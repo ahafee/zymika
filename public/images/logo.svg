@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 73 40" width="73" height="40" aria-label="ZOVI LEAF Logo">
+  <defs>
+    <linearGradient id="zoviGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#D16646"/>
+      <stop offset="100%" stop-color="#B85335"/>
+    </linearGradient>
+  </defs>
+  <!-- Botanical Leaf Emblem -->
+  <g transform="translate(2, 6)">
+    <path d="M14 0 C6 3 0 10 0 18 C0 26 8 28 14 28 C20 28 28 26 28 18 C28 10 22 3 14 0 Z" fill="url(#zoviGrad)"/>
+    <path d="M14 0 C14 10 14 20 14 28" stroke="#FAF7F2" stroke-width="1.6" stroke-linecap="round"/>
+    <path d="M14 8 C9 11 6 15 5 18" stroke="#FAF7F2" stroke-width="1.2" stroke-linecap="round"/>
+    <path d="M14 14 C19 17 22 20 23 23" stroke="#FAF7F2" stroke-width="1.2" stroke-linecap="round"/>
+  </g>
+  <!-- Typography ZOVI LEAF -->
+  <text x="33" y="20" font-family="'Outfit', 'Plus Jakarta Sans', sans-serif" font-weight="900" font-size="13" fill="#3D4130" letter-spacing="0.5">ZOVI</text>
+  <text x="33" y="30" font-family="'Plus Jakarta Sans', sans-serif" font-weight="700" font-size="8" fill="#D16646" letter-spacing="2">LEAF</text>
+</svg>
