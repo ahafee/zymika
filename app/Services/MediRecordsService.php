@@ -133,7 +133,12 @@ class MediRecordsService
             'email' => $patient->email,
             'phone' => $patient->phone,
             'dob' => $patient->date_of_birth ? $patient->date_of_birth->format('Y-m-d') : '1990-01-01',
-            'gender' => $patient->gender ?? 'Other',
+            'gender' => match(strtolower($patient->gender ?? 'other')) {
+                'female', 'f' => 1,
+                'male', 'm' => 2,
+                'other', 'o' => 3,
+                default => 4,
+            },
             'address' => [
                 'line1' => $patient->address_line1 ?? 'Level 1, 63-73 Ann street',
                 'line2' => $patient->address_line2,
