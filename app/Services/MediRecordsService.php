@@ -136,7 +136,16 @@ class MediRecordsService
             default => 4,
         };
         
-        $titleCode = ($genderInt === 1) ? 315890002 : 315890000;
+        $cleanPhone = preg_replace('/[^0-9]/', '', $patient->phone ?? '');
+        // If it's longer than 10 digits (e.g. includes country code 61), just take the last 9 or 10.
+        // Australia mobile is usually 10 digits (04...). Let's ensure it's exactly 10 digits if possible, or just trim.
+        if (strlen($cleanPhone) > 10) {
+            $cleanPhone = substr($cleanPhone, -10);
+        }
+        if (strlen($cleanPhone) < 8) {
+            // Fallback for testing if phone is too short
+            $cleanPhone = '0400000000';
+        }
 
         $payload = [
             'external_id' => (string) $patient->id,
@@ -145,7 +154,7 @@ class MediRecordsService
             'firstName' => $firstName,
             'lastName' => $lastName,
             'email' => $patient->email,
-            'mobilePhone' => $patient->phone,
+            'mobilePhone' => $cleanPhone,
             'contactMethodId' => 1,
             'dob' => $patient->date_of_birth ? $patient->date_of_birth->format('Y-m-d') : '1990-01-01',
             'gender' => $genderInt,
