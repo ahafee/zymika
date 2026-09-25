@@ -27,20 +27,14 @@ class MediRecordsService
 
     public function __construct()
     {
-        $this->isSandbox = (bool) (Setting::get('medirecords_sandbox', config('services.medirecords.sandbox', true)));
+        // Force live mode since we have live tokens
+        $this->isSandbox = false;
 
         $this->clientId = (string) (Setting::get('medirecords_client_id', config('services.medirecords.client_id', 'zovi_mr_live_client_8385365')));
         $this->clientSecret = (string) (Setting::get('medirecords_client_secret', config('services.medirecords.client_secret', 'zovi_mr_secret_leaf_992147')));
 
-        $defaultAuthUrl = $this->isSandbox
-            ? 'https://sandbox-auth.medirecords.com/oauth/token'
-            : 'https://auth.medirecords.com/oauth/token';
-        $defaultApiUrl = $this->isSandbox
-            ? 'https://sandbox-api.medirecords.com/v1'
-            : 'https://api.medirecords.com/v1';
-
-        $this->authUrl = (string) (Setting::get('medirecords_auth_url', config('services.medirecords.auth_url', $defaultAuthUrl)));
-        $this->apiBaseUrl = (string) (Setting::get('medirecords_api_url', config('services.medirecords.api_url', $defaultApiUrl)));
+        $this->authUrl = 'https://auth.medirecords.com/oauth/token';
+        $this->apiBaseUrl = 'https://api.medirecords.com/v1';
     }
 
     /**

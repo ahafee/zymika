@@ -36,6 +36,8 @@ return [
     ],
 
     'medirecords' => [
+        'sandbox' => env('MEDIRECORDS_SANDBOX', false),
+        'api_url' => env('MEDIRECORDS_API_URL'),
         'api_access_token' => env('MEDIRECORDS_API_ACCESS_TOKEN'),
         'api_refresh_token' => env('MEDIRECORDS_API_REFRESH_TOKEN'),
         'fhir_access_token' => env('MEDIRECORDS_FHIR_ACCESS_TOKEN'),
