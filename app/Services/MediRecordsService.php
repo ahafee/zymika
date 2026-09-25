@@ -125,20 +125,29 @@ class MediRecordsService
      */
     public function syncPatient(User $patient): array
     {
+        $nameParts = explode(' ', trim($patient->name));
+        $firstName = $nameParts[0];
+        $lastName = count($nameParts) > 1 ? implode(' ', array_slice($nameParts, 1)) : $firstName;
+        
+        $genderInt = match(strtolower($patient->gender ?? 'other')) {
+            'female', 'f' => 1,
+            'male', 'm' => 2,
+            'other', 'o' => 3,
+            default => 4,
+        };
+        
+        $titleCode = ($genderInt === 1) ? 315890002 : 315890000;
+
         $payload = [
             'external_id' => (string) $patient->id,
-            'title' => 'Mr/Ms',
-            'first_name' => explode(' ', $patient->name)[0] ?? $patient->name,
-            'last_name' => explode(' ', $patient->name)[1] ?? '',
+            'defaultPracticeId' => config('services.medirecords.practice_guid'),
+            'titleCode' => $titleCode,
+            'firstName' => $firstName,
+            'lastName' => $lastName,
             'email' => $patient->email,
             'phone' => $patient->phone,
             'dob' => $patient->date_of_birth ? $patient->date_of_birth->format('Y-m-d') : '1990-01-01',
-            'gender' => match(strtolower($patient->gender ?? 'other')) {
-                'female', 'f' => 1,
-                'male', 'm' => 2,
-                'other', 'o' => 3,
-                default => 4,
-            },
+            'gender' => $genderInt,
             'address' => [
                 'line1' => $patient->address_line1 ?? 'Level 1, 63-73 Ann street',
                 'line2' => $patient->address_line2,
