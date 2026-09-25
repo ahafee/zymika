@@ -48,6 +48,12 @@ class MediRecordsService
      */
     public function getAccessToken(): ?string
     {
+        // Prioritize explicit static access tokens provided via .env
+        $staticToken = config('services.medirecords.api_access_token');
+        if (! empty($staticToken)) {
+            return $staticToken;
+        }
+
         $cacheKey = 'medirecords_access_token_'.($this->isSandbox ? 'sandbox' : 'live');
 
         if (Cache::has($cacheKey)) {
@@ -152,8 +158,17 @@ class MediRecordsService
         try {
             $token = $this->getAccessToken();
 
-            // Perform or Mock API Request
-            $externalMrId = $patient->medirecords_patient_id ?: ('MR-PAT-'.strtoupper(Str::random(8)));
+            // Real API Request to MediRecords
+            $response = Http::withToken($token)
+                ->timeout(10)
+                ->post($this->apiBaseUrl . '/patients', $payload);
+
+            if (! $response->successful()) {
+                throw new \Exception('MediRecords API Error: ' . $response->body());
+            }
+
+            $responseData = $response->json();
+            $externalMrId = $responseData['id'] ?? ($patient->medirecords_patient_id ?: ('MR-PAT-'.strtoupper(Str::random(8))));
 
             $patient->update([
                 'medirecords_patient_id' => $externalMrId,
@@ -165,7 +180,7 @@ class MediRecordsService
                 'action' => 'push',
                 'status' => 'success',
                 'request_payload' => $payload,
-                'response_payload' => ['medirecords_patient_id' => $externalMrId, 'synced_at' => now()->toISOString()],
+                'response_payload' => ['medirecords_patient_id' => $externalMrId, 'api_response' => $responseData, 'synced_at' => now()->toISOString()],
             ]);
 
             return [
@@ -217,7 +232,19 @@ class MediRecordsService
         ];
 
         try {
-            $mrApptId = $appointment->medirecords_appointment_id ?: ('MR-APT-'.strtoupper(Str::random(8)));
+            $token = $this->getAccessToken();
+
+            // Real API Request to MediRecords
+            $response = Http::withToken($token)
+                ->timeout(10)
+                ->post($this->apiBaseUrl . '/appointments', $payload);
+
+            if (! $response->successful()) {
+                throw new \Exception('MediRecords API Error: ' . $response->body());
+            }
+
+            $responseData = $response->json();
+            $mrApptId = $responseData['id'] ?? ($appointment->medirecords_appointment_id ?: ('MR-APT-'.strtoupper(Str::random(8))));
 
             $appointment->update([
                 'medirecords_appointment_id' => $mrApptId,
@@ -231,7 +258,7 @@ class MediRecordsService
                 'action' => 'push',
                 'status' => 'success',
                 'request_payload' => $payload,
-                'response_payload' => ['medirecords_appointment_id' => $mrApptId, 'synced_at' => now()->toISOString()],
+                'response_payload' => ['medirecords_appointment_id' => $mrApptId, 'api_response' => $responseData, 'synced_at' => now()->toISOString()],
             ]);
 
             return [
