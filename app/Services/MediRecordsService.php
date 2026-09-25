@@ -145,7 +145,8 @@ class MediRecordsService
             'firstName' => $firstName,
             'lastName' => $lastName,
             'email' => $patient->email,
-            'phone' => $patient->phone,
+            'mobilePhone' => $patient->phone,
+            'contactMethodId' => 1,
             'dob' => $patient->date_of_birth ? $patient->date_of_birth->format('Y-m-d') : '1990-01-01',
             'gender' => $genderInt,
             'address' => [
