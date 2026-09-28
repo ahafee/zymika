@@ -243,19 +243,37 @@ class MediRecordsService
         $practiceId = config('services.medirecords.practice_guid');
         $providerId = config('services.medirecords.user_id'); // Using the User ID as provider for now
         $scheduleTime = $appointment->appointment_date->format('Y-m-d') . 'T' . \Carbon\Carbon::parse($appointment->start_time)->format('H:i');
+        
+        $token = $this->getAccessToken();
+        
+        // Dynamically fetch the first available Appointment Type ID for this practice
+        $appTypeId = null;
+        $typesResponse = Http::withToken($token)
+            ->timeout(10)
+            ->get($this->apiBaseUrl . "/practices/{$practiceId}/appointment-types");
+            
+        if ($typesResponse->successful()) {
+            $typesData = $typesResponse->json();
+            if (!empty($typesData['data']) && is_array($typesData['data'])) {
+                $appTypeId = $typesData['data'][0]['id'] ?? null;
+            }
+        }
+        
+        if (!$appTypeId) {
+            // Fallback if we couldn't fetch it dynamically (e.g., list is empty)
+            throw new \Exception('MediRecords API Error: Could not fetch a valid appointmentTypeId for this practice.');
+        }
 
         $payload = [
             'patientId' => $appointment->patient?->medirecords_patient_id,
             'providerId' => $providerId,
+            'appointmentTypeId' => $appTypeId,
             'scheduleTime' => $scheduleTime,
             'appointmentStatus' => 2, // Usually 2 means Booked in many EHRs
             'notes' => $appointment->patient_notes ?? 'Telehealth Consultation',
-            // Note: appointmentTypeId and roomId might be required by the API.
-            // If they are, the API will return a validation error and we can configure them.
         ];
 
         try {
-            $token = $this->getAccessToken();
             $url = $this->apiBaseUrl . "/practices/{$practiceId}/appointments";
 
             // Real API Request to MediRecords
