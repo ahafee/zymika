@@ -187,7 +187,11 @@ class MediRecordsService
             }
 
             $responseData = $response->json();
-            $externalMrId = $responseData['id'] ?? ($patient->medirecords_patient_id ?: ('MR-PAT-'.strtoupper(Str::random(8))));
+            $externalMrId = $responseData['id'] ?? null;
+            
+            if (!$externalMrId) {
+                throw new \Exception('MediRecords API did not return a valid Patient ID.');
+            }
 
             $patient->update([
                 'medirecords_patient_id' => $externalMrId,
@@ -229,8 +233,9 @@ class MediRecordsService
      */
     public function syncAppointment(Appointment $appointment): array
     {
-        // Ensure patient is synced first
-        if ($appointment->patient && empty($appointment->patient->medirecords_patient_id)) {
+        // Ensure patient is synced first (re-sync if it's an old fake ID starting with MR-PAT-)
+        $patientMrId = $appointment->patient?->medirecords_patient_id;
+        if ($appointment->patient && (empty($patientMrId) || str_starts_with($patientMrId, 'MR-PAT-'))) {
             $this->syncPatient($appointment->patient);
             $appointment->patient->refresh();
         }
