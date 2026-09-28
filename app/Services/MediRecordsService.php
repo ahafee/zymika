@@ -235,28 +235,28 @@ class MediRecordsService
             $appointment->patient->refresh();
         }
 
+        $practiceId = config('services.medirecords.practice_guid');
+        $providerId = config('services.medirecords.user_id'); // Using the User ID as provider for now
+        $scheduleTime = $appointment->appointment_date->format('Y-m-d') . 'T' . \Carbon\Carbon::parse($appointment->start_time)->format('H:i');
+
         $payload = [
-            'appointment_number' => $appointment->appointment_number,
-            'patient_medirecords_id' => $appointment->patient?->medirecords_patient_id,
-            'doctor_name' => $appointment->doctor?->full_name ?? 'Dr. Suneetha Batthala',
-            'ahpra_number' => $appointment->doctor?->ahpra_number ?? 'MED0001928472',
-            'service' => $appointment->service?->name ?? 'Medicinal Cannabis Initial Consult',
-            'date' => $appointment->appointment_date->format('Y-m-d'),
-            'start_time' => $appointment->start_time,
-            'end_time' => $appointment->end_time,
-            'type' => 'Telehealth Video',
-            'telehealth_url' => $appointment->video_meeting_url,
-            'notes' => $appointment->patient_notes,
-            'clinic_location' => 'Zovi Health Surry Hills NSW',
+            'patientId' => $appointment->patient?->medirecords_patient_id,
+            'providerId' => $providerId,
+            'scheduleTime' => $scheduleTime,
+            'appointmentStatus' => 2, // Usually 2 means Booked in many EHRs
+            'notes' => $appointment->patient_notes ?? 'Telehealth Consultation',
+            // Note: appointmentTypeId and roomId might be required by the API.
+            // If they are, the API will return a validation error and we can configure them.
         ];
 
         try {
             $token = $this->getAccessToken();
+            $url = $this->apiBaseUrl . "/practices/{$practiceId}/appointments";
 
             // Real API Request to MediRecords
             $response = Http::withToken($token)
                 ->timeout(10)
-                ->post($this->apiBaseUrl . '/appointments', $payload);
+                ->post($url, $payload);
 
             if (! $response->successful()) {
                 throw new \Exception('MediRecords API Error: ' . $response->body());
