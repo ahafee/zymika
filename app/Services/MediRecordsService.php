@@ -269,7 +269,8 @@ class MediRecordsService
             'providerId' => $providerId,
             'appointmentTypeId' => $appTypeId,
             'scheduleTime' => $scheduleTime,
-            'appointmentStatus' => 2, // Usually 2 means Booked in many EHRs
+            'appointmentStatus' => 2, // 2 = Booked
+            'appointmentIntervalCode' => 6, // 6 = Standard Interval (e.g., 15 mins)
             'notes' => $appointment->patient_notes ?? 'Telehealth Consultation',
         ];
 
