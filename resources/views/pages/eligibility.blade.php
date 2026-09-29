@@ -7,7 +7,7 @@
     <div class="container text-center">
         <span class="badge badge-tga mb-2">TGA SAS-B Pre-Screening</span>
         <h1 class="display-5 fw-bold text-brand-contrast">Medicinal Cannabis Eligibility Check</h1>
-        <p class="lead text-muted max-w-700 mx-auto">Complete this confidential 60-second questionnaire to check your clinical pre-qualification.</p>
+        <p class="lead text-muted max-w-700 mx-auto">Lorem ipsum dolor sit amet, consectetur adipiscing elit sed do eiusmod tempor incididunt ut labore et dolore.</p>
     </div>
 </div>
 

@@ -17,7 +17,7 @@
                     <span class="animated-gradient-brand d-inline-block">Medicinal Cannabis</span> <span>Care</span>
                 </h1>
                 <p class="lead text-brand-contrast opacity-90 mb-4 pe-lg-4 fs-5">
-                    Access personalised medicinal cannabis care through secure Australian telehealth consultations. Our doctors assess your individual needs, discuss suitable treatment options, and guide you through each step of your care.
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip.
                 </p>
 
                 <!-- Action CTAs -->
@@ -45,7 +45,7 @@
                 <!-- Interactive Quick Eligibility Card -->
                 <div class="card card-zovi p-4 p-md-4 shadow-lg border-0 bg-white position-relative">
                     <h5 class="fw-bold text-brand-contrast mb-1">Check Your Eligibility</h5>
-                    <p class="text-muted small mb-3">Answer a few quick questions to see if you may be suitable for a medicinal cannabis consultation.</p>
+                    <p class="text-muted small mb-3">Lorem ipsum dolor sit amet, consectetur adipiscing elit sed do eiusmod tempor incididunt.</p>
 
                     <form action="{{ route('eligibility.show') }}" method="GET">
                         <div class="mb-3">
@@ -156,7 +156,7 @@
         <div class="text-center max-w-700 mx-auto mb-5" data-aos="fade-up">
             <span class="badge badge-tga mb-2">STREAMLINED TELEHEALTH PROCESS</span>
             <h2 class="display-6 fw-bold text-brand-contrast mt-1">How Telehealth Works at ZOVI LEAF</h2>
-            <p class="text-muted">Simple, confidential four-step pathway from initial assessment to medication delivery.</p>
+            <p class="text-muted">Lorem ipsum dolor sit amet, consectetur adipiscing elit sed do eiusmod tempor incididunt ut labore.</p>
         </div>
 
         <div class="row g-4">
@@ -171,7 +171,7 @@
                         <div class="process-num-badge bg-brand-primary text-white">01</div>
                     </div>
                     <h5 class="fw-bold text-brand-contrast mb-2">60s Pre-Assessment</h5>
-                    <p class="text-muted small mb-3 flex-grow-1">Complete a quick online questionnaire to check your preliminary eligibility for telehealth care.</p>
+                    <p class="text-muted small mb-3 flex-grow-1">Lorem ipsum dolor sit amet, consectetur adipiscing elit sed do eiusmod tempor incididunt.</p>
                     <div class="pt-3 border-top mt-auto">
                         <span class="small text-brand-primary fw-semibold"><i class="bi bi-check2-circle me-1"></i> Instant Pre-Qualification</span>
                     </div>
@@ -189,7 +189,7 @@
                         <div class="process-num-badge bg-brand-contrast text-white">02</div>
                     </div>
                     <h5 class="fw-bold text-brand-contrast mb-2">Doctor Telehealth</h5>
-                    <p class="text-muted small mb-3 flex-grow-1">Consult with an experienced AHPRA-registered doctor via secure video or phone call.</p>
+                    <p class="text-muted small mb-3 flex-grow-1">Lorem ipsum dolor sit amet, consectetur adipiscing elit sed do eiusmod tempor incididunt.</p>
                     <div class="pt-3 border-top mt-auto">
                         <span class="small text-brand-contrast fw-semibold"><i class="bi bi-camera-video me-1"></i> Encrypted Video Consult</span>
                     </div>
@@ -207,7 +207,7 @@
                         <div class="process-num-badge bg-brand-sage text-white">03</div>
                     </div>
                     <h5 class="fw-bold text-brand-contrast mb-2">TGA &amp; Script Issuance</h5>
-                    <p class="text-muted small mb-3 flex-grow-1">If clinically suitable, your doctor completes TGA documentation and issues e-prescriptions.</p>
+                    <p class="text-muted small mb-3 flex-grow-1">Lorem ipsum dolor sit amet, consectetur adipiscing elit sed do eiusmod tempor incididunt.</p>
                     <div class="pt-3 border-top mt-auto">
                         <span class="small text-brand-sage fw-semibold"><i class="bi bi-file-earmark-medical me-1"></i> Digital E-Script Sync</span>
                     </div>
@@ -225,7 +225,7 @@
                         <div class="process-num-badge bg-brand-primary text-white">04</div>
                     </div>
                     <h5 class="fw-bold text-brand-contrast mb-2">Express Home Delivery</h5>
-                    <p class="text-muted small mb-3 flex-grow-1">Prescribed medications are dispatched directly to your door in discreet express packaging.</p>
+                    <p class="text-muted small mb-3 flex-grow-1">Lorem ipsum dolor sit amet, consectetur adipiscing elit sed do eiusmod tempor incididunt.</p>
                     <div class="pt-3 border-top mt-auto">
                         <span class="small text-brand-primary fw-semibold"><i class="bi bi-truck me-1"></i> Nationwide Express Tracking</span>
                     </div>
@@ -247,7 +247,7 @@
         <div class="text-center max-w-700 mx-auto mb-5" data-aos="fade-up">
             <span class="badge badge-tga mb-2">EVIDENCE-BASED CARE</span>
             <h2 class="display-6 fw-bold text-brand-contrast mt-1">Primary Clinical Indications Treated</h2>
-            <p class="text-muted">Our medical team assesses patients across key chronic condition categories.</p>
+            <p class="text-muted">Lorem ipsum dolor sit amet, consectetur adipiscing elit sed do eiusmod tempor.</p>
         </div>
 
         <div class="row g-4">
@@ -265,7 +265,7 @@
                     </div>
                     <h5 class="fw-bold text-brand-contrast mb-2">Chronic Musculoskeletal &amp; Nerve Pain</h5>
                     <p class="small text-muted mb-3 flex-grow-1">
-                        Specialized botanical therapies for persistent back pain, sciatica, arthritis, and neuropathic symptoms.
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
                     </p>
                     <div class="d-flex flex-wrap gap-1 mt-auto pt-2.5 border-top">
                         <span class="badge bg-light text-brand-contrast border small">Sciatica</span>
@@ -289,7 +289,7 @@
                     </div>
                     <h5 class="fw-bold text-brand-contrast mb-2">Insomnia &amp; Sleep Architecture</h5>
                     <p class="small text-muted mb-3 flex-grow-1">
-                        Targeted nighttime cannabinoid protocols formulated to reduce sleep latency and support sleep maintenance.
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
                     </p>
                     <div class="d-flex flex-wrap gap-1 mt-auto pt-2.5 border-top">
                         <span class="badge bg-light text-brand-sage border small">Sleep Onset</span>
@@ -312,7 +312,7 @@
                     </div>
                     <h5 class="fw-bold text-brand-contrast mb-2">Anxiety &amp; Mood Deregulation</h5>
                     <p class="small text-muted mb-3 flex-grow-1">
-                        Calming, physician-guided cannabinoid care for chronic anxiety, PTSD, and severe persistent work stress.
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
                     </p>
                     <div class="d-flex flex-wrap gap-1 mt-auto pt-2.5 border-top">
                         <span class="badge bg-light text-brand-contrast border small">General Anxiety</span>
@@ -336,7 +336,7 @@
                     </div>
                     <h5 class="fw-bold text-brand-contrast mb-2">Women's Health &amp; Pelvic Pain</h5>
                     <p class="small text-muted mb-3 flex-grow-1">
-                        Compassionate treatment pathways addressing severe endometriosis pain, pelvic spasms, and chronic inflammation.
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
                     </p>
                     <div class="d-flex flex-wrap gap-1 mt-auto pt-2.5 border-top">
                         <span class="badge bg-light text-brand-contrast border small">Endometriosis</span>
@@ -359,7 +359,7 @@
                     </div>
                     <h5 class="fw-bold text-brand-contrast mb-2">Neurological Migraines &amp; Headaches</h5>
                     <p class="small text-muted mb-3 flex-grow-1">
-                        Specialist assessment and cannabinoid titration protocols for cluster migraines and intractable headaches.
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
                     </p>
                     <div class="d-flex flex-wrap gap-1 mt-auto pt-2.5 border-top">
                         <span class="badge bg-light text-brand-sage border small">Cluster Migraines</span>
@@ -382,7 +382,7 @@
                     </div>
                     <h5 class="fw-bold text-brand-contrast mb-2">Palliative &amp; Oncology Support</h5>
                     <p class="small text-muted mb-3 flex-grow-1">
-                        Supportive adjunct clinical care dedicated to nausea alleviation, appetite revival, and palliative symptom relief.
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
                     </p>
                     <div class="d-flex flex-wrap gap-1 mt-auto pt-2.5 border-top">
                         <span class="badge bg-light text-brand-contrast border small">Appetite Loss</span>
@@ -425,7 +425,7 @@
                 <span class="badge badge-tga mb-2">CLINICAL LEADERSHIP</span>
                 <h2 class="display-6 fw-bold text-brand-contrast mt-1 mb-3">Meet Your Doctor: Dr. Suneetha Batthala</h2>
                 <p class="text-brand-contrast opacity-90 mb-4 fs-6">
-                    Dr. Suneetha Batthala is an experienced Australian medical practitioner committed to providing high-quality, compassionate telehealth care. With comprehensive clinical expertise, Dr. Batthala conducts thorough individual assessments for patients seeking evidence-based plant medicine pathways.
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip.
                 </p>
                 <div class="row g-3 mb-4">
                     <div class="col-sm-6" data-aos="fade-up" data-aos-delay="200">
@@ -433,7 +433,7 @@
                             <i class="bi bi-patch-check-fill text-brand-primary fs-4 mt-1"></i>
                             <div>
                                 <strong>Authorised Prescriber (AP)</strong>
-                                <p class="small text-muted mb-0">Direct TGA SAS-B prescribing without unnecessary administrative delays.</p>
+                                <p class="small text-muted mb-0">Lorem ipsum dolor sit amet consectetur adipiscing elit sed do eiusmod.</p>
                             </div>
                         </div>
                     </div>
@@ -442,7 +442,7 @@
                             <i class="bi bi-sliders text-brand-sage fs-4 mt-1"></i>
                             <div>
                                 <strong>Individualized Titration</strong>
-                                <p class="small text-muted mb-0">Custom cannabinoid ratios (CBD, THC, Terpenes) tailored to your physiology.</p>
+                                <p class="small text-muted mb-0">Lorem ipsum dolor sit amet consectetur adipiscing elit sed do eiusmod.</p>
                             </div>
                         </div>
                     </div>
@@ -460,7 +460,7 @@
                             <i class="bi bi-cloud-check-fill text-brand-primary fs-4 mt-1"></i>
                             <div>
                                 <strong>MediRecords Integration</strong>
-                                <p class="small text-muted mb-0">Direct EHR cloud sync for complete continuity of care with your GP.</p>
+                                <p class="small text-muted mb-0">Lorem ipsum dolor sit amet consectetur adipiscing elit sed do eiusmod.</p>
                             </div>
                         </div>
                     </div>
@@ -488,7 +488,7 @@
                 <span>THE ZOVI LEAF CLINICAL ADVANTAGE</span>
             </div>
             <h2 class="display-6 fw-bold text-brand-contrast mt-1">Why Choose ZOVI LEAF Telehealth?</h2>
-            <p class="text-muted fs-6 mb-0">Compare our compassionate, streamlined digital clinic with the friction of traditional in-person medical pathways.</p>
+            <p class="text-muted fs-6 mb-0">Lorem ipsum dolor sit amet, consectetur adipiscing elit sed do eiusmod tempor incididunt ut labore et dolore.</p>
         </div>
 
         <!-- Animated Side-by-Side Comparison Dual Cards -->
@@ -498,6 +498,9 @@
                 <div class="zovi-winner-card h-100 d-flex flex-column position-relative">
                     <div class="p-3.5 p-lg-4 d-flex flex-column flex-grow-1">
                         <div class="d-flex align-items-center gap-3 mb-3">
+                            <div class="comp-header-logo bg-brand-primary text-white">
+                                <i class="bi bi-shield-check fs-4"></i>
+                            </div>
                             <div>
                                 <h3 class="h4 fw-extrabold text-white mb-1">ZOVI LEAF Digital Clinic</h3>
                                 <span class="text-brand-primary fw-semibold small">Compassionate &middot; AHPRA Registered &middot; 100% Online</span>
@@ -511,7 +514,7 @@
                                 </div>
                                 <div>
                                     <h6 class="fw-bold text-white mb-1">Same-Day / Next-Day Consultations</h6>
-                                    <p class="small text-light opacity-75 mb-0">Book appointments online 24/7 without weeks of delay.</p>
+                                    <p class="small text-light opacity-75 mb-0">Lorem ipsum dolor sit amet consectetur adipiscing elit sed.</p>
                                 </div>
                             </div>
 
@@ -521,7 +524,7 @@
                                 </div>
                                 <div>
                                     <h6 class="fw-bold text-white mb-1">100% Home Video &amp; Phone Consults</h6>
-                                    <p class="small text-light opacity-75 mb-0">Consult your doctor privately from the comfort of your home.</p>
+                                    <p class="small text-light opacity-75 mb-0">Lorem ipsum dolor sit amet consectetur adipiscing elit sed.</p>
                                 </div>
                             </div>
 
@@ -531,7 +534,7 @@
                                 </div>
                                 <div>
                                     <h6 class="fw-bold text-white mb-1">Direct TGA Authorised Prescriber (AP)</h6>
-                                    <p class="small text-light opacity-75 mb-0">Direct SAS-B pathway with zero unnecessary red tape or delay.</p>
+                                    <p class="small text-light opacity-75 mb-0">Lorem ipsum dolor sit amet consectetur adipiscing elit sed.</p>
                                 </div>
                             </div>
 
@@ -541,7 +544,7 @@
                                 </div>
                                 <div>
                                     <h6 class="fw-bold text-white mb-1">AusPost Express Discreet Delivery</h6>
-                                    <p class="small text-light opacity-75 mb-0">Tamper-evident, temperature-controlled parcel right to your door.</p>
+                                    <p class="small text-light opacity-75 mb-0">Lorem ipsum dolor sit amet consectetur adipiscing elit sed.</p>
                                 </div>
                             </div>
 
@@ -551,7 +554,7 @@
                                 </div>
                                 <div>
                                     <h6 class="fw-bold text-white mb-1">1-Click Digital Repeat Script Portal</h6>
-                                    <p class="small text-light opacity-75 mb-0">Re-order authorized medications instantly with no hidden consult charges.</p>
+                                    <p class="small text-light opacity-75 mb-0">Lorem ipsum dolor sit amet consectetur adipiscing elit sed.</p>
                                 </div>
                             </div>
 
@@ -561,7 +564,7 @@
                                 </div>
                                 <div>
                                     <h6 class="fw-bold text-white mb-1">MediRecords EHR Cloud Integration</h6>
-                                    <p class="small text-light opacity-75 mb-0">Direct clinical record sync for seamless continuity of care with your GP.</p>
+                                    <p class="small text-light opacity-75 mb-0">Lorem ipsum dolor sit amet consectetur adipiscing elit sed.</p>
                                 </div>
                             </div>
                         </div>
@@ -593,7 +596,7 @@
                                 </div>
                                 <div>
                                     <h6 class="fw-bold text-brand-contrast mb-1">2 to 4 Weeks Appointment Wait</h6>
-                                    <p class="small text-muted mb-0">Long waiting lists while suffering from persistent chronic symptoms.</p>
+                                    <p class="small text-muted mb-0">Lorem ipsum dolor sit amet consectetur adipiscing elit sed.</p>
                                 </div>
                             </div>
 
@@ -603,7 +606,7 @@
                                 </div>
                                 <div>
                                     <h6 class="fw-bold text-brand-contrast mb-1">Physical Travel &amp; Crowded Waiting Rooms</h6>
-                                    <p class="small text-muted mb-0">Difficult commutes, parking stress, and waiting when in pain.</p>
+                                    <p class="small text-muted mb-0">Lorem ipsum dolor sit amet consectetur adipiscing elit sed.</p>
                                 </div>
                             </div>
 
@@ -613,7 +616,7 @@
                                 </div>
                                 <div>
                                     <h6 class="fw-bold text-brand-contrast mb-1">Complex Multi-Step Referrals</h6>
-                                    <p class="small text-muted mb-0">Multiple appointments often required to find an authorized prescriber.</p>
+                                    <p class="small text-muted mb-0">Lorem ipsum dolor sit amet consectetur adipiscing elit sed.</p>
                                 </div>
                             </div>
 
@@ -623,7 +626,7 @@
                                 </div>
                                 <div>
                                     <h6 class="fw-bold text-brand-contrast mb-1">Pharmacy Stock Outages &amp; Manual Pickup</h6>
-                                    <p class="small text-muted mb-0">Driving between multiple local chemists searching for specific medicines.</p>
+                                    <p class="small text-muted mb-0">Lorem ipsum dolor sit amet consectetur adipiscing elit sed.</p>
                                 </div>
                             </div>
 
@@ -633,7 +636,7 @@
                                 </div>
                                 <div>
                                     <h6 class="fw-bold text-brand-contrast mb-1">Full Consult Fee Charged for Repeat Scripts</h6>
-                                    <p class="small text-muted mb-0">Required to pay and visit every time a script repeat is needed.</p>
+                                    <p class="small text-muted mb-0">Lorem ipsum dolor sit amet consectetur adipiscing elit sed.</p>
                                 </div>
                             </div>
 
@@ -643,7 +646,7 @@
                                 </div>
                                 <div>
                                     <h6 class="fw-bold text-brand-contrast mb-1">Fragmented Paper &amp; Legacy Systems</h6>
-                                    <p class="small text-muted mb-0">Slow postal faxes and lack of real-time EHR patient synchronization.</p>
+                                    <p class="small text-muted mb-0">Lorem ipsum dolor sit amet consectetur adipiscing elit sed.</p>
                                 </div>
                             </div>
                         </div>
@@ -667,7 +670,7 @@
             <div>
                 <span class="badge badge-tga mb-2">VERIFIED PATIENT STORIES</span>
                 <h2 class="display-6 fw-bold text-brand-contrast mt-1 mb-1">Transforming Lives Across Australia</h2>
-                <p class="text-muted mb-0">Real verified telehealth consultations and patient feedback from Surry Hills and nationwide.</p>
+                <p class="text-muted mb-0">Lorem ipsum dolor sit amet, consectetur adipiscing elit sed do eiusmod tempor.</p>
             </div>
             
             <!-- Carousel Control Buttons -->
@@ -697,7 +700,7 @@
                                     <span class="badge badge-verified"><i class="bi bi-patch-check-fill me-1"></i> Verified Patient</span>
                                 </div>
                                 <p class="text-brand-contrast small mb-4 flex-grow-1 lh-base">
-                                    "After 3 years of chronic sciatica and nerve pain, Dr. Batthala took the time to listen and tailored a 10:10 balanced oil. Within 2 weeks my sleep and mobility improved dramatically."
+                                    "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris."
                                 </p>
                                 <div class="d-flex align-items-center gap-3 mt-auto pt-3 border-top">
                                     <div class="avatar-vip" style="width: 42px; height: 42px; font-size: 0.95rem;">JM</div>
@@ -719,7 +722,7 @@
                                     <span class="badge badge-verified"><i class="bi bi-patch-check-fill me-1"></i> Verified Patient</span>
                                 </div>
                                 <p class="text-brand-contrast small mb-4 flex-grow-1 lh-base">
-                                    "The telehealth video call was smooth, respectful, and non-judgmental. My electronic script was in my portal 10 minutes later, and the medicine arrived in discreet packaging 2 days later."
+                                    "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris."
                                 </p>
                                 <div class="d-flex align-items-center gap-3 mt-auto pt-3 border-top">
                                     <div class="avatar-vip" style="width: 42px; height: 42px; font-size: 0.95rem; background: linear-gradient(135deg, var(--brand-sage) 0%, var(--brand-contrast) 100%);">SJ</div>
@@ -741,7 +744,7 @@
                                     <span class="badge badge-verified"><i class="bi bi-patch-check-fill me-1"></i> Verified Patient</span>
                                 </div>
                                 <p class="text-brand-contrast small mb-4 flex-grow-1 lh-base">
-                                    "ZOVI LEAF makes re-ordering repeat prescriptions effortless. No long GP queues, transparent pricing, and Dr. Batthala is genuinely committed to patient outcomes."
+                                    "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris."
                                 </p>
                                 <div class="d-flex align-items-center gap-3 mt-auto pt-3 border-top">
                                     <div class="avatar-vip" style="width: 42px; height: 42px; font-size: 0.95rem; background: linear-gradient(135deg, var(--brand-contrast) 0%, #151810 100%);">DW</div>
@@ -768,7 +771,7 @@
                                     <span class="badge badge-verified"><i class="bi bi-patch-check-fill me-1"></i> Verified Patient</span>
                                 </div>
                                 <p class="text-brand-contrast small mb-4 flex-grow-1 lh-base">
-                                    "Living with endometriosis was debilitating. Dr. Suneetha formulated a specialized broad-spectrum CBD + Terpene protocol that brought back my daily quality of life."
+                                    "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris."
                                 </p>
                                 <div class="d-flex align-items-center gap-3 mt-auto pt-3 border-top">
                                     <div class="avatar-vip" style="width: 42px; height: 42px; font-size: 0.95rem;">ER</div>
@@ -790,7 +793,7 @@
                                     <span class="badge badge-verified"><i class="bi bi-patch-check-fill me-1"></i> Verified Patient</span>
                                 </div>
                                 <p class="text-brand-contrast small mb-4 flex-grow-1 lh-base">
-                                    "Extremely professional clinical workflow. The MediRecords integration gave my regular GP peace of mind, and the repeat dispensary wallet is fast and secure."
+                                    "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris."
                                 </p>
                                 <div class="d-flex align-items-center gap-3 mt-auto pt-3 border-top">
                                     <div class="avatar-vip" style="width: 42px; height: 42px; font-size: 0.95rem; background: linear-gradient(135deg, var(--brand-sage) 0%, var(--brand-contrast) 100%);">MT</div>
@@ -812,7 +815,7 @@
                                     <span class="badge badge-verified"><i class="bi bi-patch-check-fill me-1"></i> Verified Patient</span>
                                 </div>
                                 <p class="text-brand-contrast small mb-4 flex-grow-1 lh-base">
-                                    "Fast express delivery to regional WA with cold-pack protection and discreet packaging. ZOVI LEAF provides the highest level of patient care in Australia."
+                                    "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris."
                                 </p>
                                 <div class="d-flex align-items-center gap-3 mt-auto pt-3 border-top">
                                     <div class="avatar-vip" style="width: 42px; height: 42px; font-size: 0.95rem; background: linear-gradient(135deg, var(--brand-primary) 0%, var(--brand-gold) 100%);">KB</div>
@@ -865,7 +868,7 @@
                         <span class="badge bg-light text-brand-sage border" style="font-size: 0.72rem;">10 mg/mL CBD</span>
                     </div>
                     
-                    <p class="small text-muted mb-2">Harmonized 1:1 ratio tincture formulated for chronic nerve pain, fibromyalgia, and general relief.</p>
+                    <p class="small text-muted mb-2">Lorem ipsum dolor sit amet, consectetur adipiscing elit sed do eiusmod tempor incididunt.</p>
                     
                     <div class="d-flex justify-content-between align-items-center mt-auto pt-2 border-top">
                         <div class="fw-bold fs-5 text-brand-contrast">$95.00</div>
@@ -891,7 +894,7 @@
                         <span class="badge bg-light text-brand-sage border" style="font-size: 0.72rem;">100 mg/mL CBD</span>
                     </div>
                     
-                    <p class="small text-muted mb-2">Ultra-pure, non-intoxicating cannabidiol formulation designed for inflammation and daytime anxiety.</p>
+                    <p class="small text-muted mb-2">Lorem ipsum dolor sit amet, consectetur adipiscing elit sed do eiusmod tempor incididunt.</p>
                     
                     <div class="d-flex justify-content-between align-items-center mt-auto pt-2 border-top">
                         <div class="fw-bold fs-5 text-brand-contrast">$125.00</div>
@@ -917,7 +920,7 @@
                         <span class="badge bg-light text-brand-sage border" style="font-size: 0.72rem;">&lt; 1 mg/mL CBD</span>
                     </div>
                     
-                    <p class="small text-muted mb-2">Potent nighttime formulation specifically prescribed for severe insomnia and nocturnal sleep disruption.</p>
+                    <p class="small text-muted mb-2">Lorem ipsum dolor sit amet, consectetur adipiscing elit sed do eiusmod tempor incididunt.</p>
                     
                     <div class="d-flex justify-content-between align-items-center mt-auto pt-2 border-top">
                         <div class="fw-bold fs-5 text-brand-contrast">$110.00</div>
@@ -943,7 +946,7 @@
                         <span class="badge bg-light text-brand-sage border" style="font-size: 0.72rem;">&lt; 0.5% CBD</span>
                     </div>
                     
-                    <p class="small text-muted mb-2">Sun-grown Australian medical cannabis flower (22% THC) with rich terpene profiles for chronic pain.</p>
+                    <p class="small text-muted mb-2">Lorem ipsum dolor sit amet, consectetur adipiscing elit sed do eiusmod tempor incididunt.</p>
                     
                     <div class="d-flex justify-content-between align-items-center mt-auto pt-2 border-top">
                         <div class="fw-bold fs-5 text-brand-contrast">$145.00</div>
@@ -963,7 +966,7 @@
         <div class="text-center max-w-700 mx-auto mb-5" data-aos="fade-up">
             <span class="badge badge-tga mb-2">HONEST HEALTHCARE</span>
             <h2 class="display-6 fw-bold text-brand-contrast mt-1">Clear, Transparent Consultation Fees</h2>
-            <p class="text-muted">No hidden costs. Full refund guaranteed if you are assessed as clinically ineligible.</p>
+            <p class="text-muted">Lorem ipsum dolor sit amet, consectetur adipiscing elit sed do eiusmod tempor incididunt.</p>
         </div>
 
         <div class="row g-4 justify-content-center">
@@ -975,7 +978,7 @@
                         $79
                         <span class="fs-6 text-muted fw-normal">/ 20 mins</span>
                     </div>
-                    <p class="small text-muted mb-4">Comprehensive video assessment with an AHPRA doctor to evaluate your eligibility and formulate your care plan.</p>
+                    <p class="small text-muted mb-4">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
                     
                     <ul class="list-unstyled small mb-4">
                         <li class="mb-2"><i class="bi bi-check-circle-fill text-brand-primary me-2"></i> Dedicated video consult with AHPRA registered doctor</li>
@@ -997,7 +1000,7 @@
                         $49
                         <span class="fs-6 text-muted fw-normal">/ 15 mins</span>
                     </div>
-                    <p class="small text-muted mb-4">Review consultation to fine-tune your dosage, check progress, and adjust cannabinoid formulations.</p>
+                    <p class="small text-muted mb-4">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
                     
                     <ul class="list-unstyled small mb-4">
                         <li class="mb-2"><i class="bi bi-check-circle-fill text-brand-primary me-2"></i> Dedicated video consult with AHPRA registered doctor</li>
@@ -1019,7 +1022,7 @@
                         $39
                         <span class="fs-6 text-muted fw-normal">/ 10 mins</span>
                     </div>
-                    <p class="small text-muted mb-4">Fast repeat prescription issuance for existing patients on stable treatment plans.</p>
+                    <p class="small text-muted mb-4">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
                     
                     <ul class="list-unstyled small mb-4">
                         <li class="mb-2"><i class="bi bi-check-circle-fill text-brand-primary me-2"></i> Dedicated video consult with AHPRA registered doctor</li>
@@ -1046,7 +1049,7 @@
             </span>
             <h2 class="display-5 fw-extrabold text-white mb-3">Begin Your Healing Journey with ZOVI LEAF</h2>
             <p class="lead text-light opacity-90 max-w-700 mx-auto mb-4 fs-5">
-                Access personalized Australian telehealth consultation with an accredited doctor today.
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit sed do eiusmod tempor incididunt ut labore et dolore.
             </p>
             <div class="d-flex flex-wrap justify-content-center gap-3">
                 <a href="{{ route('eligibility.show') }}" class="btn btn-lg btn-brand-primary px-4 px-md-5 py-3 shadow fw-bold">

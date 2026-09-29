@@ -7,7 +7,7 @@
     <div class="container text-center">
         <span class="badge badge-tga mb-2">Step-by-Step Guide</span>
         <h1 class="display-5 fw-bold text-brand-contrast">How Telehealth Works</h1>
-        <p class="lead text-muted max-w-700 mx-auto">A transparent, fully compliant pathway to access prescribed plant therapy in Australia.</p>
+        <p class="lead text-muted max-w-700 mx-auto">Lorem ipsum dolor sit amet, consectetur adipiscing elit sed do eiusmod tempor incididunt ut labore et dolore.</p>
     </div>
 </div>
 
@@ -24,7 +24,7 @@
                 <div>
                     <h4 class="fw-bold text-brand-contrast mb-2">Complete Pre-Assessment & Snapform</h4>
                     <p class="text-muted">
-                        Take our free 60-second eligibility assessment to ensure you meet TGA SAS-B guidelines. After scheduling, fill in our secure Snapforms intake with your current medications, medical history, and regular GP details.
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris.
                     </p>
                     <a href="{{ route('eligibility.show') }}" class="btn btn-sm btn-brand-primary">Check Eligibility Now</a>
                 </div>
@@ -40,7 +40,7 @@
                 <div>
                     <h4 class="fw-bold text-brand-contrast mb-2">Telehealth Consultation with Dr. Suneetha Batthala</h4>
                     <p class="text-muted">
-                        Join your private video or phone call. Dr. Batthala will review your symptoms, assess prior treatment trials, discuss potential contraindications, and formulate a customized cannabinoid treatment plan (CBD/THC balance).
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris.
                     </p>
                     <span class="badge bg-light text-brand-contrast border">20 Mins Video Consult | $79</span>
                 </div>
@@ -56,7 +56,7 @@
                 <div>
                     <h4 class="fw-bold text-brand-contrast mb-2">Electronic Script & TGA SAS-B Approval</h4>
                     <p class="text-muted">
-                        As an Authorised Prescriber, Dr. Batthala issues your digital e-script instantly via MediRecords. Your prescription and titration dosage instructions appear directly in your ZOVI LEAF patient portal wallet.
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris.
                     </p>
                 </div>
             </div>
@@ -71,7 +71,7 @@
                 <div>
                     <h4 class="fw-bold text-brand-contrast mb-2">Compounding & Express Delivery</h4>
                     <p class="text-muted">
-                        Order your prescribed medication with one click through our dispensary. Your order is prepared by our licensed pharmacy partner and dispatched in discreet, tamper-evident packaging with Australia Post Express signature-on-delivery.
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris.
                     </p>
                 </div>
             </div>

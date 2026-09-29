@@ -7,7 +7,7 @@
     <div class="container text-center">
         <span class="badge badge-tga mb-2">Medical Services</span>
         <h1 class="display-5 fw-bold text-brand-contrast">Clinical Telehealth Services</h1>
-        <p class="lead text-muted max-w-700 mx-auto">Specialized plant medicine consultations provided by Dr. Suneetha Batthala from Surry Hills NSW.</p>
+        <p class="lead text-muted max-w-700 mx-auto">Lorem ipsum dolor sit amet, consectetur adipiscing elit sed do eiusmod tempor incididunt ut labore et dolore.</p>
     </div>
 </div>
 
@@ -24,7 +24,7 @@
                         ${{ number_format($srv->price, 0) }}
                         <span class="fs-6 text-muted fw-normal">/ {{ $srv->duration_minutes }} mins</span>
                     </div>
-                    <p class="small text-muted mb-4">{{ $srv->description }}</p>
+                    <p class="small text-muted mb-4">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
                     
                     <ul class="list-unstyled small mb-4">
                         <li class="mb-2"><i class="bi bi-check-circle-fill text-brand-primary me-2"></i> Comprehensive medical history review</li>
@@ -48,25 +48,25 @@
             <div class="col-md-6" data-aos="fade-up" data-aos-delay="100">
                 <div class="p-4 bg-white border rounded-3 h-100 shadow-sm">
                     <h5 class="fw-bold text-brand-contrast"><i class="bi bi-capsule text-brand-primary me-2"></i> Chronic Musculoskeletal & Nerve Pain</h5>
-                    <p class="small text-muted mb-0">Targeting inflammatory pathways via cannabinoid receptors (CB1 & CB2) to modulate pain signaling, reduce opioid dependence, and restore joint mobility.</p>
+                    <p class="small text-muted mb-0">Lorem ipsum dolor sit amet, consectetur adipiscing elit sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
                 </div>
             </div>
             <div class="col-md-6" data-aos="fade-up" data-aos-delay="200">
                 <div class="p-4 bg-white border rounded-3 h-100 shadow-sm">
                     <h5 class="fw-bold text-brand-contrast"><i class="bi bi-moon-stars text-brand-primary me-2"></i> Sleep Maintenance & Latency Disorders</h5>
-                    <p class="small text-muted mb-0">Utilizing nighttime terpene-rich (Myrcene/Linalool) formulations to decrease sleep onset latency and enhance REM architecture.</p>
+                    <p class="small text-muted mb-0">Lorem ipsum dolor sit amet, consectetur adipiscing elit sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
                 </div>
             </div>
             <div class="col-md-6" data-aos="fade-up" data-aos-delay="300">
                 <div class="p-4 bg-white border rounded-3 h-100 shadow-sm">
                     <h5 class="fw-bold text-brand-contrast"><i class="bi bi-shield-heart text-brand-primary me-2"></i> Anxiety & Mood Deregulation</h5>
-                    <p class="small text-muted mb-0">Full-spectrum CBD isolates and balanced tinctures promoting 5-HT1A serotonin receptor activation for non-intoxicating calming effects.</p>
+                    <p class="small text-muted mb-0">Lorem ipsum dolor sit amet, consectetur adipiscing elit sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
                 </div>
             </div>
             <div class="col-md-6" data-aos="fade-up" data-aos-delay="400">
                 <div class="p-4 bg-white border rounded-3 h-100 shadow-sm">
                     <h5 class="fw-bold text-brand-contrast"><i class="bi bi-flower1 text-brand-primary me-2"></i> Women's Health & Pelvic Pain</h5>
-                    <p class="small text-muted mb-0">Targeted support for severe endometriosis pain, menstrual dysmenorrhea, and menopausal sleep disturbances.</p>
+                    <p class="small text-muted mb-0">Lorem ipsum dolor sit amet, consectetur adipiscing elit sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
                 </div>
             </div>
         </div>

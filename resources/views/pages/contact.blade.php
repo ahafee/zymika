@@ -8,7 +8,7 @@
     <div class="container text-center">
         <span class="badge badge-tga mb-2">Patient Support & Help Desk</span>
         <h1 class="display-5 fw-bold text-brand-contrast">Frequently Asked Questions & Contact</h1>
-        <p class="lead text-muted max-w-700 mx-auto">Find answers to common questions about eligibility, TGA guidelines, prescriptions, or contact our Surry Hills clinical team.</p>
+        <p class="lead text-muted max-w-700 mx-auto">Lorem ipsum dolor sit amet, consectetur adipiscing elit sed do eiusmod tempor incididunt ut labore et dolore.</p>
     </div>
 </div>
 
@@ -18,7 +18,7 @@
         <div class="text-center max-w-700 mx-auto mb-4" data-aos="fade-up">
             <span class="badge bg-brand-primary-light text-brand-primary mb-2">QUICK ANSWERS</span>
             <h3 class="fw-bold text-brand-contrast">Common Patient Questions</h3>
-            <p class="text-muted small">Everything you need to know about accessing medical cannabis in Australia.</p>
+            <p class="text-muted small">Lorem ipsum dolor sit amet, consectetur adipiscing elit sed do eiusmod tempor.</p>
         </div>
 
         <div class="row justify-content-center" data-aos="fade-up" data-aos-delay="100">
@@ -33,7 +33,7 @@
                         </h2>
                         <div id="faq1" class="accordion-collapse collapse show" data-bs-parent="#faqAccordion">
                             <div class="accordion-body text-muted small lh-lg">
-                                Yes. Medicinal cannabis is legal under Australian Commonwealth and state legislation when prescribed by an authorised medical practitioner registered with AHPRA. Approvals are processed via the Therapeutic Goods Administration (TGA) Authorised Prescriber (AP) or Special Access Scheme (SAS-B) pathways.
+                                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
                             </div>
                         </div>
                     </div>
@@ -47,7 +47,7 @@
                         </h2>
                         <div id="faq2" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
                             <div class="accordion-body text-muted small lh-lg">
-                                Patients who have suffered from a chronic condition lasting longer than 3 months (such as chronic pain, severe insomnia, anxiety, or fibromyalgia) and who have tried first-line conventional medications without satisfactory results may be clinically eligible.
+                                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
                             </div>
                         </div>
                     </div>
@@ -61,7 +61,7 @@
                         </h2>
                         <div id="faq3" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
                             <div class="accordion-body text-muted small lh-lg">
-                                In most Australian states, driving with any detectable THC in your system is illegal. However, <strong>CBD-only (zero-THC) medications are legal to drive on</strong> provided you are not impaired. Your prescribing physician can tailor non-THC regimens if driving is required for work or daily life.
+                                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
                             </div>
                         </div>
                     </div>
@@ -75,7 +75,7 @@
                         </h2>
                         <div id="faq4" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
                             <div class="accordion-body text-muted small lh-lg">
-                                Authorized prescriptions are synced directly into your ZOVI LEAF patient wallet with active repeats. You can order repeat dispensing with 1 click from your dashboard, and medication is dispatched directly to your doorstep via express Australia Post.
+                                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
                             </div>
                         </div>
                     </div>
@@ -89,7 +89,7 @@
                         </h2>
                         <div id="faq5" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
                             <div class="accordion-body text-muted small lh-lg">
-                                All medications are dispensed by accredited Australian partner compounding pharmacies in plain, unbranded, discreet, tamper-evident packaging. Australia Post Express provides end-to-end tracking and requires a signature upon delivery.
+                                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
                             </div>
                         </div>
                     </div>
