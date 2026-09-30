@@ -15,9 +15,6 @@
         <a href="{{ route('booking.index') }}" class="btn-vip-action btn-vip-primary">
             <i class="bi bi-calendar-plus me-1"></i> Book Consult
         </a>
-        <a href="{{ route('shop.index') }}" class="btn-vip-action btn-vip-secondary">
-            <i class="bi bi-bag me-1"></i> Dispensary
-        </a>
     </div>
 </div>
 
@@ -39,7 +36,7 @@
 <!-- Summary Cards -->
 <div class="row g-4 mb-4">
     <!-- Next Consult -->
-    <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="100">
+    <div class="col-md-6 col-lg-6" data-aos="fade-up" data-aos-delay="100">
         <div class="stat-card-vip d-flex flex-column h-100">
             <div class="d-flex justify-content-between align-items-start mb-2">
                 <span class="text-muted small text-uppercase fw-bold">Next Consultation</span>
@@ -60,7 +57,7 @@
     </div>
 
     <!-- Active Scripts -->
-    <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="200">
+    <div class="col-md-6 col-lg-6" data-aos="fade-up" data-aos-delay="200">
         <div class="stat-card-vip d-flex flex-column h-100">
             <div class="d-flex justify-content-between align-items-start mb-2">
                 <span class="text-muted small text-uppercase fw-bold">Active Prescriptions</span>
@@ -73,37 +70,23 @@
             </a>
         </div>
     </div>
-
-    <!-- Orders -->
-    <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="300">
-        <div class="stat-card-vip d-flex flex-column h-100">
-            <div class="d-flex justify-content-between align-items-start mb-2">
-                <span class="text-muted small text-uppercase fw-bold">Recent Dispensary Orders</span>
-                <span class="badge-vip badge-vip-warning"><i class="bi bi-box-seam"></i></span>
-            </div>
-            <h3 class="display-6 fw-extrabold text-brand-primary mb-1">{{ $user->orders()->count() }}</h3>
-            <div class="small text-muted mb-3">Australia Post Express Deliveries</div>
-            <a href="{{ route('patient.orders') }}" class="btn-vip-action btn-vip-outline w-100 mt-auto text-center justify-content-center">
-                <i class="bi bi-box-seam me-1"></i> View Order History
-            </a>
-        </div>
-    </div>
 </div>
 
 <!-- Active Scripts List -->
 <div class="table-container-vip mb-4" data-aos="fade-up" data-aos-delay="150">
-    <div class="d-flex justify-content-between align-items-center mb-3">
+    <div class="table-vip-header">
         <div>
-            <h5 class="fw-bold text-brand-contrast mb-0">My Prescribed Medications</h5>
-            <div class="small text-muted">Authorised TGA SAS-B Scripts with Online Repeat Ordering</div>
+            <h5 class="fw-bold text-brand-contrast mb-0"><i class="bi bi-capsule text-brand-primary me-2"></i> My Prescribed Medications</h5>
+            <div class="small text-muted">Authorised TGA SAS-B Scripts with Prescribing Protocols</div>
         </div>
         <a href="{{ route('patient.prescriptions') }}" class="btn-vip-action btn-vip-outline btn-sm">View All Scripts <i class="bi bi-arrow-right ms-1"></i></a>
     </div>
 
     @if($activePrescriptions->isEmpty())
-        <div class="text-center py-4 text-muted small">
-            <i class="bi bi-capsule fs-2 text-muted d-block mb-2"></i>
-            No active prescriptions issued yet. Once Dr. Batthala completes your consultation, your e-scripts will appear here.
+        <div class="text-center py-5 text-muted small">
+            <i class="bi bi-capsule text-brand-primary fs-1 d-block mb-2 opacity-50"></i>
+            <p class="mb-0 fw-semibold text-brand-contrast">No active prescriptions issued yet.</p>
+            <div class="text-muted">Once Dr. Batthala completes your consultation, your SAS-B e-scripts will appear here.</div>
         </div>
     @else
         <div class="table-responsive">
@@ -115,7 +98,7 @@
                         <th>Dosage Protocol</th>
                         <th>Repeats Left</th>
                         <th>Valid Until</th>
-                        <th class="text-end">Action</th>
+                        <th class="text-end">Status</th>
                     </tr>
                 </thead>
                 <tbody>
@@ -132,78 +115,8 @@
                             </td>
                             <td><span class="small text-muted">{{ $script->expiry_date->format('d M Y') }}</span></td>
                             <td class="text-end">
-                                @if($script->product)
-                                    <form action="{{ route('shop.cart.add') }}" method="POST" class="d-inline">
-                                        @csrf
-                                        <input type="hidden" name="product_id" value="{{ $script->product->id }}">
-                                        <input type="hidden" name="quantity" value="1">
-                                        <button type="submit" class="btn-vip-action btn-vip-primary btn-sm" {{ $script->repeats_left <= 0 ? 'disabled' : '' }}>
-                                            <i class="bi bi-cart-check me-1"></i> Order Repeat
-                                        </button>
-                                    </form>
-                                @endif
+                                <span class="badge-vip badge-vip-success text-uppercase">{{ $script->status }}</span>
                             </td>
-                        </tr>
-                    @endforeach
-                </tbody>
-            </table>
-        </div>
-    @endif
-</div>
-
-<!-- Recent Orders -->
-<div class="table-container-vip" data-aos="fade-up" data-aos-delay="200">
-    <div class="d-flex justify-content-between align-items-center mb-3">
-        <div>
-            <h5 class="fw-bold text-brand-contrast mb-0">Recent Dispensary Shipments</h5>
-            <div class="small text-muted">Real-time Australia Post tracking & dispensary status</div>
-        </div>
-        <a href="{{ route('patient.orders') }}" class="btn-vip-action btn-vip-outline btn-sm">View All Orders <i class="bi bi-arrow-right ms-1"></i></a>
-    </div>
-
-    @if($recentOrders->isEmpty())
-        <div class="text-center py-4 text-muted small">
-            <i class="bi bi-box-seam fs-2 text-muted d-block mb-2"></i>
-            No recent orders placed.
-        </div>
-    @else
-        <div class="table-responsive">
-            <table class="table-vip">
-                <thead>
-                    <tr>
-                        <th>Order #</th>
-                        <th>Date</th>
-                        <th>Items</th>
-                        <th>Status</th>
-                        <th>AusPost Tracking</th>
-                        <th class="text-end">Total</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    @foreach($recentOrders as $order)
-                        <tr>
-                            <td><strong class="text-brand-contrast font-monospace">{{ $order->order_number }}</strong></td>
-                            <td><span class="small text-muted">{{ $order->created_at->format('d M Y') }}</span></td>
-                            <td><span class="badge-vip badge-vip-neutral">{{ $order->items->count() }} formulation(s)</span></td>
-                            <td>
-                                @if($order->status === 'delivered')
-                                    <span class="badge-vip badge-vip-success"><i class="bi bi-check2 me-1"></i> Delivered</span>
-                                @elseif($order->status === 'dispatched')
-                                    <span class="badge-vip badge-vip-primary"><i class="bi bi-truck me-1"></i> Dispatched</span>
-                                @elseif($order->status === 'processing')
-                                    <span class="badge-vip badge-vip-warning"><i class="bi bi-hourglass-split me-1"></i> Pharmacy Dispensing</span>
-                                @else
-                                    <span class="badge-vip badge-vip-neutral">{{ ucfirst($order->status) }}</span>
-                                @endif
-                            </td>
-                            <td>
-                                @if($order->tracking_number)
-                                    <span class="badge-vip badge-vip-primary font-monospace"><i class="bi bi-upc me-1"></i> {{ $order->tracking_number }}</span>
-                                @else
-                                    <span class="text-muted small">Pending Dispatch</span>
-                                @endif
-                            </td>
-                            <td class="text-end fw-bold text-brand-contrast">${{ number_format($order->total_amount, 2) }}</td>
                         </tr>
                     @endforeach
                 </tbody>

@@ -12,14 +12,14 @@
                 </span>
             </div>
             
-            <div class="d-flex align-items-center gap-2 gap-sm-3 ms-auto ms-sm-0"> 
-                <a href="mailto:care@zovihealth.com.au" class="badge bg-white bg-opacity-10 text-white border border-white border-opacity-25 d-none d-sm-inline-flex align-items-center py-1 px-2 fw-semibold text-decoration-none" style="font-size: 0.76rem; letter-spacing: 0.02em;"> 
-                    <i class="bi bi-envelope-fill text-brand-primary me-1 fs-6"></i> care@zovihealth.com.au
-                </a> 
-
-                <a href="tel:0258385365" class="top-phone-link text-white text-decoration-none fw-bold small d-inline-flex align-items-center gap-1.5 px-3 py-1 rounded-pill"> 
+            <div class="d-flex align-items-center gap-3 ms-auto ms-sm-0">
+                <a href="mailto:hello@zovi.com.au" class="top-bar-link d-none d-sm-inline-flex align-items-center gap-2">
+                    <i class="bi bi-envelope-fill text-brand-primary"></i> hello@zovi.com.au
+                </a>
+                <span class="d-none d-sm-inline opacity-25 text-white">|</span>
+                <a href="tel:0258385365" class="top-bar-link d-inline-flex align-items-center gap-2 fw-semibold">
                     <i class="bi bi-telephone-fill text-brand-primary"></i> 02 5838 5365
-                </a> 
+                </a>
             </div>
         </div>
     </div>
@@ -32,15 +32,6 @@
             </a>
             
             <div class="d-flex align-items-center gap-2 d-lg-none">
-                @php $cartCount = count(session('cart', [])); @endphp
-                <a href="{{ route('shop.cart') }}" class="btn btn-sm btn-light position-relative border" title="Cart">
-                    <i class="bi bi-bag text-brand-contrast"></i>
-                    @if($cartCount > 0)
-                        <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-brand-primary">
-                            {{ $cartCount }}
-                        </span>
-                    @endif
-                </a>
                 <button class="navbar-toggler border-0 shadow-none p-1" type="button" data-bs-toggle="offcanvas" data-bs-target="#navbarOffcanvas" aria-controls="navbarOffcanvas" aria-label="Toggle navigation">
                     <i class="bi bi-list fs-1 text-brand-contrast"></i>
                 </button>
@@ -62,24 +53,11 @@
                         <a class="nav-link {{ request()->routeIs('services') ? 'active' : '' }}" href="{{ route('services') }}">Services &amp; Fees</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link {{ request()->routeIs('shop.*') ? 'active' : '' }}" href="{{ route('shop.index') }}">Dispensary</a>
-                    </li>
-                    <li class="nav-item">
                         <a class="nav-link {{ request()->routeIs('contact') || request()->routeIs('faqs') ? 'active' : '' }}" href="{{ route('contact') }}">Contact</a>
                     </li>
                 </ul>
 
                 <div class="d-flex align-items-center gap-1.5 gap-xl-2 ms-2">
-                    <!-- Cart Indicator -->
-                    <a href="{{ route('shop.cart') }}" class="btn btn-light position-relative border nav-cart-btn" title="Dispensary Cart">
-                        <i class="bi bi-bag text-brand-contrast"></i>
-                        @if($cartCount > 0)
-                            <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-brand-primary">
-                                {{ $cartCount }}
-                            </span>
-                        @endif
-                    </a>
-
                     <!-- Eligibility CTA -->
                     <a href="{{ route('eligibility.show') }}" class="btn btn-brand-outline btn-nav-cta">
                         <i class="bi bi-ui-checks"></i> Check Eligibility
@@ -141,7 +119,6 @@
                         <li class="nav-item mb-1"><a class="nav-link fw-semibold {{ request()->routeIs('about') ? 'active text-brand-primary' : 'text-brand-contrast' }}" href="{{ route('about') }}"><i class="bi bi-info-circle me-2"></i> About Us</a></li>
                         <li class="nav-item mb-1"><a class="nav-link fw-semibold {{ request()->routeIs('how-it-works') ? 'active text-brand-primary' : 'text-brand-contrast' }}" href="{{ route('how-it-works') }}"><i class="bi bi-cpu me-2"></i> How It Works</a></li>
                         <li class="nav-item mb-1"><a class="nav-link fw-semibold {{ request()->routeIs('services') ? 'active text-brand-primary' : 'text-brand-contrast' }}" href="{{ route('services') }}"><i class="bi bi-card-checklist me-2"></i> Services &amp; Fees</a></li>
-                        <li class="nav-item mb-1"><a class="nav-link fw-semibold {{ request()->routeIs('shop.*') ? 'active text-brand-primary' : 'text-brand-contrast' }}" href="{{ route('shop.index') }}"><i class="bi bi-shop me-2"></i> Dispensary Catalog</a></li>
                         <li class="nav-item mb-1"><a class="nav-link fw-semibold {{ request()->routeIs('contact') || request()->routeIs('faqs') ? 'active text-brand-primary' : 'text-brand-contrast' }}" href="{{ route('contact') }}"><i class="bi bi-question-circle me-2"></i> Contact</a></li>
                     </ul>
 

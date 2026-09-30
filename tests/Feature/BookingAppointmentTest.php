@@ -4,6 +4,7 @@ namespace Tests\Feature;
 
 use App\Models\Doctor;
 use App\Models\Service;
+use App\Services\MediRecordsService;
 use Illuminate\Foundation\Testing\RefreshDatabase;
 use Tests\TestCase;
 
@@ -26,6 +27,9 @@ class BookingAppointmentTest extends TestCase
 
     public function test_booking_flow_creates_appointment_and_syncs(): void
     {
+        $mockMediRecords = $this->mock(MediRecordsService::class);
+        $mockMediRecords->shouldReceive('syncAppointment')->once()->andReturn(['success' => true]);
+
         $service = Service::first();
         $doctor = Doctor::first();
 

@@ -3,13 +3,51 @@
 @section('title', 'Medicinal Cannabis Pre-Eligibility Assessment - ZOVI LEAF')
 
 @section('content')
-<div class="py-5 bg-brand-light border-bottom" data-aos="fade-down">
-    <div class="container text-center">
-        <span class="badge badge-tga mb-2">TGA SAS-B Pre-Screening</span>
-        <h1 class="display-5 fw-bold text-brand-contrast">Medicinal Cannabis Eligibility Check</h1>
-        <p class="lead text-muted max-w-700 mx-auto">Lorem ipsum dolor sit amet, consectetur adipiscing elit sed do eiusmod tempor incididunt ut labore et dolore.</p>
+<!-- Premium Inner Hero Banner with Image -->
+<section class="inner-hero-section">
+    <div class="container">
+        <div class="row align-items-center g-4 g-lg-5">
+            <div class="col-lg-7" data-aos="fade-right">
+                <div class="d-inline-flex align-items-center gap-2 mb-2">
+                    <span class="badge badge-tga"><i class="bi bi-shield-check me-1"></i> TGA SAS-B PRE-SCREENING</span>
+                    <span class="badge bg-white text-brand-contrast border"><i class="bi bi-stopwatch text-brand-primary me-1"></i> 60 Seconds</span>
+                </div>
+                <h1 class="display-5 fw-bold text-brand-contrast mb-3">Medicinal Cannabis Eligibility Check</h1>
+                <p class="lead text-muted mb-4">Lorem ipsum dolor sit amet, consectetur adipiscing elit sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                
+                <div class="d-flex flex-wrap gap-3">
+                    <div class="d-flex align-items-center gap-2 small fw-semibold text-brand-contrast">
+                        <i class="bi bi-lock-fill text-brand-primary fs-5"></i>
+                        <span>100% Confidential</span>
+                    </div>
+                    <div class="d-flex align-items-center gap-2 small fw-semibold text-brand-contrast">
+                        <i class="bi bi-file-earmark-check-fill text-brand-sage fs-5"></i>
+                        <span>No GP Referral Required</span>
+                    </div>
+                    <div class="d-flex align-items-center gap-2 small fw-semibold text-brand-contrast">
+                        <i class="bi bi-lightning-charge-fill text-brand-primary fs-5"></i>
+                        <span>Instant Preliminary Outcome</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-lg-5" data-aos="fade-left" data-aos-delay="150">
+                <div class="inner-hero-img-wrap">
+                    <img src="{{ asset('images/step1-assessment.jpg') }}" alt="Eligibility Pre-Screening" class="inner-hero-img">
+                    <div class="inner-hero-floating-badge">
+                        <div class="bg-success text-white rounded-circle p-2 d-flex align-items-center justify-content-center" style="width: 38px; height: 38px;">
+                            <i class="bi bi-ui-checks fs-5"></i>
+                        </div>
+                        <div>
+                            <div class="fw-bold text-brand-contrast small">4 Quick Clinical Steps</div>
+                            <div class="text-muted" style="font-size: 0.72rem;">Free &bull; No Obligation Assessment</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
-</div>
+</section>
 
 <div class="container py-5" x-data="eligibilityQuiz()">
     <div class="row justify-content-center">

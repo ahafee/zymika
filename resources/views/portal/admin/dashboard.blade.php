@@ -29,7 +29,7 @@
 
 <!-- VIP Stats Row -->
 <div class="row g-4 mb-4">
-    <div class="col-sm-6 col-xl-3">
+    <div class="col-sm-6 col-xl-4">
         <div class="stat-card-vip h-100">
             <div class="d-flex justify-content-between align-items-start mb-3">
                 <div>
@@ -47,7 +47,7 @@
         </div>
     </div>
 
-    <div class="col-sm-6 col-xl-3">
+    <div class="col-sm-6 col-xl-4">
         <div class="stat-card-vip h-100">
             <div class="d-flex justify-content-between align-items-start mb-3">
                 <div>
@@ -65,38 +65,20 @@
         </div>
     </div>
 
-    <div class="col-sm-6 col-xl-3">
+    <div class="col-sm-6 col-xl-4">
         <div class="stat-card-vip h-100">
             <div class="d-flex justify-content-between align-items-start mb-3">
                 <div>
-                    <span class="text-muted small text-uppercase fw-bold" style="font-size: 0.72rem; letter-spacing: 0.05em;">Dispensary Orders</span>
-                    <h3 class="display-6 fw-extrabold text-brand-sage my-1 num-font">{{ $stats['total_orders'] }}</h3>
+                    <span class="text-muted small text-uppercase fw-bold" style="font-size: 0.72rem; letter-spacing: 0.05em;">EHR Sync Queue</span>
+                    <h3 class="display-6 fw-extrabold text-brand-sage my-1 num-font">{{ $stats['unsynced_appointments'] == 0 ? 'Synced' : $stats['unsynced_appointments'] }}</h3>
                 </div>
                 <div class="stat-icon-wrapper stat-icon-sage">
-                    <i class="bi bi-box-seam-fill"></i>
+                    <i class="bi bi-cloud-check-fill"></i>
                 </div>
             </div>
             <div class="d-flex align-items-center justify-content-between pt-2 border-top border-light">
-                <span class="small text-muted"><strong class="text-brand-sage">{{ $stats['processing_orders'] }}</strong> in pharmacy dispatch</span>
-                <span class="badge bg-success bg-opacity-10 text-success border border-success" style="font-size: 0.68rem;">TGA SAS-B</span>
-            </div>
-        </div>
-    </div>
-
-    <div class="col-sm-6 col-xl-3">
-        <div class="stat-card-vip h-100">
-            <div class="d-flex justify-content-between align-items-start mb-3">
-                <div>
-                    <span class="text-muted small text-uppercase fw-bold" style="font-size: 0.72rem; letter-spacing: 0.05em;">Gross Revenue</span>
-                    <h3 class="display-6 fw-extrabold text-success my-1 num-font">${{ number_format($stats['total_revenue'], 0) }}</h3>
-                </div>
-                <div class="stat-icon-wrapper stat-icon-success">
-                    <i class="bi bi-currency-dollar"></i>
-                </div>
-            </div>
-            <div class="d-flex align-items-center justify-content-between pt-2 border-top border-light">
-                <span class="small text-muted">AUD Financial Inflow</span>
-                <span class="badge bg-success text-white" style="font-size: 0.68rem;">AUD (GST Inc.)</span>
+                <span class="small text-muted">MediRecords Bridge</span>
+                <span class="badge bg-success bg-opacity-10 text-success border border-success" style="font-size: 0.68rem;">Real-Time API</span>
             </div>
         </div>
     </div>
@@ -104,7 +86,7 @@
 
 <div class="row g-4 mb-4">
     <!-- Recent Appointments Table Card -->
-    <div class="col-lg-6">
+    <div class="col-12">
         <div class="table-container-vip h-100 p-4">
             <div class="d-flex justify-content-between align-items-center mb-3">
                 <div>
@@ -162,61 +144,6 @@
                         @empty
                             <tr>
                                 <td colspan="4" class="text-center py-4 text-muted">No appointments found.</td>
-                            </tr>
-                        @endforelse
-                    </tbody>
-                </table>
-            </div>
-        </div>
-    </div>
-
-    <!-- Recent Orders Table Card -->
-    <div class="col-lg-6">
-        <div class="table-container-vip h-100 p-4">
-            <div class="d-flex justify-content-between align-items-center mb-3">
-                <div>
-                    <h5 class="fw-bold text-brand-contrast mb-0">Dispensary Orders</h5>
-                    <div class="text-muted small" style="font-size: 0.75rem;">Medical cannabis fulfillment</div>
-                </div>
-                <a href="{{ route('admin.orders') }}" class="btn btn-sm btn-vip-action">
-                    View All <i class="bi bi-chevron-right"></i>
-                </a>
-            </div>
-
-            <div class="table-responsive">
-                <table class="table table-vip align-middle">
-                    <thead>
-                        <tr>
-                            <th>Order</th>
-                            <th>Patient</th>
-                            <th>Total</th>
-                            <th>Status</th>
-                            <th class="text-end">Action</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        @forelse($recentOrders as $ord)
-                            <tr>
-                                <td class="fw-bold text-brand-contrast">{{ $ord->order_number }}</td>
-                                <td>
-                                    <div class="fw-semibold">{{ $ord->shipping_name }}</div>
-                                    <div class="text-muted" style="font-size: 0.72rem;">{{ $ord->created_at->format('d M, h:i A') }}</div>
-                                </td>
-                                <td class="fw-bold text-brand-primary num-font">${{ number_format($ord->total_amount, 2) }}</td>
-                                <td>
-                                    <span class="badge-vip badge-vip-info text-capitalize">
-                                        <span class="badge-vip-dot"></span> {{ str_replace('_', ' ', $ord->status) }}
-                                    </span>
-                                </td>
-                                <td class="text-end">
-                                    <a href="{{ route('admin.orders') }}" class="btn btn-sm btn-vip-action py-1 px-2">
-                                        Details
-                                    </a>
-                                </td>
-                            </tr>
-                        @empty
-                            <tr>
-                                <td colspan="5" class="text-center py-4 text-muted">No orders found.</td>
                             </tr>
                         @endforelse
                     </tbody>

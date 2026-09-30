@@ -57,7 +57,7 @@
 
 <!-- Today's Consultations -->
 <div class="table-container-vip mb-4" data-aos="fade-up" data-aos-delay="150">
-    <div class="d-flex justify-content-between align-items-center mb-3">
+    <div class="table-vip-header">
         <div>
             <h5 class="fw-bold text-brand-contrast mb-0"><i class="bi bi-calendar-check text-brand-primary me-2"></i> Today's Appointments ({{ date('d M Y') }})</h5>
             <div class="small text-muted">Direct Telehealth Access & EHR Integration</div>
@@ -66,9 +66,10 @@
     </div>
 
     @if($todayAppointments->isEmpty())
-        <div class="text-center py-4 text-muted small">
-            <i class="bi bi-calendar-x fs-2 text-muted d-block mb-2"></i>
-            No consultations scheduled for today.
+        <div class="text-center py-5 text-muted small">
+            <i class="bi bi-calendar-check fs-1 text-brand-primary d-block mb-2 opacity-50"></i>
+            <p class="mb-0 fw-semibold text-brand-contrast">No consultations scheduled for today.</p>
+            <div class="text-muted">New telehealth bookings will appear here automatically in real time.</div>
         </div>
     @else
         <div class="table-responsive">
@@ -123,17 +124,19 @@
 </div>
 
 <!-- Upcoming Consultations -->
-<div class="table-container-vip" data-aos="fade-up" data-aos-delay="200">
-    <div class="d-flex justify-content-between align-items-center mb-3">
+<div class="table-container-vip mb-4" data-aos="fade-up" data-aos-delay="200">
+    <div class="table-vip-header">
         <div>
             <h5 class="fw-bold text-brand-contrast mb-0"><i class="bi bi-calendar-week text-brand-contrast me-2"></i> Upcoming Appointments</h5>
             <div class="small text-muted">Future bookings in clinical queue</div>
         </div>
+        <a href="{{ route('doctor.appointments') }}" class="btn-vip-action btn-vip-outline btn-sm">View All <i class="bi bi-arrow-right ms-1"></i></a>
     </div>
     @if($upcomingAppointments->isEmpty())
-        <div class="text-center py-4 text-muted small">
-            <i class="bi bi-inbox fs-2 text-muted d-block mb-2"></i>
-            No future bookings currently in queue.
+        <div class="text-center py-5 text-muted small">
+            <i class="bi bi-inbox fs-1 text-muted d-block mb-2 opacity-50"></i>
+            <p class="mb-0 fw-semibold text-brand-contrast">No future bookings currently in queue.</p>
+            <div class="text-muted">Upcoming patient bookings will display here once scheduled.</div>
         </div>
     @else
         <div class="table-responsive">

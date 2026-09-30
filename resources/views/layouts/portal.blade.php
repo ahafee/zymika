@@ -7,7 +7,9 @@
     <title>@yield('title', 'Portal') - ZOVI LEAF Telehealth</title>
     
     <!-- Google Fonts -->
-    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700;800;900&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Space+Grotesk:wght@500;700&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,400;1,600&family=Outfit:wght@500;600;700;800;900&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Space+Grotesk:wght@500;700&display=swap" rel="stylesheet">
     
     <!-- Bootstrap 5.3 & Icons -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
@@ -114,11 +116,6 @@
                                 </a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link {{ request()->routeIs('patient.orders') ? 'active' : '' }}" href="{{ route('patient.orders') }}">
-                                    <i class="bi bi-box-seam"></i> Dispensary Orders
-                                </a>
-                            </li>
-                            <li class="nav-item">
                                 <a class="nav-link {{ request()->routeIs('patient.snapform') ? 'active' : '' }}" href="{{ route('patient.snapform') }}">
                                     <i class="bi bi-file-earmark-medical"></i> Pre-Consult Form
                                 </a>
@@ -131,9 +128,6 @@
                             <li class="nav-item mt-4 pt-3 border-top border-secondary border-opacity-25">
                                 <a class="btn btn-brand-primary w-100 btn-sm mb-2 fw-semibold" href="{{ route('booking.index') }}">
                                     <i class="bi bi-plus-circle"></i> Book New Consult
-                                </a>
-                                <a class="btn btn-outline-light w-100 btn-sm fw-semibold" href="{{ route('shop.index') }}">
-                                    <i class="bi bi-bag"></i> Browse Dispensary
                                 </a>
                             </li>
                         @elseif(Auth::user()->isDoctor())
@@ -170,17 +164,6 @@
                                     <i class="bi bi-calendar2-check"></i> Consultations
                                 </a>
                             </li>
-                            <div class="small text-uppercase fw-bold text-white-50 px-3 mt-3 mb-2" style="font-size: 0.68rem; letter-spacing: 0.08em;">Dispensary & Inventory</div>
-                            <li class="nav-item">
-                                <a class="nav-link {{ request()->routeIs('admin.orders') ? 'active' : '' }}" href="{{ route('admin.orders') }}">
-                                    <i class="bi bi-box-seam"></i> Dispensary Orders
-                                </a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link {{ request()->routeIs('admin.products') ? 'active' : '' }}" href="{{ route('admin.products') }}">
-                                    <i class="bi bi-tags"></i> Product Catalog
-                                </a>
-                            </li>
                             <div class="small text-uppercase fw-bold text-white-50 px-3 mt-3 mb-2" style="font-size: 0.68rem; letter-spacing: 0.08em;">Integrations & Health</div>
                             <li class="nav-item">
                                 <a class="nav-link {{ request()->routeIs('admin.medirecords') ? 'active' : '' }}" href="{{ route('admin.medirecords') }}">
@@ -213,7 +196,6 @@
                             <li class="nav-item mb-2"><a class="nav-link text-white" href="{{ route('patient.dashboard') }}"><i class="bi bi-speedometer2 me-2"></i> Dashboard</a></li>
                             <li class="nav-item mb-2"><a class="nav-link text-white" href="{{ route('patient.appointments') }}"><i class="bi bi-calendar-event me-2"></i> Consultations</a></li>
                             <li class="nav-item mb-2"><a class="nav-link text-white" href="{{ route('patient.prescriptions') }}"><i class="bi bi-capsule me-2"></i> Prescriptions</a></li>
-                            <li class="nav-item mb-2"><a class="nav-link text-white" href="{{ route('patient.orders') }}"><i class="bi bi-box-seam me-2"></i> Orders</a></li>
                             <li class="nav-item mb-2"><a class="nav-link text-white" href="{{ route('patient.snapform') }}"><i class="bi bi-file-earmark-medical me-2"></i> Pre-Consult Form</a></li>
                             <li class="nav-item mb-2"><a class="nav-link text-white" href="{{ route('patient.profile') }}"><i class="bi bi-person-badge me-2"></i> Profile & Medicare</a></li>
                         @elseif(Auth::user()->isDoctor())
@@ -224,8 +206,6 @@
                         @elseif(Auth::user()->isAdmin())
                             <li class="nav-item mb-2"><a class="nav-link text-white" href="{{ route('admin.dashboard') }}"><i class="bi bi-speedometer2 me-2"></i> Practice Overview</a></li>
                             <li class="nav-item mb-2"><a class="nav-link text-white" href="{{ route('admin.appointments') }}"><i class="bi bi-calendar2-check me-2"></i> Consultations</a></li>
-                            <li class="nav-item mb-2"><a class="nav-link text-white" href="{{ route('admin.orders') }}"><i class="bi bi-box-seam me-2"></i> Dispensary Orders</a></li>
-                            <li class="nav-item mb-2"><a class="nav-link text-white" href="{{ route('admin.products') }}"><i class="bi bi-tags me-2"></i> Product Catalog</a></li>
                             <li class="nav-item mb-2"><a class="nav-link text-white" href="{{ route('admin.medirecords') }}"><i class="bi bi-cloud-arrow-up me-2"></i> MediRecords Hub</a></li>
                             <li class="nav-item mb-2"><a class="nav-link text-white" href="{{ route('admin.sync-logs') }}"><i class="bi bi-journal-code me-2"></i> Integration Logs</a></li>
                         @endif

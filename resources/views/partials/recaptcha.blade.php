@@ -3,7 +3,7 @@
     <div class="recaptcha-box" id="recaptchaBox">
         <div class="d-flex align-items-center gap-3">
             <div class="recaptcha-check-wrap">
-                <input class="form-check-input recaptcha-checkbox mt-0" type="checkbox" name="g-recaptcha-response" id="recaptchaCheck" required value="verified_token" checked>
+                <input class="form-check-input recaptcha-checkbox mt-0" type="checkbox" name="g-recaptcha-response" id="recaptchaCheck" required value="verified_token">
             </div>
             <label class="form-check-label small fw-semibold text-dark mb-0 user-select-none" for="recaptchaCheck" style="cursor: pointer; font-size: 0.88rem;">
                 I'm not a robot

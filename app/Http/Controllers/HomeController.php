@@ -52,7 +52,7 @@ class HomeController extends Controller
             'name' => Setting::get('clinic_name', 'ZOVI LEAF / Zovi Health Pty Ltd'),
             'doctor' => Setting::get('clinic_doctor_lead', 'Dr. Suneetha Batthala'),
             'phone' => Setting::get('clinic_phone', '02 58385365'),
-            'email' => Setting::get('clinic_email', 'care@zovihealth.com.au'),
+            'email' => Setting::get('clinic_email', 'hello@zovi.com.au'),
             'address' => Setting::get('clinic_address', 'Level 1, 63-73 Ann street Surry hills NSW 2010'),
             'hours' => Setting::get('clinic_hours', 'Mon - Fri: 8:30am - 6:00pm, Sat: 9:00am - 2:00pm'),
         ];

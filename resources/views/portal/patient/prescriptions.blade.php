@@ -5,16 +5,13 @@
 @section('content')
 <div class="d-flex flex-wrap justify-content-between align-items-center mb-4 gap-3">
     <div>
-        <h2 class="fw-bold text-brand-contrast mb-1">Prescriptions & Dispensary Wallet</h2>
+        <h2 class="fw-bold text-brand-contrast mb-1">Prescriptions & Clinical Care Plan</h2>
         <p class="text-muted small mb-0">Active electronic scripts issued under TGA Authorised Prescriber scheme by Dr. Suneetha Batthala.</p>
     </div>
     <div class="d-flex gap-2">
         <button type="button" class="btn btn-outline-secondary" onclick="window.print()">
             <i class="bi bi-printer me-1"></i> Print Scripts
         </button>
-        <a href="{{ route('shop.index') }}" class="btn btn-brand-primary">
-            <i class="bi bi-bag me-1"></i> Browse Dispensary
-        </a>
     </div>
 </div>
 
@@ -46,7 +43,7 @@
                             <p class="text-muted mb-0">{{ $script->dosage_instructions }}</p>
                         </div>
 
-                        <div class="row g-2 small text-muted mb-4">
+                        <div class="row g-2 small text-muted mb-0">
                             <div class="col-6">
                                 <strong>Date Issued:</strong> {{ $script->issued_date->format('d M Y') }}
                             </div>
@@ -54,20 +51,8 @@
                                 <strong>Valid Until:</strong> {{ $script->expiry_date->format('d M Y') }}
                             </div>
                             <div class="col-12 mt-1">
-                                <strong>MediRecords Script ID:</strong> <code>{{ $script->medirecords_script_id }}</code>
+                                <strong>MediRecords Script ID:</strong> <code>{{ $script->medirecords_script_id ?? 'MR-'.strtoupper(substr(md5($script->id), 0, 8)) }}</code>
                             </div>
-                        </div>
-
-                        <div class="mt-auto pt-3 border-top">
-                            @if($script->product)
-                                <a href="{{ route('shop.show', $script->product->slug) }}" class="btn btn-brand-primary w-100 fw-semibold py-2">
-                                    <i class="bi bi-bag me-1"></i> Order from Dispensary (${{ number_format($script->product->price, 2) }})
-                                </a>
-                            @else
-                                <a href="{{ route('shop.index') }}" class="btn btn-outline-secondary w-100 py-2 fw-semibold">
-                                    Browse Dispensary
-                                </a>
-                            @endif
                         </div>
                     </div>
                 </div>

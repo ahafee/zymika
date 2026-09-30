@@ -72,7 +72,7 @@
                     </p>
                     <p class="mb-2 d-flex align-items-center gap-2">
                         <i class="bi bi-envelope-fill text-brand-primary"></i>
-                        <a href="mailto:care@zovihealth.com.au" class="text-white text-decoration-none hover-primary">care@zovihealth.com.au</a>
+                        <a href="mailto:hello@zovi.com.au" class="text-white text-decoration-none hover-primary">hello@zovi.com.au</a>
                     </p>
                 </div>
             </div>
@@ -85,7 +85,6 @@
                     <li><a href="{{ route('about') }}"><i class="bi bi-chevron-right me-1"></i> About Us</a></li>
                     <li><a href="{{ route('how-it-works') }}"><i class="bi bi-chevron-right me-1"></i> How It Works</a></li>
                     <li><a href="{{ route('services') }}"><i class="bi bi-chevron-right me-1"></i> Services &amp; Fees</a></li>
-                    <li><a href="{{ route('shop.index') }}"><i class="bi bi-chevron-right me-1"></i> Dispensary Catalog</a></li>
                     <li><a href="{{ route('contact') }}"><i class="bi bi-chevron-right me-1"></i> Contact</a></li>
                 </ul>
             </div>
@@ -178,12 +177,27 @@
             </div>
         </div>
 
+        <!-- <div class="footer-tga-disclaimer mb-4">
+            <div class="d-flex align-items-center gap-2 mb-1">
+                <i class="bi bi-info-circle-fill text-brand-primary"></i>
+                <span class="text-white fw-semibold small">Australian Regulatory &amp; Prescribing Notice</span>
+            </div> -->
+            <!-- <p class="mb-0 text-white-50" style="font-size: 0.75rem; line-height: 1.5;">
+                ZOVI LEAF / Zovi Health Pty Ltd operates in strict compliance with Australian therapeutic goods regulations and state medical boards. Schedule 4 and Schedule 8 prescription medications are dispensed strictly upon comprehensive medical assessment and clinical necessity by AHPRA-registered Australian medical practitioners. Treatment outcomes vary and are not guaranteed.
+            </p> -->
+        <!-- </div> -->
+
         <hr class="border-white border-opacity-10 my-4">
 
         <!-- Statutory Notice & Copyright -->
-        <div class="row g-3 align-items-center text-center">
-            <div class="col-12 text-center small text-white-50">
-                &copy; {{ date('Y') }} Zovi Health Pty Ltd (ZOVI LEAF). All rights reserved.
+        <div class="row g-3 align-items-center">
+            <div class="col-md-6 text-center text-md-start small text-white-50">
+                &copy; {{ date('Y') }} Zovi Health Pty Ltd (ZOVI LEAF). All rights reserved. ABN: 48 682 910 234.
+            </div>
+            <div class="col-md-6 text-center text-md-end small text-white-50">
+                <span class="d-inline-flex align-items-center gap-2">
+                    <i class="bi bi-geo-alt text-brand-primary"></i> Sydney &bull; Melbourne &bull; Brisbane &bull; Perth (Nationwide Telehealth)
+                </span>
             </div>
         </div>
     </div>

@@ -3,14 +3,60 @@
 @section('title', 'Patient FAQs & Contact Us - ZOVI LEAF Australia')
 
 @section('content')
-<!-- Header Banner -->
-<div class="py-5 bg-brand-light border-bottom" data-aos="fade-down">
-    <div class="container text-center">
-        <span class="badge badge-tga mb-2">Patient Support & Help Desk</span>
-        <h1 class="display-5 fw-bold text-brand-contrast">Frequently Asked Questions & Contact</h1>
-        <p class="lead text-muted max-w-700 mx-auto">Lorem ipsum dolor sit amet, consectetur adipiscing elit sed do eiusmod tempor incididunt ut labore et dolore.</p>
+<!-- Premium Inner Hero Banner with Image -->
+<section class="inner-hero-section">
+    <div class="container">
+        <div class="row align-items-center g-4 g-lg-5">
+            <div class="col-lg-7" data-aos="fade-right">
+                <div class="d-inline-flex align-items-center gap-2 mb-2">
+                    <span class="badge badge-tga"><i class="bi bi-headset me-1"></i> PATIENT CARE DESK</span>
+                    <span class="badge bg-white text-brand-contrast border"><i class="bi bi-clock-fill text-brand-primary me-1"></i> Mon - Sat Support</span>
+                </div>
+                <h1 class="display-5 fw-bold text-brand-contrast mb-3">Frequently Asked Questions &amp; Contact</h1>
+                <p class="lead text-muted mb-4">Lorem ipsum dolor sit amet, consectetur adipiscing elit sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                
+                <div class="d-flex flex-wrap gap-3 mb-4">
+                    <div class="d-flex align-items-center gap-2 small fw-semibold text-brand-contrast">
+                        <i class="bi bi-telephone-fill text-brand-primary fs-5"></i>
+                        <span>02 5838 5365</span>
+                    </div>
+                    <div class="d-flex align-items-center gap-2 small fw-semibold text-brand-contrast">
+                        <i class="bi bi-envelope-fill text-brand-sage fs-5"></i>
+                        <span>care@zovihealth.com.au</span>
+                    </div>
+                    <div class="d-flex align-items-center gap-2 small fw-semibold text-brand-contrast">
+                        <i class="bi bi-geo-alt-fill text-brand-primary fs-5"></i>
+                        <span>Surry Hills NSW 2010</span>
+                    </div>
+                </div>
+
+                <div class="d-flex flex-wrap gap-3">
+                    <a href="#contactFormSection" class="btn btn-brand-primary btn-lg shadow-sm">
+                        <i class="bi bi-envelope-paper me-2"></i> Send Us a Message
+                    </a>
+                    <a href="{{ route('booking.index') }}" class="btn btn-brand-outline btn-lg">
+                        <i class="bi bi-calendar2-check me-2"></i> Book Consult ($79)
+                    </a>
+                </div>
+            </div>
+
+            <div class="col-lg-5" data-aos="fade-left" data-aos-delay="150">
+                <div class="inner-hero-img-wrap">
+                    <img src="{{ asset('images/healing-journey-bg.jpg') }}" alt="ZOVI LEAF Patient Support" class="inner-hero-img">
+                    <div class="inner-hero-floating-badge">
+                        <div class="bg-brand-primary text-white rounded-circle p-2 d-flex align-items-center justify-content-center" style="width: 38px; height: 38px;">
+                            <i class="bi bi-shield-check fs-5"></i>
+                        </div>
+                        <div>
+                            <div class="fw-bold text-brand-contrast small">Surry Hills Clinical HQ</div>
+                            <div class="text-muted" style="font-size: 0.72rem;">Level 1, 63-73 Ann St, Surry Hills NSW</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
-</div>
+</section>
 
 <div class="container py-5">
     <!-- FAQs Section -->
@@ -153,10 +199,10 @@
             </div>
         </div>
 
-        <div class="col-lg-7" data-aos="fade-left">
+        <div class="col-lg-7" data-aos="fade-left" id="contactFormSection">
             <div class="card card-zovi p-4 p-md-5 border bg-white shadow-sm">
                 <h4 class="fw-bold text-brand-contrast mb-1">Send Us a Direct Message</h4>
-                <p class="small text-muted mb-4">Have specific clinical, prescription, or delivery questions? Leave a message below and our team will get back to you promptly.</p>
+                <p class="small text-muted mb-4">Have specific clinical, prescription, or consultation questions? Leave a message below and our Surry Hills team will get back to you promptly.</p>
 
                 <form action="{{ route('contact.submit') }}" method="POST">
                     @csrf
@@ -181,7 +227,7 @@
                             <select name="subject" class="form-select" required>
                                 <option value="Eligibility Inquiry">Eligibility Inquiry</option>
                                 <option value="Booking Assistance">Booking Assistance</option>
-                                <option value="Dispensary & Prescriptions">Dispensary & Prescriptions</option>
+                                <option value="Prescriptions & Care Plan">Prescriptions &amp; Care Plan</option>
                                 <option value="MediRecords Integration">MediRecords Integration</option>
                                 <option value="General Question">General Question</option>
                             </select>

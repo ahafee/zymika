@@ -13,21 +13,25 @@
     </form>
 </div>
 
-<div class="card card-zovi p-4 bg-white border">
-    <div class="d-flex justify-content-between align-items-center mb-3">
-        <h5 class="fw-bold text-brand-contrast mb-0">Schedule for {{ date('l, d F Y', strtotime($date)) }}</h5>
-        <span class="badge bg-brand-primary text-white">{{ count($appointments) }} booked slot(s)</span>
+<div class="table-container-vip mb-4">
+    <div class="table-vip-header">
+        <div>
+            <h5 class="fw-bold text-brand-contrast mb-0">Schedule for {{ date('l, d F Y', strtotime($date)) }}</h5>
+            <div class="small text-muted">Daily appointment queue and clinical consultation management</div>
+        </div>
+        <span class="badge-vip badge-vip-primary fw-bold">{{ count($appointments) }} booked slot(s)</span>
     </div>
 
     @if($appointments->isEmpty())
         <div class="text-center py-5 text-muted">
-            <i class="bi bi-calendar-event fs-1 mb-2 d-block"></i>
-            No appointments booked for this date.
+            <i class="bi bi-calendar-event fs-1 mb-2 d-block text-brand-primary opacity-50"></i>
+            <p class="mb-0 fw-semibold text-brand-contrast">No appointments booked for this date.</p>
+            <div class="small text-muted">Select another date above to view past or future schedules.</div>
         </div>
     @else
         <div class="table-responsive">
-            <table class="table table-hover align-middle">
-                <thead class="bg-light small">
+            <table class="table-vip">
+                <thead>
                     <tr>
                         <th>Time</th>
                         <th>Patient</th>
@@ -35,43 +39,45 @@
                         <th>Pre-Consult Snapform</th>
                         <th>Status</th>
                         <th>MediRecords Sync</th>
-                        <th>Actions</th>
+                        <th class="text-end">Actions</th>
                     </tr>
                 </thead>
                 <tbody>
                     @foreach($appointments as $apt)
                         <tr>
-                            <td class="fw-bold text-brand-primary">
-                                {{ date('h:i A', strtotime($apt->start_time)) }} - {{ date('h:i A', strtotime($apt->end_time)) }}
+                            <td>
+                                <span class="badge-vip badge-vip-primary font-monospace">
+                                    {{ date('h:i A', strtotime($apt->start_time)) }} - {{ date('h:i A', strtotime($apt->end_time)) }}
+                                </span>
                             </td>
                             <td>
-                                <strong>{{ $apt->patient->name }}</strong>
+                                <strong class="text-brand-contrast d-block">{{ $apt->patient->name }}</strong>
                                 <div class="small text-muted">{{ $apt->patient->phone }} &bull; {{ $apt->patient->email }}</div>
                             </td>
-                            <td>{{ $apt->service->name }}</td>
+                            <td><span class="small text-muted">{{ $apt->service->name }}</span></td>
                             <td>
                                 @if($apt->preConsultForm)
-                                    <span class="badge bg-success"><i class="bi bi-check2"></i> Submitted (Pain: {{ $apt->preConsultForm->form_data['fields']['pain_score'] ?? 'N/A' }}/10)</span>
+                                    <span class="badge-vip badge-vip-success"><i class="bi bi-check2"></i> Submitted (Pain: {{ $apt->preConsultForm->form_data['fields']['pain_score'] ?? 'N/A' }}/10)</span>
                                 @else
-                                    <span class="badge bg-secondary">Not Submitted</span>
+                                    <span class="badge-vip badge-vip-secondary">Not Submitted</span>
                                 @endif
                             </td>
                             <td>
-                                <span class="badge bg-{{ $apt->status == 'confirmed' ? 'success' : ($apt->status == 'completed' ? 'secondary' : 'warning') }}">
+                                <span class="badge-vip badge-vip-{{ $apt->status == 'confirmed' ? 'success' : ($apt->status == 'completed' ? 'secondary' : 'warning') }}">
                                     {{ ucfirst($apt->status) }}
                                 </span>
                             </td>
                             <td>
-                                <div class="small text-muted">{{ $apt->medirecords_appointment_id ?? 'Pending' }}</div>
+                                <div class="small text-muted font-monospace">{{ $apt->medirecords_appointment_id ?? 'Pending' }}</div>
                             </td>
-                            <td>
-                                <div class="d-flex gap-1">
-                                    <a href="{{ route('doctor.consultation', $apt->id) }}" class="btn btn-sm btn-brand-primary">
-                                        <i class="bi bi-file-earmark-medical"></i> Record
+                            <td class="text-end">
+                                <div class="d-inline-flex gap-1">
+                                    <a href="{{ route('doctor.consultation', $apt->id) }}" class="btn-vip-action btn-vip-primary btn-sm">
+                                        <i class="bi bi-file-earmark-medical me-1"></i> Record
                                     </a>
-                                    <form action="{{ route('doctor.appointments.sync', $apt->id) }}" method="POST">
+                                    <form action="{{ route('doctor.appointments.sync', $apt->id) }}" method="POST" class="d-inline">
                                         @csrf
-                                        <button type="submit" class="btn btn-sm btn-outline-secondary" title="Sync with MediRecords">
+                                        <button type="submit" class="btn-vip-action btn-vip-outline btn-sm" title="Sync with MediRecords">
                                             <i class="bi bi-cloud-arrow-up"></i>
                                         </button>
                                     </form>

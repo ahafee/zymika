@@ -36,8 +36,8 @@ class PublicPagesTest extends TestCase
     {
         $response = $this->get('/how-it-works');
         $response->assertStatus(200);
-        $response->assertSee('How Telehealth Works');
-        $response->assertSee('Pre-Assessment');
+        $response->assertSee('How Australian Telehealth Works');
+        $response->assertSee('Intake Assessment');
     }
 
     public function test_services_page_is_accessible(): void

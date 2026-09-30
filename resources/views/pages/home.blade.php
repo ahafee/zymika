@@ -839,127 +839,6 @@
     </div>
 </section>
 
-<!-- Dispensary Catalog Preview -->
-<section class="py-5 py-lg-6" style="background-color: var(--brand-bg-alt);">
-    <div class="container py-4">
-        <div class="d-flex flex-wrap justify-content-between align-items-end mb-4" data-aos="fade-up">
-            <div>
-                <span class="badge badge-tga mb-2">TGA SAS-B FORMULATIONS</span>
-                <h2 class="display-6 fw-bold text-brand-contrast mt-1 mb-0">Our Dispensary Catalog</h2>
-            </div>
-            <a href="{{ route('shop.index') }}" class="btn btn-brand-outline mt-3 mt-md-0">
-                View Full Dispensary <i class="bi bi-arrow-right ms-1"></i>
-            </a>
-        </div>
-
-        <div class="row g-4">
-            <!-- Product 1 -->
-            <div class="col-md-6 col-lg-3" data-aos="fade-up" data-aos-delay="100">
-                <div class="card card-zovi h-100 border p-3 bg-white d-flex flex-column shadow-sm">
-                    <div class="product-img-box position-relative p-2 text-center">
-                        <img src="{{ asset('images/logo.svg') }}" alt="ZOVI LEAF Balanced Oral Oil (10:10)" class="product-catalog-img">
-                    </div>
-
-                    <div class="small text-muted mb-1" style="font-size: 0.75rem;">ZOVI LEAF &bull; Oral Liquid Dropper (30mL)</div>
-                    <h6 class="fw-bold text-brand-contrast mb-1">ZOVI LEAF Balanced Oral Oil (10:10)</h6>
-                    
-                    <div class="d-flex flex-wrap gap-1 mb-2">
-                        <span class="badge bg-light text-brand-contrast border" style="font-size: 0.72rem;">10 mg/mL THC</span>
-                        <span class="badge bg-light text-brand-sage border" style="font-size: 0.72rem;">10 mg/mL CBD</span>
-                    </div>
-                    
-                    <p class="small text-muted mb-2">Lorem ipsum dolor sit amet, consectetur adipiscing elit sed do eiusmod tempor incididunt.</p>
-                    
-                    <div class="d-flex justify-content-between align-items-center mt-auto pt-2 border-top">
-                        <div class="fw-bold fs-5 text-brand-contrast">$95.00</div>
-                        <a href="{{ route('shop.index') }}" class="btn btn-sm btn-brand-primary">
-                            Details
-                        </a>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Product 2 -->
-            <div class="col-md-6 col-lg-3" data-aos="fade-up" data-aos-delay="200">
-                <div class="card card-zovi h-100 border p-3 bg-white d-flex flex-column shadow-sm">
-                    <div class="product-img-box position-relative p-2 text-center">
-                        <img src="{{ asset('images/logo.svg') }}" alt="ZOVI LEAF High-Potency CBD Isolink (100mg/mL)" class="product-catalog-img">
-                    </div>
-
-                    <div class="small text-muted mb-1" style="font-size: 0.75rem;">ZOVI LEAF &bull; Oral Liquid Dropper (30mL)</div>
-                    <h6 class="fw-bold text-brand-contrast mb-1">ZOVI LEAF High-Potency CBD Isolink (100mg/mL)</h6>
-                    
-                    <div class="d-flex flex-wrap gap-1 mb-2">
-                        <span class="badge bg-light text-brand-contrast border" style="font-size: 0.72rem;">&lt; 1 mg/mL THC</span>
-                        <span class="badge bg-light text-brand-sage border" style="font-size: 0.72rem;">100 mg/mL CBD</span>
-                    </div>
-                    
-                    <p class="small text-muted mb-2">Lorem ipsum dolor sit amet, consectetur adipiscing elit sed do eiusmod tempor incididunt.</p>
-                    
-                    <div class="d-flex justify-content-between align-items-center mt-auto pt-2 border-top">
-                        <div class="fw-bold fs-5 text-brand-contrast">$125.00</div>
-                        <a href="{{ route('shop.index') }}" class="btn btn-sm btn-brand-primary">
-                            Details
-                        </a>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Product 3 -->
-            <div class="col-md-6 col-lg-3" data-aos="fade-up" data-aos-delay="300">
-                <div class="card card-zovi h-100 border p-3 bg-white d-flex flex-column shadow-sm">
-                    <div class="product-img-box position-relative p-2 text-center">
-                        <img src="{{ asset('images/logo.svg') }}" alt="ZOVI LEAF Nightfall THC Night Tincture (25mg/mL)" class="product-catalog-img">
-                    </div>
-
-                    <div class="small text-muted mb-1" style="font-size: 0.75rem;">ZOVI LEAF &bull; Oral Liquid Dropper (30mL)</div>
-                    <h6 class="fw-bold text-brand-contrast mb-1">ZOVI LEAF Nightfall THC Night Tincture (25mg/mL)</h6>
-                    
-                    <div class="d-flex flex-wrap gap-1 mb-2">
-                        <span class="badge bg-light text-brand-contrast border" style="font-size: 0.72rem;">25 mg/mL THC</span>
-                        <span class="badge bg-light text-brand-sage border" style="font-size: 0.72rem;">&lt; 1 mg/mL CBD</span>
-                    </div>
-                    
-                    <p class="small text-muted mb-2">Lorem ipsum dolor sit amet, consectetur adipiscing elit sed do eiusmod tempor incididunt.</p>
-                    
-                    <div class="d-flex justify-content-between align-items-center mt-auto pt-2 border-top">
-                        <div class="fw-bold fs-5 text-brand-contrast">$110.00</div>
-                        <a href="{{ route('shop.index') }}" class="btn btn-sm btn-brand-primary">
-                            Details
-                        </a>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Product 4 -->
-            <div class="col-md-6 col-lg-3" data-aos="fade-up" data-aos-delay="400">
-                <div class="card card-zovi h-100 border p-3 bg-white d-flex flex-column shadow-sm">
-                    <div class="product-img-box position-relative p-2 text-center">
-                        <img src="{{ asset('images/logo.svg') }}" alt="ZOVI LEAF Alpha Indica 10g Whole Flower" class="product-catalog-img">
-                    </div>
-
-                    <div class="small text-muted mb-1" style="font-size: 0.75rem;">ZOVI LEAF &bull; Dried Herb Flower Tub (10g)</div>
-                    <h6 class="fw-bold text-brand-contrast mb-1">ZOVI LEAF Alpha Indica 10g Whole Flower</h6>
-                    
-                    <div class="d-flex flex-wrap gap-1 mb-2">
-                        <span class="badge bg-light text-brand-contrast border" style="font-size: 0.72rem;">22.5% THC</span>
-                        <span class="badge bg-light text-brand-sage border" style="font-size: 0.72rem;">&lt; 0.5% CBD</span>
-                    </div>
-                    
-                    <p class="small text-muted mb-2">Lorem ipsum dolor sit amet, consectetur adipiscing elit sed do eiusmod tempor incididunt.</p>
-                    
-                    <div class="d-flex justify-content-between align-items-center mt-auto pt-2 border-top">
-                        <div class="fw-bold fs-5 text-brand-contrast">$145.00</div>
-                        <a href="{{ route('shop.index') }}" class="btn btn-sm btn-brand-primary">
-                            Details
-                        </a>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-</section>
-
 <!-- Transparent Pricing Section -->
 <section class="py-5 py-lg-6 bg-white">
     <div class="container py-4">
@@ -970,69 +849,117 @@
         </div>
 
         <div class="row g-4 justify-content-center">
-            <div class="col-md-4" data-aos="fade-up" data-aos-delay="150">
-                <div class="card card-zovi h-100 p-4 border card-zovi-featured shadow d-flex flex-column">
-                    <div class="badge bg-brand-primary text-white w-fit mb-2 px-3 py-1"><i class="bi bi-star-fill me-1"></i> Recommended for New Patients</div>
+            <!-- Initial Consult (Featured) -->
+            <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="150">
+                <div class="pricing-card-vip pricing-card-featured">
+                    <div class="pricing-badge-popular">
+                        <i class="bi bi-star-fill text-warning me-1"></i> Recommended for New Patients
+                    </div>
+                    
                     <h4 class="fw-bold text-brand-contrast mb-1">Initial Telehealth Consultation</h4>
-                    <div class="display-5 fw-extrabold text-brand-primary my-3">
-                        $79
-                        <span class="fs-6 text-muted fw-normal">/ 20 mins</span>
-                    </div>
-                    <p class="small text-muted mb-4">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                    <p class="small text-muted mb-0">Comprehensive health intake, medical history review &amp; initial care plan.</p>
                     
-                    <ul class="list-unstyled small mb-4">
-                        <li class="mb-2"><i class="bi bi-check-circle-fill text-brand-primary me-2"></i> Dedicated video consult with AHPRA registered doctor</li>
-                        <li class="mb-2"><i class="bi bi-check-circle-fill text-brand-primary me-2"></i> TGA SAS-B &amp; AP documentation included</li>
-                        <li class="mb-2"><i class="bi bi-check-circle-fill text-brand-primary me-2"></i> MediRecords real-time EHR record sync</li>
-                        <li class="mb-2"><i class="bi bi-check-circle-fill text-brand-primary me-2"></i> Digital e-script to patient portal</li>
+                    <div class="pricing-amount-box">
+                        <span class="pricing-currency">$</span>
+                        <span class="pricing-value">79</span>
+                        <span class="pricing-duration">/ 20 min session</span>
+                    </div>
+                    
+                    <ul class="pricing-features-list flex-grow-1">
+                        <li class="pricing-feature-item">
+                            <span class="pricing-check-icon"><i class="bi bi-check2"></i></span>
+                            <span>Dedicated video consult with AHPRA registered doctor</span>
+                        </li>
+                        <li class="pricing-feature-item">
+                            <span class="pricing-check-icon"><i class="bi bi-check2"></i></span>
+                            <span>TGA SAS-B &amp; AP documentation included</span>
+                        </li>
+                        <li class="pricing-feature-item">
+                            <span class="pricing-check-icon"><i class="bi bi-check2"></i></span>
+                            <span>MediRecords real-time EHR record sync</span>
+                        </li>
+                        <li class="pricing-feature-item">
+                            <span class="pricing-check-icon"><i class="bi bi-check2"></i></span>
+                            <span>Digital e-script to patient portal</span>
+                        </li>
                     </ul>
 
-                    <a href="{{ route('booking.index', ['service_id' => 1]) }}" class="btn btn-brand-primary w-100 mt-auto py-2 fw-semibold">
-                        Book Initial Telehealth Consultation
+                    <a href="{{ route('booking.index', ['service_id' => 1]) }}" class="btn btn-brand-primary w-100 py-3 fw-bold shadow">
+                        Book Initial Consult ($79) <i class="bi bi-arrow-right ms-1"></i>
                     </a>
                 </div>
             </div>
 
-            <div class="col-md-4" data-aos="fade-up" data-aos-delay="300">
-                <div class="card card-zovi h-100 p-4 border shadow-sm d-flex flex-column">
+            <!-- Follow-Up -->
+            <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="300">
+                <div class="pricing-card-vip">
                     <h4 class="fw-bold text-brand-contrast mb-1">Follow-Up &amp; Dosage Review</h4>
-                    <div class="display-5 fw-extrabold text-brand-primary my-3">
-                        $49
-                        <span class="fs-6 text-muted fw-normal">/ 15 mins</span>
-                    </div>
-                    <p class="small text-muted mb-4">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                    <p class="small text-muted mb-0">Clinical monitoring, dosage titration &amp; ongoing care plan optimization.</p>
                     
-                    <ul class="list-unstyled small mb-4">
-                        <li class="mb-2"><i class="bi bi-check-circle-fill text-brand-primary me-2"></i> Dedicated video consult with AHPRA registered doctor</li>
-                        <li class="mb-2"><i class="bi bi-check-circle-fill text-brand-primary me-2"></i> TGA SAS-B &amp; AP documentation included</li>
-                        <li class="mb-2"><i class="bi bi-check-circle-fill text-brand-primary me-2"></i> MediRecords real-time EHR record sync</li>
-                        <li class="mb-2"><i class="bi bi-check-circle-fill text-brand-primary me-2"></i> Digital e-script to patient portal</li>
+                    <div class="pricing-amount-box">
+                        <span class="pricing-currency">$</span>
+                        <span class="pricing-value">49</span>
+                        <span class="pricing-duration">/ 15 min session</span>
+                    </div>
+                    
+                    <ul class="pricing-features-list flex-grow-1">
+                        <li class="pricing-feature-item">
+                            <span class="pricing-check-icon"><i class="bi bi-check2"></i></span>
+                            <span>Dedicated review with your treating doctor</span>
+                        </li>
+                        <li class="pricing-feature-item">
+                            <span class="pricing-check-icon"><i class="bi bi-check2"></i></span>
+                            <span>Dosage adjustments &amp; clinical efficacy assessment</span>
+                        </li>
+                        <li class="pricing-feature-item">
+                            <span class="pricing-check-icon"><i class="bi bi-check2"></i></span>
+                            <span>Updated digital e-scripts &amp; repeat management</span>
+                        </li>
+                        <li class="pricing-feature-item">
+                            <span class="pricing-check-icon"><i class="bi bi-check2"></i></span>
+                            <span>Direct MediRecords clinical notes update</span>
+                        </li>
                     </ul>
 
-                    <a href="{{ route('booking.index', ['service_id' => 2]) }}" class="btn btn-brand-outline w-100 mt-auto py-2 fw-semibold">
-                        Book Follow-Up &amp; Dosage Review
+                    <a href="{{ route('booking.index', ['service_id' => 2]) }}" class="btn btn-brand-outline w-100 py-3 fw-bold">
+                        Book Follow-Up ($49) <i class="bi bi-arrow-right ms-1"></i>
                     </a>
                 </div>
             </div>
 
-            <div class="col-md-4" data-aos="fade-up" data-aos-delay="450">
-                <div class="card card-zovi h-100 p-4 border shadow-sm d-flex flex-column">
+            <!-- Express Repeat -->
+            <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="450">
+                <div class="pricing-card-vip">
                     <h4 class="fw-bold text-brand-contrast mb-1">Express Repeat Prescription</h4>
-                    <div class="display-5 fw-extrabold text-brand-primary my-3">
-                        $39
-                        <span class="fs-6 text-muted fw-normal">/ 10 mins</span>
-                    </div>
-                    <p class="small text-muted mb-4">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                    <p class="small text-muted mb-0">Fast script replenishment for stable, existing regular patients.</p>
                     
-                    <ul class="list-unstyled small mb-4">
-                        <li class="mb-2"><i class="bi bi-check-circle-fill text-brand-primary me-2"></i> Dedicated video consult with AHPRA registered doctor</li>
-                        <li class="mb-2"><i class="bi bi-check-circle-fill text-brand-primary me-2"></i> TGA SAS-B &amp; AP documentation included</li>
-                        <li class="mb-2"><i class="bi bi-check-circle-fill text-brand-primary me-2"></i> MediRecords real-time EHR record sync</li>
-                        <li class="mb-2"><i class="bi bi-check-circle-fill text-brand-primary me-2"></i> Digital e-script to patient portal</li>
+                    <div class="pricing-amount-box">
+                        <span class="pricing-currency">$</span>
+                        <span class="pricing-value">39</span>
+                        <span class="pricing-duration">/ 10 min session</span>
+                    </div>
+                    
+                    <ul class="pricing-features-list flex-grow-1">
+                        <li class="pricing-feature-item">
+                            <span class="pricing-check-icon"><i class="bi bi-check2"></i></span>
+                            <span>Quick script verification for stable treatment plans</span>
+                        </li>
+                        <li class="pricing-feature-item">
+                            <span class="pricing-check-icon"><i class="bi bi-check2"></i></span>
+                            <span>Immediate e-script dispatch to patient wallet</span>
+                        </li>
+                        <li class="pricing-feature-item">
+                            <span class="pricing-check-icon"><i class="bi bi-check2"></i></span>
+                            <span>Direct pharmacy transmission for express delivery</span>
+                        </li>
+                        <li class="pricing-feature-item">
+                            <span class="pricing-check-icon"><i class="bi bi-check2"></i></span>
+                            <span>Full compliance with TGA repeat guidelines</span>
+                        </li>
                     </ul>
 
-                    <a href="{{ route('booking.index', ['service_id' => 3]) }}" class="btn btn-brand-outline w-100 mt-auto py-2 fw-semibold">
-                        Book Express Repeat Prescription
+                    <a href="{{ route('booking.index', ['service_id' => 3]) }}" class="btn btn-brand-outline w-100 py-3 fw-bold">
+                        Book Express Repeat ($39) <i class="bi bi-arrow-right ms-1"></i>
                     </a>
                 </div>
             </div>

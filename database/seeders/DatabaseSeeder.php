@@ -26,7 +26,7 @@ class DatabaseSeeder extends Seeder
         Setting::set('clinic_name', 'ZOVI LEAF / Zovi Health Pty Ltd', 'general');
         Setting::set('clinic_doctor_lead', 'Dr. Suneetha Batthala', 'general');
         Setting::set('clinic_phone', '02 58385365', 'general');
-        Setting::set('clinic_email', 'care@zovihealth.com.au', 'general');
+        Setting::set('clinic_email', 'hello@zovi.com.au', 'general');
         Setting::set('clinic_address', 'Level 1, 63-73 Ann street, Surry Hills NSW 2010', 'general');
         Setting::set('clinic_hours', 'Monday - Friday: 8:30 AM - 6:00 PM | Saturday: 9:00 AM - 2:00 PM', 'general');
         Setting::set('primary_color', '#D16646', 'general');

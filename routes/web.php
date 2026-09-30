@@ -7,7 +7,6 @@ use App\Http\Controllers\DoctorPortalController;
 use App\Http\Controllers\EligibilityController;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\PatientPortalController;
-use App\Http\Controllers\ShopController;
 use Illuminate\Support\Facades\Route;
 
 // Public Core Website Pages
@@ -29,16 +28,19 @@ Route::get('/booking/slots', [BookingController::class, 'getSlots'])->name('book
 Route::post('/booking', [BookingController::class, 'store'])->name('booking.store');
 Route::get('/booking/confirmation/{appointment_number}', [BookingController::class, 'confirmation'])->name('booking.confirmation');
 
-// E-Commerce Dispensary (WooCommerce equivalent)
-Route::get('/shop', [ShopController::class, 'index'])->name('shop.index');
-Route::get('/shop/{slug}', [ShopController::class, 'show'])->name('shop.show');
-Route::post('/cart/add', [ShopController::class, 'addToCart'])->name('shop.cart.add');
-Route::get('/cart', [ShopController::class, 'viewCart'])->name('shop.cart');
-Route::post('/cart/update', [ShopController::class, 'updateCart'])->name('shop.cart.update');
-Route::get('/cart/remove/{id}', [ShopController::class, 'removeFromCart'])->name('shop.cart.remove');
-Route::get('/checkout', [ShopController::class, 'checkout'])->name('shop.checkout');
-Route::post('/checkout', [ShopController::class, 'processCheckout'])->name('shop.checkout.process');
-Route::get('/order/confirmation/{order_number}', [ShopController::class, 'orderConfirmation'])->name('shop.order-confirmation');
+// E-Commerce Dispensary (Disabled - Redirect to Services)
+Route::get('/shop', function () {
+    return redirect()->route('services');
+})->name('shop.index');
+Route::get('/shop/{slug}', function () {
+    return redirect()->route('services');
+})->name('shop.show');
+Route::get('/cart', function () {
+    return redirect()->route('services');
+})->name('shop.cart');
+Route::get('/checkout', function () {
+    return redirect()->route('services');
+})->name('shop.checkout');
 
 // Authentication Routes
 Route::get('/login', [AuthController::class, 'showLogin'])->name('login');

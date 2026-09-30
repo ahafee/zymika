@@ -54,6 +54,11 @@ class Doctor extends Model
 
     public function getFullNameAttribute(): string
     {
-        return $this->title.' '.($this->user ? $this->user->name : '');
+        $name = $this->user ? $this->user->name : '';
+        if (str_starts_with($name, 'Dr. ') || str_starts_with($name, 'Dr ')) {
+            return $name;
+        }
+
+        return ($this->title ? $this->title.' ' : 'Dr. ').$name;
     }
 }
