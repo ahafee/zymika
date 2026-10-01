@@ -6,7 +6,10 @@
     <meta name="csrf-token" content="{{ csrf_token() }}">
     <title>@yield('title', 'Portal') - ZOVI LEAF Telehealth</title>
     
-    <!-- Google Fonts -->
+    <!-- Favicon & Brand Icons -->
+    <link rel="icon" type="image/png" href="{{ asset('images/zovi-logo.png') }}">
+    <link rel="shortcut icon" type="image/x-icon" href="{{ asset('favicon.ico') }}">
+    <link rel="apple-touch-icon" sizes="180x180" href="{{ asset('images/zovi-logo.png') }}">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,400;1,600&family=Outfit:wght@500;600;700;800;900&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Space+Grotesk:wght@500;700&display=swap" rel="stylesheet">
@@ -28,8 +31,8 @@
 </head>
 <body class="bg-light">
 
-    <!-- Portal Top Bar -->
-    <header class="bg-white border-bottom py-2 px-3 px-md-4 sticky-top shadow-sm" style="backdrop-filter: blur(12px); background-color: rgba(255, 255, 255, 0.95) !important;">
+    <!-- Portal Top Bar (Static, non-sticky) -->
+    <header class="bg-white border-bottom py-2 px-3 px-md-4 shadow-sm" style="background-color: #FFFFFF !important;">
         <div class="container-fluid d-flex justify-content-between align-items-center">
             <div class="d-flex align-items-center gap-3">
                 <!-- Mobile Sidebar Toggle -->

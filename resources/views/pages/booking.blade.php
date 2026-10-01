@@ -17,15 +17,15 @@
         </div>
         <h1 class="display-5 fw-extrabold text-white mb-2" style="letter-spacing: -0.02em;">Book Telehealth Consultation</h1>
         <p class="lead text-white text-opacity-85 max-w-700 mx-auto mb-4" style="font-size: 1.05rem; line-height: 1.6;">
-            1-on-1 private video &amp; phone consultations with <strong>Dr. Suneetha Batthala</strong>. Direct AHPRA Authorised Prescriber for chronic pain, insomnia, anxiety &amp; natural medicine.
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris.
         </p>
 
         <!-- Trust Badges Strip -->
         <div class="d-flex flex-wrap justify-content-center gap-2 gap-md-4 text-white text-opacity-80 small">
-            <span class="d-inline-flex align-items-center gap-1.5"><i class="bi bi-patch-check-fill text-brand-primary"></i> AHPRA Registered Doctor</span>
-            <span class="d-inline-flex align-items-center gap-1.5"><i class="bi bi-shield-lock-fill text-brand-sage"></i> 256-bit Encrypted Telehealth</span>
-            <span class="d-inline-flex align-items-center gap-1.5"><i class="bi bi-qr-code text-brand-primary"></i> Direct e-Script via SMS</span>
-            <span class="d-inline-flex align-items-center gap-1.5"><i class="bi bi-box-seam-fill text-brand-sage"></i> Express AusPost Delivery</span>
+            <span class="d-inline-flex align-items-center gap-2"><i class="bi bi-patch-check-fill text-brand-primary"></i> AHPRA Registered Doctor</span>
+            <span class="d-inline-flex align-items-center gap-2"><i class="bi bi-shield-lock-fill text-brand-sage"></i> 256-bit Encrypted Telehealth</span>
+            <span class="d-inline-flex align-items-center gap-2"><i class="bi bi-qr-code text-brand-primary"></i> Direct e-Script via SMS</span>
+            <span class="d-inline-flex align-items-center gap-2"><i class="bi bi-box-seam-fill text-brand-sage"></i> Express AusPost Delivery</span>
         </div>
     </div>
 </div>
