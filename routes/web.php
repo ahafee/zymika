@@ -27,6 +27,7 @@ Route::get('/booking', [BookingController::class, 'index'])->name('booking.index
 Route::get('/booking/slots', [BookingController::class, 'getSlots'])->name('booking.slots');
 Route::post('/booking', [BookingController::class, 'store'])->name('booking.store');
 Route::get('/booking/confirmation/{appointment_number}', [BookingController::class, 'confirmation'])->name('booking.confirmation');
+Route::get('/room/{room_code}', [HomeController::class, 'telehealthRoom'])->name('telehealth.room');
 
 // E-Commerce Dispensary (Disabled - Redirect to Services)
 Route::get('/shop', function () {

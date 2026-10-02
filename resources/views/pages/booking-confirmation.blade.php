@@ -44,12 +44,19 @@
                                 <i class="bi bi-camera-video text-brand-primary me-1"></i> Secure Video Telehealth Room
                             </div>
                         </div>
+                        @php
+                            $resolvedVideoUrl = $appointment->video_meeting_url;
+                            if (str_contains($resolvedVideoUrl, 'telehealth.zovihealth.com.au/room/')) {
+                                $roomCode = last(explode('/', $resolvedVideoUrl));
+                                $resolvedVideoUrl = route('telehealth.room', ['room_code' => $roomCode]);
+                            }
+                        @endphp
                         <div class="col-12 pt-3 border-top">
                             <span class="small text-muted fw-semibold">Your Direct Telehealth Video Room Link:</span>
                             <div class="input-group mt-1.5">
                                 <span class="input-group-text bg-white"><i class="bi bi-link-45deg text-brand-primary"></i></span>
-                                <input type="text" class="form-control font-monospace small bg-white" value="{{ $appointment->video_meeting_url }}" readonly>
-                                <a href="{{ $appointment->video_meeting_url }}" target="_blank" class="btn btn-brand-primary px-3">
+                                <input type="text" class="form-control font-monospace small bg-white" value="{{ $resolvedVideoUrl }}" readonly>
+                                <a href="{{ $resolvedVideoUrl }}" class="btn btn-brand-primary px-3">
                                     <i class="bi bi-box-arrow-up-right me-1"></i> Open Room
                                 </a>
                             </div>

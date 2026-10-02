@@ -72,6 +72,15 @@
                             </td>
                             <td class="text-end">
                                 <div class="d-inline-flex gap-1">
+                                    @php
+                                        $docRoom = $apt->video_meeting_url;
+                                        if (str_contains($docRoom, 'telehealth.zovihealth.com.au/room/')) {
+                                            $docRoom = route('telehealth.room', ['room_code' => last(explode('/', $docRoom))]);
+                                        }
+                                    @endphp
+                                    <a href="{{ $docRoom }}" target="_blank" class="btn-vip-action btn-vip-success btn-sm" title="Join Video Room">
+                                        <i class="bi bi-camera-video-fill"></i>
+                                    </a>
                                     <a href="{{ route('doctor.consultation', $apt->id) }}" class="btn-vip-action btn-vip-primary btn-sm">
                                         <i class="bi bi-file-earmark-medical me-1"></i> Record
                                     </a>

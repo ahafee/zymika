@@ -70,4 +70,12 @@ class PublicPagesTest extends TestCase
         $postResponse->assertRedirect();
         $postResponse->assertSessionHas('success');
     }
+
+    public function test_telehealth_video_room_is_accessible(): void
+    {
+        $response = $this->get('/room/dr-suneetha-batthala-test12');
+        $response->assertStatus(200);
+        $response->assertSee('Encrypted Telehealth Video Room');
+        $response->assertSee('Dr. Suneetha Batthala');
+    }
 }

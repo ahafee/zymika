@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Appointment;
 use App\Models\Doctor;
 use App\Models\Product;
 use App\Models\Service;
@@ -71,5 +72,17 @@ class HomeController extends Controller
         ]);
 
         return redirect()->back()->with('success', 'Thank you for reaching out to ZOVI LEAF. Our Surry Hills clinical team will contact you within 1 business day.');
+    }
+
+    public function telehealthRoom($room_code)
+    {
+        $appointment = Appointment::with(['patient', 'doctor.user', 'service', 'preConsultForm'])
+            ->where('video_meeting_url', 'LIKE', '%'.$room_code.'%')
+            ->latest()
+            ->first();
+
+        $doctor = $appointment?->doctor ?: Doctor::with('user')->first();
+
+        return view('pages.telehealth-room', compact('room_code', 'appointment', 'doctor'));
     }
 }

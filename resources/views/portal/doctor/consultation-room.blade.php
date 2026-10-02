@@ -21,7 +21,17 @@
                 DOB: <strong>{{ $appointment->patient->date_of_birth?->format('d/m/Y') ?? '12/04/1985' }}</strong> &bull; Medicare: <strong>{{ $appointment->patient->medicare_number ?? '2938 10293' }}</strong> &bull; MediRecords Patient ID: <code>{{ $appointment->patient->medirecords_patient_id ?? 'MR-PAT-293841' }}</code>
             </div>
         </div>
+        @php
+            $doctorRoomUrl = $appointment->video_meeting_url;
+            if (str_contains($doctorRoomUrl, 'telehealth.zovihealth.com.au/room/')) {
+                $roomCode = last(explode('/', $doctorRoomUrl));
+                $doctorRoomUrl = route('telehealth.room', ['room_code' => $roomCode]);
+            }
+        @endphp
         <div class="d-flex align-items-center gap-2">
+            <a href="{{ $doctorRoomUrl }}" target="_blank" class="btn btn-brand-primary btn-sm px-3 py-2 fw-bold d-inline-flex align-items-center gap-1.5 shadow-sm">
+                <i class="bi bi-camera-video-fill"></i> Join Video Room
+            </a>
             <div class="p-2 px-3 bg-light border rounded-3 text-end shadow-sm">
                 <div class="small text-muted" style="font-size: 0.75rem;">Appointment Scheduled</div>
                 <div class="fw-bold text-brand-contrast">

@@ -13,6 +13,7 @@ use Carbon\Carbon;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Hash;
+use Illuminate\Support\Facades\Log;
 use Illuminate\Support\Str;
 
 class BookingController extends Controller
@@ -169,7 +170,7 @@ class BookingController extends Controller
         $appointmentNumber = 'APT-'.date('Y').'-'.strtoupper(Str::random(6));
 
         $roomCode = Str::slug($doctor->user->name).'-'.Str::random(5);
-        $videoUrl = 'https://telehealth.zovihealth.com.au/room/'.$roomCode;
+        $videoUrl = route('telehealth.room', ['room_code' => $roomCode]);
 
         $appointment = Appointment::create([
             'appointment_number' => $appointmentNumber,
@@ -189,8 +190,12 @@ class BookingController extends Controller
             'amount_paid' => $service->price,
         ]);
 
-        // Sync with MediRecords Cloud API
-        $this->mediRecordsService->syncAppointment($appointment);
+        // Sync with MediRecords Cloud API safely
+        try {
+            $this->mediRecordsService->syncAppointment($appointment);
+        } catch (\Throwable $e) {
+            Log::warning('MediRecords sync non-blocking error: '.$e->getMessage());
+        }
 
         return redirect()->route('booking.confirmation', ['appointment_number' => $appointment->appointment_number])
             ->with('success', 'Your Telehealth consultation with Dr. Suneetha Batthala has been confirmed!');
