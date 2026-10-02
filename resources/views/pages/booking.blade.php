@@ -34,6 +34,8 @@
     <div class="container">
         <form action="{{ route('booking.store') }}" method="POST" @submit="validateForm($event)">
             @csrf
+            <input type="hidden" name="service_id" :value="selectedServiceId">
+            <input type="hidden" name="doctor_id" :value="selectedDoctorId">
             @if($assessment)
                 <input type="hidden" name="assessment_id" value="{{ $assessment->id }}">
             @endif
