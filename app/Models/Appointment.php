@@ -67,4 +67,20 @@ class Appointment extends Model
     {
         return $this->hasOne(PreConsultForm::class);
     }
+
+    public function getVideoMeetingUrlAttribute(?string $value): string
+    {
+        if (empty($value)) {
+            return route('telehealth.room', ['room_code' => 'zovi-'.strtolower($this->appointment_number ?? 'room')]);
+        }
+
+        if (str_contains($value, 'telehealth.zovihealth.com.au/room/')) {
+            $parts = explode('/', $value);
+            $roomCode = end($parts);
+
+            return route('telehealth.room', ['room_code' => $roomCode]);
+        }
+
+        return $value;
+    }
 }
