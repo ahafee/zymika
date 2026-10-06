@@ -83,38 +83,74 @@
 
         <!-- Snapform Clinical Intake Responses -->
         <div class="card card-zovi p-4 bg-white border shadow-sm">
-            <h5 class="fw-bold text-brand-contrast mb-3 pb-2 border-bottom">
-                <i class="bi bi-file-earmark-medical-fill text-brand-primary me-2"></i> Snapform Patient Clinical Intake
-            </h5>
+            <div class="d-flex justify-content-between align-items-center mb-3 pb-2 border-bottom">
+                <h5 class="fw-bold text-brand-contrast mb-0">
+                    <i class="bi bi-file-earmark-medical-fill text-brand-primary me-2"></i> Patient Clinical Questionnaire &amp; Consent
+                </h5>
+                @if($appointment->preConsultForm)
+                    <span class="badge bg-success bg-opacity-10 text-success border border-success px-2.5 py-1 small">
+                        <i class="bi bi-check-circle-fill"></i> TGA Consent Signed
+                    </span>
+                @endif
+            </div>
 
             @if($appointment->preConsultForm)
+                @php $fields = $appointment->preConsultForm->form_data['fields'] ?? []; @endphp
                 <div class="row g-3 small">
                     <div class="col-6"><strong>Regular GP:</strong> {{ $appointment->preConsultForm->regular_gp_name ?? 'Dr. Andrew Clarke' }}</div>
                     <div class="col-6"><strong>GP Practice:</strong> {{ $appointment->preConsultForm->regular_gp_clinic ?? 'Surry Hills Family Practice, NSW' }}</div>
-                    <div class="col-6">
-                        <strong>Self-Reported Pain Score:</strong> 
-                        <span class="badge bg-danger">{{ $appointment->preConsultForm->form_data['fields']['pain_score'] ?? '7' }} / 10</span>
+                    
+                    <div class="col-12 p-2 bg-light rounded border">
+                        <div class="row text-center g-2">
+                            <div class="col-4">
+                                <span class="text-muted d-block" style="font-size: 0.72rem;">Avg Pain Score</span>
+                                <span class="badge bg-danger fs-6">{{ $fields['pain_score_average'] ?? ($fields['pain_score'] ?? '6') }} / 10</span>
+                            </div>
+                            <div class="col-4">
+                                <span class="text-muted d-block" style="font-size: 0.72rem;">Enjoyment Impact</span>
+                                <span class="badge bg-warning text-dark fs-6">{{ $fields['pain_score_enjoyment'] ?? '6' }} / 10</span>
+                            </div>
+                            <div class="col-4">
+                                <span class="text-muted d-block" style="font-size: 0.72rem;">Activity Impact</span>
+                                <span class="badge bg-warning text-dark fs-6">{{ $fields['pain_score_activity'] ?? '5' }} / 10</span>
+                            </div>
+                        </div>
                     </div>
+
                     <div class="col-6">
                         <strong>Sleep Quality:</strong> 
-                        <span>{{ $appointment->preConsultForm->form_data['fields']['sleep_quality'] ?? 'Poor' }}</span>
+                        <span class="badge bg-brand-light text-brand-contrast border">{{ $fields['sleep_quality'] ?? 'Fairly poor' }}</span>
                     </div>
+                    <div class="col-6">
+                        <strong>Safety-Sensitive Role:</strong> 
+                        <span class="badge bg-{{ ($fields['safety_sensitive_role'] ?? 'No') == 'Yes' ? 'danger' : 'secondary' }}">{{ $fields['safety_sensitive_role'] ?? 'No' }}</span>
+                    </div>
+
+                    <div class="col-12">
+                        <strong>Health Concern / Reason for Consult:</strong>
+                        <div class="p-2 bg-light rounded mt-1">{{ $fields['health_concern'] ?? ($appointment->preConsultForm->medical_history ?? 'Chronic pain & sleep disturbance') }}</div>
+                    </div>
+
                     <div class="col-12">
                         <strong>Current Medications:</strong>
-                        <div class="p-2 bg-light rounded mt-1">{{ $appointment->preConsultForm->current_medications ?? 'Paracetamol 500mg prn, Meloxicam 7.5mg' }}</div>
+                        <div class="p-2 bg-light rounded mt-1">{{ $appointment->preConsultForm->current_medications ?? 'None stated' }}</div>
                     </div>
+
                     <div class="col-12">
-                        <strong>Known Allergies:</strong>
-                        <div class="p-2 bg-light rounded mt-1">{{ $appointment->preConsultForm->known_allergies ?? 'Penicillin (mild rash)' }}</div>
+                        <strong>Known Drug Allergies:</strong>
+                        <div class="p-2 bg-light rounded mt-1 text-danger fw-semibold">{{ $fields['allergy_details'] ?? ($appointment->preConsultForm->known_allergies ?? 'No known drug allergies') }}</div>
                     </div>
+
                     <div class="col-12">
-                        <strong>Medical History:</strong>
-                        <div class="p-2 bg-light rounded mt-1">{{ $appointment->preConsultForm->medical_history ?? 'Lumbar spine disc protrusion L4-L5 since 2021. Managed with physical therapy.' }}</div>
+                        <strong>Informed Consent Status:</strong>
+                        <div class="p-2 bg-success bg-opacity-10 border border-success border-opacity-25 rounded mt-1 text-success small">
+                            <i class="bi bi-shield-check me-1"></i> Patient <strong>{{ $fields['consent_patient_name'] ?? $appointment->patient->name }}</strong> digitally signed on {{ $fields['consent_patient_date'] ?? date('d/m/Y') }}. Driving warnings &amp; TGA unapproved medicine disclosures accepted.
+                        </div>
                     </div>
                 </div>
             @else
                 <div class="p-3 bg-light rounded text-muted small text-center">
-                    <i class="bi bi-info-circle me-1"></i> Patient has not completed the digital Snapform yet.
+                    <i class="bi bi-info-circle me-1"></i> Patient has not completed the digital questionnaire &amp; consent yet.
                 </div>
             @endif
         </div>

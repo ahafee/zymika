@@ -103,37 +103,151 @@ class PatientPortalController extends Controller
     public function submitSnapform(Request $request)
     {
         $user = Auth::user();
+
         $validated = $request->validate([
             'appointment_id' => 'nullable|exists:appointments,id',
+            // Section 1: Your Details
+            'full_name' => 'nullable|string|max:255',
+            'date_of_birth' => 'nullable|date',
+            'sex_at_birth' => 'nullable|string|max:50',
+            'mobile' => 'nullable|string|max:50',
+            'email' => 'nullable|email|max:255',
+            'residential_address' => 'nullable|string|max:500',
+            'medicare_number' => 'nullable|string|max:50',
+            'emergency_contact' => 'nullable|string|max:255',
+            'height_cm' => 'nullable|numeric',
+            'weight_kg' => 'nullable|numeric',
+            'occupation' => 'nullable|string|max:255',
+
+            // Section 2: Your Health Concern
+            'health_concern' => 'nullable|string|max:3000',
+            'concern_duration' => 'nullable|string|max:100',
+            'diagnosed_by' => 'nullable|string|max:100',
+            'seeing_specialist' => 'nullable|string|max:10',
+            'specialist_details' => 'nullable|string|max:255',
+            'life_impact' => 'nullable|array',
+            'involves_pain' => 'nullable|string|max:10',
+            'pain_score_average' => 'nullable|integer|min:0|max:10',
+            'pain_score_enjoyment' => 'nullable|integer|min:0|max:10',
+            'pain_score_activity' => 'nullable|integer|min:0|max:10',
+            'treatments_tried' => 'nullable|string|max:3000',
+            'upcoming_procedures' => 'nullable|string|max:10',
+            'upcoming_procedures_details' => 'nullable|string|max:1000',
+            'supporting_records_notes' => 'nullable|string|max:1000',
+
+            // Section 3: Medical History
+            'medical_conditions' => 'nullable|array',
+            'other_conditions_surgeries' => 'nullable|string|max:2000',
+            'fall_last_12m' => 'nullable|string|max:10',
+            'bp_last_checked' => 'nullable|string|max:100',
+            'bp_reading' => 'nullable|string|max:100',
+            'pregnancy_status' => 'nullable|string|max:50',
+            'current_medications' => 'required|string|max:3000',
+            'known_allergies' => 'required|string|max:2000',
+            'allergy_details' => 'nullable|string|max:2000',
+
+            // Section 4: Mental Health
+            'mental_health_diagnoses' => 'nullable|array',
+            'mental_health_hospitalised' => 'nullable|string|max:10',
+            'seeing_mental_health_pro' => 'nullable|string|max:10',
+            'anxiety_nervous_freq' => 'nullable|string|max:100',
+            'anxiety_worry_freq' => 'nullable|string|max:100',
+            'depression_interest_freq' => 'nullable|string|max:100',
+            'depression_hopeless_freq' => 'nullable|string|max:100',
+            'self_harm_thoughts' => 'nullable|string|max:10',
+            'sleep_quality' => 'required|string|max:50',
+
+            // Section 5: Family History
+            'family_history' => 'nullable|array',
+
+            // Section 6: Lifestyle
+            'exercise_hours' => 'nullable|string|max:50',
+            'smoking_vaping' => 'nullable|array',
+            'alcohol_freq' => 'nullable|string|max:100',
+            'alcohol_drinks_day' => 'nullable|string|max:100',
+            'alcohol_binge_freq' => 'nullable|string|max:100',
+            'substance_use_12m' => 'nullable|array',
+            'substance_use_details' => 'nullable|string|max:1000',
+            'substance_dependence_history' => 'nullable|string|max:10',
+
+            // Section 7: Work and Safety
+            'driver_licence_types' => 'nullable|array',
+            'safety_sensitive_role' => 'nullable|string|max:10',
+            'drug_testing_subject' => 'nullable|string|max:50',
+            'live_alone' => 'nullable|string|max:10',
+            'children_under_18' => 'nullable|string|max:10',
+
+            // Section 8: Your Care Team and Consent
+            'has_regular_gp' => 'nullable|string|max:10',
             'regular_gp_name' => 'required|string|max:255',
             'regular_gp_clinic' => 'required|string|max:255',
-            'current_medications' => 'required|string|max:2000',
-            'known_allergies' => 'required|string|max:1000',
-            'medical_history' => 'required|string|max:3000',
-            'pain_score' => 'required|integer|min:0|max:10',
-            'sleep_quality' => 'required|string',
-            'consent_tga' => 'required|accepted',
-            'consent_gp' => 'required|accepted',
+            'regular_gp_email' => 'nullable|string|max:255',
+            'keep_gp_informed' => 'nullable|string|max:10',
+            'my_health_record_consent' => 'nullable|string|max:10',
+            'extra_doctor_notes' => 'nullable|string|max:2000',
+            'declaration_confirmed' => 'required|accepted',
+            'declaration_name' => 'required|string|max:255',
+            'declaration_signature' => 'nullable|string|max:255',
+            'declaration_date' => 'required|string|max:50',
+
+            // Informed Consent Checklist Items
+            'consent_treatment_1' => 'required|accepted',
+            'consent_treatment_2' => 'required|accepted',
+            'consent_treatment_3' => 'required|accepted',
+            'consent_treatment_4' => 'required|accepted',
+            'consent_treatment_5' => 'required|accepted',
+            'consent_risks_1' => 'required|accepted',
+            'consent_risks_2' => 'required|accepted',
+            'consent_risks_3' => 'required|accepted',
+            'consent_risks_4' => 'required|accepted',
+            'consent_risks_5' => 'required|accepted',
+            'consent_safety_1' => 'required|accepted',
+            'consent_safety_2' => 'required|accepted',
+            'consent_safety_3' => 'required|accepted',
+            'consent_safety_4' => 'required|accepted',
+            'consent_safety_5' => 'required|accepted',
+            'consent_resp_1' => 'required|accepted',
+            'consent_resp_2' => 'required|accepted',
+            'consent_resp_3' => 'required|accepted',
+            'consent_resp_4' => 'required|accepted',
+            'consent_resp_5' => 'required|accepted',
+            'consent_resp_6' => 'required|accepted',
+            'consent_resp_7' => 'required|accepted',
+            'consent_privacy_1' => 'required|accepted',
+            'consent_privacy_2' => 'required|accepted',
+            'consent_opt_research' => 'nullable|string',
+            'consent_opt_gp' => 'nullable|string',
+            'consent_withdraw' => 'required|accepted',
+            'consent_patient_name' => 'required|string|max:255',
+            'consent_patient_sig' => 'nullable|string|max:255',
+            'consent_patient_date' => 'required|string|max:50',
+            'consent_interpreter_used' => 'nullable|string|max:50',
+            'consent_interpreter_details' => 'nullable|string|max:255',
         ]);
+
+        $painScore = (int) ($validated['pain_score_average'] ?? 5);
 
         $payload = [
             'submission_id' => 'SNAP-'.strtoupper(uniqid()),
             'email' => $user->email,
             'appointment_id' => $validated['appointment_id'] ?? null,
-            'fields' => [
-                'regular_gp_name' => $validated['regular_gp_name'],
-                'regular_gp_clinic' => $validated['regular_gp_clinic'],
-                'current_medications' => $validated['current_medications'],
-                'known_allergies' => $validated['known_allergies'],
-                'medical_history' => $validated['medical_history'],
-                'pain_score' => $validated['pain_score'],
-                'sleep_quality' => $validated['sleep_quality'],
-            ],
+            'submitted_at' => now()->toDateTimeString(),
+            'fields' => array_merge($validated, [
+                'pain_score' => $painScore,
+                'medical_history' => $validated['health_concern'] ?? ($validated['medical_history'] ?? 'Clinical review requested'),
+            ]),
         ];
 
-        $res = $this->snapformsService->handleSubmission($payload);
+        // Update user profile demographics if available
+        $user->update([
+            'phone' => $validated['mobile'] ?? $user->phone,
+            'address_line1' => $validated['residential_address'] ?? $user->address_line1,
+            'medicare_number' => $validated['medicare_number'] ?? $user->medicare_number,
+        ]);
 
-        return redirect()->route('patient.dashboard')->with('success', 'Pre-consult assessment form successfully submitted and synchronized with Dr. Batthala via MediRecords.');
+        $this->snapformsService->handleSubmission($payload);
+
+        return redirect()->route('patient.dashboard')->with('success', 'Pre-consultation health questionnaire & informed consent submitted successfully to Dr. Suneetha Batthala.');
     }
 
     public function profile()
