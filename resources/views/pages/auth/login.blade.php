@@ -1,6 +1,6 @@
 @extends('layouts.app')
 
-@section('title', 'Patient & Practitioner Login - ZOVI LEAF')
+@section('title', 'Patient & Practitioner Login - ZYMIKA HEALTH')
 
 @section('content')
 <div class="auth-wrapper">
@@ -20,13 +20,13 @@
                                     <a href="{{ route('home') }}" class="d-inline-block text-decoration-none">
                                         <div class="d-flex align-items-center gap-2">
                                             <svg width="42" height="42" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                                <rect width="100" height="100" rx="24" fill="#D16646"/>
-                                                <path d="M50 20C40 38 32 46 22 54C34 54 44 48 50 38C56 48 66 54 78 54C68 46 60 38 50 20Z" fill="#FAF7F2"/>
-                                                <path d="M50 38V80" stroke="#FAF7F2" stroke-width="6" stroke-linecap="round"/>
-                                                <path d="M50 55C42 63 36 68 28 72" stroke="#FAF7F2" stroke-width="5" stroke-linecap="round"/>
-                                                <path d="M50 55C58 63 64 68 72 72" stroke="#FAF7F2" stroke-width="5" stroke-linecap="round"/>
+                                                <rect width="100" height="100" rx="24" fill="#3aa3a2"/>
+                                                <path d="M50 20C40 38 32 46 22 54C34 54 44 48 50 38C56 48 66 54 78 54C68 46 60 38 50 20Z" fill="#ffffff"/>
+                                                <path d="M50 38V80" stroke="#ffffff" stroke-width="6" stroke-linecap="round"/>
+                                                <path d="M50 55C42 63 36 68 28 72" stroke="#ffffff" stroke-width="5" stroke-linecap="round"/>
+                                                <path d="M50 55C58 63 64 68 72 72" stroke="#ffffff" stroke-width="5" stroke-linecap="round"/>
                                             </svg>
-                                            <span class="fs-4 fw-extrabold text-white font-heading tracking-wide">ZOVI LEAF</span>
+                                            <span class="fs-4 fw-extrabold text-white font-heading tracking-wide">ZYMIKA HEALTH</span>
                                         </div>
                                     </a>
                                 </div>
@@ -46,19 +46,19 @@
 
                                 <div class="d-flex flex-column gap-2 pt-1 mb-4">
                                     <div class="auth-feature-item d-flex align-items-center gap-3">
-                                        <div class="rounded-circle d-flex align-items-center justify-content-center shadow-sm" style="width: 38px; height: 38px; background: linear-gradient(135deg, #D16646 0%, #BA5335 100%); flex-shrink: 0;">
+                                        <div class="rounded-circle d-flex align-items-center justify-content-center shadow-sm" style="width: 38px; height: 38px; background: linear-gradient(135deg, #3aa3a2 0%, #1a9b8c 100%); flex-shrink: 0;">
                                             <i class="bi bi-arrow-repeat text-white fs-5"></i>
                                         </div>
                                         <span class="small text-white opacity-95">Direct <strong>MediRecords API</strong> EHR Synchronisation</span>
                                     </div>
                                     <div class="auth-feature-item d-flex align-items-center gap-3">
-                                        <div class="rounded-circle d-flex align-items-center justify-content-center shadow-sm" style="width: 38px; height: 38px; background: linear-gradient(135deg, #D16646 0%, #BA5335 100%); flex-shrink: 0;">
+                                        <div class="rounded-circle d-flex align-items-center justify-content-center shadow-sm" style="width: 38px; height: 38px; background: linear-gradient(135deg, #3aa3a2 0%, #1a9b8c 100%); flex-shrink: 0;">
                                             <i class="bi bi-camera-video-fill text-white fs-5"></i>
                                         </div>
                                         <span class="small text-white opacity-95">HD End-to-End Encrypted Telehealth Consultations</span>
                                     </div>
                                     <div class="auth-feature-item d-flex align-items-center gap-3">
-                                        <div class="rounded-circle d-flex align-items-center justify-content-center shadow-sm" style="width: 38px; height: 38px; background: linear-gradient(135deg, #D16646 0%, #BA5335 100%); flex-shrink: 0;">
+                                        <div class="rounded-circle d-flex align-items-center justify-content-center shadow-sm" style="width: 38px; height: 38px; background: linear-gradient(135deg, #3aa3a2 0%, #1a9b8c 100%); flex-shrink: 0;">
                                             <i class="bi bi-truck text-white fs-5"></i>
                                         </div>
                                         <span class="small text-white opacity-95">Express Australian Pharmacy Dispensary Delivery</span>
@@ -157,7 +157,7 @@
                                         </div>
                                     </div>
                                     <div class="col-sm-4">
-                                        <div class="demo-pill" id="pill-doctor" onclick="fillDemo('dr.batthala@zovihealth.com.au', 'password', this)">
+                                        <div class="demo-pill" id="pill-doctor" onclick="fillDemo('dr.batthala@zymikahealth.com.au', 'password', this)">
                                             <div>
                                                 <div class="fw-bold text-dark"><i class="bi bi-heart-pulse-fill text-brand-sage me-1"></i> Doctor</div>
                                                 <div class="text-muted" style="font-size: 0.72rem;">Dr. Suneetha</div>
@@ -166,7 +166,7 @@
                                         </div>
                                     </div>
                                     <div class="col-sm-4">
-                                        <div class="demo-pill" id="pill-admin" onclick="fillDemo('admin@zovihealth.com.au', 'password', this)">
+                                        <div class="demo-pill" id="pill-admin" onclick="fillDemo('admin@zymikahealth.com.au', 'password', this)">
                                             <div>
                                                 <div class="fw-bold text-dark"><i class="bi bi-shield-lock-fill text-dark me-1"></i> Admin</div>
                                                 <div class="text-muted" style="font-size: 0.72rem;">Practice Mgr</div>

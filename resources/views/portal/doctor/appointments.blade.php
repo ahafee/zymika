@@ -74,7 +74,7 @@
                                 <div class="d-inline-flex gap-1">
                                     @php
                                         $docRoom = $apt->video_meeting_url;
-                                        if (str_contains($docRoom, 'telehealth.zovihealth.com.au/room/')) {
+                                        if (str_contains($docRoom, 'telehealth.zymikahealth.com.au/room/')) {
                                             $docRoom = route('telehealth.room', ['room_code' => last(explode('/', $docRoom))]);
                                         }
                                     @endphp

@@ -10,7 +10,7 @@
 
 <div class="row justify-content-center">
     <div class="col-lg-9">
-        <div class="card card-zovi p-4 p-md-5 bg-white border">
+        <div class="card card-zymika p-4 p-md-5 bg-white border">
             <form action="{{ route('patient.profile.update') }}" method="POST">
                 @csrf
                 <h5 class="fw-bold text-brand-contrast mb-3 pb-2 border-bottom">Personal Details</h5>

@@ -19,7 +19,7 @@ class PublicPagesTest extends TestCase
     {
         $response = $this->get('/');
         $response->assertStatus(200);
-        $response->assertSee('ZOVI LEAF');
+        $response->assertSee('ZYMIKA HEALTH');
         $response->assertSee('Dr. Suneetha Batthala');
         $response->assertSee('Check Eligibility');
     }

@@ -1,6 +1,6 @@
 @extends('layouts.app')
 
-@section('title', 'How It Works - ZOVI LEAF Telehealth Process')
+@section('title', 'How It Works - ZYMIKA HEALTH Telehealth Process')
 
 @section('content')
 <!-- Premium Inner Hero Banner with Image -->
@@ -69,7 +69,7 @@
     <div class="row g-4 mb-5">
         <!-- Step 1 -->
         <div class="col-md-6 col-lg-3" data-aos="fade-up" data-aos-delay="100">
-            <div class="card card-zovi h-100 p-4 border bg-white shadow-sm d-flex flex-column">
+            <div class="card card-zymika h-100 p-4 border bg-white shadow-sm d-flex flex-column">
                 <div class="inner-step-img-wrap">
                     <img src="{{ asset('images/step1-assessment.jpg') }}" alt="Step 1 Assessment" class="inner-step-img">
                 </div>
@@ -87,7 +87,7 @@
 
         <!-- Step 2 -->
         <div class="col-md-6 col-lg-3" data-aos="fade-up" data-aos-delay="200">
-            <div class="card card-zovi h-100 p-4 border bg-white shadow-sm d-flex flex-column">
+            <div class="card card-zymika h-100 p-4 border bg-white shadow-sm d-flex flex-column">
                 <div class="inner-step-img-wrap">
                     <img src="{{ asset('images/step2-telehealth.jpg') }}" alt="Step 2 Telehealth" class="inner-step-img">
                 </div>
@@ -105,7 +105,7 @@
 
         <!-- Step 3 -->
         <div class="col-md-6 col-lg-3" data-aos="fade-up" data-aos-delay="300">
-            <div class="card card-zovi h-100 p-4 border bg-white shadow-sm d-flex flex-column">
+            <div class="card card-zymika h-100 p-4 border bg-white shadow-sm d-flex flex-column">
                 <div class="inner-step-img-wrap">
                     <img src="{{ asset('images/step3-prescription.jpg') }}" alt="Step 3 Prescription" class="inner-step-img">
                 </div>
@@ -123,7 +123,7 @@
 
         <!-- Step 4 -->
         <div class="col-md-6 col-lg-3" data-aos="fade-up" data-aos-delay="400">
-            <div class="card card-zovi h-100 p-4 border bg-white shadow-sm d-flex flex-column">
+            <div class="card card-zymika h-100 p-4 border bg-white shadow-sm d-flex flex-column">
                 <div class="inner-step-img-wrap">
                     <img src="{{ asset('images/step4-delivery.jpg') }}" alt="Step 4 Delivery" class="inner-step-img">
                 </div>
@@ -141,7 +141,7 @@
     </div>
 
     <!-- Bottom Action Card -->
-    <div class="card card-zovi p-4 p-md-5 bg-brand-soft border text-center" data-aos="fade-up">
+    <div class="card card-zymika p-4 p-md-5 bg-brand-soft border text-center" data-aos="fade-up">
         <h3 class="fw-bold text-brand-contrast mb-2">Ready to Start Your Health Journey?</h3>
         <p class="text-muted max-w-700 mx-auto mb-4">Lorem ipsum dolor sit amet, consectetur adipiscing elit sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
         <div class="d-flex justify-content-center flex-wrap gap-3">

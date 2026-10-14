@@ -1,6 +1,6 @@
 @extends('layouts.app')
 
-@section('title', 'Medicinal Cannabis Pre-Eligibility Assessment - ZOVI LEAF')
+@section('title', 'Medicinal Cannabis Pre-Eligibility Assessment - ZYMIKA HEALTH')
 
 @section('content')
 <!-- Premium Inner Hero Banner with Image -->
@@ -64,7 +64,7 @@
             </div>
 
             <!-- Quiz Card -->
-            <div class="card card-zovi p-4 p-md-5 border bg-white shadow-sm">
+            <div class="card card-zymika p-4 p-md-5 border bg-white shadow-sm">
                 
                 <!-- Step 1: Health Condition -->
                 <div x-show="step === 1" x-transition>

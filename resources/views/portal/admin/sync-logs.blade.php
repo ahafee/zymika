@@ -1,6 +1,6 @@
 @extends('layouts.portal')
 
-@section('title', 'MediRecords & Webhook Integration Logs - ZOVI LEAF')
+@section('title', 'MediRecords & Webhook Integration Logs - ZYMIKA HEALTH')
 
 @section('content')
 <div class="d-flex flex-wrap justify-content-between align-items-center mb-4 gap-3">

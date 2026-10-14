@@ -1,4 +1,4 @@
-<header class="sticky-top shadow-sm header-zovi-wrapper">
+<header class="sticky-top shadow-sm header-zymika-wrapper">
     <!-- Top Announcement & Medical Hotline Bar -->
     <div class="top-notice-bar py-2">
         <div class="container-fluid px-3 px-lg-4 px-xxl-5 d-flex flex-wrap justify-content-between align-items-center gap-2" style="max-width: 1560px;">
@@ -13,8 +13,8 @@
             </div>
             
             <div class="d-flex align-items-center gap-3 ms-auto ms-sm-0">
-                <a href="mailto:hello@zovi.com.au" class="top-bar-link d-none d-sm-inline-flex align-items-center gap-2">
-                    <i class="bi bi-envelope-fill text-brand-primary"></i> hello@zovi.com.au
+                <a href="mailto:hello@zymikahealth.com.au" class="top-bar-link d-none d-sm-inline-flex align-items-center gap-2">
+                    <i class="bi bi-envelope-fill text-brand-primary"></i> hello@zymikahealth.com.au
                 </a>
                 <span class="d-none d-sm-inline opacity-25 text-white">|</span>
                 <a href="tel:0258385365" class="top-bar-link d-inline-flex align-items-center gap-2 fw-semibold">
@@ -25,7 +25,7 @@
     </div>
 
     <!-- Main Navigation Bar -->
-    <nav class="navbar navbar-expand-lg navbar-zovi">
+    <nav class="navbar navbar-expand-lg navbar-zymika">
         <div class="container-fluid px-3 px-lg-4 px-xxl-5" style="max-width: 1560px;">
             <a class="navbar-brand d-flex align-items-center me-2 me-xl-4 py-1" href="{{ route('home') }}">
                 @include('partials.logo')

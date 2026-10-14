@@ -1,6 +1,6 @@
 @extends('layouts.app')
 
-@section('title', 'Clinical Services & Consultation Fees - ZOVI LEAF')
+@section('title', 'Clinical Services & Consultation Fees - ZYMIKA HEALTH')
 
 @section('content')
 <!-- Premium Inner Hero Banner with Image -->
@@ -196,7 +196,7 @@
         <div class="row g-4">
             <!-- Pain -->
             <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="100">
-                <div class="p-4 bg-white border rounded-3 h-100 shadow-sm d-flex gap-3 align-items-start card-zovi">
+                <div class="p-4 bg-white border rounded-3 h-100 shadow-sm d-flex gap-3 align-items-start card-zymika">
                     <div class="condition-thumb-wrap">
                         <img src="{{ asset('images/cond-pain.jpg') }}" alt="Chronic Pain" class="condition-thumb-img">
                     </div>
@@ -209,7 +209,7 @@
 
             <!-- Sleep -->
             <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="200">
-                <div class="p-4 bg-white border rounded-3 h-100 shadow-sm d-flex gap-3 align-items-start card-zovi">
+                <div class="p-4 bg-white border rounded-3 h-100 shadow-sm d-flex gap-3 align-items-start card-zymika">
                     <div class="condition-thumb-wrap">
                         <img src="{{ asset('images/cond-sleep.jpg') }}" alt="Sleep Disorders" class="condition-thumb-img">
                     </div>
@@ -222,7 +222,7 @@
 
             <!-- Anxiety -->
             <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="300">
-                <div class="p-4 bg-white border rounded-3 h-100 shadow-sm d-flex gap-3 align-items-start card-zovi">
+                <div class="p-4 bg-white border rounded-3 h-100 shadow-sm d-flex gap-3 align-items-start card-zymika">
                     <div class="condition-thumb-wrap">
                         <img src="{{ asset('images/cond-anxiety.jpg') }}" alt="Anxiety Disorders" class="condition-thumb-img">
                     </div>
@@ -235,7 +235,7 @@
 
             <!-- Women's Health -->
             <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="400">
-                <div class="p-4 bg-white border rounded-3 h-100 shadow-sm d-flex gap-3 align-items-start card-zovi">
+                <div class="p-4 bg-white border rounded-3 h-100 shadow-sm d-flex gap-3 align-items-start card-zymika">
                     <div class="condition-thumb-wrap">
                         <img src="{{ asset('images/cond-women.jpg') }}" alt="Women's Health" class="condition-thumb-img">
                     </div>
@@ -248,7 +248,7 @@
 
             <!-- Neurological -->
             <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="500">
-                <div class="p-4 bg-white border rounded-3 h-100 shadow-sm d-flex gap-3 align-items-start card-zovi">
+                <div class="p-4 bg-white border rounded-3 h-100 shadow-sm d-flex gap-3 align-items-start card-zymika">
                     <div class="condition-thumb-wrap">
                         <img src="{{ asset('images/cond-neuro.jpg') }}" alt="Neurological Conditions" class="condition-thumb-img">
                     </div>
@@ -261,7 +261,7 @@
 
             <!-- Palliative -->
             <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="600">
-                <div class="p-4 bg-white border rounded-3 h-100 shadow-sm d-flex gap-3 align-items-start card-zovi">
+                <div class="p-4 bg-white border rounded-3 h-100 shadow-sm d-flex gap-3 align-items-start card-zymika">
                     <div class="condition-thumb-wrap">
                         <img src="{{ asset('images/cond-palliative.jpg') }}" alt="Palliative Support" class="condition-thumb-img">
                     </div>

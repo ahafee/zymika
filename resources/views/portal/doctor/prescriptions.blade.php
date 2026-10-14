@@ -76,7 +76,7 @@
     </div>
 </div>
 
-<div class="card card-zovi p-4 bg-white border">
+<div class="card card-zymika p-4 bg-white border">
     <div class="table-responsive">
         <table class="table table-hover align-middle">
             <thead class="bg-light small">

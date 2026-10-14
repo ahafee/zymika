@@ -4,7 +4,7 @@
 
 @section('content')
 <!-- Top Consultation Record Header -->
-<div class="card card-zovi p-3 px-4 bg-white border mb-4 shadow-sm">
+<div class="card card-zymika p-3 px-4 bg-white border mb-4 shadow-sm">
     <div class="d-flex flex-wrap justify-content-between align-items-center gap-3">
         <div>
             <div class="d-flex align-items-center gap-2 mb-1">
@@ -23,7 +23,7 @@
         </div>
         @php
             $doctorRoomUrl = $appointment->video_meeting_url;
-            if (str_contains($doctorRoomUrl, 'telehealth.zovihealth.com.au/room/')) {
+            if (str_contains($doctorRoomUrl, 'telehealth.zymikahealth.com.au/room/')) {
                 $roomCode = last(explode('/', $doctorRoomUrl));
                 $doctorRoomUrl = route('telehealth.room', ['room_code' => $roomCode]);
             }
@@ -47,7 +47,7 @@
     <div class="col-lg-6">
         
         <!-- Patient Overview Card -->
-        <div class="card card-zovi p-4 bg-white border mb-4 shadow-sm">
+        <div class="card card-zymika p-4 bg-white border mb-4 shadow-sm">
             <h5 class="fw-bold text-brand-contrast mb-3 pb-2 border-bottom">
                 <i class="bi bi-person-lines-fill text-brand-primary me-2"></i> Patient Demographics & Contact
             </h5>
@@ -82,7 +82,7 @@
         </div>
 
         <!-- Snapform Clinical Intake Responses -->
-        <div class="card card-zovi p-4 bg-white border shadow-sm">
+        <div class="card card-zymika p-4 bg-white border shadow-sm">
             <div class="d-flex justify-content-between align-items-center mb-3 pb-2 border-bottom">
                 <h5 class="fw-bold text-brand-contrast mb-0">
                     <i class="bi bi-file-earmark-medical-fill text-brand-primary me-2"></i> Patient Clinical Questionnaire &amp; Consent
@@ -161,7 +161,7 @@
     <div class="col-lg-6">
         
         <!-- Clinical Consultation Notes Form -->
-        <div class="card card-zovi p-4 bg-white border mb-4 shadow-sm">
+        <div class="card card-zymika p-4 bg-white border mb-4 shadow-sm">
             <h5 class="fw-bold text-brand-contrast mb-3 pb-2 border-bottom">
                 <i class="bi bi-journal-text text-brand-primary me-2"></i> Clinical Notes & MediRecords EHR
             </h5>
@@ -192,7 +192,7 @@
         </div>
 
         <!-- Issue Prescription Directly -->
-        <div class="card card-zovi p-4 bg-white border shadow-sm">
+        <div class="card card-zymika p-4 bg-white border shadow-sm">
             <h5 class="fw-bold text-brand-contrast mb-3 pb-2 border-bottom">
                 <i class="bi bi-prescription2 text-brand-sage me-2"></i> Authorised Prescriber (AP) Tool
             </h5>

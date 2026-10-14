@@ -1,6 +1,6 @@
 @extends('layouts.app')
 
-@section('title', 'Reset Password - ZOVI LEAF')
+@section('title', 'Reset Password - ZYMIKA HEALTH')
 
 @section('content')
 <div class="auth-wrapper">
@@ -20,13 +20,13 @@
                                     <a href="{{ route('home') }}" class="d-inline-block text-decoration-none">
                                         <div class="d-flex align-items-center gap-2">
                                             <svg width="40" height="40" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                                <rect width="100" height="100" rx="24" fill="#D16646"/>
-                                                <path d="M50 20C40 38 32 46 22 54C34 54 44 48 50 38C56 48 66 54 78 54C68 46 60 38 50 20Z" fill="#FAF7F2"/>
-                                                <path d="M50 38V80" stroke="#FAF7F2" stroke-width="6" stroke-linecap="round"/>
-                                                <path d="M50 55C42 63 36 68 28 72" stroke="#FAF7F2" stroke-width="5" stroke-linecap="round"/>
-                                                <path d="M50 55C58 63 64 68 72 72" stroke="#FAF7F2" stroke-width="5" stroke-linecap="round"/>
+                                                <rect width="100" height="100" rx="24" fill="#3aa3a2"/>
+                                                <path d="M50 20C40 38 32 46 22 54C34 54 44 48 50 38C56 48 66 54 78 54C68 46 60 38 50 20Z" fill="#ffffff"/>
+                                                <path d="M50 38V80" stroke="#ffffff" stroke-width="6" stroke-linecap="round"/>
+                                                <path d="M50 55C42 63 36 68 28 72" stroke="#ffffff" stroke-width="5" stroke-linecap="round"/>
+                                                <path d="M50 55C58 63 64 68 72 72" stroke="#ffffff" stroke-width="5" stroke-linecap="round"/>
                                             </svg>
-                                            <span class="fs-4 fw-extrabold text-white font-heading tracking-wide">ZOVI LEAF</span>
+                                            <span class="fs-4 fw-extrabold text-white font-heading tracking-wide">ZYMIKA HEALTH</span>
                                         </div>
                                     </a>
                                 </div>

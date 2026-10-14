@@ -154,8 +154,8 @@ class AdminPortalController extends Controller
 
         $settings = [
             'sandbox' => Setting::get('medirecords_sandbox', true),
-            'client_id' => Setting::get('medirecords_client_id', 'zovi_mr_live_client_8385365'),
-            'client_secret' => Setting::get('medirecords_client_secret', 'zovi_mr_secret_leaf_992147'),
+            'client_id' => Setting::get('medirecords_client_id', 'zymika_mr_live_client_8385365'),
+            'client_secret' => Setting::get('medirecords_client_secret', 'zymika_mr_secret_992147'),
             'api_url' => Setting::get('medirecords_api_url', 'https://sandbox-api.medirecords.com/v1'),
             'auth_url' => Setting::get('medirecords_auth_url', 'https://sandbox-auth.medirecords.com/oauth/token'),
         ];

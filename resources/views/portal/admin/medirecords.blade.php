@@ -1,6 +1,6 @@
 @extends('layouts.portal')
 
-@section('title', 'MediRecords EHR Integration Hub - ZOVI LEAF')
+@section('title', 'MediRecords EHR Integration Hub - ZYMIKA HEALTH')
 
 @section('content')
 <div class="d-flex flex-wrap justify-content-between align-items-center mb-4 gap-3">

@@ -1,6 +1,6 @@
 @extends('layouts.app')
 
-@section('title', 'Patient FAQs & Contact Us - ZOVI LEAF Australia')
+@section('title', 'Patient FAQs & Contact Us - ZYMIKA HEALTH Australia')
 
 @section('content')
 <!-- Premium Inner Hero Banner with Image -->
@@ -22,7 +22,7 @@
                     </div>
                     <div class="d-flex align-items-center gap-2 small fw-semibold text-brand-contrast">
                         <i class="bi bi-envelope-fill text-brand-sage fs-5"></i>
-                        <span>care@zovihealth.com.au</span>
+                        <span>care@zymikahealth.com.au</span>
                     </div>
                     <div class="d-flex align-items-center gap-2 small fw-semibold text-brand-contrast">
                         <i class="bi bi-geo-alt-fill text-brand-primary fs-5"></i>
@@ -42,7 +42,7 @@
 
             <div class="col-lg-5" data-aos="fade-left" data-aos-delay="150">
                 <div class="inner-hero-img-wrap">
-                    <img src="{{ asset('images/healing-journey-bg.jpg') }}" alt="ZOVI LEAF Patient Support" class="inner-hero-img">
+                    <img src="{{ asset('images/healing-journey-bg.jpg') }}" alt="ZYMIKA HEALTH Patient Support" class="inner-hero-img">
                     <div class="inner-hero-floating-badge">
                         <div class="bg-brand-primary text-white rounded-circle p-2 d-flex align-items-center justify-content-center" style="width: 38px; height: 38px;">
                             <i class="bi bi-shield-check fs-5"></i>
@@ -147,7 +147,7 @@
     <!-- Contact & Direct Assistance Section -->
     <div class="row g-5 align-items-start">
         <div class="col-lg-5" data-aos="fade-right">
-            <div class="card card-zovi p-4 border bg-white mb-4 shadow-sm">
+            <div class="card card-zymika p-4 border bg-white mb-4 shadow-sm">
                 <h4 class="fw-bold text-brand-contrast mb-3"><i class="bi bi-building text-brand-primary me-2"></i> Clinic Information</h4>
                 
                 <div class="d-flex gap-3 mb-3">
@@ -200,7 +200,7 @@
         </div>
 
         <div class="col-lg-7" data-aos="fade-left" id="contactFormSection">
-            <div class="card card-zovi p-4 p-md-5 border bg-white shadow-sm">
+            <div class="card card-zymika p-4 p-md-5 border bg-white shadow-sm">
                 <h4 class="fw-bold text-brand-contrast mb-1">Send Us a Direct Message</h4>
                 <p class="small text-muted mb-4">Have specific clinical, prescription, or consultation questions? Leave a message below and our Surry Hills team will get back to you promptly.</p>
 

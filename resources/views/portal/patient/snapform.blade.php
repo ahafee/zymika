@@ -1,20 +1,20 @@
 @extends('layouts.portal')
 
-@section('title', 'Pre-Consultation Questionnaire & Informed Consent - ZOVI LEAF')
+@section('title', 'Pre-Consultation Questionnaire & Informed Consent - ZYMIKA HEALTH')
 
 @push('styles')
 <style>
 .clinical-card {
     background: #FFFFFF;
     border-radius: var(--radius-lg);
-    border: 1px solid rgba(61, 65, 48, 0.12);
+    border: 1px solid rgba(15, 45, 89, 0.12);
     box-shadow: 0 4px 20px rgba(0, 0, 0, 0.04);
     padding: 2rem;
     margin-bottom: 2rem;
     transition: all 0.25s ease;
 }
 .clinical-card:hover {
-    border-color: rgba(209, 102, 70, 0.3);
+    border-color: rgba(58, 163, 162, 0.3);
     box-shadow: 0 8px 30px rgba(0, 0, 0, 0.06);
 }
 .clinical-card-header {
@@ -23,14 +23,14 @@
     justify-content: space-between;
     padding-bottom: 1.25rem;
     margin-bottom: 1.75rem;
-    border-bottom: 1px solid rgba(61, 65, 48, 0.08);
+    border-bottom: 1px solid rgba(15, 45, 89, 0.08);
 }
 .clinical-sec-num {
     width: 38px;
     height: 38px;
     border-radius: 10px;
     background: var(--brand-contrast);
-    color: #FAF7F2;
+    color: #ffffff;
     display: inline-flex;
     align-items: center;
     justify-content: center;
@@ -39,10 +39,10 @@
 }
 .choice-pill {
     cursor: pointer;
-    border: 1px solid rgba(61, 65, 48, 0.2);
+    border: 1px solid rgba(15, 45, 89, 0.2);
     border-radius: 12px;
     padding: 0.65rem 1rem;
-    background: #FAF7F2;
+    background: #fdfdfd;
     color: var(--brand-contrast);
     font-weight: 500;
     font-size: 0.9rem;
@@ -66,14 +66,14 @@
 .choice-pill.active {
     background: #FFFFFF;
     border-color: var(--brand-primary);
-    box-shadow: 0 0 0 2px rgba(209, 102, 70, 0.2);
+    box-shadow: 0 0 0 2px rgba(58, 163, 162, 0.2);
 }
 .pain-score-pill {
     width: 44px;
     height: 44px;
     border-radius: 10px;
-    border: 1px solid rgba(61, 65, 48, 0.2);
-    background: #FAF7F2;
+    border: 1px solid rgba(15, 45, 89, 0.2);
+    background: #fdfdfd;
     color: var(--brand-contrast);
     display: inline-flex;
     align-items: center;
@@ -90,11 +90,11 @@
     background: var(--brand-primary);
     color: #FFFFFF;
     border-color: var(--brand-primary);
-    box-shadow: 0 4px 12px rgba(209, 102, 70, 0.35);
+    box-shadow: 0 4px 12px rgba(58, 163, 162, 0.35);
 }
 .consent-item-card {
-    background: #FAF8F5;
-    border: 1px solid rgba(61, 65, 48, 0.1);
+    background: #f8fbfb;
+    border: 1px solid rgba(15, 45, 89, 0.1);
     border-radius: 12px;
     padding: 1rem 1.25rem;
     margin-bottom: 0.75rem;
@@ -102,7 +102,7 @@
 }
 .consent-item-card:hover {
     background: #FFFFFF;
-    border-color: rgba(209, 102, 70, 0.3);
+    border-color: rgba(58, 163, 162, 0.3);
 }
 .crisis-alert-box {
     background: #FFF5F5;
@@ -121,7 +121,7 @@
     <div class="d-flex flex-wrap justify-content-between align-items-center gap-3 mb-4">
         <div>
             <div class="d-inline-flex align-items-center gap-2 px-3 py-1 rounded-pill bg-brand-light border text-brand-contrast small fw-semibold mb-2">
-                <i class="bi bi-file-earmark-medical-fill text-brand-primary"></i> ZOVI LEAF Clinical Intake &amp; Consent
+                <i class="bi bi-file-earmark-medical-fill text-brand-primary"></i> ZYMIKA HEALTH Clinical Intake &amp; Consent
             </div>
             <h2 class="fw-extrabold text-brand-contrast mb-1" style="font-size: 1.75rem; letter-spacing: -0.02em;">
                 Pre-Consultation Health Questionnaire &amp; Informed Consent
@@ -140,7 +140,7 @@
 
     <!-- Active Appointment Banner -->
     @if($appointment)
-        <div class="p-3.5 mb-4 rounded-3 border d-flex align-items-center justify-content-between flex-wrap gap-3" style="background: linear-gradient(135deg, rgba(209, 102, 70, 0.08) 0%, rgba(91, 104, 70, 0.05) 100%); border-color: rgba(209, 102, 70, 0.3) !important;">
+        <div class="p-3.5 mb-4 rounded-3 border d-flex align-items-center justify-content-between flex-wrap gap-3" style="background: linear-gradient(135deg, rgba(58, 163, 162, 0.08) 0%, rgba(26, 155, 140, 0.05) 100%); border-color: rgba(58, 163, 162, 0.3) !important;">
             <div class="d-flex align-items-center gap-3">
                 <div class="footer-trust-icon footer-trust-ahpra" style="width: 44px; height: 44px; font-size: 1.25rem;">
                     <i class="bi bi-calendar-check-fill"></i>
@@ -890,7 +890,7 @@
                         <span class="clinical-sec-num"><i class="bi bi-shield-check"></i></span>
                         <div>
                             <h4 class="fw-bold text-brand-contrast mb-0 fs-5">Informed Consent: Medicinal Cannabis Treatment</h4>
-                            <span class="small text-muted">ZOVI LEAF &bull; TGA Special Access Scheme (SAS-B) / Authorised Prescriber Framework</span>
+                            <span class="small text-muted">ZYMIKA HEALTH &bull; TGA Special Access Scheme (SAS-B) / Authorised Prescriber Framework</span>
                         </div>
                     </div>
                     <button type="button" class="btn btn-sm btn-outline-secondary" @click="selectAllConsent()">

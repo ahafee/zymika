@@ -1,12 +1,12 @@
 @extends('layouts.app')
 
-@section('title', 'Appointment Confirmed - ZOVI LEAF')
+@section('title', 'Appointment Confirmed - ZYMIKA HEALTH')
 
 @section('content')
 <div class="container py-5">
     <div class="row justify-content-center">
         <div class="col-lg-8" data-aos="zoom-in">
-            <div class="card card-zovi p-4 p-md-5 border bg-white shadow-lg text-center" style="border-radius: var(--radius-xl);">
+            <div class="card card-zymika p-4 p-md-5 border bg-white shadow-lg text-center" style="border-radius: var(--radius-xl);">
                 <div class="bg-success bg-opacity-10 text-success rounded-circle p-3 d-inline-flex mb-3 border border-success border-opacity-25" style="width: 80px; height: 80px; align-items: center; justify-content: center; margin: 0 auto;">
                     <i class="bi bi-calendar-check-fill fs-1"></i>
                 </div>
@@ -46,7 +46,7 @@
                         </div>
                         @php
                             $resolvedVideoUrl = $appointment->video_meeting_url;
-                            if (str_contains($resolvedVideoUrl, 'telehealth.zovihealth.com.au/room/')) {
+                            if (str_contains($resolvedVideoUrl, 'telehealth.zymikahealth.com.au/room/')) {
                                 $roomCode = last(explode('/', $resolvedVideoUrl));
                                 $resolvedVideoUrl = route('telehealth.room', ['room_code' => $roomCode]);
                             }

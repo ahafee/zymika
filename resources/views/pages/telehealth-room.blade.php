@@ -1,11 +1,11 @@
 @extends('layouts.app')
 
-@section('title', 'Encrypted Telehealth Video Room - ZOVI LEAF')
+@section('title', 'Encrypted Telehealth Video Room - ZYMIKA HEALTH')
 
 @push('styles')
 <style>
 .video-room-container {
-    background-color: #141712;
+    background-color: #010916;
     min-height: calc(100vh - 180px);
     border-radius: var(--radius-xl);
     overflow: hidden;
@@ -25,7 +25,7 @@
     }
 }
 .video-feed-main {
-    background: linear-gradient(135deg, #1C2218 0%, #0F130E 100%);
+    background: linear-gradient(135deg, #0f2d59 0%, #010916 100%);
     border-radius: 16px;
     border: 1px solid rgba(255,255,255,0.08);
     position: relative;
@@ -54,7 +54,7 @@
     object-fit: cover;
 }
 .video-controls-bar {
-    background: rgba(26, 32, 22, 0.95);
+    background: rgba(15, 45, 89, 0.95);
     backdrop-filter: blur(12px);
     border-top: 1px solid rgba(255,255,255,0.08);
     padding: 1rem 1.5rem;
@@ -101,7 +101,7 @@
     border: 1px solid rgba(255,255,255,0.08);
     border-radius: 16px;
     padding: 1.25rem;
-    color: #FAF7F2;
+    color: #ffffff;
     display: flex;
     flex-direction: column;
 }
@@ -184,12 +184,12 @@
                 <div class="text-center p-4">
                     <div class="position-relative d-inline-block mb-3">
                         <div class="rounded-circle p-1 border border-2 border-success d-inline-block">
-                            <img src="{{ asset('images/zovi-logo.png') }}" alt="Dr. Suneetha Batthala" class="rounded-circle shadow" style="width: 110px; height: 110px; object-fit: cover; background: #FAF7F2;">
+                            <img src="{{ asset('images/Final-File.png') }}" alt="Dr. Suneetha Batthala" class="rounded-circle shadow" style="width: 110px; height: 110px; object-fit: cover; background: #ffffff;">
                         </div>
                         <span class="position-absolute bottom-0 end-0 p-1.5 bg-success border border-2 border-dark rounded-circle"></span>
                     </div>
                     <h5 class="text-white fw-bold mb-1">{{ $doctor->full_name ?? 'Dr. Suneetha Batthala' }}</h5>
-                    <p class="text-white-50 small mb-2">Prescribing Telehealth Doctor &bull; ZOVI LEAF Surry Hills</p>
+                    <p class="text-white-50 small mb-2">Prescribing Telehealth Doctor &bull; ZYMIKA HEALTH Surry Hills</p>
                     <span class="badge bg-white bg-opacity-10 text-white border border-white border-opacity-20 px-3 py-1.5">
                         <i class="bi bi-shield-check text-brand-primary me-1"></i> Consultation Active &amp; Ready
                     </span>

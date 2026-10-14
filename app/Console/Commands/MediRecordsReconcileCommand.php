@@ -9,7 +9,7 @@ class MediRecordsReconcileCommand extends Command
 {
     protected $signature = 'medirecords:reconcile';
 
-    protected $description = 'Perform scheduled daily reconciliation between ZOVI LEAF platform and MediRecords API';
+    protected $description = 'Perform scheduled daily reconciliation between ZYMIKA HEALTH platform and MediRecords API';
 
     public function handle(MediRecordsService $service): int
     {

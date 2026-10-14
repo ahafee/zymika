@@ -1,6 +1,6 @@
 @extends('layouts.portal')
 
-@section('title', 'Executive Practice Dashboard - ZOVI LEAF')
+@section('title', 'Executive Practice Dashboard - ZYMIKA HEALTH')
 
 @section('content')
 <!-- Header & Quick Operations Bar -->
@@ -12,7 +12,7 @@
             <span class="badge bg-success bg-opacity-10 text-success border border-success">AHPRA Compliant</span>
         </div>
         <h2 class="fw-bold text-brand-contrast mb-0">Practice Operations & Analytics</h2>
-        <p class="text-muted small mb-0">ZOVI LEAF &bull; Zovi Health Pty Ltd &bull; Level 1, 63-73 Ann St, Surry Hills NSW 2010</p>
+        <p class="text-muted small mb-0">ZYMIKA HEALTH &bull; Zymika Health Pty Ltd &bull; Level 1, 63-73 Ann St, Surry Hills NSW 2010</p>
     </div>
     <div class="d-flex gap-2">
         <form action="{{ route('admin.medirecords.reconcile') }}" method="POST">

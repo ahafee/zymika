@@ -1,6 +1,6 @@
 @extends('layouts.app')
 
-@section('title', 'Book Telehealth Consultation - Dr. Suneetha Batthala | ZOVI LEAF')
+@section('title', 'Book Telehealth Consultation - Dr. Suneetha Batthala | ZYMIKA HEALTH')
 
 @php
     $currentSelectedService = $services->firstWhere('id', $selectedServiceId) ?? $services->first();

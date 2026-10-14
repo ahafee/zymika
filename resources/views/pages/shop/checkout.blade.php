@@ -1,6 +1,6 @@
 @extends('layouts.app')
 
-@section('title', 'Secure Checkout - ZOVI LEAF Dispensary')
+@section('title', 'Secure Checkout - ZYMIKA HEALTH Dispensary')
 
 @section('content')
 <div class="py-5 bg-brand-light border-bottom">
@@ -19,7 +19,7 @@
             <div class="col-lg-8">
                 
                 <!-- 1. Patient & Delivery Address -->
-                <div class="card card-zovi p-4 mb-4 bg-white border">
+                <div class="card card-zymika p-4 mb-4 bg-white border">
                     <h5 class="fw-bold text-brand-contrast mb-3"><i class="bi bi-geo-alt-fill text-brand-primary me-2"></i> 1. Delivery Details (Australia Post Express)</h5>
 
                     <div class="row g-3">
@@ -77,7 +77,7 @@
 
                 <!-- 2. Prescription & Regulatory Verification -->
                 @if($hasPrescriptionRequiredItems)
-                    <div class="card card-zovi p-4 mb-4 bg-white border">
+                    <div class="card card-zymika p-4 mb-4 bg-white border">
                         <h5 class="fw-bold text-brand-contrast mb-2"><i class="bi bi-shield-check text-brand-sage me-2"></i> 2. Prescription Verification</h5>
                         <p class="small text-muted mb-3">Your order contains TGA Schedule 4 / Schedule 8 medicinal cannabis products.</p>
 
@@ -105,7 +105,7 @@
                 @endif
 
                 <!-- 3. Payment Method -->
-                <div class="card card-zovi p-4 mb-4 bg-white border">
+                <div class="card card-zymika p-4 mb-4 bg-white border">
                     <h5 class="fw-bold text-brand-contrast mb-3"><i class="bi bi-credit-card-2-front-fill text-brand-primary me-2"></i> 3. Payment Method</h5>
 
                     <div class="mb-3">
@@ -143,7 +143,7 @@
 
             <!-- Right: Order Summary -->
             <div class="col-lg-4">
-                <div class="card card-zovi p-4 bg-white border sticky-top" style="top: 100px;">
+                <div class="card card-zymika p-4 bg-white border sticky-top" style="top: 100px;">
                     <h5 class="fw-bold text-brand-contrast mb-3">Items in Order</h5>
 
                     <div class="mb-3" style="max-height: 240px; overflow-y: auto;">

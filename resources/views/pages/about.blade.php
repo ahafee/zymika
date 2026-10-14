@@ -1,6 +1,6 @@
 @extends('layouts.app')
 
-@section('title', 'About Us - Zovi Health Pty Ltd / ZOVI LEAF')
+@section('title', 'About Us - Zymika Health Pty Ltd / ZYMIKA HEALTH')
 
 @section('content')
 <!-- Premium Inner Hero Banner with Image -->
@@ -12,7 +12,7 @@
                     <span class="badge badge-tga"><i class="bi bi-shield-check me-1"></i> AHPRA & TGA ACCREDITED</span>
                     <span class="badge bg-white text-brand-contrast border"><i class="bi bi-geo-alt-fill text-brand-primary me-1"></i> Surry Hills NSW</span>
                 </div>
-                <h1 class="display-5 fw-bold text-brand-contrast mb-3">About ZOVI LEAF &amp; Zovi Health</h1>
+                <h1 class="display-5 fw-bold text-brand-contrast mb-3">About ZYMIKA HEALTH &amp; Zymika Health</h1>
                 <p class="lead text-muted mb-4">Lorem ipsum dolor sit amet, consectetur adipiscing elit sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
                 
                 <div class="d-flex flex-wrap gap-3 mb-4">
@@ -42,7 +42,7 @@
 
             <div class="col-lg-5" data-aos="fade-left" data-aos-delay="150">
                 <div class="inner-hero-img-wrap">
-                    <img src="{{ asset('images/banner1.jpg') }}" alt="ZOVI LEAF Australian Telehealth Clinic" class="inner-hero-img">
+                    <img src="{{ asset('images/banner1.jpg') }}" alt="ZYMIKA HEALTH Australian Telehealth Clinic" class="inner-hero-img">
                     <div class="inner-hero-floating-badge">
                         <div class="bg-success text-white rounded-circle p-2 d-flex align-items-center justify-content-center" style="width: 38px; height: 38px;">
                             <i class="bi bi-hospital fs-5"></i>
@@ -101,7 +101,7 @@
         </div>
 
         <div class="col-lg-6" data-aos="fade-left" data-aos-delay="150">
-            <div class="card card-zovi p-4 bg-white shadow-sm border">
+            <div class="card card-zymika p-4 bg-white shadow-sm border">
                 <div class="d-flex align-items-center gap-3 mb-3">
                     <img src="{{ asset('images/doctor-suneetha.jpg') }}" alt="Dr. Suneetha Batthala" class="rounded-circle border" style="width: 75px; height: 75px; object-fit: cover;">
                     <div>
@@ -137,7 +137,7 @@
 
         <div class="row g-4 text-center">
             <div class="col-md-4" data-aos="fade-up" data-aos-delay="100">
-                <div class="card card-zovi h-100 p-4 border bg-white shadow-sm">
+                <div class="card card-zymika h-100 p-4 border bg-white shadow-sm">
                     <div class="bg-brand-primary-light text-brand-primary rounded-circle mx-auto p-3 mb-3 d-flex align-items-center justify-content-center" style="width: 64px; height: 64px;">
                         <i class="bi bi-heart-pulse-fill fs-2"></i>
                     </div>
@@ -146,7 +146,7 @@
                 </div>
             </div>
             <div class="col-md-4" data-aos="fade-up" data-aos-delay="200">
-                <div class="card card-zovi h-100 p-4 border bg-white shadow-sm">
+                <div class="card card-zymika h-100 p-4 border bg-white shadow-sm">
                     <div class="bg-brand-sage-light text-brand-sage rounded-circle mx-auto p-3 mb-3 d-flex align-items-center justify-content-center" style="width: 64px; height: 64px;">
                         <i class="bi bi-shield-check fs-2"></i>
                     </div>
@@ -155,7 +155,7 @@
                 </div>
             </div>
             <div class="col-md-4" data-aos="fade-up" data-aos-delay="300">
-                <div class="card card-zovi h-100 p-4 border bg-white shadow-sm">
+                <div class="card card-zymika h-100 p-4 border bg-white shadow-sm">
                     <div class="bg-brand-primary-light text-brand-primary rounded-circle mx-auto p-3 mb-3 d-flex align-items-center justify-content-center" style="width: 64px; height: 64px;">
                         <i class="bi bi-lightning-charge-fill fs-2"></i>
                     </div>

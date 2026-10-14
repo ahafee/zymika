@@ -1,6 +1,6 @@
 @extends('layouts.portal')
 
-@section('title', 'Manage Consultations - ZOVI LEAF')
+@section('title', 'Manage Consultations - ZYMIKA HEALTH')
 
 @section('content')
 <div class="d-flex flex-wrap justify-content-between align-items-center mb-4 gap-3">

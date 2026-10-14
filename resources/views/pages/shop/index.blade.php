@@ -1,6 +1,6 @@
 @extends('layouts.app')
 
-@section('title', 'Medicinal Cannabis Dispensary Catalog - ZOVI LEAF')
+@section('title', 'Medicinal Cannabis Dispensary Catalog - ZYMIKA HEALTH')
 
 @section('content')
 <div class="py-5 bg-brand-light border-bottom" data-aos="fade-down">
@@ -15,7 +15,7 @@
     <div class="row g-4">
         <!-- Sidebar Filters -->
         <div class="col-lg-3" data-aos="fade-right">
-            <div class="card card-zovi p-4 bg-white border shadow-sm">
+            <div class="card card-zymika p-4 bg-white border shadow-sm">
                 <h5 class="fw-bold text-brand-contrast mb-3">Categories</h5>
                 <div class="list-group list-group-flush mb-4">
                     @foreach($categories as $key => $label)
@@ -65,7 +65,7 @@
             <div class="row g-4">
                 @forelse($products as $index => $prod)
                     <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="{{ ($index % 6) * 75 }}">
-                        <div class="card card-zovi h-100 border p-3 bg-white d-flex flex-column shadow-sm">
+                        <div class="card card-zymika h-100 border p-3 bg-white d-flex flex-column shadow-sm">
                             <div class="d-flex justify-content-between align-items-start mb-2">
                                 <span class="badge badge-schedule" style="font-size: 0.72rem;">{{ $prod->tga_schedule }}</span>
                                 @if($prod->is_prescription_required)

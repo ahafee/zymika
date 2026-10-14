@@ -19,7 +19,7 @@
     <div class="row g-5">
         <!-- Left: Product Showcase -->
         <div class="col-lg-6">
-            <div class="card card-zovi p-5 text-center bg-white border mb-3">
+            <div class="card card-zymika p-5 text-center bg-white border mb-3">
                 <div class="py-5">
                     @if(str_contains($product->category, 'flower'))
                         <i class="bi bi-flower1 text-brand-sage" style="font-size: 7rem;"></i>
@@ -60,7 +60,7 @@
             </p>
 
             <!-- Specs Table -->
-            <div class="card card-zovi p-3 bg-light border-0 mb-4">
+            <div class="card card-zymika p-3 bg-light border-0 mb-4">
                 <div class="row g-2 small">
                     <div class="col-6"><strong>Form Factor:</strong> {{ $product->form_factor }}</div>
                     <div class="col-6"><strong>Stock Status:</strong> <span class="text-success fw-bold">In Stock</span></div>
@@ -90,7 +90,7 @@
                     <div class="d-flex align-items-start gap-2">
                         <i class="bi bi-info-circle-fill text-brand-primary mt-1"></i>
                         <div class="small">
-                            <strong>New to ZOVI LEAF?</strong>
+                            <strong>New to ZYMIKA HEALTH?</strong>
                             <p class="text-muted mb-1">You will need an active prescription issued by Dr. Suneetha Batthala before your medication is dispensed.</p>
                             <a href="{{ route('booking.index') }}" class="fw-bold text-brand-primary text-decoration-none">
                                 Book Doctor Consultation ($79) &rarr;
@@ -117,7 +117,7 @@
             <div class="row g-4">
                 @foreach($relatedProducts as $rel)
                     <div class="col-md-4">
-                        <div class="card card-zovi h-100 p-3 border bg-white">
+                        <div class="card card-zymika h-100 p-3 border bg-white">
                             <h6 class="fw-bold text-brand-contrast mb-1">{{ $rel->name }}</h6>
                             <div class="text-brand-primary fw-bold mb-2">${{ number_format($rel->price, 2) }}</div>
                             <p class="small text-muted mb-3">{{ Str::limit($rel->short_description, 80) }}</p>

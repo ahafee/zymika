@@ -31,8 +31,8 @@ class MediRecordsService
         // Force live mode since we have live tokens
         $this->isSandbox = false;
 
-        $this->clientId = (string) (Setting::get('medirecords_client_id', config('services.medirecords.client_id', 'zovi_mr_live_client_8385365')));
-        $this->clientSecret = (string) (Setting::get('medirecords_client_secret', config('services.medirecords.client_secret', 'zovi_mr_secret_leaf_992147')));
+        $this->clientId = (string) (Setting::get('medirecords_client_id', config('services.medirecords.client_id', 'zymika_mr_live_client_8385365')));
+        $this->clientSecret = (string) (Setting::get('medirecords_client_secret', config('services.medirecords.client_secret', 'zymika_mr_secret_992147')));
 
         $this->authUrl = 'https://auth.medirecords.com/oauth/token';
         $this->apiBaseUrl = 'https://api.medirecords.com/v1';
@@ -172,7 +172,7 @@ class MediRecordsService
                 'ref' => $patient->medicare_ref,
                 'expiry' => $patient->medicare_expiry,
             ],
-            'clinic' => 'Zovi Health Pty Ltd - ZOVI LEAF Surry Hills',
+            'clinic' => 'Zymika Health Pty Ltd - ZYMIKA HEALTH Surry Hills',
         ];
 
         try {
@@ -400,7 +400,7 @@ class MediRecordsService
                         'prescription_number' => 'RX-'.strtoupper(Str::random(8)),
                         'patient_id' => $patient->id,
                         'doctor_id' => Doctor::first()?->id ?? 1,
-                        'medication_name' => $payload['data']['medication_name'] ?? 'ZOVI LEAF Full Spectrum CBD Oil 100mg/mL',
+                        'medication_name' => $payload['data']['medication_name'] ?? 'ZYMIKA HEALTH Full Spectrum CBD Oil 100mg/mL',
                         'dosage_instructions' => $payload['data']['dosage'] ?? '0.5mL sublingually twice daily as directed',
                         'repeats_total' => $payload['data']['repeats'] ?? 5,
                         'repeats_left' => $payload['data']['repeats'] ?? 5,

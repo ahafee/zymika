@@ -1,12 +1,12 @@
 @extends('layouts.app')
 
-@section('title', 'Order Confirmed - ZOVI LEAF')
+@section('title', 'Order Confirmed - ZYMIKA HEALTH')
 
 @section('content')
 <div class="container py-5">
     <div class="row justify-content-center">
         <div class="col-lg-8">
-            <div class="card card-zovi p-4 p-md-5 border bg-white shadow text-center">
+            <div class="card card-zymika p-4 p-md-5 border bg-white shadow text-center">
                 <div class="bg-brand-sage-light text-brand-sage rounded-circle p-3 d-inline-flex mb-3">
                     <i class="bi bi-box2-heart-fill display-4"></i>
                 </div>

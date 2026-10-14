@@ -1,6 +1,6 @@
 @extends('layouts.portal')
 
-@section('title', 'Manage Product Catalog - ZOVI LEAF')
+@section('title', 'Manage Product Catalog - ZYMIKA HEALTH')
 
 @section('content')
 <div class="d-flex flex-wrap justify-content-between align-items-center mb-4 gap-3">
@@ -35,7 +35,7 @@
                     <div class="row g-3">
                         <div class="col-md-8">
                             <label class="form-label fw-semibold small text-brand-contrast">Product Name *</label>
-                            <input type="text" name="name" id="prod_name" class="form-control" required placeholder="e.g. ZOVI LEAF Full Spectrum CBD Oil 100mg/mL">
+                            <input type="text" name="name" id="prod_name" class="form-control" required placeholder="e.g. ZYMIKA HEALTH Full Spectrum CBD Oil 100mg/mL">
                         </div>
                         <div class="col-md-4">
                             <label class="form-label fw-semibold small text-brand-contrast">SKU Code *</label>
@@ -53,7 +53,7 @@
                         </div>
                         <div class="col-md-4">
                             <label class="form-label fw-semibold small text-brand-contrast">Brand *</label>
-                            <input type="text" name="brand" id="prod_brand" class="form-control" value="ZOVI LEAF" required>
+                            <input type="text" name="brand" id="prod_brand" class="form-control" value="ZYMIKA HEALTH" required>
                         </div>
                         <div class="col-md-4">
                             <label class="form-label fw-semibold small text-brand-contrast">Form Factor *</label>

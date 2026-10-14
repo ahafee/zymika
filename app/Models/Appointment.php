@@ -71,10 +71,10 @@ class Appointment extends Model
     public function getVideoMeetingUrlAttribute(?string $value): string
     {
         if (empty($value)) {
-            return route('telehealth.room', ['room_code' => 'zovi-'.strtolower($this->appointment_number ?? 'room')]);
+            return route('telehealth.room', ['room_code' => 'zymika-'.strtolower($this->appointment_number ?? 'room')]);
         }
 
-        if (str_contains($value, 'telehealth.zovihealth.com.au/room/')) {
+        if (str_contains($value, 'telehealth.zymikahealth.com.au/room/')) {
             $parts = explode('/', $value);
             $roomCode = end($parts);
 

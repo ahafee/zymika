@@ -1,6 +1,6 @@
 @extends('layouts.app')
 
-@section('title', 'ZOVI LEAF | Australian Telehealth & Medicinal Cannabis Clinic - Zovi Health')
+@section('title', 'ZYMIKA HEALTH | Australian Telehealth & Medicinal Cannabis Clinic - Zymika Health')
 
 @section('content')
 <!-- Hero Section -->
@@ -43,7 +43,7 @@
                 </div>
 
                 <!-- Interactive Quick Eligibility Card -->
-                <div class="card card-zovi p-4 p-md-4 shadow-lg border-0 bg-white position-relative">
+                <div class="card card-zymika p-4 p-md-4 shadow-lg border-0 bg-white position-relative">
                     <h5 class="fw-bold text-brand-contrast mb-1">Check Your Eligibility</h5>
                     <p class="text-muted small mb-3">Lorem ipsum dolor sit amet, consectetur adipiscing elit sed do eiusmod tempor incididunt.</p>
 
@@ -155,7 +155,7 @@
     <div class="container py-4">
         <div class="text-center max-w-700 mx-auto mb-5" data-aos="fade-up">
             <span class="badge badge-tga mb-2">STREAMLINED TELEHEALTH PROCESS</span>
-            <h2 class="display-6 fw-bold text-brand-contrast mt-1">How Telehealth Works at ZOVI LEAF</h2>
+            <h2 class="display-6 fw-bold text-brand-contrast mt-1">How Telehealth Works at ZYMIKA HEALTH</h2>
             <p class="text-muted">Lorem ipsum dolor sit amet, consectetur adipiscing elit sed do eiusmod tempor incididunt ut labore.</p>
         </div>
 
@@ -479,36 +479,36 @@
     </div>
 </section>
 
-<!-- Why Choose ZOVI LEAF vs Traditional Clinics -->
-<section class="py-4 py-lg-5 position-relative overflow-hidden" style="background: linear-gradient(180deg, #FAF7F2 0%, #F3EFE6 100%);">
+<!-- Why Choose ZYMIKA HEALTH vs Traditional Clinics -->
+<section class="py-4 py-lg-5 position-relative overflow-hidden" style="background: linear-gradient(180deg, #fdfdfd 0%, #e7f9fb 100%);">
     <div class="container py-3">
         <div class="text-center max-w-700 mx-auto mb-4" data-aos="fade-up">
             <div class="d-inline-flex align-items-center gap-2 px-3 py-1 rounded-pill badge-tga mb-2">
                 <span class="pulse-dot"></span>
-                <span>THE ZOVI LEAF CLINICAL ADVANTAGE</span>
+                <span>THE ZYMIKA HEALTH CLINICAL ADVANTAGE</span>
             </div>
-            <h2 class="display-6 fw-bold text-brand-contrast mt-1">Why Choose ZOVI LEAF Telehealth?</h2>
+            <h2 class="display-6 fw-bold text-brand-contrast mt-1">Why Choose ZYMIKA HEALTH Telehealth?</h2>
             <p class="text-muted fs-6 mb-0">Lorem ipsum dolor sit amet, consectetur adipiscing elit sed do eiusmod tempor incididunt ut labore et dolore.</p>
         </div>
 
         <!-- Animated Side-by-Side Comparison Dual Cards -->
         <div class="row g-3 g-lg-4 align-items-stretch mb-4 mb-lg-5">
-            <!-- Left Card: ZOVI LEAF VIP Card -->
+            <!-- Left Card: ZYMIKA HEALTH VIP Card -->
             <div class="col-lg-6" data-aos="fade-right" data-aos-duration="800">
-                <div class="zovi-winner-card h-100 d-flex flex-column position-relative">
+                <div class="zymika-winner-card h-100 d-flex flex-column position-relative">
                     <div class="p-3.5 p-lg-4 d-flex flex-column flex-grow-1">
                         <div class="d-flex align-items-center gap-3 mb-3">
                             <div class="comp-header-logo bg-brand-primary text-white">
                                 <i class="bi bi-shield-check fs-4"></i>
                             </div>
                             <div>
-                                <h3 class="h4 fw-extrabold text-white mb-1">ZOVI LEAF Digital Clinic</h3>
+                                <h3 class="h4 fw-extrabold text-white mb-1">ZYMIKA HEALTH Digital Clinic</h3>
                                 <span class="text-brand-primary fw-semibold small">Compassionate &middot; AHPRA Registered &middot; 100% Online</span>
                             </div>
                         </div>
 
                         <div class="comparison-features-list flex-grow-1">
-                            <div class="comp-feature-item zovi-feature" data-aos="fade-up" data-aos-delay="100">
+                            <div class="comp-feature-item zymika-feature" data-aos="fade-up" data-aos-delay="100">
                                 <div class="comp-icon-box bg-brand-primary text-white">
                                     <i class="bi bi-lightning-charge-fill"></i>
                                 </div>
@@ -518,7 +518,7 @@
                                 </div>
                             </div>
 
-                            <div class="comp-feature-item zovi-feature" data-aos="fade-up" data-aos-delay="150">
+                            <div class="comp-feature-item zymika-feature" data-aos="fade-up" data-aos-delay="150">
                                 <div class="comp-icon-box bg-brand-sage text-white">
                                     <i class="bi bi-house-door-fill"></i>
                                 </div>
@@ -528,7 +528,7 @@
                                 </div>
                             </div>
 
-                            <div class="comp-feature-item zovi-feature" data-aos="fade-up" data-aos-delay="200">
+                            <div class="comp-feature-item zymika-feature" data-aos="fade-up" data-aos-delay="200">
                                 <div class="comp-icon-box bg-brand-primary text-white">
                                     <i class="bi bi-award-fill"></i>
                                 </div>
@@ -538,7 +538,7 @@
                                 </div>
                             </div>
 
-                            <div class="comp-feature-item zovi-feature" data-aos="fade-up" data-aos-delay="250">
+                            <div class="comp-feature-item zymika-feature" data-aos="fade-up" data-aos-delay="250">
                                 <div class="comp-icon-box bg-brand-sage text-white">
                                     <i class="bi bi-truck"></i>
                                 </div>
@@ -548,7 +548,7 @@
                                 </div>
                             </div>
 
-                            <div class="comp-feature-item zovi-feature" data-aos="fade-up" data-aos-delay="300">
+                            <div class="comp-feature-item zymika-feature" data-aos="fade-up" data-aos-delay="300">
                                 <div class="comp-icon-box bg-brand-primary text-white">
                                     <i class="bi bi-arrow-repeat"></i>
                                 </div>
@@ -558,7 +558,7 @@
                                 </div>
                             </div>
 
-                            <div class="comp-feature-item zovi-feature" data-aos="fade-up" data-aos-delay="350">
+                            <div class="comp-feature-item zymika-feature" data-aos="fade-up" data-aos-delay="350">
                                 <div class="comp-icon-box bg-brand-sage text-white">
                                     <i class="bi bi-cloud-check-fill"></i>
                                 </div>
@@ -974,7 +974,7 @@
             <span class="badge bg-white text-dark px-3 py-1.5 rounded-pill fw-bold mb-3 shadow-sm" style="font-size: 0.78rem; letter-spacing: 0.04em;">
                 <i class="bi bi-stars text-brand-primary me-1"></i> START YOUR JOURNEY TODAY
             </span>
-            <h2 class="display-5 fw-extrabold text-white mb-3">Begin Your Healing Journey with ZOVI LEAF</h2>
+            <h2 class="display-5 fw-extrabold text-white mb-3">Begin Your Healing Journey with ZYMIKA HEALTH</h2>
             <p class="lead text-light opacity-90 max-w-700 mx-auto mb-4 fs-5">
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit sed do eiusmod tempor incididunt ut labore et dolore.
             </p>

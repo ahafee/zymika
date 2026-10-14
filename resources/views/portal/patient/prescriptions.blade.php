@@ -15,7 +15,7 @@
     </div>
 </div>
 
-<div class="card card-zovi p-4 bg-white border">
+<div class="card card-zymika p-4 bg-white border">
     @if($prescriptions->isEmpty())
         <div class="text-center py-5 text-muted">
             <i class="bi bi-capsule fs-1 mb-2 d-block text-brand-primary"></i>

@@ -14,7 +14,7 @@ return new class extends Migration
             $table->string('slug')->unique();
             $table->string('sku')->unique();
             $table->string('category'); // cbd_oil, thc_oil, balanced_extract, medicinal_flower, vaporiser, accessory
-            $table->string('brand')->default('ZOVI LEAF');
+            $table->string('brand')->default('ZYMIKA HEALTH');
             $table->text('short_description')->nullable();
             $table->longText('description')->nullable();
             $table->string('thc_potency')->nullable(); // e.g. "20% THC" or "10mg/mL"

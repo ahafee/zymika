@@ -1,6 +1,6 @@
 @extends('layouts.app')
 
-@section('title', 'Frequently Asked Questions (FAQs) - ZOVI LEAF')
+@section('title', 'Frequently Asked Questions (FAQs) - ZYMIKA HEALTH')
 
 @section('content')
 <div class="py-5 bg-brand-light border-bottom" data-aos="fade-down">

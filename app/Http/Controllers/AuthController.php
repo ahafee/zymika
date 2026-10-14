@@ -86,7 +86,7 @@ class AuthController extends Controller
 
         Auth::login($user);
 
-        return redirect()->route('patient.dashboard')->with('success', 'Account created successfully! Welcome to ZOVI LEAF Patient Portal.');
+        return redirect()->route('patient.dashboard')->with('success', 'Account created successfully! Welcome to ZYMIKA HEALTH Patient Portal.');
     }
 
     public function showForgotPassword()

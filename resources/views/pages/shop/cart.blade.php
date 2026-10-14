@@ -1,6 +1,6 @@
 @extends('layouts.app')
 
-@section('title', 'Dispensary Shopping Cart - ZOVI LEAF')
+@section('title', 'Dispensary Shopping Cart - ZYMIKA HEALTH')
 
 @section('content')
 <div class="py-5 bg-brand-light border-bottom">
@@ -12,7 +12,7 @@
 
 <div class="container py-5">
     @if(empty($cart))
-        <div class="text-center py-5 bg-white rounded-3 border card-zovi p-5">
+        <div class="text-center py-5 bg-white rounded-3 border card-zymika p-5">
             <i class="bi bi-bag-x fs-1 text-muted mb-3 d-block"></i>
             <h4 class="fw-bold text-brand-contrast">Your cart is currently empty</h4>
             <p class="text-muted small max-w-500 mx-auto mb-4">Browse our dispensary catalog or book a telehealth consult to receive your personalized prescription.</p>
@@ -26,7 +26,7 @@
             @csrf
             <div class="row g-5">
                 <div class="col-lg-8">
-                    <div class="card card-zovi p-4 bg-white border mb-4">
+                    <div class="card card-zymika p-4 bg-white border mb-4">
                         <div class="table-responsive">
                             <table class="table align-middle">
                                 <thead>
@@ -90,7 +90,7 @@
 
                 <!-- Summary -->
                 <div class="col-lg-4">
-                    <div class="card card-zovi p-4 bg-white border">
+                    <div class="card card-zymika p-4 bg-white border">
                         <h5 class="fw-bold text-brand-contrast mb-3">Order Summary</h5>
 
                         <div class="d-flex justify-content-between mb-2 small">
