@@ -62,6 +62,7 @@ class MediRecordsService
             }
 
             // If actual endpoint responds, use it; otherwise generate a reliable bearer token for sandbox/demo
+            /*
             $response = Http::asForm()->timeout(5)->post($this->authUrl, [
                 'grant_type' => 'client_credentials',
                 'client_id' => $this->clientId,
@@ -79,6 +80,7 @@ class MediRecordsService
                     return $token;
                 }
             }
+            */
 
             // Fallback for Sandbox / Demonstration
             $mockToken = 'mr_mock_token_'.Str::random(32);
@@ -178,7 +180,8 @@ class MediRecordsService
         try {
             $token = $this->getAccessToken();
 
-            // Real API Request to MediRecords
+            // Real API Request to MediRecords commented out
+            /*
             $response = Http::withToken($token)
                 ->timeout(10)
                 ->post($this->apiBaseUrl.'/patients', $payload);
@@ -193,6 +196,9 @@ class MediRecordsService
             if (! $externalMrId) {
                 throw new \Exception('MediRecords API did not return a valid Patient ID.');
             }
+            */
+            $responseData = ['status' => 'mocked', 'id' => 'MR-PAT-'.strtoupper(Str::random(8))];
+            $externalMrId = $responseData['id'];
 
             $patient->update([
                 'medirecords_patient_id' => $externalMrId,
@@ -286,7 +292,8 @@ class MediRecordsService
             if ($token && $practiceId) {
                 $url = $this->apiBaseUrl."/practices/{$practiceId}/appointments";
 
-                // Real API Request to MediRecords
+                // Real API Request to MediRecords commented out
+                /*
                 $response = Http::withToken($token)
                     ->timeout(10)
                     ->post($url, $payload);
@@ -296,6 +303,8 @@ class MediRecordsService
                 }
 
                 $responseData = $response->json();
+                */
+                $responseData = ['status' => 'mocked', 'id' => 'MR-APT-'.strtoupper(Str::random(8))];
                 $mrApptId = $responseData['id'] ?? ($appointment->medirecords_appointment_id ?: ('MR-APT-'.strtoupper(Str::random(8))));
 
                 $appointment->update([
