@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\HomeController;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Artisan;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -30,7 +31,7 @@ $stubNamedRoutes = [
     'admin.dashboard', 'admin.appointments', 'admin.orders', 'admin.products',
     'admin.medirecords', 'admin.sync-logs', 'doctor.dashboard', 'doctor.appointments',
     'doctor.patients', 'doctor.prescriptions', 'patient.dashboard', 'patient.appointments',
-    'patient.prescriptions', 'patient.orders', 'patient.profile', 'patient.snapform'
+    'patient.prescriptions', 'patient.orders', 'patient.profile', 'patient.snapform',
 ];
 
 foreach ($stubNamedRoutes as $routeName) {
@@ -38,6 +39,33 @@ foreach ($stubNamedRoutes as $routeName) {
         return redirect()->route('home');
     })->name($routeName);
 }
+
+// Auto-deployment Webhook (Triggers git pull & cache clear on live server)
+Route::match(['GET', 'POST'], '/deploy-webhook', function (Request $request) {
+    $token = $request->query('token') ?? $request->header('X-Deploy-Token');
+    if ($token !== 'zymika_deploy_772910') {
+        return response()->json(['error' => 'Unauthorized'], 401);
+    }
+
+    $basePath = base_path();
+    $output = [];
+    $returnVar = 0;
+
+    exec("cd {$basePath} && /bin/git checkout -- . && /bin/git pull origin main 2>&1", $output, $returnVar);
+
+    Artisan::call('view:clear');
+    Artisan::call('route:clear');
+    Artisan::call('config:clear');
+    Artisan::call('cache:clear');
+
+    return response()->json([
+        'status' => $returnVar === 0 ? 'success' : 'failed',
+        'exit_code' => $returnVar,
+        'git_output' => $output,
+        'message' => 'Zymika live auto-deployment completed successfully.',
+        'timestamp' => now()->toIso8601String(),
+    ]);
+});
 
 // Redirect all other URLs and admin back to home page
 Route::any('{any}', function () {

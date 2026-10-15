@@ -1,0 +1,14 @@
+name: Auto Deploy to SiteGround
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Trigger SiteGround Webhook Deployment
+        run: |
+          curl -s -X POST "https://zymikahealth.aussifywebistedemo.com/deploy-webhook?token=zymika_deploy_772910"
