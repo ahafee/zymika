@@ -13,11 +13,7 @@ class HomeController extends Controller
 {
     public function index()
     {
-        $services = Service::where('is_active', true)->get();
-        $doctor = Doctor::with('user')->where('is_active', true)->first();
-        $featuredProducts = Product::where('is_active', true)->take(4)->get();
-
-        return view('pages.home', compact('services', 'doctor', 'featuredProducts'));
+        return view('pages.home');
     }
 
     public function about()

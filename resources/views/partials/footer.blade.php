@@ -1,203 +1,91 @@
-<footer class="pt-5 pb-4 mt-5 text-white footer-zymika-wrapper">
-    <div class="container">
-        <!-- VIP Trust Badges Strip -->
-        <div class="row g-3 pb-4 mb-5 border-bottom border-white border-opacity-10">
-            <div class="col-6 col-lg-3">
-                <div class="footer-trust-card">
-                    <div class="footer-trust-icon footer-trust-ahpra">
-                        <i class="bi bi-patch-check-fill"></i>
-                    </div>
-                    <div>
-                        <div class="fw-bold small text-white">AHPRA Registered</div>
-                        <div class="text-white-50" style="font-size: 0.75rem;">Accredited Australian Doctors</div>
-                    </div>
-                </div>
-            </div>
-            
-            <div class="col-6 col-lg-3">
-                <div class="footer-trust-card">
-                    <div class="footer-trust-icon footer-trust-tga">
-                        <i class="bi bi-shield-check"></i>
-                    </div>
-                    <div>
-                        <div class="fw-bold small text-white">TGA SAS-B &amp; AP</div>
-                        <div class="text-white-50" style="font-size: 0.75rem;">Direct Authorised Prescriber</div>
-                    </div>
-                </div>
-            </div>
-
-            <div class="col-6 col-lg-3">
-                <div class="footer-trust-card">
-                    <div class="footer-trust-icon footer-trust-medirecords">
-                        <i class="bi bi-cloud-check-fill"></i>
-                    </div>
-                    <div>
-                        <div class="fw-bold small text-white">MediRecords EHR</div>
-                        <div class="text-white-50" style="font-size: 0.75rem;">Bank-Grade Cloud Encryption</div>
-                    </div>
-                </div>
-            </div>
-
-            <div class="col-6 col-lg-3">
-                <div class="footer-trust-card">
-                    <div class="footer-trust-icon footer-trust-auspost">
-                        <i class="bi bi-truck"></i>
-                    </div>
-                    <div>
-                        <div class="fw-bold small text-white">Express AusPost</div>
-                        <div class="text-white-50" style="font-size: 0.75rem;">Discreet Nationwide Dispatch</div>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <!-- Main Footer Content Columns -->
-        <div class="row g-4 mb-5">
-            <!-- Brand & Clinic HQ -->
+<footer class="pt-5 pb-4 text-white footer-zymika-wrapper" style="background: linear-gradient(180deg, #0d223f 0%, #061324 100%); border-top: 3px solid var(--brand-primary, #3aa3a2);">
+    <div class="container" style="max-width: 1320px;">
+        <div class="row g-4 mb-5 pb-3 border-bottom border-white border-opacity-10">
+            <!-- Brand & Info Column -->
             <div class="col-lg-4 col-md-6">
                 <div class="d-flex align-items-center mb-3">
-                    @include('partials.logo')
+                    <a href="#" class="brand-logo-wrap d-inline-flex align-items-center text-decoration-none">
+                        <img src="{{ asset('images/Final-File-white.png') }}" alt="ZYMIKA HEALTH" class="brand-logo-img" style="max-height: 48px; width: auto;" onerror="this.src='{{ asset('images/Final-File.png') }}'">
+                    </a>
                 </div>
-                <p class="small text-light opacity-75 pe-lg-3 lh-base">
-                    <strong>ZYMIKA HEALTH / Zymika Health Pty Ltd</strong> is a physician-led Australian telehealth clinic dedicated to evidence-based plant medicine, chronic pain management, sleep restoration, and patient-centered integrative care.
+                <p class="text-light opacity-75 small pe-lg-3 lh-base">
+                    Zymika Health provides convenient telehealth consultations for patients seeking reliable online medical support, guidance, and patient centred care from home.
                 </p>
-                <div class="small text-light opacity-85 mt-3">
-                    <p class="mb-2 d-flex align-items-start gap-2">
-                        <i class="bi bi-geo-alt-fill text-brand-primary mt-1"></i>
-                        <span>Level 1, 63-73 Ann Street, Surry Hills NSW 2010</span>
-                    </p>
-                    <p class="mb-2 d-flex align-items-center gap-2">
-                        <i class="bi bi-telephone-fill text-brand-primary"></i>
-                        <a href="tel:0258385365" class="text-white text-decoration-none fw-semibold hover-primary">02 5838 5365</a>
-                    </p>
-                    <p class="mb-2 d-flex align-items-center gap-2">
-                        <i class="bi bi-envelope-fill text-brand-primary"></i>
-                        <a href="mailto:hello@zymikahealth.com.au" class="text-white text-decoration-none hover-primary">hello@zymikahealth.com.au</a>
-                    </p>
+                <div class="text-brand-primary fw-semibold small mb-3">
+                    Supporting Your Health Journey
+                </div>
+                <!-- Social Media Links (LinkedIn commented out as requested) -->
+                <div class="d-flex align-items-center gap-2 mt-3">
+                    {{-- LinkedIn is temporarily commented out as requested --}}
+                    <!-- <a href="#" class="btn btn-sm btn-outline-light rounded-circle d-inline-flex align-items-center justify-content-center" style="width: 38px; height: 38px;" title="LinkedIn"><i class="bi bi-linkedin"></i></a> -->
+                    
+                    <a href="#" class="btn btn-sm btn-outline-light rounded-circle d-inline-flex align-items-center justify-content-center" style="width: 38px; height: 38px;" title="Facebook">
+                        <i class="bi bi-facebook"></i>
+                    </a>
+                    <a href="#" class="btn btn-sm btn-outline-light rounded-circle d-inline-flex align-items-center justify-content-center" style="width: 38px; height: 38px;" title="YouTube">
+                        <i class="bi bi-youtube"></i>
+                    </a>
+                    <a href="#" class="btn btn-sm btn-outline-light rounded-circle d-inline-flex align-items-center justify-content-center" style="width: 38px; height: 38px;" title="Instagram">
+                        <i class="bi bi-instagram"></i>
+                    </a>
                 </div>
             </div>
 
-            <!-- Quick Navigation -->
+            <!-- Company Column -->
             <div class="col-lg-2 col-md-6 col-6">
-                <h6 class="footer-col-title">Quick Links</h6>
-                <ul class="list-unstyled footer-nav-list small">
-                    <li><a href="{{ route('home') }}"><i class="bi bi-chevron-right me-1"></i> Home</a></li>
-                    <li><a href="{{ route('about') }}"><i class="bi bi-chevron-right me-1"></i> About Us</a></li>
-                    <li><a href="{{ route('how-it-works') }}"><i class="bi bi-chevron-right me-1"></i> How It Works</a></li>
-                    <li><a href="{{ route('services') }}"><i class="bi bi-chevron-right me-1"></i> Services &amp; Fees</a></li>
-                    <li><a href="{{ route('contact') }}"><i class="bi bi-chevron-right me-1"></i> Contact</a></li>
+                <h6 class="text-white fw-bold mb-3 text-uppercase tracking-wider fs-6">Company</h6>
+                <ul class="list-unstyled d-flex flex-column gap-2 small">
+                    <li><a href="#" class="text-light opacity-75 text-decoration-none hover-primary">About Us</a></li>
+                    <li><a href="#" class="text-light opacity-75 text-decoration-none hover-primary">Our Services</a></li>
+                    <li><a href="#" class="text-light opacity-75 text-decoration-none hover-primary">How It Works</a></li>
+                    <li><a href="#" class="text-light opacity-75 text-decoration-none hover-primary">Contact Us</a></li>
                 </ul>
             </div>
 
-            <!-- Clinical Pathways -->
+            <!-- Services Column -->
             <div class="col-lg-3 col-md-6 col-6">
-                <h6 class="footer-col-title">Clinical Pathways</h6>
-                <ul class="list-unstyled footer-pathway-list small">
-                    <li class="footer-pathway-item mb-3">
-                        <a href="{{ route('services') }}" class="d-flex align-items-center gap-2 text-decoration-none text-light opacity-90 hover-white">
-                            <div class="footer-pathway-icon">
-                                <i class="bi bi-capsule text-brand-primary"></i>
-                            </div>
-                            <span>Chronic Musculoskeletal Pain</span>
-                        </a>
-                    </li>
-                    <li class="footer-pathway-item mb-3">
-                        <a href="{{ route('services') }}" class="d-flex align-items-center gap-2 text-decoration-none text-light opacity-90 hover-white">
-                            <div class="footer-pathway-icon">
-                                <i class="bi bi-moon-stars-fill text-brand-sage"></i>
-                            </div>
-                            <span>Insomnia &amp; Sleep Therapy</span>
-                        </a>
-                    </li>
-                    <li class="footer-pathway-item mb-3">
-                        <a href="{{ route('services') }}" class="d-flex align-items-center gap-2 text-decoration-none text-light opacity-90 hover-white">
-                            <div class="footer-pathway-icon">
-                                <i class="bi bi-heart-pulse-fill text-brand-primary"></i>
-                            </div>
-                            <span>Anxiety &amp; Stress Management</span>
-                        </a>
-                    </li>
-                    <li class="footer-pathway-item mb-3">
-                        <a href="{{ route('services') }}" class="d-flex align-items-center gap-2 text-decoration-none text-light opacity-90 hover-white">
-                            <div class="footer-pathway-icon">
-                                <i class="bi bi-flower1 text-brand-sage"></i>
-                            </div>
-                            <span>Women's Pelvic &amp; Endo Care</span>
-                        </a>
-                    </li>
-                    <li class="footer-pathway-item mb-3">
-                        <a href="{{ route('services') }}" class="d-flex align-items-center gap-2 text-decoration-none text-light opacity-90 hover-white">
-                            <div class="footer-pathway-icon">
-                                <i class="bi bi-shield-plus text-brand-primary"></i>
-                            </div>
-                            <span>Palliative Supportive Care</span>
-                        </a>
-                    </li>
+                <h6 class="text-white fw-bold mb-3 text-uppercase tracking-wider fs-6">Services</h6>
+                <ul class="list-unstyled d-flex flex-column gap-2 small">
+                    <li><a href="#" class="text-light opacity-75 text-decoration-none hover-primary">Men’s Health</a></li>
+                    <li><a href="#" class="text-light opacity-75 text-decoration-none hover-primary">Mental Health</a></li>
+                    <li><a href="#" class="text-light opacity-75 text-decoration-none hover-primary">Chronic Management</a></li>
+                    <li><a href="#" class="text-light opacity-75 text-decoration-none hover-primary">Medical Checkup</a></li>
                 </ul>
             </div>
 
-            <!-- Patient Hub & Care -->
+            <!-- Contact Info Column -->
             <div class="col-lg-3 col-md-6">
-                <h6 class="footer-col-title">Patient Portal &amp; Care</h6>
-                <p class="small text-white-50 mb-3">Access your electronic prescriptions, repeats wallet, and clinical documents securely.</p>
-                
-                <div class="d-flex flex-column gap-2 mb-3">
-                    @auth
-                        <a href="{{ route('login') }}" class="btn btn-sm btn-brand-primary fw-semibold py-2">
-                            <i class="bi bi-speedometer2 me-1"></i> My Patient Dashboard
-                        </a>
-                    @else
-                        <a href="{{ route('login') }}" class="btn btn-sm btn-brand-primary fw-semibold py-2">
-                            <i class="bi bi-person-circle me-1"></i> Patient Login
-                        </a>
-                        <a href="{{ route('eligibility.show') }}" class="btn btn-sm btn-outline-light py-2">
-                            <i class="bi bi-ui-checks me-1"></i> Free 60s Eligibility Quiz
-                        </a>
-                    @endauth
-                </div>
-
-                <!-- Emergency Support Notice Box -->
-                <div class="footer-emergency-card">
-                    <div class="d-flex align-items-center gap-2 mb-1.5">
-                        <i class="bi bi-shield-exclamation text-danger fs-5"></i>
-                        <strong class="text-white small">24/7 Crisis &amp; Emergency</strong>
+                <h6 class="text-white fw-bold mb-3 text-uppercase tracking-wider fs-6">Contact Info</h6>
+                <div class="small text-light opacity-85 d-flex flex-column gap-2">
+                    <div>
+                        <div class="text-white fw-semibold">Monday - Friday:</div>
+                        <div class="text-light opacity-75">9:00 AM - 5:00 PM</div>
                     </div>
-                    <p class="text-white-50 mb-2.5" style="font-size: 0.76rem; line-height: 1.4;">
-                        For acute medical emergencies, call <strong>000</strong>. For 24/7 mental health crisis support, connect with Lifeline.
-                    </p>
-                    <div class="d-flex flex-wrap gap-2">
-                        <a href="tel:000" class="btn btn-danger btn-sm py-1 px-2.5 fw-bold" style="font-size: 0.75rem;">
-                            <i class="bi bi-telephone-fill me-1"></i> Call 000
-                        </a>
-                        <a href="tel:131114" class="btn btn-outline-light btn-sm py-1 px-2.5" style="font-size: 0.75rem;">
-                            <i class="bi bi-heart-pulse me-1"></i> Lifeline 13 11 14
-                        </a>
+                    <div>
+                        <div class="text-white fw-semibold">Location:</div>
+                        <div class="text-light opacity-75">Berwick, VIC 3806</div>
+                    </div>
+                    <div>
+                        <div class="text-white fw-semibold">Phone No:</div>
+                        <div><a href="tel:0411174173" class="text-brand-primary text-decoration-none fw-semibold">0411174173</a></div>
                     </div>
                 </div>
             </div>
         </div>
 
-        <!-- <div class="footer-tga-disclaimer mb-4">
-            <div class="d-flex align-items-center gap-2 mb-1">
-                <i class="bi bi-info-circle-fill text-brand-primary"></i>
-                <span class="text-white fw-semibold small">Australian Regulatory &amp; Prescribing Notice</span>
-            </div> -->
-            <!-- <p class="mb-0 text-white-50" style="font-size: 0.75rem; line-height: 1.5;">
-                ZYMIKA HEALTH / Zymika Health Pty Ltd operates in strict compliance with Australian therapeutic goods regulations and state medical boards. Schedule 4 and Schedule 8 prescription medications are dispensed strictly upon comprehensive medical assessment and clinical necessity by AHPRA-registered Australian medical practitioners. Treatment outcomes vary and are not guaranteed.
-            </p> -->
-        <!-- </div> -->
-
-        <hr class="border-white border-opacity-10 my-4">
-
-        <!-- Statutory Notice & Copyright -->
-        <div class="row g-3 align-items-center">
-            <div class="col-md-6 text-center text-md-start small text-white-50">
-                &copy; {{ date('Y') }} Zymika Health Pty Ltd (ZYMIKA HEALTH). All rights reserved. ABN: 48 682 910 234.
+        <!-- Bottom Copyright Bar -->
+        <div class="d-flex flex-column flex-md-row justify-content-between align-items-center gap-3 small text-light opacity-75">
+            <div>
+                &copy; 2026 Zymika Health. All Rights Reserved. | Website Designed by <a href="https://www.aussifywebdesign.com.au/" target="_blank" rel="noopener noreferrer" class="text-white text-decoration-underline hover-primary">Aussify Web Design</a>
             </div>
-            <div class="col-md-6 text-center text-md-end small text-white-50">
-                <span class="d-inline-flex align-items-center gap-2">
-                    <i class="bi bi-geo-alt text-brand-primary"></i> Sydney &bull; Melbourne &bull; Brisbane &bull; Perth (Nationwide Telehealth)
-                </span>
+            <div class="d-flex align-items-center gap-3">
+                <a href="#" class="text-light opacity-75 text-decoration-none hover-primary">Terms &amp; Conditions</a>
+                <span class="opacity-25">|</span>
+                <a href="#" class="text-light opacity-75 text-decoration-none hover-primary">Privacy Policy</a>
+                <span class="opacity-25">|</span>
+                <a href="#" class="text-light opacity-75 text-decoration-none hover-primary d-inline-flex align-items-center gap-1">
+                    <span>Back To Top</span> <i class="bi bi-arrow-up-circle"></i>
+                </a>
             </div>
         </div>
     </div>
