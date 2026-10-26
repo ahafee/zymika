@@ -102,7 +102,7 @@
             <div class="col-lg-7" data-aos="fade-left">
                 <div class="card border-0 shadow-lg rounded-4 overflow-hidden">
                     <div class="card-header border-0 py-3 px-4 text-white" style="background-color: #0f2d59;">
-                        <h5 class="mb-0 fw-semibold fs-5"><i class="bi bi-envelope-check me-2 text-brand-primary"></i> Send Us a Message</h5>
+                        <h5 class="mb-0 text-white fw-semibold fs-5"><i class="bi bi-envelope-check me-2 text-brand-primary"></i> Send Us a Message</h5>
                     </div>
                     <div class="card-body p-4 p-md-5 bg-white">
                         @if(session('success'))
