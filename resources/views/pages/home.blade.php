@@ -98,7 +98,8 @@
     </div>
 </section>
 
-<!-- 25+ Years of Experience In Healthcare Service Section (Matches Live Reference & Screenshot) -->
+{{--
+<!-- 25+ Years of Experience In Healthcare Service Section (Temporarily Commented Out) -->
 <section class="partner-showcase-section">
     <div class="container">
         <h2 class="partner-showcase-title" data-aos="fade-up">
@@ -156,6 +157,7 @@
         </div>
     </div>
 </section>
+--}}
 
 <!-- About Us: Accessible Online Healthcare across Australia (Matches Live Reference & Screenshot) -->
 <section class="about-accessible-section" id="about">
