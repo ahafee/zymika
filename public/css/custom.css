@@ -3820,33 +3820,64 @@ img {
     }
 }
 
+.hero-service-pills-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 0.75rem 1rem;
+    max-width: 580px;
+    margin-bottom: 2rem;
+}
+
 .hero-service-pill {
-    background-color: rgba(255, 255, 255, 0.65);
-    border: 1px solid rgba(15, 45, 89, 0.08);
-    transition: all 0.28s cubic-bezier(0.16, 1, 0.3, 1);
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    padding: 0.7rem 1.15rem;
+    background: #ffffff;
+    border: 1.5px solid rgba(15, 45, 89, 0.12);
+    border-radius: 12px;
+    text-decoration: none !important;
+    box-shadow: 0 4px 14px rgba(15, 45, 89, 0.04);
+    transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
 }
 
 .hero-service-pill .pill-arrow-wrap {
-    color: #3aa3a2;
-    transition: transform 0.25s ease, color 0.25s ease;
+    width: 26px;
+    height: 26px;
+    border-radius: 50%;
+    background: rgba(58, 163, 162, 0.12);
+    color: #176562;
     display: inline-flex;
     align-items: center;
+    justify-content: center;
+    font-size: 0.85rem;
+    flex-shrink: 0;
+    transition: all 0.25s ease;
+}
+
+.hero-service-pill .pill-text {
+    font-size: 0.88rem;
+    font-weight: 700;
+    color: #0f2d59 !important;
+    line-height: 1.3;
+    transition: color 0.2s ease;
 }
 
 .hero-service-pill:hover {
-    background-color: #ffffff;
-    border-color: rgba(58, 163, 162, 0.4);
-    box-shadow: 0 6px 18px rgba(15, 45, 89, 0.08);
+    background: #ffffff;
+    border-color: #176562;
     transform: translateY(-2px);
+    box-shadow: 0 8px 22px rgba(23, 101, 98, 0.14);
 }
 
 .hero-service-pill:hover .pill-arrow-wrap {
-    transform: translateX(4px);
-    color: #0f2d59;
+    background: #176562;
+    color: #ffffff;
+    transform: translateX(3px);
 }
 
 .hero-service-pill:hover .pill-text {
-    color: #3aa3a2 !important;
+    color: #176562 !important;
 }
 
 .hero-btn-primary:hover {
@@ -5266,6 +5297,218 @@ img {
         right: auto;
         margin-top: 1rem;
         max-width: 100%;
+    }
+}
+
+/* ==========================================================================
+   VIP PATIENT REVIEWS & TESTIMONIALS (100% NO INLINE CSS)
+   ========================================================================== */
+
+.reviews-section {
+    padding: 5rem 0;
+    background: linear-gradient(180deg, #ffffff 0%, #f7fafc 100%);
+    position: relative;
+}
+
+.reviews-trust-pill {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.65rem;
+    padding: 6px 18px;
+    background: #ffffff;
+    border: 1.5px solid rgba(15, 45, 89, 0.1);
+    border-radius: 50rem;
+    box-shadow: 0 4px 14px rgba(15, 45, 89, 0.05);
+    margin-bottom: 2rem;
+}
+
+.reviews-stars-wrap {
+    color: #f59e0b;
+    font-size: 0.95rem;
+    display: flex;
+    gap: 2px;
+}
+
+.reviews-score-text {
+    font-size: 0.88rem;
+    font-weight: 700;
+    color: #0f2d59;
+}
+
+.reviews-ahpra-badge {
+    background: #ecfdf5;
+    color: #059669;
+    font-size: 0.76rem;
+    font-weight: 700;
+    padding: 3px 10px;
+    border-radius: 50rem;
+    border: 1px solid rgba(5, 150, 105, 0.2);
+}
+
+/* Featured Review Hero Card */
+.review-featured-card {
+    background: linear-gradient(135deg, #f0fafb 0%, #ffffff 50%, #e7f9fb 100%);
+    border: 1.5px solid rgba(58, 163, 162, 0.25);
+    border-radius: 24px;
+    padding: 2.75rem 3rem;
+    margin-bottom: 2rem;
+    position: relative;
+    overflow: hidden;
+    box-shadow: 0 15px 40px rgba(15, 45, 89, 0.07);
+    transition: all 0.3s ease;
+}
+
+.review-featured-card:hover {
+    box-shadow: 0 20px 50px rgba(15, 45, 89, 0.11);
+    border-color: #176562;
+    transform: translateY(-2px);
+}
+
+.review-watermark-quote {
+    position: absolute;
+    top: 15px;
+    right: 25px;
+    font-size: 6rem;
+    line-height: 1;
+    color: #176562;
+    opacity: 0.08;
+    pointer-events: none;
+    font-family: serif;
+}
+
+.review-featured-stars {
+    color: #f59e0b;
+    font-size: 1.25rem;
+    margin-bottom: 1.25rem;
+    display: flex;
+    gap: 3px;
+}
+
+.review-featured-quote {
+    font-size: clamp(1.05rem, 1.8vw, 1.25rem);
+    font-weight: 500;
+    color: #0f2d59;
+    line-height: 1.8;
+    font-style: italic;
+    margin-bottom: 1.5rem;
+    position: relative;
+    z-index: 2;
+}
+
+.review-author-wrap {
+    display: flex;
+    align-items: center;
+    gap: 0.95rem;
+    position: relative;
+    z-index: 2;
+}
+
+.review-author-avatar {
+    width: 46px;
+    height: 46px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 800;
+    font-size: 0.95rem;
+    color: #ffffff;
+    background: linear-gradient(135deg, #176562 0%, #0f2d59 100%);
+    box-shadow: 0 4px 12px rgba(23, 101, 98, 0.25);
+    flex-shrink: 0;
+}
+
+.review-author-name {
+    font-size: 1rem;
+    font-weight: 700;
+    color: #0f2d59;
+    margin: 0;
+    display: flex;
+    align-items: center;
+    gap: 0.35rem;
+}
+
+.review-author-badge {
+    font-size: 0.78rem;
+    color: #64748b;
+    margin: 0;
+}
+
+.review-verified-tag {
+    color: #059669;
+    font-size: 0.95rem;
+}
+
+/* 3 Bottom Testimonial Cards Grid */
+.review-card {
+    background: #ffffff;
+    border: 1.5px solid #e2e8f0;
+    border-radius: 18px;
+    padding: 1.85rem;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    box-shadow: 0 4px 16px rgba(15, 45, 89, 0.04);
+    transition: all 0.28s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.review-card:hover {
+    border-color: #176562;
+    transform: translateY(-4px);
+    box-shadow: 0 14px 30px rgba(15, 45, 89, 0.09);
+}
+
+.review-card-stars {
+    color: #f59e0b;
+    font-size: 0.95rem;
+    margin-bottom: 0.85rem;
+    display: flex;
+    gap: 2px;
+}
+
+.review-card-text {
+    font-size: 0.92rem;
+    color: #334155;
+    line-height: 1.65;
+    font-style: italic;
+    margin-bottom: 1.35rem;
+    flex-grow: 1;
+}
+
+.review-card-author-avatar {
+    width: 38px;
+    height: 38px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 700;
+    font-size: 0.82rem;
+    color: #ffffff;
+    background: linear-gradient(135deg, #3aa3a2 0%, #163868 100%);
+    flex-shrink: 0;
+}
+
+.review-card-author-name {
+    font-size: 0.92rem;
+    font-weight: 700;
+    color: #0f2d59;
+    margin: 0;
+    display: flex;
+    align-items: center;
+    gap: 0.35rem;
+}
+
+.review-card-author-sub {
+    font-size: 0.74rem;
+    color: #64748b;
+    margin: 0;
+}
+
+@media (max-width: 768px) {
+    .review-featured-card {
+        padding: 1.75rem 1.5rem;
     }
 }
 

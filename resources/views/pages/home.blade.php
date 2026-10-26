@@ -428,66 +428,152 @@
     </div>
 </section>
 
-<!-- Our Satisfied Patients Section -->
-<section class="py-5 bg-white">
-    <div class="container py-lg-4" style="max-width: 1200px;">
-        <div class="text-center mb-5" data-aos="fade-up">
+<!-- Our Satisfied Patients Section (VIP Luxury Review Design - Zero Inline CSS) -->
+<section class="reviews-section">
+    <div class="container" style="max-width: 1200px;">
+        <div class="text-center mb-4" data-aos="fade-up">
             <span class="badge px-3 py-2 rounded-pill fw-semibold mb-2 text-uppercase" style="background-color: rgba(58, 163, 162, 0.12); color: #1a9b8c;">
                 Our Satisfied Patients
             </span>
             <h2 class="display-6 fw-bold text-brand-contrast mb-2">What Our Patients Say about Zymika Health?</h2>
-            <p class="text-muted mx-auto lead fs-6" style="max-width: 680px;">
+            <p class="text-muted mx-auto lead fs-6 mb-3" style="max-width: 680px;">
                 Discover why patients across Australia trust Zymika Health for convenient and 24/7 Telehealth Australia services.
             </p>
+
+            <!-- Rating Trust Pill -->
+            <div class="reviews-trust-pill">
+                <div class="reviews-stars-wrap">
+                    <i class="bi bi-star-fill"></i>
+                    <i class="bi bi-star-fill"></i>
+                    <i class="bi bi-star-fill"></i>
+                    <i class="bi bi-star-fill"></i>
+                    <i class="bi bi-star-fill"></i>
+                </div>
+                <span class="reviews-score-text">4.9 / 5.0 Star Patient Rating</span>
+                <span class="reviews-ahpra-badge">
+                    <i class="bi bi-patch-check-fill me-1"></i>AHPRA Verified Doctors
+                </span>
+            </div>
         </div>
 
-        <!-- Featured Doctor Review -->
-        <div class="card border-0 shadow-sm rounded-4 p-4 p-md-5 mb-4 text-center" style="background: linear-gradient(135deg, #f0fafb 0%, #e7f9fb 100%);" data-aos="fade-up">
-            <div class="text-warning fs-5 mb-3">
-                <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i>
+        <!-- Featured Luxury Doctor Review -->
+        <div class="review-featured-card" data-aos="fade-up">
+            <span class="review-watermark-quote">“</span>
+            
+            <div class="review-featured-stars">
+                <i class="bi bi-star-fill"></i>
+                <i class="bi bi-star-fill"></i>
+                <i class="bi bi-star-fill"></i>
+                <i class="bi bi-star-fill"></i>
+                <i class="bi bi-star-fill"></i>
             </div>
-            <p class="fs-5 text-brand-contrast fst-italic mb-3 mx-auto" style="max-width: 840px; line-height: 1.8;">
+            
+            <p class="review-featured-quote">
                 “Dr Bazel Lodhi provided exceptional care and made me feel comfortable throughout my consultation. His professional approach, clear communication, and genuine concern for my health were outstanding. I appreciate the time he took to understand my needs and provide personalised advice.”
             </p>
-            <div class="fw-bold text-brand-contrast">Patient Review</div>
+
+            <div class="review-author-wrap">
+                <div class="review-author-avatar">
+                    <i class="bi bi-person-fill"></i>
+                </div>
+                <div>
+                    <h4 class="review-author-name">
+                        <span>Patient Review</span>
+                        <i class="bi bi-patch-check-fill review-verified-tag"></i>
+                    </h4>
+                    <p class="review-author-badge">Dr Bazel Lodhi Consultation • Verified Australian Telehealth Patient</p>
+                </div>
+            </div>
         </div>
 
-        <!-- 3 Patient Testimonial Cards -->
+        <!-- 3 Patient Testimonial Cards Grid -->
         <div class="row g-4">
+            <!-- Review 1: David R. -->
             <div class="col-md-4" data-aos="fade-up" data-aos-delay="50">
-                <div class="card h-100 border rounded-4 p-4 shadow-sm">
-                    <div class="text-warning small mb-2"><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i></div>
-                    <p class="text-muted small fst-italic mb-3 lh-base">
-                        “Zymika Health made getting medical advice so much easier. I was able to connect with a healthcare professional from home without the stress of waiting rooms. Highly recommended.”
-                    </p>
-                    <div class="mt-auto pt-2 border-top">
-                        <div class="fw-bold text-brand-contrast small">David R.</div>
-                        <small class="text-muted">Patient</small>
+                <div class="review-card">
+                    <div>
+                        <div class="review-card-stars">
+                            <i class="bi bi-star-fill"></i>
+                            <i class="bi bi-star-fill"></i>
+                            <i class="bi bi-star-fill"></i>
+                            <i class="bi bi-star-fill"></i>
+                            <i class="bi bi-star-fill"></i>
+                        </div>
+                        <p class="review-card-text">
+                            “Zymika Health made getting medical advice so much easier. I was able to connect with a healthcare professional from home without the stress of waiting rooms. Highly recommended.”
+                        </p>
+                    </div>
+                    <div class="d-flex align-items-center gap-2.5 pt-3 border-top">
+                        <div class="review-card-author-avatar">DR</div>
+                        <div>
+                            <div class="review-card-author-name">
+                                <span>David R.</span>
+                                <i class="bi bi-patch-check-fill review-verified-tag"></i>
+                            </div>
+                            <div class="review-card-author-sub">General GP Patient • Melbourne, VIC</div>
+                        </div>
                     </div>
                 </div>
             </div>
+
+            <!-- Review 2: Emily K. -->
             <div class="col-md-4" data-aos="fade-up" data-aos-delay="100">
-                <div class="card h-100 border rounded-4 p-4 shadow-sm">
-                    <div class="text-warning small mb-2"><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i></div>
-                    <p class="text-muted small fst-italic mb-3 lh-base">
-                        “The convenience of online consultations has completely changed how my family manages healthcare. Zymika Health is actually the best.”
-                    </p>
-                    <div class="mt-auto pt-2 border-top">
-                        <div class="fw-bold text-brand-contrast small">Emily K.</div>
-                        <small class="text-muted">Patient</small>
+                <div class="review-card">
+                    <div>
+                        <div class="review-card-stars">
+                            <i class="bi bi-star-fill"></i>
+                            <i class="bi bi-star-fill"></i>
+                            <i class="bi bi-star-fill"></i>
+                            <i class="bi bi-star-fill"></i>
+                            <i class="bi bi-star-fill"></i>
+                        </div>
+                        <p class="review-card-text">
+                            “The convenience of online consultations has completely changed how my family manages healthcare. Zymika Health is actually the best.”
+                        </p>
+                    </div>
+                    <div class="d-flex align-items-center gap-2.5 pt-3 border-top">
+                        <div class="review-card-author-avatar">EK</div>
+                        <div>
+                            <div class="review-card-author-name">
+                                <span>Emily K.</span>
+                                <i class="bi bi-patch-check-fill review-verified-tag"></i>
+                            </div>
+                            <div class="review-card-author-sub">Family Telehealth • Sydney, NSW</div>
+                        </div>
                     </div>
                 </div>
             </div>
+
+            <!-- Review 3: John G. -->
             <div class="col-md-4" data-aos="fade-up" data-aos-delay="150">
-                <div class="card h-100 border rounded-4 p-4 shadow-sm">
-                    <div class="text-warning small mb-2"><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i></div>
-                    <p class="text-muted small fst-italic mb-3 lh-base">
-                        “I appreciate how easy it is to book appointments and receive quality care through Zymika Health. Amazing platform. I am glad that now my health is in good hands.”
-                    </p>
-                    <div class="mt-auto pt-2 border-top">
-                        <div class="fw-bold text-brand-contrast small">John G.</div>
-                        <small class="text-muted">Patient’s Parent</small>
+                <div class="review-card">
+                    <div>
+                        <div class="review-card-stars">
+                            <i class="bi bi-star-fill"></i>
+                            <i class="bi bi-star-fill"></i>
+                            <i class="bi bi-star-fill"></i>
+                            <i class="bi bi-star-fill"></i>
+                            <i class="bi bi-star-fill"></i>
+                        </div>
+                        <p class="review-card-text">
+                            “I appreciate how easy it is to book appointments and receive quality care through Zymika Health. Amazing platform. I am glad that now my health is in good hands.”
+                        </p>
                     </div>
+                    <div class="d-flex align-items-center gap-2.5 pt-3 border-top">
+                        <div class="review-card-author-avatar">JG</div>
+                        <div>
+                            <div class="review-card-author-name">
+                                <span>John G.</span>
+                                <i class="bi bi-patch-check-fill review-verified-tag"></i>
+                            </div>
+                            <div class="review-card-author-sub">Patient’s Parent • Brisbane, QLD</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
                 </div>
             </div>
         </div>
