@@ -4001,16 +4001,36 @@ img {
 /* Hero Typography */
 .newdoc-hero-title {
     font-family: 'Outfit', 'Poppins', sans-serif;
-    font-size: clamp(2.4rem, 4.8vw, 4rem);
+    font-size: clamp(1.85rem, 3.2vw, 2.75rem);
     font-weight: 800;
     color: #0f2d59;
-    line-height: 1.12;
-    letter-spacing: -0.035em;
-    margin-bottom: 1.75rem;
+    line-height: 1.22;
+    letter-spacing: -0.03em;
+    margin-bottom: 1.35rem;
 }
 
 .newdoc-hero-title span.text-teal {
     color: #1a7e78;
+}
+
+/* dCapture Hero Image Graphic (No Inline CSS) */
+.hero-dcapture-wrap {
+    position: relative;
+    display: inline-block;
+    width: 100%;
+    max-width: 580px;
+    transition: transform 0.35s ease;
+}
+
+.hero-dcapture-wrap:hover {
+    transform: translateY(-4px);
+}
+
+.hero-dcapture-img {
+    width: 100%;
+    max-height: 480px;
+    object-fit: contain;
+
 }
 
 .newdoc-lead-desc {
@@ -5398,20 +5418,20 @@ img {
 .review-author-wrap {
     display: flex;
     align-items: center;
-    gap: 0.95rem;
+    gap: 16px;
     position: relative;
     z-index: 2;
 }
 
 .review-author-avatar {
-    width: 46px;
-    height: 46px;
+    width: 48px;
+    height: 48px;
     border-radius: 50%;
     display: flex;
     align-items: center;
     justify-content: center;
     font-weight: 800;
-    font-size: 0.95rem;
+    font-size: 1.1rem;
     color: #ffffff;
     background: linear-gradient(135deg, #176562 0%, #0f2d59 100%);
     box-shadow: 0 4px 12px rgba(23, 101, 98, 0.25);
@@ -5422,14 +5442,14 @@ img {
     font-size: 1rem;
     font-weight: 700;
     color: #0f2d59;
-    margin: 0;
+    margin: 0 0 2px 0;
     display: flex;
     align-items: center;
-    gap: 0.35rem;
+    gap: 6px;
 }
 
 .review-author-badge {
-    font-size: 0.78rem;
+    font-size: 0.8rem;
     color: #64748b;
     margin: 0;
 }
@@ -5439,12 +5459,48 @@ img {
     font-size: 0.95rem;
 }
 
-/* 3 Bottom Testimonial Cards Grid */
+/* Reviews Auto-Scroll Track (Continuous Smooth Marquee) */
+.reviews-autoscroll-wrapper {
+    width: 100%;
+    overflow: hidden;
+    position: relative;
+    padding: 1.25rem 0 2rem;
+    margin-top: 1rem;
+    mask-image: linear-gradient(to right, transparent 0%, black 4%, black 96%, transparent 100%);
+    -webkit-mask-image: linear-gradient(to right, transparent 0%, black 4%, black 96%, transparent 100%);
+}
+
+.reviews-autoscroll-track {
+    display: flex;
+    gap: 1.5rem;
+    width: max-content;
+    animation: scrollReviews 40s linear infinite;
+}
+
+.reviews-autoscroll-track:hover {
+    animation-play-state: paused;
+}
+
+@keyframes scrollReviews {
+    0% {
+        transform: translateX(0);
+    }
+    100% {
+        transform: translateX(-50%);
+    }
+}
+
+.review-carousel-item {
+    width: 360px;
+    flex-shrink: 0;
+}
+
+/* Review Card Styling & Footer Spacing */
 .review-card {
     background: #ffffff;
     border: 1.5px solid #e2e8f0;
-    border-radius: 18px;
-    padding: 1.85rem;
+    border-radius: 20px;
+    padding: 1.75rem 1.85rem;
     height: 100%;
     display: flex;
     flex-direction: column;
@@ -5464,7 +5520,7 @@ img {
     font-size: 0.95rem;
     margin-bottom: 0.85rem;
     display: flex;
-    gap: 2px;
+    gap: 3px;
 }
 
 .review-card-text {
@@ -5476,34 +5532,44 @@ img {
     flex-grow: 1;
 }
 
+.review-card-footer {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    padding-top: 1rem;
+    border-top: 1px solid #f1f5f9;
+}
+
 .review-card-author-avatar {
-    width: 38px;
-    height: 38px;
+    width: 42px;
+    height: 42px;
     border-radius: 50%;
     display: flex;
     align-items: center;
     justify-content: center;
     font-weight: 700;
-    font-size: 0.82rem;
+    font-size: 0.86rem;
     color: #ffffff;
     background: linear-gradient(135deg, #3aa3a2 0%, #163868 100%);
+    box-shadow: 0 3px 10px rgba(58, 163, 162, 0.25);
     flex-shrink: 0;
 }
 
 .review-card-author-name {
-    font-size: 0.92rem;
+    font-size: 0.95rem;
     font-weight: 700;
     color: #0f2d59;
-    margin: 0;
+    margin: 0 0 2px 0;
     display: flex;
     align-items: center;
-    gap: 0.35rem;
+    gap: 5px;
 }
 
 .review-card-author-sub {
-    font-size: 0.74rem;
+    font-size: 0.76rem;
     color: #64748b;
     margin: 0;
+    line-height: 1.2;
 }
 
 @media (max-width: 768px) {

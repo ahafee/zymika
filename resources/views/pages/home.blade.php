@@ -16,9 +16,9 @@
                     <span class="newdoc-avatar-text text-uppercase">Telehealth doctor Australia</span>
                 </div>
 
-                <!-- Main Heading -->
+                <!-- Main Heading (2 Lines on Desktop) -->
                 <h1 class="newdoc-hero-title">
-                    24/7 Quality Healthcare Wherever You Are
+                    24/7 Quality Healthcare<br class="d-none d-md-inline"> Wherever You Are
                 </h1>
 
                 <!-- Hero Subtitle Description -->
@@ -67,24 +67,10 @@
                 </div>
             </div>
 
-            <!-- Right Hero Image Graphic with Layered Cards & Floating Badges -->
-            <div class="col-lg-6" data-aos="fade-left">
-                <div class="newdoc-cards-stage">
-                    <!-- Back Card: Doctor -->
-                    <div class="newdoc-card-back">
-                        <img src="{{ asset('images/doctor-bazel.png') }}" alt="Dr Bazel Lodhi Specialist General Practitioner">
-                    </div>
-
-                    <!-- Front Card: Patient with Speech Bubble -->
-                    <div class="newdoc-card-front">
-                        <div class="newdoc-card-front-inner">
-                            <img src="{{ asset('images/hero-telehealth.jpg') }}" alt="Telehealth Consultation Australia">
-                        </div>
-                        <div class="newdoc-speech-bubble">
-                            <i class="bi bi-chat-square-quote-fill bubble-icon"></i>
-                            <span>I'd like to renew my prescription!</span>
-                        </div>
-                    </div>
+            <!-- Right Hero Image Graphic (Using dCapture.png) -->
+            <div class="col-lg-6 text-center" data-aos="fade-left">
+                <div class="hero-dcapture-wrap">
+                    <img src="{{ asset('images/dCapture.png') }}" alt="Telehealth Online Doctor Consultation Australia - Zymika Health" class="img-fluid hero-dcapture-img" onerror="this.src='{{ asset('images/hero-telehealth.jpg') }}'">
                 </div>
             </div>
         </div>
@@ -486,95 +472,246 @@
             </div>
         </div>
 
-        <!-- 3 Patient Testimonial Cards Grid -->
-        <div class="row g-4">
-            <!-- Review 1: David R. -->
-            <div class="col-md-4" data-aos="fade-up" data-aos-delay="50">
-                <div class="review-card">
-                    <div>
-                        <div class="review-card-stars">
-                            <i class="bi bi-star-fill"></i>
-                            <i class="bi bi-star-fill"></i>
-                            <i class="bi bi-star-fill"></i>
-                            <i class="bi bi-star-fill"></i>
-                            <i class="bi bi-star-fill"></i>
-                        </div>
-                        <p class="review-card-text">
-                            “Zymika Health made getting medical advice so much easier. I was able to connect with a healthcare professional from home without the stress of waiting rooms. Highly recommended.”
-                        </p>
-                    </div>
-                    <div class="d-flex align-items-center gap-2.5 pt-3 border-top">
-                        <div class="review-card-author-avatar">DR</div>
+        <!-- Auto-Scrolling Infinite Patient Reviews Track -->
+        <div class="reviews-autoscroll-wrapper" data-aos="fade-up">
+            <div class="reviews-autoscroll-track">
+                
+                <!-- Review 1: David R. -->
+                <div class="review-carousel-item">
+                    <div class="review-card">
                         <div>
-                            <div class="review-card-author-name">
-                                <span>David R.</span>
-                                <i class="bi bi-patch-check-fill review-verified-tag"></i>
+                            <div class="review-card-stars">
+                                <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i>
                             </div>
-                            <div class="review-card-author-sub">General GP Patient • Melbourne, VIC</div>
+                            <p class="review-card-text">
+                                “Zymika Health made getting medical advice so much easier. I was able to connect with a healthcare professional from home without the stress of waiting rooms. Highly recommended.”
+                            </p>
+                        </div>
+                        <div class="review-card-footer">
+                            <div class="review-card-author-avatar">DR</div>
+                            <div>
+                                <div class="review-card-author-name">
+                                    <span>David R.</span>
+                                    <i class="bi bi-patch-check-fill review-verified-tag"></i>
+                                </div>
+                                <div class="review-card-author-sub">General GP Patient • Melbourne, VIC</div>
+                            </div>
                         </div>
                     </div>
                 </div>
-            </div>
 
-            <!-- Review 2: Emily K. -->
-            <div class="col-md-4" data-aos="fade-up" data-aos-delay="100">
-                <div class="review-card">
-                    <div>
-                        <div class="review-card-stars">
-                            <i class="bi bi-star-fill"></i>
-                            <i class="bi bi-star-fill"></i>
-                            <i class="bi bi-star-fill"></i>
-                            <i class="bi bi-star-fill"></i>
-                            <i class="bi bi-star-fill"></i>
-                        </div>
-                        <p class="review-card-text">
-                            “The convenience of online consultations has completely changed how my family manages healthcare. Zymika Health is actually the best.”
-                        </p>
-                    </div>
-                    <div class="d-flex align-items-center gap-2.5 pt-3 border-top">
-                        <div class="review-card-author-avatar">EK</div>
+                <!-- Review 2: Emily K. -->
+                <div class="review-carousel-item">
+                    <div class="review-card">
                         <div>
-                            <div class="review-card-author-name">
-                                <span>Emily K.</span>
-                                <i class="bi bi-patch-check-fill review-verified-tag"></i>
+                            <div class="review-card-stars">
+                                <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i>
                             </div>
-                            <div class="review-card-author-sub">Family Telehealth • Sydney, NSW</div>
+                            <p class="review-card-text">
+                                “The convenience of online consultations has completely changed how my family manages healthcare. Zymika Health is actually the best.”
+                            </p>
+                        </div>
+                        <div class="review-card-footer">
+                            <div class="review-card-author-avatar">EK</div>
+                            <div>
+                                <div class="review-card-author-name">
+                                    <span>Emily K.</span>
+                                    <i class="bi bi-patch-check-fill review-verified-tag"></i>
+                                </div>
+                                <div class="review-card-author-sub">Family Telehealth • Sydney, NSW</div>
+                            </div>
                         </div>
                     </div>
                 </div>
-            </div>
 
-            <!-- Review 3: John G. -->
-            <div class="col-md-4" data-aos="fade-up" data-aos-delay="150">
-                <div class="review-card">
-                    <div>
-                        <div class="review-card-stars">
-                            <i class="bi bi-star-fill"></i>
-                            <i class="bi bi-star-fill"></i>
-                            <i class="bi bi-star-fill"></i>
-                            <i class="bi bi-star-fill"></i>
-                            <i class="bi bi-star-fill"></i>
-                        </div>
-                        <p class="review-card-text">
-                            “I appreciate how easy it is to book appointments and receive quality care through Zymika Health. Amazing platform. I am glad that now my health is in good hands.”
-                        </p>
-                    </div>
-                    <div class="d-flex align-items-center gap-2.5 pt-3 border-top">
-                        <div class="review-card-author-avatar">JG</div>
+                <!-- Review 3: John G. -->
+                <div class="review-carousel-item">
+                    <div class="review-card">
                         <div>
-                            <div class="review-card-author-name">
-                                <span>John G.</span>
-                                <i class="bi bi-patch-check-fill review-verified-tag"></i>
+                            <div class="review-card-stars">
+                                <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i>
                             </div>
-                            <div class="review-card-author-sub">Patient’s Parent • Brisbane, QLD</div>
+                            <p class="review-card-text">
+                                “I appreciate how easy it is to book appointments and receive quality care through Zymika Health. Amazing platform. I am glad that now my health is in good hands.”
+                            </p>
+                        </div>
+                        <div class="review-card-footer">
+                            <div class="review-card-author-avatar">JG</div>
+                            <div>
+                                <div class="review-card-author-name">
+                                    <span>John G.</span>
+                                    <i class="bi bi-patch-check-fill review-verified-tag"></i>
+                                </div>
+                                <div class="review-card-author-sub">Patient’s Parent • Brisbane, QLD</div>
+                            </div>
                         </div>
                     </div>
                 </div>
-            </div>
-        </div>
-    </div>
-</section>
+
+                <!-- Review 4: Sarah M. -->
+                <div class="review-carousel-item">
+                    <div class="review-card">
+                        <div>
+                            <div class="review-card-stars">
+                                <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i>
+                            </div>
+                            <p class="review-card-text">
+                                “Fast, seamless prescription renewal without taking half a day off work. The doctor was knowledgeable, patient, and very helpful.”
+                            </p>
+                        </div>
+                        <div class="review-card-footer">
+                            <div class="review-card-author-avatar">SM</div>
+                            <div>
+                                <div class="review-card-author-name">
+                                    <span>Sarah M.</span>
+                                    <i class="bi bi-patch-check-fill review-verified-tag"></i>
+                                </div>
+                                <div class="review-card-author-sub">Online Prescription • Perth, WA</div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
+
+                <!-- Review 5: Michael T. -->
+                <div class="review-carousel-item">
+                    <div class="review-card">
+                        <div>
+                            <div class="review-card-stars">
+                                <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i>
+                            </div>
+                            <p class="review-card-text">
+                                “Compassionate and discreet medical care. Being able to speak to a doctor privately from home has been wonderful for my wellbeing.”
+                            </p>
+                        </div>
+                        <div class="review-card-footer">
+                            <div class="review-card-author-avatar">MT</div>
+                            <div>
+                                <div class="review-card-author-name">
+                                    <span>Michael T.</span>
+                                    <i class="bi bi-patch-check-fill review-verified-tag"></i>
+                                </div>
+                                <div class="review-card-author-sub">Mental Health Care • Adelaide, SA</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- DUPLICATE SET FOR INFINITE SEAMLESS LOOPING -->
+                <div class="review-carousel-item" aria-hidden="true">
+                    <div class="review-card">
+                        <div>
+                            <div class="review-card-stars">
+                                <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i>
+                            </div>
+                            <p class="review-card-text">
+                                “Zymika Health made getting medical advice so much easier. I was able to connect with a healthcare professional from home without the stress of waiting rooms. Highly recommended.”
+                            </p>
+                        </div>
+                        <div class="review-card-footer">
+                            <div class="review-card-author-avatar">DR</div>
+                            <div>
+                                <div class="review-card-author-name">
+                                    <span>David R.</span>
+                                    <i class="bi bi-patch-check-fill review-verified-tag"></i>
+                                </div>
+                                <div class="review-card-author-sub">General GP Patient • Melbourne, VIC</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="review-carousel-item" aria-hidden="true">
+                    <div class="review-card">
+                        <div>
+                            <div class="review-card-stars">
+                                <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i>
+                            </div>
+                            <p class="review-card-text">
+                                “The convenience of online consultations has completely changed how my family manages healthcare. Zymika Health is actually the best.”
+                            </p>
+                        </div>
+                        <div class="review-card-footer">
+                            <div class="review-card-author-avatar">EK</div>
+                            <div>
+                                <div class="review-card-author-name">
+                                    <span>Emily K.</span>
+                                    <i class="bi bi-patch-check-fill review-verified-tag"></i>
+                                </div>
+                                <div class="review-card-author-sub">Family Telehealth • Sydney, NSW</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="review-carousel-item" aria-hidden="true">
+                    <div class="review-card">
+                        <div>
+                            <div class="review-card-stars">
+                                <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i>
+                            </div>
+                            <p class="review-card-text">
+                                “I appreciate how easy it is to book appointments and receive quality care through Zymika Health. Amazing platform. I am glad that now my health is in good hands.”
+                            </p>
+                        </div>
+                        <div class="review-card-footer">
+                            <div class="review-card-author-avatar">JG</div>
+                            <div>
+                                <div class="review-card-author-name">
+                                    <span>John G.</span>
+                                    <i class="bi bi-patch-check-fill review-verified-tag"></i>
+                                </div>
+                                <div class="review-card-author-sub">Patient’s Parent • Brisbane, QLD</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="review-carousel-item" aria-hidden="true">
+                    <div class="review-card">
+                        <div>
+                            <div class="review-card-stars">
+                                <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i>
+                            </div>
+                            <p class="review-card-text">
+                                “Fast, seamless prescription renewal without taking half a day off work. The doctor was knowledgeable, patient, and very helpful.”
+                            </p>
+                        </div>
+                        <div class="review-card-footer">
+                            <div class="review-card-author-avatar">SM</div>
+                            <div>
+                                <div class="review-card-author-name">
+                                    <span>Sarah M.</span>
+                                    <i class="bi bi-patch-check-fill review-verified-tag"></i>
+                                </div>
+                                <div class="review-card-author-sub">Online Prescription • Perth, WA</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="review-carousel-item" aria-hidden="true">
+                    <div class="review-card">
+                        <div>
+                            <div class="review-card-stars">
+                                <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i>
+                            </div>
+                            <p class="review-card-text">
+                                “Compassionate and discreet medical care. Being able to speak to a doctor privately from home has been wonderful for my wellbeing.”
+                            </p>
+                        </div>
+                        <div class="review-card-footer">
+                            <div class="review-card-author-avatar">MT</div>
+                            <div>
+                                <div class="review-card-author-name">
+                                    <span>Michael T.</span>
+                                    <i class="bi bi-patch-check-fill review-verified-tag"></i>
+                                </div>
+                                <div class="review-card-author-sub">Mental Health Care • Adelaide, SA</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
             </div>
         </div>
     </div>
