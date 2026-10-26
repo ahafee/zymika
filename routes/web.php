@@ -51,7 +51,10 @@ Route::match(['GET', 'POST'], '/deploy-webhook', function (Request $request) {
     $output = [];
     $returnVar = 0;
 
-    exec("cd {$basePath} && /bin/git checkout -- . && /bin/git pull origin main 2>&1", $output, $returnVar);
+    $whichGit = trim((string) @shell_exec('which git 2>/dev/null'));
+    $gitCmd = !empty($whichGit) ? $whichGit : 'git';
+
+    exec("cd {$basePath} && {$gitCmd} checkout -- . && {$gitCmd} pull origin main 2>&1", $output, $returnVar);
 
     Artisan::call('view:clear');
     Artisan::call('route:clear');

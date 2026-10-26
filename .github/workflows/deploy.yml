@@ -1,4 +1,4 @@
-name: Auto Deploy to SiteGround
+name: Auto Deploy to Live Server
 
 on:
   push:
@@ -9,6 +9,6 @@ jobs:
   deploy:
     runs-on: ubuntu-latest
     steps:
-      - name: Trigger SiteGround Webhook Deployment
+      - name: Trigger Deployment Webhook
         run: |
-          curl -s -X POST "https://zymikahealth.aussifywebistedemo.com/deploy-webhook?token=zymika_deploy_772910"
+          curl -s -X POST "https://zymikahealth.aussifydemowebsite.com/deploy-webhook?token=zymika_deploy_772910"
