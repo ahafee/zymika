@@ -1,6 +1,6 @@
 <!-- Consultation Booking Modal (NewDoc Inspired Flow - 100% No Inline CSS) -->
 <div class="modal fade consult-modal" id="consultBookingModal" tabindex="-1" aria-labelledby="consultBookingModalLabel" aria-hidden="true" x-data="bookingModalHandler()">
-    <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
         <div class="modal-content consult-modal-content">
             
             <!-- Modal Header -->

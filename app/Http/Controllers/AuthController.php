@@ -18,20 +18,29 @@ class AuthController extends Controller
         return view('pages.auth.login');
     }
 
+    public function showLoginForm()
+    {
+        return $this->showLogin();
+    }
+
     public function login(Request $request)
     {
-        $credentials = $request->validate([
-            'email' => 'required|email',
-            'password' => 'required',
+        $loginInput = $request->input('email');
+        $password = $request->input('password');
+
+        $request->validate([
+            'email' => 'required|string',
+            'password' => 'required|string',
         ]);
 
         $remember = (bool) $request->has('remember');
+        $fieldType = filter_var($loginInput, FILTER_VALIDATE_EMAIL) ? 'email' : 'phone';
 
-        if (Auth::attempt($credentials, $remember)) {
+        if (Auth::attempt([$fieldType => $loginInput, 'password' => $password], $remember)) {
             $request->session()->regenerate();
             $user = Auth::user();
 
-            return $this->redirectBasedOnRole($user);
+            return redirect()->intended(route('home'))->with('success', 'Welcome back, ' . $user->name . '! You are now signed in.');
         }
 
         return back()->withErrors([
@@ -48,45 +57,57 @@ class AuthController extends Controller
         return view('pages.auth.register');
     }
 
+    public function showRegisterForm()
+    {
+        return $this->showRegister();
+    }
+
     public function register(Request $request)
     {
-        $validated = $request->validate([
+        $rules = [
             'name' => 'required|string|max:255',
             'email' => 'required|string|email|max:255|unique:users',
-            'password' => 'required|string|min:8|confirmed',
-            'phone' => 'required|string|max:50',
-            'date_of_birth' => 'required|date',
-            'gender' => 'required|string',
-            'address_line1' => 'required|string|max:255',
-            'city' => 'required|string|max:255',
-            'state' => 'required|string|max:10',
-            'postcode' => 'required|string|max:10',
+            'password' => 'required|string|min:6',
+            'phone' => 'nullable|string|max:50',
+            'date_of_birth' => 'nullable|date',
+            'gender' => 'nullable|string',
+            'address_line1' => 'nullable|string|max:255',
+            'city' => 'nullable|string|max:255',
+            'state' => 'nullable|string|max:10',
+            'postcode' => 'nullable|string|max:10',
             'medicare_number' => 'nullable|string|max:50',
             'medicare_ref' => 'nullable|string|max:5',
             'medicare_expiry' => 'nullable|string|max:10',
-            'terms' => 'required|accepted',
-        ]);
+            'terms' => 'nullable',
+        ];
+
+        if ($request->has('password_confirmation')) {
+            $rules['password'] = 'required|string|min:6|confirmed';
+        }
+
+        $validated = $request->validate($rules);
 
         $user = User::create([
             'name' => $validated['name'],
             'email' => $validated['email'],
             'password' => Hash::make($validated['password']),
             'role' => 'patient',
-            'phone' => $validated['phone'],
-            'date_of_birth' => $validated['date_of_birth'],
-            'gender' => $validated['gender'],
-            'address_line1' => $validated['address_line1'],
-            'city' => $validated['city'],
-            'state' => $validated['state'],
-            'postcode' => $validated['postcode'],
+            'phone' => $validated['phone'] ?? '0411174173',
+            'date_of_birth' => $validated['date_of_birth'] ?? now()->subYears(25)->toDateString(),
+            'gender' => $validated['gender'] ?? 'prefer_not_to_say',
+            'address_line1' => $validated['address_line1'] ?? 'Telehealth Patient',
+            'city' => $validated['city'] ?? 'Berwick',
+            'state' => $validated['state'] ?? 'VIC',
+            'postcode' => $validated['postcode'] ?? '3806',
             'medicare_number' => $validated['medicare_number'] ?? null,
             'medicare_ref' => $validated['medicare_ref'] ?? null,
             'medicare_expiry' => $validated['medicare_expiry'] ?? null,
+            'is_active' => true,
         ]);
 
         Auth::login($user);
 
-        return redirect()->route('patient.dashboard')->with('success', 'Account created successfully! Welcome to ZYMIKA HEALTH Patient Portal.');
+        return redirect()->intended(route('home'))->with('success', 'Account created successfully! Welcome to Zymika Health.');
     }
 
     public function showForgotPassword()

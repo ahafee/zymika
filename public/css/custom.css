@@ -4188,73 +4188,99 @@ img {
 }
 
 /* ==========================================================================
-   CONSULTATION BOOKING MODAL (100% NO INLINE CSS)
+   CONSULTATION BOOKING MODAL (100% RESPONSIVE & NO INLINE CSS)
    ========================================================================== */
 
 .consult-modal .modal-dialog {
-    max-width: 780px;
-    margin: 1.75rem auto;
+    max-width: 760px;
+    width: 95%;
+    margin: 1.25rem auto;
 }
 
 .consult-modal-content {
     border: none;
-    border-radius: 24px;
+    border-radius: 20px;
     overflow: hidden;
-    box-shadow: 0 30px 80px rgba(15, 45, 89, 0.28);
+    box-shadow: 0 25px 70px rgba(15, 45, 89, 0.25);
     background-color: #ffffff;
+    max-height: calc(100vh - 2.5rem);
+    display: flex;
+    flex-direction: column;
 }
 
 .consult-modal-header {
-    padding: 1.85rem 2.2rem 1rem;
+    padding: 1.35rem 1.85rem 0.65rem;
     border-bottom: none;
     display: flex;
     align-items: flex-start;
     justify-content: space-between;
+    flex-shrink: 0;
 }
 
 .consult-modal-title {
     font-family: 'Outfit', 'Poppins', sans-serif;
-    font-size: 1.65rem;
+    font-size: 1.45rem;
     font-weight: 800;
     color: #0f2d59;
     letter-spacing: -0.02em;
-    margin-bottom: 0.35rem;
+    margin-bottom: 0.2rem;
 }
 
 .consult-modal-subtitle {
-    font-size: 0.88rem;
+    font-size: 0.84rem;
     font-weight: 600;
     color: #176562;
     display: flex;
     align-items: center;
-    gap: 0.45rem;
+    gap: 0.4rem;
 }
 
 .consult-modal-subtitle .bi-check-circle-fill {
-    font-size: 1rem;
+    font-size: 0.95rem;
     color: #176562;
 }
 
 .consult-modal-body {
-    padding: 0.5rem 2.2rem 2.2rem;
+    padding: 0.5rem 1.85rem 1.25rem;
+    overflow-y: auto;
+    flex: 1 1 auto;
+}
+
+/* Custom sleek scrollbar */
+.consult-modal-body::-webkit-scrollbar,
+.consult-times-panel::-webkit-scrollbar,
+.consult-days-list::-webkit-scrollbar {
+    width: 5px;
+    height: 5px;
+}
+.consult-modal-body::-webkit-scrollbar-thumb,
+.consult-times-panel::-webkit-scrollbar-thumb,
+.consult-days-list::-webkit-scrollbar-thumb {
+    background: #cbd5e1;
+    border-radius: 10px;
+}
+.consult-modal-body::-webkit-scrollbar-track,
+.consult-times-panel::-webkit-scrollbar-track,
+.consult-days-list::-webkit-scrollbar-track {
+    background: transparent;
 }
 
 /* Service Options Cards (Step 1) */
 .consult-service-grid {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-    gap: 1rem;
-    margin-bottom: 1rem;
+    gap: 0.95rem;
+    margin-bottom: 0.95rem;
 }
 
 .consult-service-card {
     border: 1.5px solid #e2e8f0;
-    border-radius: 16px;
-    padding: 1.35rem 1.4rem;
+    border-radius: 14px;
+    padding: 1.2rem 1.25rem;
     background-color: #ffffff;
     cursor: pointer;
     text-align: left;
-    transition: all 0.26s cubic-bezier(0.16, 1, 0.3, 1);
+    transition: all 0.24s cubic-bezier(0.16, 1, 0.3, 1);
     position: relative;
     display: flex;
     flex-direction: column;
@@ -4264,31 +4290,31 @@ img {
 .consult-service-card:hover {
     border-color: #176562;
     transform: translateY(-2px);
-    box-shadow: 0 10px 24px rgba(23, 101, 98, 0.12);
+    box-shadow: 0 8px 20px rgba(23, 101, 98, 0.12);
 }
 
 .consult-service-card.selected {
     border-color: #176562;
     background-color: #f2f9f9;
-    box-shadow: 0 6px 18px rgba(23, 101, 98, 0.15);
+    box-shadow: 0 4px 14px rgba(23, 101, 98, 0.15);
 }
 
 .consult-card-head {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    margin-bottom: 0.5rem;
+    margin-bottom: 0.4rem;
 }
 
 .consult-card-title {
-    font-size: 1.15rem;
+    font-size: 1.1rem;
     font-weight: 700;
     color: #0f2d59;
     margin: 0;
 }
 
 .consult-card-arrow {
-    font-size: 1.1rem;
+    font-size: 1.05rem;
     color: #64748b;
     transition: transform 0.2s ease, color 0.2s ease;
 }
@@ -4299,24 +4325,24 @@ img {
 }
 
 .consult-card-desc {
-    font-size: 0.84rem;
+    font-size: 0.82rem;
     color: #475569;
-    line-height: 1.55;
+    line-height: 1.5;
     margin: 0;
 }
 
 .consult-card-notice {
-    margin-top: 0.85rem;
-    padding: 0.45rem 0.75rem;
+    margin-top: 0.75rem;
+    padding: 0.4rem 0.65rem;
     background: #f8fafc;
     border: 1px solid #e2e8f0;
     border-radius: 8px;
-    font-size: 0.76rem;
+    font-size: 0.74rem;
     color: #64748b;
     display: flex;
     align-items: flex-start;
     gap: 0.35rem;
-    line-height: 1.4;
+    line-height: 1.35;
 }
 
 .consult-card-notice .bi-info-circle {
@@ -4327,17 +4353,17 @@ img {
 /* Full Width Review Banner */
 .consult-review-banner {
     border: 1.5px solid #e2e8f0;
-    border-radius: 14px;
-    padding: 1rem 1.4rem;
+    border-radius: 12px;
+    padding: 0.85rem 1.25rem;
     background-color: #ffffff;
     cursor: pointer;
     display: flex;
     align-items: center;
     justify-content: space-between;
-    font-size: 0.88rem;
+    font-size: 0.85rem;
     color: #334155;
     transition: all 0.2s ease;
-    margin-bottom: 1.25rem;
+    margin-bottom: 1.15rem;
 }
 
 .consult-review-banner:hover {
@@ -4351,13 +4377,13 @@ img {
 }
 
 .consult-step1-footer {
-    font-size: 0.82rem;
+    font-size: 0.8rem;
     color: #64748b;
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
-    gap: 0.5rem;
-    padding-top: 0.5rem;
+    gap: 0.45rem;
+    padding-top: 0.45rem;
     border-top: 1px solid #f1f5f9;
 }
 
@@ -4373,31 +4399,31 @@ img {
     align-items: center;
     justify-content: space-between;
     flex-wrap: wrap;
-    gap: 0.5rem;
-    margin-bottom: 1.15rem;
-    padding-bottom: 0.75rem;
+    gap: 0.4rem;
+    margin-bottom: 0.85rem;
+    padding-bottom: 0.55rem;
     border-bottom: 1px solid #f1f5f9;
 }
 
 .consult-selected-badge {
     display: inline-flex;
     align-items: center;
-    gap: 0.5rem;
-    font-size: 0.92rem;
+    gap: 0.45rem;
+    font-size: 0.88rem;
     font-weight: 600;
     color: #0f2d59;
 }
 
 .consult-change-link {
     color: #176562;
-    font-size: 0.84rem;
+    font-size: 0.82rem;
     font-weight: 600;
     text-decoration: underline;
     cursor: pointer;
 }
 
 .consult-match-text {
-    font-size: 0.84rem;
+    font-size: 0.8rem;
     color: #64748b;
 }
 
@@ -4408,10 +4434,10 @@ img {
     justify-content: space-between;
     background: #f8fafc;
     border: 1px solid #e2e8f0;
-    border-radius: 12px;
-    padding: 0.75rem 1.15rem;
-    margin-bottom: 1.25rem;
-    font-size: 0.86rem;
+    border-radius: 11px;
+    padding: 0.65rem 1rem;
+    margin-bottom: 0.85rem;
+    font-size: 0.83rem;
     color: #334155;
 }
 
@@ -4435,23 +4461,23 @@ img {
     justify-content: space-between;
     background: #ffffff;
     border: 1.5px solid #e2e8f0;
-    border-radius: 14px;
-    padding: 0.95rem 1.35rem;
-    margin-bottom: 1.35rem;
-    box-shadow: 0 4px 12px rgba(15, 45, 89, 0.04);
+    border-radius: 12px;
+    padding: 0.75rem 1.15rem;
+    margin-bottom: 0.95rem;
+    box-shadow: 0 3px 10px rgba(15, 45, 89, 0.04);
 }
 
 .consult-soonest-label {
-    font-size: 0.76rem;
+    font-size: 0.72rem;
     color: #64748b;
     font-weight: 600;
     text-transform: uppercase;
     letter-spacing: 0.04em;
-    margin-bottom: 0.2rem;
+    margin-bottom: 0.15rem;
 }
 
 .consult-soonest-time {
-    font-size: 1.1rem;
+    font-size: 1.05rem;
     font-weight: 700;
     color: #0f2d59;
 }
@@ -4460,9 +4486,9 @@ img {
     background-color: #176562;
     color: #ffffff;
     border: none;
-    border-radius: 10px;
-    padding: 0.65rem 1.35rem;
-    font-size: 0.92rem;
+    border-radius: 9px;
+    padding: 0.55rem 1.15rem;
+    font-size: 0.86rem;
     font-weight: 600;
     cursor: pointer;
     transition: all 0.2s ease;
@@ -4476,44 +4502,47 @@ img {
 /* Two Column Slot Layout */
 .consult-slots-row {
     display: grid;
-    grid-template-columns: 210px 1fr;
-    gap: 1.5rem;
-    margin-bottom: 1.5rem;
+    grid-template-columns: 195px 1fr;
+    gap: 1.15rem;
+    margin-bottom: 0.85rem;
 }
 
 .consult-days-list {
     display: flex;
     flex-direction: column;
-    gap: 0.45rem;
+    gap: 0.35rem;
+    max-height: 270px;
+    overflow-y: auto;
+    padding-right: 4px;
 }
 
 .consult-day-heading {
-    font-size: 0.8rem;
+    font-size: 0.75rem;
     font-weight: 700;
     color: #64748b;
     text-transform: uppercase;
     letter-spacing: 0.05em;
-    margin-bottom: 0.35rem;
+    margin-bottom: 0.3rem;
 }
 
 .consult-day-pill {
     width: 100%;
-    padding: 0.75rem 1rem;
+    padding: 0.52rem 0.85rem;
     border: 1.5px solid #e2e8f0;
-    border-radius: 12px;
+    border-radius: 10px;
     background: #ffffff;
     color: #334155;
-    font-size: 0.88rem;
+    font-size: 0.84rem;
     font-weight: 600;
     text-align: left;
     cursor: pointer;
-    transition: all 0.2s ease;
+    transition: all 0.18s ease;
     display: flex;
     flex-direction: column;
 }
 
 .consult-day-pill .day-sub {
-    font-size: 0.76rem;
+    font-size: 0.72rem;
     color: #64748b;
     font-weight: 400;
 }
@@ -4535,57 +4564,57 @@ img {
 
 /* Time Slots Grid */
 .consult-times-panel {
-    max-height: 380px;
+    max-height: 270px;
     overflow-y: auto;
-    padding-right: 0.35rem;
+    padding-right: 4px;
 }
 
 .consult-times-header {
     display: flex;
     justify-content: space-between;
     align-items: baseline;
-    margin-bottom: 0.85rem;
+    margin-bottom: 0.65rem;
 }
 
 .consult-times-title {
-    font-size: 1rem;
+    font-size: 0.95rem;
     font-weight: 700;
     color: #0f2d59;
 }
 
 .consult-times-tz {
-    font-size: 0.76rem;
+    font-size: 0.74rem;
     color: #64748b;
 }
 
 .consult-time-period-label {
-    font-size: 0.78rem;
+    font-size: 0.74rem;
     font-weight: 700;
     color: #64748b;
-    margin-top: 0.75rem;
-    margin-bottom: 0.5rem;
+    margin-top: 0.65rem;
+    margin-bottom: 0.4rem;
     text-transform: uppercase;
     letter-spacing: 0.04em;
 }
 
 .consult-time-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(78px, 1fr));
-    gap: 0.55rem;
-    margin-bottom: 0.85rem;
+    grid-template-columns: repeat(auto-fill, minmax(74px, 1fr));
+    gap: 0.45rem;
+    margin-bottom: 0.65rem;
 }
 
 .consult-slot-box {
-    padding: 0.55rem 0.25rem;
+    padding: 0.48rem 0.2rem;
     border: 1.5px solid #e2e8f0;
-    border-radius: 9px;
+    border-radius: 8px;
     background: #ffffff;
     color: #334155;
-    font-size: 0.82rem;
+    font-size: 0.78rem;
     font-weight: 600;
     text-align: center;
     cursor: pointer;
-    transition: all 0.18s cubic-bezier(0.16, 1, 0.3, 1);
+    transition: all 0.16s cubic-bezier(0.16, 1, 0.3, 1);
 }
 
 .consult-slot-box:hover {
@@ -4598,7 +4627,7 @@ img {
     background-color: #176562;
     border-color: #176562;
     color: #ffffff;
-    box-shadow: 0 4px 10px rgba(23, 101, 98, 0.25);
+    box-shadow: 0 3px 8px rgba(23, 101, 98, 0.25);
 }
 
 .consult-slot-box.booked {
@@ -4609,25 +4638,30 @@ img {
     text-decoration: line-through;
 }
 
-/* Step 2 Bottom Controls */
+/* Step 2 Bottom Controls (Pinned) */
 .consult-step2-actions {
     display: flex;
     justify-content: space-between;
     align-items: center;
     border-top: 1px solid #f1f5f9;
-    padding-top: 1.15rem;
+    padding-top: 0.85rem;
+    margin-top: 0.5rem;
+    position: sticky;
+    bottom: 0;
+    background: #ffffff;
+    z-index: 5;
 }
 
 .consult-step2-actions .btn-continue {
     background-color: #176562;
     color: #ffffff;
     border: none;
-    border-radius: 10px;
-    padding: 0.75rem 2.2rem;
-    font-size: 0.96rem;
+    border-radius: 9px;
+    padding: 0.68rem 2rem;
+    font-size: 0.92rem;
     font-weight: 600;
     cursor: pointer;
-    transition: all 0.22s ease;
+    transition: all 0.2s ease;
 }
 
 .consult-step2-actions .btn-continue:disabled {
@@ -4645,16 +4679,16 @@ img {
 .consult-form-summary {
     background: #f8fafc;
     border: 1px solid #e2e8f0;
-    border-radius: 14px;
-    padding: 1rem 1.25rem;
+    border-radius: 12px;
+    padding: 0.85rem 1.15rem;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    margin-bottom: 1.35rem;
+    margin-bottom: 1.15rem;
 }
 
 .consult-form-summary-item {
-    font-size: 0.86rem;
+    font-size: 0.83rem;
     color: #334155;
 }
 
@@ -4663,18 +4697,18 @@ img {
 }
 
 .consult-input-label {
-    font-size: 0.84rem;
+    font-size: 0.82rem;
     font-weight: 600;
     color: #334155;
-    margin-bottom: 0.35rem;
+    margin-bottom: 0.3rem;
 }
 
 .consult-input-control {
     width: 100%;
     border: 1.5px solid #cbd5e1;
-    border-radius: 10px;
-    padding: 0.65rem 0.95rem;
-    font-size: 0.9rem;
+    border-radius: 9px;
+    padding: 0.58rem 0.85rem;
+    font-size: 0.88rem;
     color: #1e293b;
     outline: none;
     transition: border-color 0.2s ease, box-shadow 0.2s ease;
@@ -4690,41 +4724,41 @@ img {
     background-color: #176562;
     color: #ffffff;
     border: none;
-    border-radius: 12px;
-    padding: 0.9rem;
-    font-size: 1.05rem;
+    border-radius: 10px;
+    padding: 0.82rem;
+    font-size: 1rem;
     font-weight: 700;
     cursor: pointer;
-    transition: all 0.25s ease;
-    box-shadow: 0 8px 20px rgba(23, 101, 98, 0.25);
+    transition: all 0.22s ease;
+    box-shadow: 0 6px 18px rgba(23, 101, 98, 0.22);
 }
 
 .consult-submit-btn:hover {
     background-color: #0e4846;
     transform: translateY(-2px);
-    box-shadow: 0 12px 26px rgba(23, 101, 98, 0.35);
+    box-shadow: 0 10px 22px rgba(23, 101, 98, 0.32);
 }
 
 /* Step 4 & 5 Auth Panes (Screenshot 4 & 5) */
 .consult-auth-wrapper {
-    max-width: 440px;
+    max-width: 420px;
     margin: 0 auto;
     text-align: center;
-    padding: 1rem 0;
+    padding: 0.75rem 0;
 }
 
 .consult-auth-title {
     font-family: 'Outfit', 'Poppins', sans-serif;
-    font-size: 1.85rem;
+    font-size: 1.65rem;
     font-weight: 800;
     color: #0f2d59;
-    margin-bottom: 0.35rem;
+    margin-bottom: 0.25rem;
 }
 
 .consult-auth-subtitle {
-    font-size: 0.88rem;
+    font-size: 0.84rem;
     color: #64748b;
-    margin-bottom: 1.5rem;
+    margin-bottom: 1.25rem;
 }
 
 .consult-auth-btn {
@@ -4732,12 +4766,12 @@ img {
     background-color: #176562;
     color: #ffffff;
     border: none;
-    border-radius: 10px;
-    padding: 0.85rem;
-    font-size: 1rem;
+    border-radius: 9px;
+    padding: 0.75rem;
+    font-size: 0.95rem;
     font-weight: 700;
     cursor: pointer;
-    margin-top: 1rem;
+    margin-top: 0.85rem;
     transition: all 0.2s ease;
 }
 
@@ -4746,9 +4780,9 @@ img {
 }
 
 .consult-auth-switch {
-    font-size: 0.85rem;
+    font-size: 0.83rem;
     color: #64748b;
-    margin-top: 1.25rem;
+    margin-top: 1rem;
 }
 
 .consult-auth-switch a {
@@ -4758,36 +4792,79 @@ img {
     cursor: pointer;
 }
 
-/* Mobile Responsive */
+/* Comprehensive Responsive Adjustments */
 @media (max-width: 991px) {
     .newdoc-cards-stage {
-        min-height: 400px;
+        min-height: 380px;
         margin-top: 2rem;
     }
     .newdoc-card-back {
         width: 70%;
-        height: 230px;
+        height: 220px;
     }
     .newdoc-card-front {
         width: 78%;
-        height: 250px;
+        height: 240px;
         left: 5px;
     }
     .newdoc-speech-bubble {
         bottom: -15px;
         right: 0;
     }
-    .consult-slots-row {
-        grid-template-columns: 1fr;
-        gap: 1rem;
+    .consult-modal .modal-dialog {
+        width: 96%;
+        margin: 1rem auto;
     }
-    .consult-days-list {
-        display: grid;
-        grid-template-columns: repeat(3, 1fr);
-        gap: 0.4rem;
+}
+
+@media (max-width: 768px) {
+    .consult-modal-content {
+        max-height: calc(100vh - 1.5rem);
+        border-radius: 16px;
+    }
+    .consult-modal-header {
+        padding: 1.15rem 1.25rem 0.5rem;
+    }
+    .consult-modal-title {
+        font-size: 1.25rem;
+    }
+    .consult-modal-body {
+        padding: 0.5rem 1.25rem 1rem;
     }
     .consult-service-grid {
         grid-template-columns: 1fr;
+        gap: 0.75rem;
+    }
+    .consult-slots-row {
+        grid-template-columns: 1fr;
+        gap: 0.85rem;
+    }
+    /* Horizontal swipeable days list on mobile */
+    .consult-days-list {
+        display: flex;
+        flex-direction: row;
+        overflow-x: auto;
+        max-height: none;
+        gap: 0.45rem;
+        padding-bottom: 0.45rem;
+        white-space: nowrap;
+        -webkit-overflow-scrolling: touch;
+    }
+    .consult-day-pill {
+        min-width: 105px;
+        flex: 0 0 auto;
+        padding: 0.45rem 0.65rem;
+        text-align: center;
+    }
+    .consult-times-panel {
+        max-height: 220px;
+    }
+    .consult-time-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+    .consult-step2-actions .btn-continue {
+        flex-grow: 1;
+        text-align: center;
     }
 }
 
@@ -4796,29 +4873,40 @@ img {
         grid-template-columns: 1fr;
     }
     .newdoc-hero-section {
-        padding: 3rem 0 2.5rem;
+        padding: 2.8rem 0 2rem;
     }
     .newdoc-cards-stage {
-        min-height: 320px;
+        min-height: 300px;
     }
     .newdoc-card-back {
-        width: 80%;
-        height: 190px;
+        width: 82%;
+        height: 180px;
         right: 5px;
     }
     .newdoc-card-front {
-        width: 85%;
-        height: 210px;
+        width: 88%;
+        height: 200px;
         left: 0;
     }
-    .consult-days-list {
-        grid-template-columns: repeat(2, 1fr);
-    }
     .consult-modal-header {
-        padding: 1.35rem 1.25rem 0.75rem;
+        padding: 1rem 1rem 0.45rem;
     }
     .consult-modal-body {
-        padding: 0.5rem 1.25rem 1.5rem;
+        padding: 0.4rem 1rem 0.95rem;
+    }
+}
+
+@media (max-height: 820px) {
+    .consult-modal-content {
+        max-height: 94vh;
+    }
+    .consult-days-list,
+    .consult-times-panel {
+        max-height: 220px;
+    }
+    .consult-soonest-box {
+        padding: 0.6rem 0.95rem;
+        margin-bottom: 0.65rem;
     }
 }
 
