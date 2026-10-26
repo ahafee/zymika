@@ -3,81 +3,71 @@
 @section('title', 'Zymika Health | 24/7 Quality Healthcare Wherever You Are | Telehealth Australia')
 
 @section('content')
-<!-- Hero Section (NewDoc Style Reference - 100% No Inline CSS) -->
+<!-- Hero Section (Matches Reference 100% with VIP Design - Zero Inline CSS) -->
 <section class="newdoc-hero-section">
     <div class="container newdoc-hero-container">
         <div class="row align-items-center g-4 g-lg-5">
             <!-- Left Text Content -->
             <div class="col-lg-6" data-aos="fade-right">
                 
-                <!-- Doctor Avatar Badge -->
+                <!-- Top Status Pill -->
                 <div class="newdoc-avatar-badge">
-                    <div class="newdoc-avatar-group">
-                        <img src="{{ asset('images/doctor-bazel.png') }}" class="newdoc-avatar-img" alt="Dr Bazel Lodhi">
-                        <img src="{{ asset('images/step2-telehealth.jpg') }}" class="newdoc-avatar-img" alt="Specialist GP">
-                    </div>
-                    <span class="newdoc-avatar-text">Australian-trained, specialist GPs</span>
+                    <span class="pulse-live-dot"></span>
+                    <span class="newdoc-avatar-text text-uppercase">Telehealth doctor Australia</span>
                 </div>
 
                 <!-- Main Heading -->
                 <h1 class="newdoc-hero-title">
-                    Bulk Billed*<br>
-                    Telehealth Consults
+                    24/7 Quality Healthcare Wherever You Are
                 </h1>
 
-                <!-- Book A Consult Button (Opens Multi-Step Modal) -->
-                <div>
+                <!-- Hero Subtitle Description -->
+                <p class="newdoc-lead-desc">
+                    Connect with qualified Australian doctors from the comfort of your home. Get secure online consultations, prescriptions, medical certificates, referrals and ongoing healthcare support.
+                </p>
+
+                <!-- 6 Service Pills Grid (2 Columns with Hover Effects) -->
+                <div class="hero-service-pills-grid">
+                    <a href="{{ route('services.gp') }}" class="hero-service-pill">
+                        <span class="pill-arrow-wrap"><i class="bi bi-arrow-right"></i></span>
+                        <span class="pill-text">General GP Consultations</span>
+                    </a>
+                    <a href="{{ route('services.mental-health') }}" class="hero-service-pill">
+                        <span class="pill-arrow-wrap"><i class="bi bi-arrow-right"></i></span>
+                        <span class="pill-text">Mental Health &amp; Wellbeing</span>
+                    </a>
+                    <a href="{{ route('services.compounding') }}" class="hero-service-pill">
+                        <span class="pill-arrow-wrap"><i class="bi bi-arrow-right"></i></span>
+                        <span class="pill-text">Health Cannabis Compounding</span>
+                    </a>
+                    <a href="{{ route('services.urgent-care') }}" class="hero-service-pill">
+                        <span class="pill-arrow-wrap"><i class="bi bi-arrow-right"></i></span>
+                        <span class="pill-text">Urgent &amp; After Hours Care</span>
+                    </a>
+                    <a href="{{ route('services.prescriptions') }}" class="hero-service-pill">
+                        <span class="pill-arrow-wrap"><i class="bi bi-arrow-right"></i></span>
+                        <span class="pill-text">Online Prescriptions</span>
+                    </a>
+                    <a href="{{ route('services.gp') }}" class="hero-service-pill">
+                        <span class="pill-arrow-wrap"><i class="bi bi-arrow-right"></i></span>
+                        <span class="pill-text">Chronic Disease Support</span>
+                    </a>
+                </div>
+
+                <!-- Action CTAs (Book Appointment Modal Trigger & Call Us) -->
+                <div class="d-flex flex-wrap align-items-center gap-3">
                     <button type="button" class="newdoc-consult-btn" data-bs-toggle="modal" data-bs-target="#consultBookingModal">
-                        <span>Book a consult</span>
+                        <span>Book Appointment</span>
                         <i class="bi bi-arrow-right btn-arrow-icon"></i>
                     </button>
+                    <a href="tel:0411174173" class="btn btn-outline-secondary px-4 py-3 rounded-pill fw-semibold d-inline-flex align-items-center gap-2 bg-white shadow-sm">
+                        <i class="bi bi-telephone-fill text-brand-primary"></i>
+                        <span>Call Us</span>
+                    </a>
                 </div>
-
-                <!-- Call Support Link -->
-                <div class="newdoc-call-text">
-                    Or call <a href="tel:0411174173">0411 174 173</a> to learn more
-                </div>
-
-                <!-- 2-Column Features Checklist -->
-                <div class="newdoc-check-grid">
-                    <div class="newdoc-check-item">
-                        <span class="newdoc-check-icon">✓</span>
-                        <span>Bulk billed telehealth</span>
-                    </div>
-                    <div class="newdoc-check-item">
-                        <span class="newdoc-check-icon">✓</span>
-                        <span>Mental health</span>
-                    </div>
-                    <div class="newdoc-check-item">
-                        <span class="newdoc-check-icon">✓</span>
-                        <span>Repeat scripts</span>
-                    </div>
-                    <div class="newdoc-check-item">
-                        <span class="newdoc-check-icon">✓</span>
-                        <span>Medical certificates</span>
-                    </div>
-                    <div class="newdoc-check-item">
-                        <span class="newdoc-check-icon">✓</span>
-                        <span>Sexual health</span>
-                    </div>
-                    <div class="newdoc-check-item">
-                        <span class="newdoc-check-icon">✓</span>
-                        <span>Specialist referrals</span>
-                    </div>
-                    <div class="newdoc-check-item">
-                        <span class="newdoc-check-icon">✓</span>
-                        <span>Blood test referrals</span>
-                    </div>
-                    <div class="newdoc-check-item">
-                        <span class="newdoc-check-icon">✓</span>
-                        <span>Imaging referrals</span>
-                    </div>
-                </div>
-
-                <span class="newdoc-check-disclaimer">* If eligible under Medicare</span>
             </div>
 
-            <!-- Right Hero Image Graphic with Layered Cards -->
+            <!-- Right Hero Image Graphic with Layered Cards & Floating Badges -->
             <div class="col-lg-6" data-aos="fade-left">
                 <div class="newdoc-cards-stage">
                     <!-- Back Card: Doctor -->
@@ -88,7 +78,7 @@
                     <!-- Front Card: Patient with Speech Bubble -->
                     <div class="newdoc-card-front">
                         <div class="newdoc-card-front-inner">
-                            <img src="{{ asset('images/hero-telehealth.jpg') }}" alt="Telehealth Consultation">
+                            <img src="{{ asset('images/hero-telehealth.jpg') }}" alt="Telehealth Consultation Australia">
                         </div>
                         <div class="newdoc-speech-bubble">
                             <i class="bi bi-chat-square-quote-fill bubble-icon"></i>
@@ -101,96 +91,144 @@
     </div>
 </section>
 
-<!-- Trust Metrics Bar -->
+<!-- Trust Metrics Bar (40,000+ Consultations, Australian Registered Doctors, Secure & Confidential, Same Day Availability) -->
 <section class="newdoc-trust-strip">
     <div class="container newdoc-trust-container">
         <div class="newdoc-trust-item">
-            <span>Specialist GPs</span>
+            <span>40,000+ Consultations</span>
         </div>
         <div class="newdoc-trust-item">
-            <span class="star-icon">☆</span>
-            <span>40,000+ consults</span>
+            <span class="star-icon">|</span>
+            <span>Australian Registered Doctors</span>
         </div>
         <div class="newdoc-trust-item">
-            <span class="star-icon">☆</span>
-            <span>Same day availability</span>
+            <span class="star-icon">|</span>
+            <span>Secure &amp; Confidential Care</span>
+        </div>
+        <div class="newdoc-trust-item">
+            <span class="star-icon">|</span>
+            <span>Same Day Availability</span>
         </div>
     </div>
 </section>
 
-<!-- Doctor Quote & 25+ Years Experience Section -->
-<section class="py-5 bg-white">
-    <div class="container py-lg-4" style="max-width: 1140px;">
+<!-- 25+ Years of Experience In Healthcare Service Section (Matches Live Reference & Screenshot) -->
+<section class="partner-showcase-section">
+    <div class="container">
+        <h2 class="partner-showcase-title" data-aos="fade-up">
+            25+ Years of Experience In Healthcare Service
+        </h2>
+
+        <!-- Partner Pharmacy & Health Platform Logos -->
+        <div class="partner-logos-container" data-aos="fade-up" data-aos-delay="100">
+            <!-- Direct Chemist Outlet -->
+            <div class="partner-logo-pill">
+                <div class="logo-dco-wrap">
+                    <span class="logo-dco-star">Direct</span>
+                    <span class="logo-dco-text">Chemist<br>Outlet</span>
+                </div>
+            </div>
+
+            <!-- TerryWhite Chemmart -->
+            <div class="partner-logo-pill">
+                <div class="logo-terrywhite">
+                    <span class="logo-terrywhite-box">+</span>
+                    <span class="logo-terrywhite-text">TerryWhite<br>Chemmart</span>
+                </div>
+            </div>
+
+            <!-- Symbion -->
+            <div class="partner-logo-pill">
+                <div class="logo-symbion">
+                    <span>symbion</span>
+                    <span class="logo-symbion-dot"></span>
+                </div>
+            </div>
+
+            <!-- MedAdvisor -->
+            <div class="partner-logo-pill">
+                <div class="logo-medadvisor">
+                    <i class="bi bi-file-medical-fill"></i>
+                    <span>MedAdvisor</span>
+                </div>
+            </div>
+
+            <!-- HotDoc -->
+            <div class="partner-logo-pill">
+                <div class="logo-hotdoc">
+                    <i class="bi bi-plus-circle-fill"></i>
+                    <span>HotDoc</span>
+                </div>
+            </div>
+
+            <!-- HealthyLife -->
+            <div class="partner-logo-pill">
+                <div class="logo-healthylife">
+                    <span>healthy<strong>life</strong></span>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- About Us: Accessible Online Healthcare across Australia (Matches Live Reference & Screenshot) -->
+<section class="about-accessible-section" id="about">
+    <div class="container" style="max-width: 1240px;">
         <div class="row align-items-center g-4 g-lg-5">
-            <div class="col-lg-4 text-center" data-aos="fade-right">
-                <div class="position-relative d-inline-block">
-                    <img src="{{ asset('images/doctor-bazel.png') }}" alt="Dr Bazel Lodhi General Practitioner" class="img-fluid rounded-4 shadow-md" style="max-height: 320px; object-fit: cover;">
-                    <div class="position-absolute bottom-0 start-50 translate-middle-x mb-n2 bg-white px-3 py-1 rounded-pill shadow-sm border small fw-bold text-brand-primary text-nowrap">
-                        25+ Years of Experience In Healthcare Service
+            <!-- Left Side: Doctor Video Consultation Photo with Dr Bazel Lodhi Quote Badge -->
+            <div class="col-lg-6" data-aos="fade-right">
+                <div class="about-media-stage">
+                    <img src="{{ asset('images/step2-telehealth.jpg') }}" alt="Telehealth Doctor Video Consultation Australia" class="about-main-photo" onerror="this.src='{{ asset('images/banner1.jpg') }}'">
+                    
+                    <!-- Floating Doctor Quote Card -->
+                    <div class="about-quote-box">
+                        <div class="about-quote-header">
+                            <img src="{{ asset('images/doctor-bazel.png') }}" alt="Dr Bazel Lodhi" class="about-quote-doc-img">
+                            <div>
+                                <h4 class="about-quote-doc-name">Dr Bazel Lodhi</h4>
+                                <span class="about-quote-doc-title">General Practitioner</span>
+                            </div>
+                        </div>
+                        <p class="about-quote-text">
+                            “Committed to providing accessible, high-quality and patient-centred healthcare through convenient telehealth consultations.”
+                        </p>
                     </div>
                 </div>
             </div>
-            <div class="col-lg-8" data-aos="fade-left">
-                <div class="ps-lg-3">
-                    <span class="badge px-3 py-2 rounded-pill fw-semibold mb-2" style="background-color: rgba(58, 163, 162, 0.12); color: #1a9b8c;">
-                        CLINICAL EXCELLENCE
-                    </span>
-                    <h3 class="display-6 fw-bold text-brand-contrast mb-1">Dr Bazel Lodhi</h3>
-                    <h5 class="fw-semibold text-muted mb-3">General Practitioner</h5>
-                    <blockquote class="blockquote border-start border-4 ps-3 py-1 my-3" style="border-color: #3aa3a2 !important;">
-                        <p class="fs-5 text-brand-contrast fst-italic mb-0">
-                            “Committed to providing accessible, high-quality and patient-centred healthcare through convenient telehealth consultations.”
-                        </p>
-                    </blockquote>
-                    <p class="text-muted small lh-base mb-0">
-                        Holding multiple postgraduate qualifications, including Fellowship of the Australian College of Rural and Remote Medicine (FACRRM) and a Master of Public Health (MPH), Dr Lodhi brings a broad and comprehensive perspective to patient care.
-                    </p>
-                </div>
-            </div>
-        </div>
-    </div>
-</section>
 
-<!-- About Us Section -->
-<section class="py-5" style="background-color: #f7fbfc;" id="about">
-    <div class="container py-lg-4" style="max-width: 1200px;">
-        <div class="row g-4 g-lg-5 align-items-center">
-            <div class="col-lg-6" data-aos="fade-right">
-                <span class="badge px-3 py-2 rounded-pill fw-semibold mb-2 text-uppercase" style="background-color: rgba(15, 45, 89, 0.08); color: #0f2d59;">
-                    About Us
-                </span>
-                <h2 class="display-6 fw-bold text-brand-contrast mb-3">Accessible Online Healthcare across Australia</h2>
-                <p class="text-muted lead fs-6 mb-4" style="line-height: 1.8;">
+            <!-- Right Side: Content & Key Pillars -->
+            <div class="col-lg-6" data-aos="fade-left">
+                <span class="about-badge-tag">ABOUT US</span>
+                <h2 class="about-accessible-heading">Accessible Online Healthcare across Australia</h2>
+                <p class="about-accessible-lead">
                     Healthcare is one of the domains of daily life that should be reliable, accessible, and convenient. At Zymika Health, we help people receive quality medical care from an experienced telehealth doctor Australia, avoiding spending hours travelling or waiting for their number in busy clinics.
                 </p>
 
-                <div class="row g-3">
-                    <div class="col-sm-6">
-                        <div class="p-4 bg-white rounded-4 shadow-sm border h-100">
-                            <div class="rounded-circle d-inline-flex align-items-center justify-content-center text-white mb-3" style="width: 48px; height: 48px; background-color: #0f2d59;">
-                                <i class="bi bi-person-check fs-5"></i>
-                            </div>
-                            <h5 class="fw-bold text-brand-contrast fs-6 mb-2">Expert Doctor</h5>
-                            <p class="text-muted small mb-0 lh-base">
-                                Our secure telehealth platform connects patients seeking GP consultations with experienced Australian doctors, offering personalised healthcare solutions through Virtual GP Appointment Australia.
-                            </p>
-                        </div>
+                <!-- Feature 1: Expert Doctor -->
+                <div class="about-feature-card">
+                    <div class="about-feature-icon-wrap">
+                        <i class="bi bi-person-check-fill"></i>
                     </div>
-                    <div class="col-sm-6">
-                        <div class="p-4 bg-white rounded-4 shadow-sm border h-100">
-                            <div class="rounded-circle d-inline-flex align-items-center justify-content-center text-white mb-3" style="width: 48px; height: 48px; background-color: #3aa3a2;">
-                                <i class="bi bi-laptop fs-5"></i>
-                            </div>
-                            <h5 class="fw-bold text-brand-contrast fs-6 mb-2">Advanced Technology</h5>
-                            <p class="text-muted small mb-0 lh-base">
-                                We manage all your medical appointments using advanced technology, offer same-day consultations, provide instant medications, and offer virtual GP appointment Australia.
-                            </p>
-                        </div>
+                    <div>
+                        <h3 class="about-feature-title">Expert Doctor</h3>
+                        <p class="about-feature-desc">
+                            Our secure telehealth platform connects patients seeking GP consultations with experienced Australian doctors, offering personalised healthcare solutions through Virtual GP Appointment Australia.
+                        </p>
                     </div>
                 </div>
-            </div>
-            <div class="col-lg-6 text-center" data-aos="fade-left">
-                <img src="{{ asset('images/step2-telehealth.jpg') }}" alt="Accessible Online Healthcare across Australia" class="img-fluid rounded-5 shadow-lg" onerror="this.src='{{ asset('images/banner1.jpg') }}'">
+
+                <!-- Feature 2: Advanced Technology -->
+                <div class="about-feature-card">
+                    <div class="about-feature-icon-wrap">
+                        <i class="bi bi-laptop-fill"></i>
+                    </div>
+                    <div>
+                        <h3 class="about-feature-title">Advanced Technology</h3>
+                        <p class="about-feature-desc">
+                            We manage all your medical appointments using advanced technology, offer same-day consultations, provide instant medications, and offer virtual GP appointment Australia.
+                        </p>
+                    </div>
+                </div>
             </div>
         </div>
     </div>

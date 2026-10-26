@@ -3982,6 +3982,22 @@ img {
     color: #1a7e78;
 }
 
+.newdoc-lead-desc {
+    font-size: 1rem;
+    line-height: 1.75;
+    color: #4a5568;
+    max-width: 580px;
+    margin-bottom: 1.4rem;
+}
+
+.hero-service-pills-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 0.65rem 0.95rem;
+    max-width: 580px;
+    margin-bottom: 1.75rem;
+}
+
 /* Consult CTA Button */
 .newdoc-consult-btn {
     background-color: #176562;
@@ -4949,6 +4965,308 @@ img {
     background-color: #0e4846;
     transform: translateY(-2px);
     box-shadow: 0 6px 16px rgba(23, 101, 98, 0.25);
+}
+
+/* ==========================================================================
+   25+ YEARS OF EXPERIENCE & PARTNER SHOWCASE (100% NO INLINE CSS)
+   ========================================================================== */
+
+.partner-showcase-section {
+    padding: 3.5rem 0 3rem;
+    background-color: #ffffff;
+    text-align: center;
+}
+
+.partner-showcase-title {
+    font-family: 'Outfit', 'Poppins', sans-serif;
+    font-size: clamp(1.65rem, 3.2vw, 2.35rem);
+    font-weight: 700;
+    color: #0f2d59;
+    letter-spacing: -0.02em;
+    margin-bottom: 2rem;
+}
+
+.partner-logos-container {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    gap: 1.15rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.partner-logo-pill {
+    background: #ffffff;
+    border: 1.5px solid #e2e8f0;
+    border-radius: 12px;
+    padding: 0.85rem 1.65rem;
+    box-shadow: 0 4px 14px rgba(15, 45, 89, 0.04);
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 64px;
+    min-width: 155px;
+    transition: all 0.26s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.partner-logo-pill:hover {
+    border-color: #3aa3a2;
+    box-shadow: 0 8px 22px rgba(15, 45, 89, 0.08);
+    transform: translateY(-2px);
+}
+
+/* Styled Partner Logos */
+.logo-dco-wrap {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+}
+.logo-dco-star {
+    background: #e63946;
+    color: #fff;
+    font-size: 0.72rem;
+    font-weight: 900;
+    padding: 2px 5px;
+    border-radius: 4px;
+    text-transform: uppercase;
+}
+.logo-dco-text {
+    font-size: 0.82rem;
+    font-weight: 800;
+    color: #0f2d59;
+    line-height: 1.1;
+    text-align: left;
+}
+
+.logo-terrywhite {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+.logo-terrywhite-box {
+    background: #198754;
+    color: #ffffff;
+    font-weight: 900;
+    font-size: 1.1rem;
+    width: 28px;
+    height: 28px;
+    border-radius: 6px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.logo-terrywhite-text {
+    font-size: 0.9rem;
+    font-weight: 800;
+    color: #198754;
+    line-height: 1.1;
+    text-align: left;
+}
+
+.logo-symbion {
+    font-family: 'Poppins', sans-serif;
+    font-size: 1.15rem;
+    font-weight: 700;
+    color: #555e68;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+}
+.logo-symbion-dot {
+    width: 14px;
+    height: 14px;
+    border-radius: 50% 50% 0 50%;
+    background: #84cc16;
+    transform: rotate(45deg);
+    display: inline-block;
+}
+
+.logo-medadvisor {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    font-size: 1.05rem;
+    font-weight: 800;
+    color: #e11d48;
+}
+
+.logo-hotdoc {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    font-size: 1.1rem;
+    font-weight: 800;
+    color: #059669;
+}
+
+.logo-healthylife {
+    font-family: 'Outfit', sans-serif;
+    font-size: 1.1rem;
+    font-weight: 700;
+    color: #334155;
+    letter-spacing: -0.02em;
+}
+
+/* ==========================================================================
+   ABOUT US: ACCESSIBLE ONLINE HEALTHCARE SECTION
+   ========================================================================== */
+
+.about-accessible-section {
+    padding: 4.5rem 0 4rem;
+    background-color: #fbfdfe;
+}
+
+.about-badge-tag {
+    display: inline-block;
+    padding: 5px 15px;
+    border-radius: 50rem;
+    font-size: 0.8rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    background: rgba(15, 45, 89, 0.08);
+    color: #0f2d59;
+    margin-bottom: 1rem;
+}
+
+.about-accessible-heading {
+    font-family: 'Outfit', 'Poppins', sans-serif;
+    font-size: clamp(2rem, 3.5vw, 2.75rem);
+    font-weight: 700;
+    color: #0f2d59;
+    line-height: 1.22;
+    letter-spacing: -0.025em;
+    margin-bottom: 1.35rem;
+}
+
+.about-accessible-lead {
+    font-size: 0.98rem;
+    color: #475569;
+    line-height: 1.8;
+    margin-bottom: 2rem;
+}
+
+.about-feature-card {
+    display: flex;
+    align-items: flex-start;
+    gap: 1.15rem;
+    margin-bottom: 1.65rem;
+}
+
+.about-feature-icon-wrap {
+    width: 48px;
+    height: 48px;
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #0f2d59;
+    background: #eef5f9;
+    flex-shrink: 0;
+    font-size: 1.35rem;
+    transition: transform 0.25s ease;
+}
+
+.about-feature-card:hover .about-feature-icon-wrap {
+    transform: scale(1.08);
+    background: #e0f2f1;
+    color: #176562;
+}
+
+.about-feature-title {
+    font-size: 1.15rem;
+    font-weight: 700;
+    color: #0f2d59;
+    margin-bottom: 0.35rem;
+}
+
+.about-feature-desc {
+    font-size: 0.88rem;
+    color: #64748b;
+    line-height: 1.6;
+    margin: 0;
+}
+
+/* About Media Stage & Floating Quote */
+.about-media-stage {
+    position: relative;
+    border-radius: 28px;
+    overflow: visible;
+}
+
+.about-main-photo {
+    width: 100%;
+    border-radius: 28px;
+    box-shadow: 0 25px 60px rgba(15, 45, 89, 0.12);
+    object-fit: cover;
+    max-height: 520px;
+}
+
+.about-quote-box {
+    position: absolute;
+    bottom: 25px;
+    right: 20px;
+    background: #ffffff;
+    border-radius: 18px;
+    padding: 1.15rem 1.35rem;
+    box-shadow: 0 16px 40px rgba(15, 45, 89, 0.18);
+    max-width: 330px;
+    border: 1px solid rgba(15, 45, 89, 0.08);
+    z-index: 2;
+    animation: quoteFloat 4s ease-in-out infinite alternate;
+}
+
+@keyframes quoteFloat {
+    0% { transform: translateY(0px); }
+    100% { transform: translateY(-8px); }
+}
+
+.about-quote-header {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    margin-bottom: 0.65rem;
+}
+
+.about-quote-doc-img {
+    width: 42px;
+    height: 42px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 2px solid #3aa3a2;
+}
+
+.about-quote-doc-name {
+    font-size: 0.92rem;
+    font-weight: 700;
+    color: #0f2d59;
+    margin: 0;
+    line-height: 1.2;
+}
+
+.about-quote-doc-title {
+    font-size: 0.76rem;
+    color: #176562;
+    font-weight: 600;
+}
+
+.about-quote-text {
+    font-size: 0.8rem;
+    color: #334155;
+    font-style: italic;
+    line-height: 1.45;
+    margin: 0;
+}
+
+@media (max-width: 991px) {
+    .about-quote-box {
+        position: relative;
+        bottom: auto;
+        right: auto;
+        margin-top: 1rem;
+        max-width: 100%;
+    }
 }
 
 
