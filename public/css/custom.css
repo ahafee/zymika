@@ -3794,3 +3794,109 @@ img {
     transform: translateY(-1px);
 }
 
+/* Hero Banner VIP Animations & Hovers */
+.pulse-live-dot {
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background-color: #20c997;
+    display: inline-block;
+    box-shadow: 0 0 0 0 rgba(32, 201, 151, 0.7);
+    animation: liveDotPulse 2s infinite;
+}
+
+@keyframes liveDotPulse {
+    0% {
+        transform: scale(0.95);
+        box-shadow: 0 0 0 0 rgba(32, 201, 151, 0.7);
+    }
+    70% {
+        transform: scale(1);
+        box-shadow: 0 0 0 7px rgba(32, 201, 151, 0);
+    }
+    100% {
+        transform: scale(0.95);
+        box-shadow: 0 0 0 0 rgba(32, 201, 151, 0);
+    }
+}
+
+.hero-service-pill {
+    background-color: rgba(255, 255, 255, 0.65);
+    border: 1px solid rgba(15, 45, 89, 0.08);
+    transition: all 0.28s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.hero-service-pill .pill-arrow-wrap {
+    color: #3aa3a2;
+    transition: transform 0.25s ease, color 0.25s ease;
+    display: inline-flex;
+    align-items: center;
+}
+
+.hero-service-pill:hover {
+    background-color: #ffffff;
+    border-color: rgba(58, 163, 162, 0.4);
+    box-shadow: 0 6px 18px rgba(15, 45, 89, 0.08);
+    transform: translateY(-2px);
+}
+
+.hero-service-pill:hover .pill-arrow-wrap {
+    transform: translateX(4px);
+    color: #0f2d59;
+}
+
+.hero-service-pill:hover .pill-text {
+    color: #3aa3a2 !important;
+}
+
+.hero-btn-primary:hover {
+    transform: translateY(-3px) scale(1.02);
+    box-shadow: 0 14px 28px rgba(15, 45, 89, 0.28) !important;
+}
+
+.hero-btn-primary:hover .hero-arrow-icon {
+    transform: translateX(4px);
+    transition: transform 0.25s ease;
+}
+
+.hero-btn-secondary:hover {
+    background-color: #ffffff !important;
+    border-color: #3aa3a2 !important;
+    color: #3aa3a2 !important;
+    transform: translateY(-3px) scale(1.02);
+    box-shadow: 0 10px 22px rgba(15, 45, 89, 0.1) !important;
+}
+
+.hero-btn-secondary:hover .hero-phone-icon {
+    transform: rotate(15deg);
+    transition: transform 0.25s ease;
+}
+
+.hero-float-badge {
+    position: absolute;
+    z-index: 2;
+    animation: floatBadgeAnim 4.5s ease-in-out infinite alternate;
+}
+
+.hero-float-badge.top-right {
+    top: 20px;
+    right: -10px;
+    animation-delay: 0.5s;
+}
+
+.hero-float-badge.bottom-left {
+    bottom: 25px;
+    left: -15px;
+    animation-delay: 1.5s;
+}
+
+@keyframes floatBadgeAnim {
+    0% {
+        transform: translateY(0px);
+    }
+    100% {
+        transform: translateY(-10px);
+    }
+}
+
+

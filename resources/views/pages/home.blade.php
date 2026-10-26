@@ -3,80 +3,106 @@
 @section('title', 'Zymika Health | 24/7 Quality Healthcare Wherever You Are | Telehealth Australia')
 
 @section('content')
-<!-- Hero Section (Matches Reference 100%) -->
-<section class="position-relative overflow-hidden py-5" style="background: linear-gradient(135deg, #f0fafb 0%, #e7f9fb 45%, #f4fbfc 100%); min-height: 85vh; display: flex; align-items: center;">
-    <div class="container py-lg-4" style="max-width: 1320px;">
+<!-- Hero Section (Matches Reference 100% with VIP Design) -->
+<section class="position-relative overflow-hidden py-5 hero-banner-section" style="background: linear-gradient(135deg, #f0fafb 0%, #e7f9fb 45%, #f6fcfe 100%); min-height: 88vh; display: flex; align-items: center;">
+    <!-- Subtle Background Ambient Orbs -->
+    <div class="position-absolute top-0 end-0 rounded-circle opacity-30" style="width: 550px; height: 550px; background: radial-gradient(circle, rgba(58, 163, 162, 0.22) 0%, transparent 70%); pointer-events: none;"></div>
+    <div class="position-absolute bottom-0 start-0 rounded-circle opacity-20" style="width: 450px; height: 450px; background: radial-gradient(circle, rgba(15, 45, 89, 0.15) 0%, transparent 70%); pointer-events: none;"></div>
+
+    <div class="container py-lg-4 position-relative" style="max-width: 1320px; z-index: 2;">
         <div class="row align-items-center g-4 g-lg-5">
             <!-- Left Text Content -->
             <div class="col-lg-6" data-aos="fade-right">
-                <div class="text-uppercase fw-bold mb-2 tracking-wider small" style="color: #3aa3a2; letter-spacing: 0.1em; font-size: 0.85rem;">
-                    TELEHEALTH DOCTOR AUSTRALIA
+                <!-- Top Status Pill -->
+                <div class="d-inline-flex align-items-center gap-2 px-3.5 py-1.5 rounded-pill mb-3 shadow-sm bg-white border" style="border-color: rgba(58, 163, 162, 0.3) !important;">
+                    <span class="pulse-live-dot"></span>
+                    <span class="text-uppercase fw-bold tracking-wider" style="color: #1a9b8c; font-size: 0.8rem; letter-spacing: 0.08em;">
+                        TELEHEALTH DOCTOR AUSTRALIA
+                    </span>
                 </div>
-                <h1 class="display-4 fw-extrabold text-brand-contrast mb-3 lh-sm" style="font-size: calc(2rem + 1.8vw);">
+
+                <h1 class="display-4 fw-extrabold text-brand-contrast mb-3 lh-sm hero-main-heading" style="font-family: 'Outfit', 'Poppins', sans-serif; font-size: calc(2.2rem + 1.8vw); letter-spacing: -0.03em;">
                     24/7 Quality Healthcare Wherever You Are
                 </h1>
-                <p class="lead text-muted mb-4 fs-6" style="line-height: 1.7; max-width: 580px;">
+
+                <p class="lead text-muted mb-4 fs-6 hero-desc-text" style="line-height: 1.8; max-width: 580px; color: #4a5568 !important;">
                     Connect with qualified Australian doctors from the comfort of your home. Get secure online consultations, prescriptions, medical certificates, referrals and ongoing healthcare support.
                 </p>
 
-                <!-- Bullet Points Grid (2 Columns) -->
-                <div class="row g-2 mb-4 pb-2" style="max-width: 540px;">
+                <!-- Interactive Service Pills Grid (2 Columns with Hover Effects) -->
+                <div class="row g-2.5 mb-4 pb-2" style="max-width: 580px;">
                     <div class="col-sm-6">
-                        <div class="d-flex align-items-center gap-2 text-brand-contrast fw-medium small">
-                            <i class="bi bi-arrow-right text-brand-primary"></i>
-                            <a href="{{ route('services.gp') }}" class="text-decoration-none text-brand-contrast hover-primary">General GP Consultations</a>
-                        </div>
+                        <a href="{{ route('services.gp') }}" class="hero-service-pill d-flex align-items-center gap-2 p-2 rounded-3 text-decoration-none">
+                            <span class="pill-arrow-wrap"><i class="bi bi-arrow-right"></i></span>
+                            <span class="pill-text fw-semibold small text-brand-contrast">General GP Consultations</span>
+                        </a>
                     </div>
                     <div class="col-sm-6">
-                        <div class="d-flex align-items-center gap-2 text-brand-contrast fw-medium small">
-                            <i class="bi bi-arrow-right text-brand-primary"></i>
-                            <a href="{{ route('services.urgent-care') }}" class="text-decoration-none text-brand-contrast hover-primary">Urgent &amp; After Hours Care</a>
-                        </div>
+                        <a href="{{ route('services.urgent-care') }}" class="hero-service-pill d-flex align-items-center gap-2 p-2 rounded-3 text-decoration-none">
+                            <span class="pill-arrow-wrap"><i class="bi bi-arrow-right"></i></span>
+                            <span class="pill-text fw-semibold small text-brand-contrast">Urgent &amp; After Hours Care</span>
+                        </a>
                     </div>
                     <div class="col-sm-6">
-                        <div class="d-flex align-items-center gap-2 text-brand-contrast fw-medium small">
-                            <i class="bi bi-arrow-right text-brand-primary"></i>
-                            <a href="{{ route('services.mental-health') }}" class="text-decoration-none text-brand-contrast hover-primary">Mental Health &amp; Wellbeing</a>
-                        </div>
+                        <a href="{{ route('services.mental-health') }}" class="hero-service-pill d-flex align-items-center gap-2 p-2 rounded-3 text-decoration-none">
+                            <span class="pill-arrow-wrap"><i class="bi bi-arrow-right"></i></span>
+                            <span class="pill-text fw-semibold small text-brand-contrast">Mental Health &amp; Wellbeing</span>
+                        </a>
                     </div>
                     <div class="col-sm-6">
-                        <div class="d-flex align-items-center gap-2 text-brand-contrast fw-medium small">
-                            <i class="bi bi-arrow-right text-brand-primary"></i>
-                            <a href="{{ route('services.prescriptions') }}" class="text-decoration-none text-brand-contrast hover-primary">Online Prescriptions</a>
-                        </div>
+                        <a href="{{ route('services.prescriptions') }}" class="hero-service-pill d-flex align-items-center gap-2 p-2 rounded-3 text-decoration-none">
+                            <span class="pill-arrow-wrap"><i class="bi bi-arrow-right"></i></span>
+                            <span class="pill-text fw-semibold small text-brand-contrast">Online Prescriptions</span>
+                        </a>
                     </div>
                     <div class="col-sm-6">
-                        <div class="d-flex align-items-center gap-2 text-brand-contrast fw-medium small">
-                            <i class="bi bi-arrow-right text-brand-primary"></i>
-                            <a href="{{ route('services.compounding') }}" class="text-decoration-none text-brand-contrast hover-primary">Health Cannabis Compounding</a>
-                        </div>
+                        <a href="{{ route('services.compounding') }}" class="hero-service-pill d-flex align-items-center gap-2 p-2 rounded-3 text-decoration-none">
+                            <span class="pill-arrow-wrap"><i class="bi bi-arrow-right"></i></span>
+                            <span class="pill-text fw-semibold small text-brand-contrast">Health Cannabis Compounding</span>
+                        </a>
                     </div>
                     <div class="col-sm-6">
-                        <div class="d-flex align-items-center gap-2 text-brand-contrast fw-medium small">
-                            <i class="bi bi-arrow-right text-brand-primary"></i>
-                            <a href="{{ route('services.gp') }}" class="text-decoration-none text-brand-contrast hover-primary">Chronic Disease Support</a>
-                        </div>
+                        <a href="{{ route('services.gp') }}" class="hero-service-pill d-flex align-items-center gap-2 p-2 rounded-3 text-decoration-none">
+                            <span class="pill-arrow-wrap"><i class="bi bi-arrow-right"></i></span>
+                            <span class="pill-text fw-semibold small text-brand-contrast">Chronic Disease Support</span>
+                        </a>
                     </div>
                 </div>
 
-                <!-- Action CTAs -->
+                <!-- Action CTAs with Hover Animations -->
                 <div class="d-flex flex-wrap align-items-center gap-3">
-                    <a href="{{ route('booking.index') }}" class="btn px-4 py-3 rounded-pill fw-semibold shadow text-white d-inline-flex align-items-center gap-2" style="background-color: #0f2d59; font-size: 1rem; transition: transform 0.25s ease;">
+                    <a href="{{ route('booking.index') }}" class="btn px-4 py-3 rounded-pill fw-semibold shadow text-white d-inline-flex align-items-center gap-2 hero-btn-primary" style="background: linear-gradient(135deg, #0f2d59 0%, #163a6b 100%); font-size: 1rem; transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);">
                         <span>Book Appointment</span>
-                        <i class="bi bi-arrow-right"></i>
+                        <i class="bi bi-arrow-right hero-arrow-icon"></i>
                     </a>
-                    <a href="tel:0411174173" class="btn px-4 py-3 rounded-pill fw-semibold d-inline-flex align-items-center gap-2 text-brand-contrast bg-white border shadow-sm">
-                        <i class="bi bi-telephone-fill text-brand-primary"></i>
+                    <a href="tel:0411174173" class="btn px-4 py-3 rounded-pill fw-semibold d-inline-flex align-items-center gap-2 text-brand-contrast bg-white border shadow-sm hero-btn-secondary" style="font-size: 1rem; transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);">
+                        <i class="bi bi-telephone-fill text-brand-primary hero-phone-icon"></i>
                         <span>Call Us</span>
                     </a>
                 </div>
             </div>
 
-            <!-- Right Hero Image Graphic -->
+            <!-- Right Hero Image Graphic with Floating Badges -->
             <div class="col-lg-6 text-center position-relative" data-aos="fade-left">
-                <div class="position-relative d-inline-block p-2">
-                    <div class="position-absolute top-50 start-50 translate-middle rounded-circle" style="width: 440px; height: 440px; background: radial-gradient(circle, rgba(58, 163, 162, 0.2) 0%, transparent 70%); z-index: 0;"></div>
-                    <img src="{{ asset('images/hero-telehealth.jpg') }}" alt="Telehealth Doctor Video Consultation Australia" class="img-fluid rounded-5 shadow-lg position-relative" style="max-height: 480px; width: 100%; object-fit: cover; z-index: 1;" onerror="this.src='{{ asset('images/doctor-bazel.png') }}'">
+                <div class="position-relative d-inline-block p-2 hero-graphic-wrap">
+                    <img src="{{ asset('images/hero-telehealth.jpg') }}" alt="Telehealth Doctor Video Consultation Australia" class="img-fluid rounded-5 shadow-lg position-relative hero-main-img" style="max-height: 480px; width: 100%; object-fit: cover; z-index: 1;" onerror="this.src='{{ asset('images/doctor-bazel.png') }}'">
+                    
+                    <!-- Floating Badge Top Right -->
+                    <div class="hero-float-badge top-right shadow-md rounded-pill py-2 px-3 bg-white d-none d-sm-flex align-items-center gap-2 border">
+                        <i class="bi bi-shield-check text-success fs-5"></i>
+                        <span class="small fw-bold text-brand-contrast">AHPRA Registered GP</span>
+                    </div>
+
+                    <!-- Floating Badge Bottom Left -->
+                    <div class="hero-float-badge bottom-left shadow-lg rounded-4 p-3 bg-white d-none d-sm-flex align-items-center gap-3 border text-start">
+                        <div class="rounded-circle d-flex align-items-center justify-content-center text-white" style="width: 42px; height: 42px; background: linear-gradient(135deg, #3aa3a2 0%, #1a9b8c 100%);">
+                            <i class="bi bi-camera-video-fill fs-5"></i>
+                        </div>
+                        <div>
+                            <div class="small fw-bold text-brand-contrast">40,000+ Consultations</div>
+                            <small class="text-muted">Same-Day Available</small>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>

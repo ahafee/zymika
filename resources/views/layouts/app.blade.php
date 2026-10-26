@@ -34,11 +34,10 @@
     @include('partials.header')
 
     <main class="flex-grow-1">
-        <div class="container">
-            @include('partials.alerts')
-        </div>
         @yield('content')
     </main>
+
+    @include('partials.alerts')
 
     @include('partials.footer')
 
