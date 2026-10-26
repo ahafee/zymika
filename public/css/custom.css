@@ -3899,4 +3899,968 @@ img {
     }
 }
 
+/* ==========================================================================
+   NEWDOC-INSPIRED HERO BANNER & VIP CONSULTATION MODAL (NO INLINE CSS)
+   ========================================================================== */
+
+/* Hero Banner Section */
+.newdoc-hero-section {
+    position: relative;
+    overflow: hidden;
+    background-color: #f6fafd;
+    background-image: 
+        radial-gradient(circle at 85% 25%, rgba(58, 163, 162, 0.12) 0%, transparent 45%),
+        radial-gradient(circle at 12% 75%, rgba(15, 45, 89, 0.08) 0%, transparent 50%),
+        url("data:image/svg+xml,%3Csvg width='1200' height='800' viewBox='0 0 1200 800' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M-100,240 C200,120 400,320 650,190 C900,60 1050,260 1300,160' fill='none' stroke='%233aa3a2' stroke-opacity='0.08' stroke-width='2.5'/%3E%3Cpath d='M-100,340 C220,200 450,420 720,290 C980,160 1100,360 1300,260' fill='none' stroke='%230f2d59' stroke-opacity='0.05' stroke-width='2'/%3E%3Cpath d='M-100,440 C180,300 420,520 680,390 C920,260 1080,440 1300,360' fill='none' stroke='%233aa3a2' stroke-opacity='0.06' stroke-width='2'/%3E%3Cpath d='M-100,560 C240,420 500,620 780,490 C1020,360 1150,540 1300,460' fill='none' stroke='%230f2d59' stroke-opacity='0.04' stroke-width='2'/%3E%3C/svg%3E");
+    background-repeat: repeat;
+    background-size: cover;
+    min-height: 86vh;
+    display: flex;
+    align-items: center;
+    padding: 4.5rem 0 3.5rem;
+}
+
+.newdoc-hero-container {
+    max-width: 1320px;
+    position: relative;
+    z-index: 2;
+}
+
+/* Avatar Badge */
+.newdoc-avatar-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.65rem;
+    padding: 5px 16px 5px 6px;
+    background: #ffffff;
+    border: 1px solid rgba(15, 45, 89, 0.12);
+    border-radius: 50rem;
+    box-shadow: 0 4px 14px rgba(15, 45, 89, 0.05);
+    margin-bottom: 1.5rem;
+    transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.newdoc-avatar-badge:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 20px rgba(15, 45, 89, 0.09);
+}
+
+.newdoc-avatar-group {
+    display: inline-flex;
+    align-items: center;
+}
+
+.newdoc-avatar-img {
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    border: 2px solid #ffffff;
+    object-fit: cover;
+    margin-right: -8px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+}
+
+.newdoc-avatar-text {
+    font-size: 0.86rem;
+    font-weight: 600;
+    color: #0f2d59;
+    letter-spacing: -0.01em;
+}
+
+/* Hero Typography */
+.newdoc-hero-title {
+    font-family: 'Outfit', 'Poppins', sans-serif;
+    font-size: clamp(2.4rem, 4.8vw, 4rem);
+    font-weight: 800;
+    color: #0f2d59;
+    line-height: 1.12;
+    letter-spacing: -0.035em;
+    margin-bottom: 1.75rem;
+}
+
+.newdoc-hero-title span.text-teal {
+    color: #1a7e78;
+}
+
+/* Consult CTA Button */
+.newdoc-consult-btn {
+    background-color: #176562;
+    color: #ffffff !important;
+    border: none;
+    border-radius: 12px;
+    padding: 0.95rem 2.2rem;
+    font-size: 1.05rem;
+    font-weight: 600;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.65rem;
+    box-shadow: 0 10px 24px rgba(23, 101, 98, 0.28);
+    transition: all 0.28s cubic-bezier(0.16, 1, 0.3, 1);
+    cursor: pointer;
+    text-decoration: none;
+}
+
+.newdoc-consult-btn:hover {
+    background-color: #0e4846;
+    transform: translateY(-3px) scale(1.02);
+    box-shadow: 0 16px 32px rgba(23, 101, 98, 0.38);
+    color: #ffffff !important;
+}
+
+.newdoc-consult-btn .btn-arrow-icon {
+    font-size: 1.15rem;
+    transition: transform 0.25s ease;
+}
+
+.newdoc-consult-btn:hover .btn-arrow-icon {
+    transform: translateX(4px);
+}
+
+/* Call Us Secondary Text */
+.newdoc-call-text {
+    font-size: 0.92rem;
+    color: #4a5568;
+    margin-top: 0.85rem;
+    margin-bottom: 2rem;
+}
+
+.newdoc-call-text a {
+    color: #0f2d59;
+    font-weight: 700;
+    text-decoration: underline;
+    transition: color 0.2s ease;
+}
+
+.newdoc-call-text a:hover {
+    color: #176562;
+}
+
+/* Features Checklist */
+.newdoc-check-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 0.65rem 1.5rem;
+    max-width: 520px;
+    margin-bottom: 0.65rem;
+}
+
+.newdoc-check-item {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-size: 0.92rem;
+    font-weight: 500;
+    color: #1e293b;
+    line-height: 1.4;
+}
+
+.newdoc-check-icon {
+    color: #176562;
+    font-weight: bold;
+    font-size: 1rem;
+    flex-shrink: 0;
+}
+
+.newdoc-check-disclaimer {
+    font-size: 0.78rem;
+    color: #64748b;
+    margin-top: 0.35rem;
+    display: block;
+}
+
+/* Right Stage Cards (Overlapping Modern Photos) */
+.newdoc-cards-stage {
+    position: relative;
+    width: 100%;
+    min-height: 480px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.newdoc-card-back {
+    position: absolute;
+    top: 15px;
+    right: 20px;
+    width: 62%;
+    max-width: 350px;
+    height: 270px;
+    border-radius: 26px;
+    overflow: hidden;
+    box-shadow: 0 20px 45px rgba(15, 45, 89, 0.12);
+    border: 4px solid #ffffff;
+    z-index: 1;
+    transition: transform 0.4s ease;
+}
+
+.newdoc-card-back img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.newdoc-card-front {
+    position: absolute;
+    bottom: 25px;
+    left: 20px;
+    width: 68%;
+    max-width: 390px;
+    height: 300px;
+    border-radius: 28px;
+    overflow: visible;
+    box-shadow: 0 28px 60px rgba(15, 45, 89, 0.18);
+    border: 5px solid #ffffff;
+    z-index: 2;
+    transition: transform 0.4s ease;
+}
+
+.newdoc-card-front-inner {
+    width: 100%;
+    height: 100%;
+    border-radius: 24px;
+    overflow: hidden;
+}
+
+.newdoc-card-front-inner img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.newdoc-speech-bubble {
+    position: absolute;
+    bottom: -18px;
+    right: -15px;
+    background: #ffffff;
+    border-radius: 14px;
+    padding: 0.65rem 1.15rem;
+    box-shadow: 0 14px 30px rgba(15, 45, 89, 0.16);
+    z-index: 3;
+    font-size: 0.88rem;
+    font-weight: 600;
+    color: #0f2d59;
+    border: 1px solid rgba(15, 45, 89, 0.08);
+    display: flex;
+    align-items: center;
+    gap: 0.45rem;
+    animation: speechFloat 3.8s ease-in-out infinite alternate;
+}
+
+@keyframes speechFloat {
+    0% { transform: translateY(0px); }
+    100% { transform: translateY(-7px); }
+}
+
+.newdoc-speech-bubble .bubble-icon {
+    color: #176562;
+    font-size: 1.05rem;
+}
+
+/* Trust Metrics Strip */
+.newdoc-trust-strip {
+    background-color: #0c2035;
+    color: #ffffff;
+    padding: 0.95rem 0;
+}
+
+.newdoc-trust-container {
+    max-width: 1100px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 1.5rem 3rem;
+}
+
+.newdoc-trust-item {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-size: 0.95rem;
+    font-weight: 600;
+    letter-spacing: -0.01em;
+    color: rgba(255, 255, 255, 0.92);
+}
+
+.newdoc-trust-item .star-icon {
+    color: #3aa3a2;
+    font-size: 0.8rem;
+}
+
+/* ==========================================================================
+   CONSULTATION BOOKING MODAL (100% NO INLINE CSS)
+   ========================================================================== */
+
+.consult-modal .modal-dialog {
+    max-width: 780px;
+    margin: 1.75rem auto;
+}
+
+.consult-modal-content {
+    border: none;
+    border-radius: 24px;
+    overflow: hidden;
+    box-shadow: 0 30px 80px rgba(15, 45, 89, 0.28);
+    background-color: #ffffff;
+}
+
+.consult-modal-header {
+    padding: 1.85rem 2.2rem 1rem;
+    border-bottom: none;
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+}
+
+.consult-modal-title {
+    font-family: 'Outfit', 'Poppins', sans-serif;
+    font-size: 1.65rem;
+    font-weight: 800;
+    color: #0f2d59;
+    letter-spacing: -0.02em;
+    margin-bottom: 0.35rem;
+}
+
+.consult-modal-subtitle {
+    font-size: 0.88rem;
+    font-weight: 600;
+    color: #176562;
+    display: flex;
+    align-items: center;
+    gap: 0.45rem;
+}
+
+.consult-modal-subtitle .bi-check-circle-fill {
+    font-size: 1rem;
+    color: #176562;
+}
+
+.consult-modal-body {
+    padding: 0.5rem 2.2rem 2.2rem;
+}
+
+/* Service Options Cards (Step 1) */
+.consult-service-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1rem;
+    margin-bottom: 1rem;
+}
+
+.consult-service-card {
+    border: 1.5px solid #e2e8f0;
+    border-radius: 16px;
+    padding: 1.35rem 1.4rem;
+    background-color: #ffffff;
+    cursor: pointer;
+    text-align: left;
+    transition: all 0.26s cubic-bezier(0.16, 1, 0.3, 1);
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.consult-service-card:hover {
+    border-color: #176562;
+    transform: translateY(-2px);
+    box-shadow: 0 10px 24px rgba(23, 101, 98, 0.12);
+}
+
+.consult-service-card.selected {
+    border-color: #176562;
+    background-color: #f2f9f9;
+    box-shadow: 0 6px 18px rgba(23, 101, 98, 0.15);
+}
+
+.consult-card-head {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 0.5rem;
+}
+
+.consult-card-title {
+    font-size: 1.15rem;
+    font-weight: 700;
+    color: #0f2d59;
+    margin: 0;
+}
+
+.consult-card-arrow {
+    font-size: 1.1rem;
+    color: #64748b;
+    transition: transform 0.2s ease, color 0.2s ease;
+}
+
+.consult-service-card:hover .consult-card-arrow {
+    transform: translateX(4px);
+    color: #176562;
+}
+
+.consult-card-desc {
+    font-size: 0.84rem;
+    color: #475569;
+    line-height: 1.55;
+    margin: 0;
+}
+
+.consult-card-notice {
+    margin-top: 0.85rem;
+    padding: 0.45rem 0.75rem;
+    background: #f8fafc;
+    border: 1px solid #e2e8f0;
+    border-radius: 8px;
+    font-size: 0.76rem;
+    color: #64748b;
+    display: flex;
+    align-items: flex-start;
+    gap: 0.35rem;
+    line-height: 1.4;
+}
+
+.consult-card-notice .bi-info-circle {
+    color: #0284c7;
+    margin-top: 1px;
+}
+
+/* Full Width Review Banner */
+.consult-review-banner {
+    border: 1.5px solid #e2e8f0;
+    border-radius: 14px;
+    padding: 1rem 1.4rem;
+    background-color: #ffffff;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-size: 0.88rem;
+    color: #334155;
+    transition: all 0.2s ease;
+    margin-bottom: 1.25rem;
+}
+
+.consult-review-banner:hover {
+    border-color: #176562;
+    background-color: #f8fafc;
+    transform: translateY(-1px);
+}
+
+.consult-review-banner strong {
+    color: #0f2d59;
+}
+
+.consult-step1-footer {
+    font-size: 0.82rem;
+    color: #64748b;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    padding-top: 0.5rem;
+    border-top: 1px solid #f1f5f9;
+}
+
+.consult-step1-footer a {
+    color: #176562;
+    font-weight: 600;
+    text-decoration: underline;
+}
+
+/* Step 2: Date & Slot Picker */
+.consult-step2-subbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    margin-bottom: 1.15rem;
+    padding-bottom: 0.75rem;
+    border-bottom: 1px solid #f1f5f9;
+}
+
+.consult-selected-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-size: 0.92rem;
+    font-weight: 600;
+    color: #0f2d59;
+}
+
+.consult-change-link {
+    color: #176562;
+    font-size: 0.84rem;
+    font-weight: 600;
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+.consult-match-text {
+    font-size: 0.84rem;
+    color: #64748b;
+}
+
+/* Previous Doctor Callout */
+.consult-previous-callout {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: #f8fafc;
+    border: 1px solid #e2e8f0;
+    border-radius: 12px;
+    padding: 0.75rem 1.15rem;
+    margin-bottom: 1.25rem;
+    font-size: 0.86rem;
+    color: #334155;
+}
+
+.consult-previous-callout a {
+    color: #176562;
+    font-weight: 700;
+    text-decoration: none;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.25rem;
+}
+
+.consult-previous-callout a:hover {
+    text-decoration: underline;
+}
+
+/* Soonest Available Box */
+.consult-soonest-box {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: #ffffff;
+    border: 1.5px solid #e2e8f0;
+    border-radius: 14px;
+    padding: 0.95rem 1.35rem;
+    margin-bottom: 1.35rem;
+    box-shadow: 0 4px 12px rgba(15, 45, 89, 0.04);
+}
+
+.consult-soonest-label {
+    font-size: 0.76rem;
+    color: #64748b;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+    margin-bottom: 0.2rem;
+}
+
+.consult-soonest-time {
+    font-size: 1.1rem;
+    font-weight: 700;
+    color: #0f2d59;
+}
+
+.consult-soonest-btn {
+    background-color: #176562;
+    color: #ffffff;
+    border: none;
+    border-radius: 10px;
+    padding: 0.65rem 1.35rem;
+    font-size: 0.92rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.consult-soonest-btn:hover {
+    background-color: #0e4846;
+    transform: translateY(-1px);
+}
+
+/* Two Column Slot Layout */
+.consult-slots-row {
+    display: grid;
+    grid-template-columns: 210px 1fr;
+    gap: 1.5rem;
+    margin-bottom: 1.5rem;
+}
+
+.consult-days-list {
+    display: flex;
+    flex-direction: column;
+    gap: 0.45rem;
+}
+
+.consult-day-heading {
+    font-size: 0.8rem;
+    font-weight: 700;
+    color: #64748b;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    margin-bottom: 0.35rem;
+}
+
+.consult-day-pill {
+    width: 100%;
+    padding: 0.75rem 1rem;
+    border: 1.5px solid #e2e8f0;
+    border-radius: 12px;
+    background: #ffffff;
+    color: #334155;
+    font-size: 0.88rem;
+    font-weight: 600;
+    text-align: left;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    display: flex;
+    flex-direction: column;
+}
+
+.consult-day-pill .day-sub {
+    font-size: 0.76rem;
+    color: #64748b;
+    font-weight: 400;
+}
+
+.consult-day-pill:hover {
+    border-color: #176562;
+    color: #176562;
+}
+
+.consult-day-pill.active {
+    background-color: #176562;
+    border-color: #176562;
+    color: #ffffff;
+}
+
+.consult-day-pill.active .day-sub {
+    color: rgba(255, 255, 255, 0.85);
+}
+
+/* Time Slots Grid */
+.consult-times-panel {
+    max-height: 380px;
+    overflow-y: auto;
+    padding-right: 0.35rem;
+}
+
+.consult-times-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    margin-bottom: 0.85rem;
+}
+
+.consult-times-title {
+    font-size: 1rem;
+    font-weight: 700;
+    color: #0f2d59;
+}
+
+.consult-times-tz {
+    font-size: 0.76rem;
+    color: #64748b;
+}
+
+.consult-time-period-label {
+    font-size: 0.78rem;
+    font-weight: 700;
+    color: #64748b;
+    margin-top: 0.75rem;
+    margin-bottom: 0.5rem;
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+}
+
+.consult-time-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(78px, 1fr));
+    gap: 0.55rem;
+    margin-bottom: 0.85rem;
+}
+
+.consult-slot-box {
+    padding: 0.55rem 0.25rem;
+    border: 1.5px solid #e2e8f0;
+    border-radius: 9px;
+    background: #ffffff;
+    color: #334155;
+    font-size: 0.82rem;
+    font-weight: 600;
+    text-align: center;
+    cursor: pointer;
+    transition: all 0.18s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.consult-slot-box:hover {
+    border-color: #176562;
+    color: #176562;
+    background: #f2f9f9;
+}
+
+.consult-slot-box.selected {
+    background-color: #176562;
+    border-color: #176562;
+    color: #ffffff;
+    box-shadow: 0 4px 10px rgba(23, 101, 98, 0.25);
+}
+
+.consult-slot-box.booked {
+    background: #f1f5f9;
+    color: #94a3b8;
+    border-color: #e2e8f0;
+    cursor: not-allowed;
+    text-decoration: line-through;
+}
+
+/* Step 2 Bottom Controls */
+.consult-step2-actions {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-top: 1px solid #f1f5f9;
+    padding-top: 1.15rem;
+}
+
+.consult-step2-actions .btn-continue {
+    background-color: #176562;
+    color: #ffffff;
+    border: none;
+    border-radius: 10px;
+    padding: 0.75rem 2.2rem;
+    font-size: 0.96rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.22s ease;
+}
+
+.consult-step2-actions .btn-continue:disabled {
+    background-color: #e2e8f0;
+    color: #94a3b8;
+    cursor: not-allowed;
+}
+
+.consult-step2-actions .btn-continue:not(:disabled):hover {
+    background-color: #0e4846;
+    transform: translateY(-2px);
+}
+
+/* Step 3: Patient Intake Form */
+.consult-form-summary {
+    background: #f8fafc;
+    border: 1px solid #e2e8f0;
+    border-radius: 14px;
+    padding: 1rem 1.25rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1.35rem;
+}
+
+.consult-form-summary-item {
+    font-size: 0.86rem;
+    color: #334155;
+}
+
+.consult-form-summary-item strong {
+    color: #0f2d59;
+}
+
+.consult-input-label {
+    font-size: 0.84rem;
+    font-weight: 600;
+    color: #334155;
+    margin-bottom: 0.35rem;
+}
+
+.consult-input-control {
+    width: 100%;
+    border: 1.5px solid #cbd5e1;
+    border-radius: 10px;
+    padding: 0.65rem 0.95rem;
+    font-size: 0.9rem;
+    color: #1e293b;
+    outline: none;
+    transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.consult-input-control:focus {
+    border-color: #176562;
+    box-shadow: 0 0 0 3px rgba(23, 101, 98, 0.14);
+}
+
+.consult-submit-btn {
+    width: 100%;
+    background-color: #176562;
+    color: #ffffff;
+    border: none;
+    border-radius: 12px;
+    padding: 0.9rem;
+    font-size: 1.05rem;
+    font-weight: 700;
+    cursor: pointer;
+    transition: all 0.25s ease;
+    box-shadow: 0 8px 20px rgba(23, 101, 98, 0.25);
+}
+
+.consult-submit-btn:hover {
+    background-color: #0e4846;
+    transform: translateY(-2px);
+    box-shadow: 0 12px 26px rgba(23, 101, 98, 0.35);
+}
+
+/* Step 4 & 5 Auth Panes (Screenshot 4 & 5) */
+.consult-auth-wrapper {
+    max-width: 440px;
+    margin: 0 auto;
+    text-align: center;
+    padding: 1rem 0;
+}
+
+.consult-auth-title {
+    font-family: 'Outfit', 'Poppins', sans-serif;
+    font-size: 1.85rem;
+    font-weight: 800;
+    color: #0f2d59;
+    margin-bottom: 0.35rem;
+}
+
+.consult-auth-subtitle {
+    font-size: 0.88rem;
+    color: #64748b;
+    margin-bottom: 1.5rem;
+}
+
+.consult-auth-btn {
+    width: 100%;
+    background-color: #176562;
+    color: #ffffff;
+    border: none;
+    border-radius: 10px;
+    padding: 0.85rem;
+    font-size: 1rem;
+    font-weight: 700;
+    cursor: pointer;
+    margin-top: 1rem;
+    transition: all 0.2s ease;
+}
+
+.consult-auth-btn:hover {
+    background-color: #0e4846;
+}
+
+.consult-auth-switch {
+    font-size: 0.85rem;
+    color: #64748b;
+    margin-top: 1.25rem;
+}
+
+.consult-auth-switch a {
+    color: #176562;
+    font-weight: 600;
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+/* Mobile Responsive */
+@media (max-width: 991px) {
+    .newdoc-cards-stage {
+        min-height: 400px;
+        margin-top: 2rem;
+    }
+    .newdoc-card-back {
+        width: 70%;
+        height: 230px;
+    }
+    .newdoc-card-front {
+        width: 78%;
+        height: 250px;
+        left: 5px;
+    }
+    .newdoc-speech-bubble {
+        bottom: -15px;
+        right: 0;
+    }
+    .consult-slots-row {
+        grid-template-columns: 1fr;
+        gap: 1rem;
+    }
+    .consult-days-list {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 0.4rem;
+    }
+    .consult-service-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 576px) {
+    .newdoc-check-grid {
+        grid-template-columns: 1fr;
+    }
+    .newdoc-hero-section {
+        padding: 3rem 0 2.5rem;
+    }
+    .newdoc-cards-stage {
+        min-height: 320px;
+    }
+    .newdoc-card-back {
+        width: 80%;
+        height: 190px;
+        right: 5px;
+    }
+    .newdoc-card-front {
+        width: 85%;
+        height: 210px;
+        left: 0;
+    }
+    .consult-days-list {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    .consult-modal-header {
+        padding: 1.35rem 1.25rem 0.75rem;
+    }
+    .consult-modal-body {
+        padding: 0.5rem 1.25rem 1.5rem;
+    }
+}
+
+/* Nav CTA Buttons (No inline CSS) */
+.btn-nav-book {
+    background-color: #0f2d59;
+    color: #ffffff !important;
+    font-size: 0.92rem;
+    font-weight: 600;
+    border-radius: 50rem;
+    padding: 0.52rem 1.35rem;
+    transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+    border: none;
+    text-decoration: none;
+    display: inline-flex;
+    align-items: center;
+}
+
+.btn-nav-book:hover {
+    background-color: #176562;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 16px rgba(15, 45, 89, 0.2);
+}
+
+.btn-nav-login {
+    background-color: #176562;
+    color: #ffffff !important;
+    font-size: 0.92rem;
+    font-weight: 600;
+    border-radius: 50rem;
+    padding: 0.52rem 1.35rem;
+    transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+    border: none;
+    text-decoration: none;
+    display: inline-flex;
+    align-items: center;
+}
+
+.btn-nav-login:hover {
+    background-color: #0e4846;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 16px rgba(23, 101, 98, 0.25);
+}
+
 

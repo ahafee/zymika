@@ -39,6 +39,8 @@
 
     @include('partials.alerts')
 
+    @include('partials.consultation-modal')
+
     @include('partials.footer')
 
     <!-- Bootstrap 5 Bundle JS -->

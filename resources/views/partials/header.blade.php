@@ -55,10 +55,10 @@
 
                 <!-- Header CTA Buttons (Book Appointment & Login) -->
                 <div class="d-flex align-items-center gap-2 ms-2">
-                    <a href="{{ route('booking.index') }}" class="btn px-4 py-2 rounded-pill fw-semibold shadow-sm text-white" style="background-color: #0f2d59; font-size: 0.95rem; transition: all 0.3s ease;">
+                    <button type="button" class="btn btn-nav-book shadow-sm" data-bs-toggle="modal" data-bs-target="#consultBookingModal">
                         Book Appointment
-                    </a>
-                    <a href="{{ route('login') }}" class="btn px-4 py-2 rounded-pill fw-semibold shadow-sm text-white" style="background-color: #3aa3a2; font-size: 0.95rem; transition: all 0.3s ease;">
+                    </button>
+                    <a href="{{ route('login') }}" class="btn btn-nav-login shadow-sm">
                         Login
                     </a>
                 </div>
@@ -119,11 +119,11 @@
                     </ul>
 
                     <div class="d-flex flex-column gap-2 pt-3 border-top">
-                        <a href="{{ route('booking.index') }}" class="btn text-white w-100 py-3 rounded-pill fw-semibold shadow-sm d-flex align-items-center justify-content-center gap-2" style="background-color: #0f2d59;">
+                        <button type="button" class="btn btn-nav-book w-100 py-3 rounded-pill fw-semibold shadow-sm d-flex align-items-center justify-content-center gap-2" data-bs-dismiss="offcanvas" data-bs-toggle="modal" data-bs-target="#consultBookingModal">
                             <i class="bi bi-calendar2-check"></i>
                             <span>Book Appointment</span>
-                        </a>
-                        <a href="{{ route('login') }}" class="btn text-white w-100 py-3 rounded-pill fw-semibold shadow-sm d-flex align-items-center justify-content-center gap-2" style="background-color: #3aa3a2;">
+                        </button>
+                        <a href="{{ route('login') }}" class="btn btn-nav-login w-100 py-3 rounded-pill fw-semibold shadow-sm d-flex align-items-center justify-content-center gap-2">
                             <i class="bi bi-box-arrow-in-right"></i>
                             <span>Login to Portal</span>
                         </a>
