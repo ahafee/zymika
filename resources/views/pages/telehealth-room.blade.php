@@ -162,7 +162,7 @@
                             SB
                         </div>
                         <div>
-                            <div class="text-white fw-bold small">{{ $doctor->full_name ?? 'Dr. Suneetha Batthala' }}</div>
+                            <div class="text-white fw-bold small">{{ $doctor->full_name ?? 'Dr Bazel Lodhi' }}</div>
                             <div class="text-white-50" style="font-size: 0.75rem;">AHPRA Authorised Prescriber &bull; Online</div>
                         </div>
                     </div>
@@ -184,12 +184,12 @@
                 <div class="text-center p-4">
                     <div class="position-relative d-inline-block mb-3">
                         <div class="rounded-circle p-1 border border-2 border-success d-inline-block">
-                            <img src="{{ asset('images/Final-File.png') }}" alt="Dr. Suneetha Batthala" class="rounded-circle shadow" style="width: 110px; height: 110px; object-fit: cover; background: #ffffff;">
+                            <img src="{{ asset('images/Final-File.png') }}" alt="Dr Bazel Lodhi" class="rounded-circle shadow" style="width: 110px; height: 110px; object-fit: cover; background: #ffffff;">
                         </div>
                         <span class="position-absolute bottom-0 end-0 p-1.5 bg-success border border-2 border-dark rounded-circle"></span>
                     </div>
-                    <h5 class="text-white fw-bold mb-1">{{ $doctor->full_name ?? 'Dr. Suneetha Batthala' }}</h5>
-                    <p class="text-white-50 small mb-2">Prescribing Telehealth Doctor &bull; ZYMIKA HEALTH Surry Hills</p>
+                    <h5 class="text-white fw-bold mb-1">{{ $doctor->full_name ?? 'Dr Bazel Lodhi' }}</h5>
+                    <p class="text-white-50 small mb-2">Prescribing Telehealth Doctor &bull; ZYMIKA HEALTH</p>
                     <span class="badge bg-white bg-opacity-10 text-white border border-white border-opacity-20 px-3 py-1.5">
                         <i class="bi bi-shield-check text-brand-primary me-1"></i> Consultation Active &amp; Ready
                     </span>
@@ -247,7 +247,7 @@
                         <div class="fw-bold text-white small mb-1">
                             <i class="bi bi-file-earmark-medical me-1"></i> Snapform Intake
                         </div>
-                        <p class="text-white-50 mb-2" style="font-size: 0.75rem;">Share pain score &amp; current medicines with Dr. Batthala.</p>
+                        <p class="text-white-50 mb-2" style="font-size: 0.75rem;">Share pain score &amp; current medicines with Dr Lodhi.</p>
                         <a href="{{ route('patient.snapform', ['appointment_id' => $appointment->id]) }}" class="btn btn-sm btn-brand-primary w-100 fw-semibold" style="font-size: 0.8rem;">
                             Open Snapform &rarr;
                         </a>
@@ -361,7 +361,7 @@ function videoRoomApp() {
         toggleScreenShare() {
             this.screenSharing = !this.screenSharing;
             if (this.screenSharing) {
-                alert('Screen sharing initiated for Dr. Suneetha Batthala.');
+                alert('Screen sharing initiated for Dr Bazel Lodhi.');
             }
         },
         requestHelp() {

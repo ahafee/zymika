@@ -24,11 +24,11 @@ class DatabaseSeeder extends Seeder
     {
         // 1. Settings
         Setting::set('clinic_name', 'ZYMIKA HEALTH / Zymika Health Pty Ltd', 'general');
-        Setting::set('clinic_doctor_lead', 'Dr. Suneetha Batthala', 'general');
-        Setting::set('clinic_phone', '02 58385365', 'general');
-        Setting::set('clinic_email', 'hello@zymikahealth.com.au', 'general');
-        Setting::set('clinic_address', 'Level 1, 63-73 Ann street, Surry Hills NSW 2010', 'general');
-        Setting::set('clinic_hours', 'Monday - Friday: 8:30 AM - 6:00 PM | Saturday: 9:00 AM - 2:00 PM', 'general');
+        Setting::set('clinic_doctor_lead', 'Dr Bazel Lodhi', 'general');
+        Setting::set('clinic_phone', '0411174173', 'general');
+        Setting::set('clinic_email', 'info@zymikahealth.com.au', 'general');
+        Setting::set('clinic_address', 'Berwick, VIC 3806 / 1098 Heatherton Rd, Noble Park VIC 3174', 'general');
+        Setting::set('clinic_hours', 'Monday - Friday: 9:00 AM - 5:00 PM', 'general');
         Setting::set('primary_color', '#3aa3a2', 'general');
         Setting::set('contrast_color', '#0f2d59', 'general');
         Setting::set('medirecords_sandbox', '1', 'medirecords', 'boolean');
@@ -42,25 +42,25 @@ class DatabaseSeeder extends Seeder
             'email' => 'admin@zymikahealth.com.au',
             'password' => Hash::make('password'),
             'role' => 'admin',
-            'phone' => '02 58385365',
-            'city' => 'Surry Hills',
-            'state' => 'NSW',
-            'postcode' => '2010',
-            'address_line1' => 'Level 1, 63-73 Ann street',
+            'phone' => '0411174173',
+            'city' => 'Berwick',
+            'state' => 'VIC',
+            'postcode' => '3806',
+            'address_line1' => 'Berwick, VIC 3806',
         ]);
 
-        // 3. Doctor User (Dr. Suneetha Batthala)
+        // 3. Doctor User (Dr Bazel Lodhi)
         $doctorUser = User::create([
-            'name' => 'Dr. Suneetha Batthala',
-            'email' => 'dr.batthala@zymikahealth.com.au',
+            'name' => 'Dr Bazel Lodhi',
+            'email' => 'dr.lodhi@zymikahealth.com.au',
             'password' => Hash::make('password'),
             'role' => 'doctor',
-            'phone' => '02 58385365',
-            'city' => 'Surry Hills',
-            'state' => 'NSW',
-            'postcode' => '2010',
-            'address_line1' => 'Level 1, 63-73 Ann street',
-            'medirecords_patient_id' => 'MR-DOC-BATTHALA',
+            'phone' => '0411174173',
+            'city' => 'Berwick',
+            'state' => 'VIC',
+            'postcode' => '3806',
+            'address_line1' => 'Berwick, VIC 3806',
+            'medirecords_patient_id' => 'MR-DOC-LODHI',
         ]);
 
         $doctor = Doctor::create([
@@ -69,9 +69,9 @@ class DatabaseSeeder extends Seeder
             'ahpra_number' => 'MED0001928472',
             'provider_number' => '2938472B',
             'prescriber_number' => 'PR-883921',
-            'specialty' => 'Medicinal Cannabis Authorised Prescriber & Integrative Medicine',
-            'bio' => 'Dr. Suneetha Batthala is a dedicated Australian General Practitioner and TGA Authorised Prescriber specializing in plant-based therapies, chronic pain management, anxiety disorders, and sleep medicine. Operating from Surry Hills NSW, she provides compassionate, evidence-based telehealth care to patients across Australia.',
-            'consultation_fee' => 79.00,
+            'specialty' => 'General Practitioner & Telehealth Specialist (FACRRM, MPH, MBBS, EMC, RPSGT)',
+            'bio' => 'Dr Bazel Lodhi is a highly experienced General Practitioner with over 25 years of clinical practice across diverse healthcare settings internationally. Currently consulting with Hola Health, he is committed to delivering accessible, high-quality medical care through telehealth to patients across Australia.',
+            'consultation_fee' => 65.00,
             'medirecords_practitioner_id' => 'MR-PRAC-01823',
             'is_active' => true,
         ]);
@@ -91,27 +91,51 @@ class DatabaseSeeder extends Seeder
         // 5. Services
         $services = [
             [
-                'name' => 'Initial Telehealth Consultation',
-                'slug' => 'initial-telehealth-consultation',
-                'description' => 'Comprehensive 20-minute video/phone consultation with Dr. Suneetha Batthala. Includes clinical assessment, personalized treatment plan, TGA Special Access Scheme / Authorised Prescriber submission, and digital e-script creation.',
-                'duration_minutes' => 20,
-                'price' => 79.00,
+                'name' => 'GP Online Consultation',
+                'slug' => 'gp-online-consultation',
+                'description' => 'Speak with a doctor online for a 15-minute consultation with Dr Bazel Lodhi. Includes clinical assessment, personalized medical advice, referrals, or e-scripts where clinically appropriate.',
+                'duration_minutes' => 15,
+                'price' => 65.00,
                 'type' => 'initial',
             ],
             [
-                'name' => 'Follow-Up & Dosage Review',
-                'slug' => 'follow-up-review',
-                'description' => '15-minute follow-up consultation to evaluate treatment efficacy, adjust cannabinoid titration dosages, manage any side effects, and renew prescription repeats.',
-                'duration_minutes' => 15,
-                'price' => 49.00,
-                'type' => 'follow_up',
+                'name' => 'Cardiology Review',
+                'slug' => 'cardiology-review',
+                'description' => 'Heart health consultation and follow-up review.',
+                'duration_minutes' => 20,
+                'price' => 120.00,
+                'type' => 'specialist',
             ],
             [
-                'name' => 'Express Repeat Prescription',
-                'slug' => 'express-repeat-prescription',
-                'description' => 'Quick review and repeat authorization for existing patients whose treatment regimen is stable and approved by Dr. Batthala.',
+                'name' => 'Skin Treatment',
+                'slug' => 'skin-treatment',
+                'description' => 'Skin, acne, rash and allergy consultation.',
+                'duration_minutes' => 15,
+                'price' => 80.00,
+                'type' => 'treatment',
+            ],
+            [
+                'name' => 'Pediatric Consultation',
+                'slug' => 'pediatric-consultation',
+                'description' => 'Child health appointment with pediatric-focused care with Dr Bazel Lodhi.',
+                'duration_minutes' => 20,
+                'price' => 75.00,
+                'type' => 'pediatric',
+            ],
+            [
+                'name' => 'Dental Checkup',
+                'slug' => 'dental-checkup',
+                'description' => 'Dental checkup and care planning appointment.',
+                'duration_minutes' => 30,
+                'price' => 95.00,
+                'type' => 'dental',
+            ],
+            [
+                'name' => 'Repeat Prescription',
+                'slug' => 'repeat-prescription',
+                'description' => 'Repeat script request and medication review with Dr Bazel Lodhi.',
                 'duration_minutes' => 10,
-                'price' => 39.00,
+                'price' => 35.00,
                 'type' => 'repeat_script',
             ],
         ];

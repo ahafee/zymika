@@ -37,7 +37,7 @@
                     <div class="row align-items-center g-4">
                         <div class="col-md-4 text-center">
                             <div class="position-relative d-inline-block">
-                                <img src="{{ asset('images/doctor-suneetha.jpg') }}" alt="Dr Bazel Lodhi" class="img-fluid rounded-4 shadow-sm" style="max-height: 280px; width: 100%; object-fit: cover;">
+                                <img src="{{ asset('images/doctor-bazel.png') }}" alt="Dr Bazel Lodhi" class="img-fluid rounded-4 shadow-sm" style="max-height: 280px; width: 100%; object-fit: cover;">
                                 <div class="position-absolute top-0 start-0 m-2 badge bg-success text-white px-2 py-1 rounded-pill small">
                                     Available Online
                                 </div>

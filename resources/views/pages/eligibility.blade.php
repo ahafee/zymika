@@ -145,7 +145,7 @@
                 <!-- Step 3: Medical Contraindications -->
                 <div x-show="step === 3" x-transition>
                     <h4 class="fw-bold text-brand-contrast mb-1">3. Safety & Medical Safety Screen</h4>
-                    <p class="text-muted small mb-4">Please answer honestly to assist Dr. Batthala in assessing clinical safety.</p>
+                    <p class="text-muted small mb-4">Please answer honestly to assist Dr Bazel Lodhi in assessing clinical safety.</p>
 
                     <div class="mb-3 p-3 border rounded-3 bg-light">
                         <label class="form-label fw-semibold small text-brand-contrast d-block mb-2">Are you currently pregnant, planning pregnancy, or breastfeeding?</label>
@@ -247,7 +247,7 @@
 
                             <div class="p-4 bg-brand-light rounded-3 border mb-4 text-start">
                                 <h6 class="fw-bold text-brand-contrast mb-2"><i class="bi bi-calendar-check text-brand-primary me-2"></i> Next Step: Telehealth Booking</h6>
-                                <p class="small text-muted mb-0">Your answers have been securely attached to your file. Proceed to choose an appointment slot with <strong>Dr. Suneetha Batthala</strong>.</p>
+                                <p class="small text-muted mb-0">Your answers have been securely attached to your file. Proceed to choose an appointment slot with <strong>Dr Bazel Lodhi</strong>.</p>
                             </div>
 
                             <a :href="result.redirect_url" class="btn btn-brand-primary btn-lg px-5 fw-bold shadow">

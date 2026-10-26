@@ -30,7 +30,7 @@
     <div class="container" style="max-width: 1140px;">
         <div class="row align-items-center g-4">
             <div class="col-lg-3 text-center" data-aos="fade-right">
-                <img src="{{ asset('images/doctor-suneetha.jpg') }}" alt="Dr Bazel Lodhi" class="img-fluid rounded-4 shadow-sm" style="max-height: 240px; object-fit: cover;">
+                <img src="{{ asset('images/doctor-bazel.png') }}" alt="Dr Bazel Lodhi" class="img-fluid rounded-4 shadow-sm" style="max-height: 240px; object-fit: cover;">
             </div>
             <div class="col-lg-9" data-aos="fade-left">
                 <h3 class="fw-bold text-brand-contrast mb-1">Dr Bazel Lodhi</h3>
@@ -154,7 +154,7 @@
 
         <div class="row align-items-center g-4 g-lg-5 justify-content-center">
             <div class="col-lg-5 text-center" data-aos="fade-right">
-                <img src="{{ asset('images/doctor-suneetha.jpg') }}" alt="Dr Bazel Lodhi" class="img-fluid rounded-5 shadow-lg" style="max-height: 420px; object-fit: cover;">
+                <img src="{{ asset('images/doctor-bazel.png') }}" alt="Dr Bazel Lodhi" class="img-fluid rounded-5 shadow-lg" style="max-height: 420px; object-fit: cover;">
             </div>
             <div class="col-lg-7" data-aos="fade-left">
                 <p class="text-muted lead fs-6 mb-3 lh-base">

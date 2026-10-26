@@ -76,7 +76,7 @@
             <div class="col-lg-6 text-center position-relative" data-aos="fade-left">
                 <div class="position-relative d-inline-block p-2">
                     <div class="position-absolute top-50 start-50 translate-middle rounded-circle" style="width: 440px; height: 440px; background: radial-gradient(circle, rgba(58, 163, 162, 0.2) 0%, transparent 70%); z-index: 0;"></div>
-                    <img src="{{ asset('images/hero-telehealth.jpg') }}" alt="Telehealth Doctor Video Consultation Australia" class="img-fluid rounded-5 shadow-lg position-relative" style="max-height: 480px; width: 100%; object-fit: cover; z-index: 1;" onerror="this.src='{{ asset('images/doctor-suneetha.jpg') }}'">
+                    <img src="{{ asset('images/hero-telehealth.jpg') }}" alt="Telehealth Doctor Video Consultation Australia" class="img-fluid rounded-5 shadow-lg position-relative" style="max-height: 480px; width: 100%; object-fit: cover; z-index: 1;" onerror="this.src='{{ asset('images/doctor-bazel.png') }}'">
                 </div>
             </div>
         </div>
@@ -109,7 +109,7 @@
         <div class="row align-items-center g-4 g-lg-5">
             <div class="col-lg-4 text-center" data-aos="fade-right">
                 <div class="position-relative d-inline-block">
-                    <img src="{{ asset('images/doctor-suneetha.jpg') }}" alt="Dr Bazel Lodhi General Practitioner" class="img-fluid rounded-4 shadow-md" style="max-height: 320px; object-fit: cover;">
+                    <img src="{{ asset('images/doctor-bazel.png') }}" alt="Dr Bazel Lodhi General Practitioner" class="img-fluid rounded-4 shadow-md" style="max-height: 320px; object-fit: cover;">
                     <div class="position-absolute bottom-0 start-50 translate-middle-x mb-n2 bg-white px-3 py-1 rounded-pill shadow-sm border small fw-bold text-brand-primary text-nowrap">
                         25+ Years of Experience In Healthcare Service
                     </div>
@@ -302,7 +302,7 @@
         <div class="row align-items-center g-4 g-lg-5 justify-content-center">
             <div class="col-lg-5 text-center" data-aos="fade-right">
                 <div class="position-relative d-inline-block">
-                    <img src="{{ asset('images/doctor-suneetha.jpg') }}" alt="Dr Bazel Lodhi General Practitioner" class="img-fluid rounded-5 shadow-lg" style="max-height: 420px; object-fit: cover;">
+                    <img src="{{ asset('images/doctor-bazel.png') }}" alt="Dr Bazel Lodhi General Practitioner" class="img-fluid rounded-5 shadow-lg" style="max-height: 420px; object-fit: cover;">
                     <div class="position-absolute bottom-0 end-0 bg-white p-3 rounded-4 shadow-sm border m-3 text-start">
                         <div class="fw-bold text-brand-contrast small">Dr Bazel Lodhi</div>
                         <div class="text-brand-primary small fw-semibold">FACRRM, MPH, MBBS, EMC, RPSGT</div>

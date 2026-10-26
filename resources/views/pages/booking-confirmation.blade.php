@@ -70,7 +70,7 @@
                         <h6 class="fw-bold text-brand-contrast mb-1">
                             <i class="bi bi-file-earmark-medical-fill text-brand-sage me-1.5"></i> Step 2: Snapform Pre-Consult Questionnaire
                         </h6>
-                        <p class="small text-muted mb-0">Please share your symptoms &amp; health history so Dr. Batthala can review prior to the call.</p>
+                        <p class="small text-muted mb-0">Please share your symptoms &amp; health history so Dr Bazel Lodhi can review prior to the call.</p>
                     </div>
                     <a href="{{ route('patient.snapform', ['appointment_id' => $appointment->id]) }}" class="btn btn-sm btn-brand-contrast px-3 py-2 fw-semibold">
                         Complete Pre-Consult Form &rarr;
