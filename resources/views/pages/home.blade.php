@@ -60,8 +60,8 @@
                         <span>Book Appointment</span>
                         <i class="bi bi-arrow-right btn-arrow-icon"></i>
                     </button>
-                    <a href="tel:0411174173" class="btn btn-outline-secondary px-4 py-3 rounded-pill fw-semibold d-inline-flex align-items-center gap-2 bg-white shadow-sm">
-                        <i class="bi bi-telephone-fill text-brand-primary"></i>
+                    <a href="tel:0411174173" class="hero-call-btn">
+                        <i class="bi bi-telephone-fill"></i>
                         <span>Call Us</span>
                     </a>
                 </div>

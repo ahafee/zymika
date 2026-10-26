@@ -23,19 +23,54 @@
                     </li>
 
                     <!-- Services Dropdown -->
-                    <li class="nav-item dropdown">
+                    <li class="nav-item dropdown dropdown-zymika">
                         <a class="nav-link dropdown-toggle fw-semibold {{ request()->is('clinic-services*') || request()->is('*-consultations*') || request()->is('*prescriptions*') || request()->is('*mental-health*') || request()->is('*urgent*') || request()->is('*compounding*') ? 'active text-brand-primary' : 'text-brand-contrast' }}" href="#" id="servicesDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                             Services
                         </a>
-                        <ul class="dropdown-menu shadow-lg border-0 rounded-3 py-2 mt-2" aria-labelledby="servicesDropdown" style="min-width: 270px; border-top: 3px solid #3aa3a2 !important;">
-                            <li><a class="dropdown-item py-2 px-3 fw-medium text-brand-contrast {{ request()->routeIs('services.gp') ? 'active bg-light text-brand-primary' : '' }}" href="{{ route('services.gp') }}">General GP Consultations</a></li>
-                            <li><a class="dropdown-item py-2 px-3 fw-medium text-brand-contrast {{ request()->routeIs('services.prescriptions') ? 'active bg-light text-brand-primary' : '' }}" href="{{ route('services.prescriptions') }}">Prescriptions & Medical</a></li>
-                            <li><a class="dropdown-item py-2 px-3 fw-medium text-brand-contrast {{ request()->routeIs('services.cannabis') ? 'active bg-light text-brand-primary' : '' }}" href="{{ route('services.cannabis') }}">Medicinal Cannabis Consultations</a></li>
-                            <li><a class="dropdown-item py-2 px-3 fw-medium text-brand-contrast {{ request()->routeIs('services.mental-health') ? 'active bg-light text-brand-primary' : '' }}" href="{{ route('services.mental-health') }}">Mental Health & Wellbeing</a></li>
-                            <li><a class="dropdown-item py-2 px-3 fw-medium text-brand-contrast {{ request()->routeIs('services.urgent-care') ? 'active bg-light text-brand-primary' : '' }}" href="{{ route('services.urgent-care') }}">Urgent & After Hours Care</a></li>
-                            <li><a class="dropdown-item py-2 px-3 fw-medium text-brand-contrast {{ request()->routeIs('services.compounding') ? 'active bg-light text-brand-primary' : '' }}" href="{{ route('services.compounding') }}">Health Cannabis Compounding</a></li>
-                            <li><hr class="dropdown-divider my-1"></li>
-                            <li><a class="dropdown-item py-2 px-3 fw-semibold text-brand-primary d-flex align-items-center justify-content-between" href="{{ route('services') }}"><span>View All Services</span> <i class="bi bi-arrow-right"></i></a></li>
+                        <ul class="dropdown-menu dropdown-menu-zymika shadow-lg" aria-labelledby="servicesDropdown">
+                            <li>
+                                <a class="dropdown-item {{ request()->routeIs('services.gp') ? 'active' : '' }}" href="{{ route('services.gp') }}">
+                                    <span class="dropdown-item-icon"><i class="bi bi-person-badge"></i></span>
+                                    <span class="dropdown-item-text">General GP Consultations</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a class="dropdown-item {{ request()->routeIs('services.prescriptions') ? 'active' : '' }}" href="{{ route('services.prescriptions') }}">
+                                    <span class="dropdown-item-icon"><i class="bi bi-file-earmark-medical"></i></span>
+                                    <span class="dropdown-item-text">Prescriptions & Medical</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a class="dropdown-item {{ request()->routeIs('services.cannabis') ? 'active' : '' }}" href="{{ route('services.cannabis') }}">
+                                    <span class="dropdown-item-icon"><i class="bi bi-flower1"></i></span>
+                                    <span class="dropdown-item-text">Medicinal Cannabis Consultations</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a class="dropdown-item {{ request()->routeIs('services.mental-health') ? 'active' : '' }}" href="{{ route('services.mental-health') }}">
+                                    <span class="dropdown-item-icon"><i class="bi bi-heart-pulse"></i></span>
+                                    <span class="dropdown-item-text">Mental Health & Wellbeing</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a class="dropdown-item {{ request()->routeIs('services.urgent-care') ? 'active' : '' }}" href="{{ route('services.urgent-care') }}">
+                                    <span class="dropdown-item-icon"><i class="bi bi-clock-history"></i></span>
+                                    <span class="dropdown-item-text">Urgent & After Hours Care</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a class="dropdown-item {{ request()->routeIs('services.compounding') ? 'active' : '' }}" href="{{ route('services.compounding') }}">
+                                    <span class="dropdown-item-icon"><i class="bi bi-capsule"></i></span>
+                                    <span class="dropdown-item-text">Health Cannabis Compounding</span>
+                                </a>
+                            </li>
+                            <li><hr class="dropdown-divider my-2 opacity-10"></li>
+                            <li>
+                                <a class="dropdown-item dropdown-item-all d-flex align-items-center justify-content-between" href="{{ route('services') }}">
+                                    <span>View All Services</span>
+                                    <i class="bi bi-arrow-right"></i>
+                                </a>
+                            </li>
                         </ul>
                     </li>
 

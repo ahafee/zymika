@@ -60,8 +60,16 @@
                             </div>
                             <div>
                                 <h6 class="fw-bold text-brand-contrast mb-1">Location</h6>
-                                <p class="text-muted small mb-0">1098 Heatherton Rd, Noble Park VIC 3174</p>
-                                <p class="text-muted small mb-0">Berwick, VIC 3806</p>
+                                <p class="small mb-1">
+                                    <a href="https://maps.google.com/?q=1098+Heatherton+Rd+Noble+Park+VIC+3174" target="_blank" rel="noopener noreferrer" class="text-muted text-decoration-none hover-primary">
+                                        <i class="bi bi-geo-alt text-brand-primary me-1"></i>1098 Heatherton Rd, Noble Park VIC 3174
+                                    </a>
+                                </p>
+                                <p class="small mb-0">
+                                    <a href="https://maps.google.com/?q=Berwick+VIC+3806+Australia" target="_blank" rel="noopener noreferrer" class="text-muted text-decoration-none hover-primary">
+                                        <i class="bi bi-geo-alt text-brand-primary me-1"></i>Berwick, VIC 3806
+                                    </a>
+                                </p>
                             </div>
                         </div>
                     </div>

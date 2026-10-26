@@ -5578,4 +5578,209 @@ img {
     }
 }
 
+/* ==========================================================================
+   Hero Call Us Button (Enhanced Size, High-Contrast Hover State)
+   ========================================================================== */
+.hero-call-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.65rem;
+    padding: 0.95rem 2.2rem;
+    font-size: 1.05rem;
+    font-weight: 600;
+    border-radius: 12px;
+    background-color: #ffffff;
+    color: #176562 !important;
+    border: 2px solid #176562;
+    box-shadow: 0 6px 18px rgba(23, 101, 98, 0.12);
+    transition: all 0.28s cubic-bezier(0.16, 1, 0.3, 1);
+    text-decoration: none !important;
+    cursor: pointer;
+}
+
+.hero-call-btn i {
+    color: #176562 !important;
+    font-size: 1.15rem;
+    transition: transform 0.25s ease, color 0.25s ease;
+}
+
+.hero-call-btn span {
+    color: #176562 !important;
+    transition: color 0.25s ease;
+}
+
+.hero-call-btn:hover {
+    background-color: #176562 !important;
+    color: #ffffff !important;
+    border-color: #176562 !important;
+    transform: translateY(-3px) scale(1.02);
+    box-shadow: 0 14px 30px rgba(23, 101, 98, 0.32);
+}
+
+.hero-call-btn:hover i {
+    color: #ffffff !important;
+    transform: rotate(15deg) scale(1.1);
+}
+
+.hero-call-btn:hover span {
+    color: #ffffff !important;
+}
+
+/* ==========================================================================
+   Footer Highlight Link (Aussify Web Design)
+   ========================================================================== */
+.footer-highlight-link {
+    color: #38bdf8 !important;
+    font-weight: 700 !important;
+    letter-spacing: 0.02em;
+    padding: 3px 10px;
+    background: rgba(56, 189, 248, 0.14);
+    border: 1px solid rgba(56, 189, 248, 0.35);
+    border-radius: 6px;
+    text-decoration: none !important;
+    display: inline-flex;
+    align-items: center;
+    gap: 4px;
+    transition: all 0.25s ease;
+    vertical-align: middle;
+}
+
+.footer-highlight-link:hover {
+    background: #38bdf8 !important;
+    color: #071529 !important;
+    box-shadow: 0 0 16px rgba(56, 189, 248, 0.65);
+    transform: translateY(-1px);
+    border-color: #38bdf8 !important;
+}
+
+/* ==========================================================================
+   Navbar Services Dropdown (Smooth Bridge, No-Disappear Hover, Modern Look)
+   ========================================================================== */
+.dropdown-menu-zymika {
+    min-width: 310px;
+    padding: 0.65rem 0.5rem;
+    background: #ffffff;
+    border: 1px solid rgba(58, 163, 162, 0.2) !important;
+    border-top: 3.5px solid #3aa3a2 !important;
+    border-radius: 16px !important;
+    box-shadow: 0 18px 45px rgba(15, 45, 89, 0.14) !important;
+}
+
+.dropdown-menu-zymika .dropdown-item {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 0.65rem 0.85rem;
+    border-radius: 10px;
+    color: #0f2d59 !important;
+    font-size: 0.92rem;
+    font-weight: 500;
+    transition: all 0.22s cubic-bezier(0.16, 1, 0.3, 1);
+    background: transparent;
+}
+
+.dropdown-menu-zymika .dropdown-item-icon {
+    width: 32px;
+    height: 32px;
+    border-radius: 8px;
+    background: #e7f9fb;
+    color: #3aa3a2;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1rem;
+    flex-shrink: 0;
+    transition: all 0.22s ease;
+}
+
+.dropdown-menu-zymika .dropdown-item-text {
+    flex-grow: 1;
+    line-height: 1.35;
+}
+
+.dropdown-menu-zymika .dropdown-item:hover,
+.dropdown-menu-zymika .dropdown-item:focus {
+    background-color: #f0fdfa !important;
+    color: #176562 !important;
+    transform: translateX(4px);
+}
+
+.dropdown-menu-zymika .dropdown-item:hover .dropdown-item-icon,
+.dropdown-menu-zymika .dropdown-item:focus .dropdown-item-icon {
+    background-color: #176562;
+    color: #ffffff;
+    transform: scale(1.05);
+}
+
+.dropdown-menu-zymika .dropdown-item.active {
+    background-color: #e7f9fb !important;
+    color: #176562 !important;
+    font-weight: 600;
+}
+
+.dropdown-menu-zymika .dropdown-item.active .dropdown-item-icon {
+    background-color: #176562;
+    color: #ffffff;
+}
+
+.dropdown-menu-zymika .dropdown-item-all {
+    color: #176562 !important;
+    font-weight: 700;
+    font-size: 0.95rem;
+    padding: 0.75rem 0.95rem;
+    background: #f8fafc;
+    border-radius: 10px;
+}
+
+.dropdown-menu-zymika .dropdown-item-all:hover {
+    background: #176562 !important;
+    color: #ffffff !important;
+    transform: translateX(4px);
+}
+
+.dropdown-menu-zymika .dropdown-item-all:hover i {
+    transform: translateX(3px);
+}
+
+/* Desktop Hover Bridge (Prevents mouse cursor drop when moving to menu) */
+@media (min-width: 992px) {
+    .navbar-zymika .dropdown-zymika {
+        position: relative;
+    }
+
+    .navbar-zymika .dropdown-zymika .dropdown-menu-zymika {
+        display: block !important;
+        opacity: 0;
+        visibility: hidden;
+        pointer-events: none;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        margin-top: 0 !important;
+        transform: translateY(10px);
+        transition: opacity 0.2s cubic-bezier(0.16, 1, 0.3, 1),
+                    transform 0.2s cubic-bezier(0.16, 1, 0.3, 1),
+                    visibility 0.2s;
+    }
+
+    /* Invisible hover bridge covering the air gap */
+    .navbar-zymika .dropdown-zymika .dropdown-menu-zymika::before {
+        content: '';
+        position: absolute;
+        top: -15px;
+        left: 0;
+        right: 0;
+        height: 15px;
+        background: transparent;
+    }
+
+    .navbar-zymika .dropdown-zymika:hover > .dropdown-menu-zymika,
+    .navbar-zymika .dropdown-zymika .dropdown-menu-zymika:hover {
+        opacity: 1 !important;
+        visibility: visible !important;
+        pointer-events: auto !important;
+        transform: translateY(0) !important;
+    }
+}
+
 

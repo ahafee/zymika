@@ -63,11 +63,27 @@
                     </div>
                     <div>
                         <div class="text-white fw-semibold">Location:</div>
-                        <div class="text-light opacity-75">Berwick, VIC 3806</div>
+                        <div>
+                            <a href="https://maps.google.com/?q=Berwick+VIC+3806+Australia" target="_blank" rel="noopener noreferrer" class="text-light opacity-75 text-decoration-none hover-primary d-inline-flex align-items-center gap-1">
+                                <i class="bi bi-geo-alt text-brand-primary"></i> Berwick, VIC 3806
+                            </a>
+                        </div>
                     </div>
                     <div>
                         <div class="text-white fw-semibold">Phone No:</div>
-                        <div><a href="tel:0411174173" class="text-decoration-none fw-semibold" style="color: #3aa3a2;">0411174173</a></div>
+                        <div>
+                            <a href="tel:0411174173" class="text-decoration-none fw-semibold d-inline-flex align-items-center gap-1" style="color: #3aa3a2;">
+                                <i class="bi bi-telephone-fill"></i> 0411174173
+                            </a>
+                        </div>
+                    </div>
+                    <div>
+                        <div class="text-white fw-semibold">Email:</div>
+                        <div>
+                            <a href="mailto:info@zymikahealth.com.au" class="text-decoration-none text-light opacity-75 hover-primary d-inline-flex align-items-center gap-1">
+                                <i class="bi bi-envelope-fill text-brand-primary"></i> info@zymikahealth.com.au
+                            </a>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -76,7 +92,7 @@
         <!-- Bottom Copyright Bar -->
         <div class="d-flex flex-column flex-md-row justify-content-between align-items-center gap-3 small text-light opacity-75">
             <div>
-                &copy; 2026 Zymika Health. All Rights Reserved. | Website Designed by <a href="https://www.aussifywebdesign.com.au/" target="_blank" rel="noopener noreferrer" class="text-white text-decoration-underline hover-primary">Aussify Web Design</a>
+                &copy; 2026 Zymika Health. All Rights Reserved. | Website Designed by <a href="https://www.aussifywebdesign.com.au/" target="_blank" rel="noopener noreferrer" class="footer-highlight-link">Aussify Web Design</a>
             </div>
             <div class="d-flex align-items-center gap-3">
                 <a href="{{ route('home') }}#terms" class="text-light opacity-75 text-decoration-none hover-primary">Terms &amp; Conditions</a>
