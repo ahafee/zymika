@@ -1,58 +1,170 @@
 @extends('layouts.app')
 
-@section('title', 'Clinical Services & Consultation Fees - ZYMIKA HEALTH')
+@section('title', 'Professional Care Services - Zymika Health Telehealth Australia')
 
 @section('content')
-<!-- Premium Inner Hero Banner with Image -->
-<section class="inner-hero-section">
-    <div class="container">
-        <div class="row align-items-center g-4 g-lg-5">
-            <div class="col-lg-7" data-aos="fade-right">
-                <div class="d-inline-flex align-items-center gap-2 mb-2">
-                    <span class="badge badge-tga"><i class="bi bi-wallet2 me-1"></i> HONEST &amp; TRANSPARENT FEES</span>
-                    <span class="badge bg-white text-brand-contrast border"><i class="bi bi-shield-check text-brand-sage me-1"></i> TGA SAS-B &amp; AP</span>
-                </div>
-                <h1 class="display-5 fw-bold text-brand-contrast mb-3">Clinical Telehealth Services &amp; Fees</h1>
-                <p class="lead text-muted mb-4">
-                    Clear, transparent Australian telehealth consultation pricing with no hidden lock-in contracts. Direct AHPRA-registered doctor consultations with instant digital e-prescriptions.
+<!-- Page Header -->
+<section class="py-5 text-white position-relative" style="background: linear-gradient(135deg, #0f2d59 0%, #163868 60%, #0a2142 100%);">
+    <div class="container py-3" style="max-width: 1200px;">
+        <nav aria-label="breadcrumb">
+            <ol class="breadcrumb mb-2 text-white-50 small">
+                <li class="breadcrumb-item"><a href="{{ route('home') }}" class="text-white text-decoration-none">Home</a></li>
+                <li class="breadcrumb-item active text-white" aria-current="page">Services</li>
+            </ol>
+        </nav>
+        <div class="d-flex flex-column flex-md-row justify-content-between align-items-md-center gap-3">
+            <div>
+                <h1 class="display-5 fw-bold text-white mb-2">Professional care services</h1>
+                <p class="lead text-white text-opacity-90 fs-6 mb-0" style="max-width: 720px;">
+                    Choose a medical service, review assigned doctors, then continue to a guided booking flow with live availability and secure payments.
                 </p>
-                
-                <div class="d-flex flex-wrap gap-3 mb-4">
-                    <div class="d-flex align-items-center gap-2 small fw-semibold text-brand-contrast">
-                        <i class="bi bi-check-circle-fill text-brand-primary fs-5"></i>
-                        <span>No Hidden Lock-In Subscriptions</span>
-                    </div>
-                    <div class="d-flex align-items-center gap-2 small fw-semibold text-brand-contrast">
-                        <i class="bi bi-check-circle-fill text-brand-primary fs-5"></i>
-                        <span>TGA SAS-B Approvals Included</span>
-                    </div>
-                    <div class="d-flex align-items-center gap-2 small fw-semibold text-brand-contrast">
-                        <i class="bi bi-check-circle-fill text-brand-primary fs-5"></i>
-                        <span>Instant E-Script Delivery via SMS</span>
-                    </div>
-                </div>
+            </div>
+            <div class="d-flex align-items-center gap-2">
+                <span class="badge bg-white text-brand-contrast px-3 py-2 rounded-pill fw-semibold shadow-sm">
+                    6 Active Services
+                </span>
+                <span class="badge bg-white text-brand-contrast px-3 py-2 rounded-pill fw-semibold shadow-sm">
+                    <span class="text-success me-1">●</span> 1 Active Doctors
+                </span>
+            </div>
+        </div>
+    </div>
+</section>
 
-                <div class="d-flex flex-wrap gap-3">
-                    <a href="{{ route('booking.index') }}" class="btn btn-brand-primary btn-lg shadow-sm">
-                        <i class="bi bi-calendar2-check me-2"></i> Book Doctor Consult ($79)
-                    </a>
-                    <a href="{{ route('eligibility.show') }}" class="btn btn-brand-outline btn-lg">
-                        <i class="bi bi-ui-checks me-2"></i> Free Eligibility Check
-                    </a>
+<!-- Available Services Section -->
+<section class="py-5 bg-white">
+    <div class="container py-lg-4" style="max-width: 1200px;">
+        <div class="d-flex flex-column flex-md-row justify-content-between align-items-md-center gap-3 mb-5" data-aos="fade-up">
+            <div>
+                <h2 class="h3 fw-bold text-brand-contrast mb-1">Available Services</h2>
+                <p class="text-muted small mb-0">Every card is powered by live service records, doctor assignments, pricing and duration settings.</p>
+            </div>
+            <div>
+                <a href="{{ route('booking.index') }}" class="btn px-4 py-2 rounded-pill fw-semibold text-white shadow-sm" style="background-color: #0f2d59;">
+                    Book Appointment
+                </a>
+            </div>
+        </div>
+
+        <div class="row g-4">
+            <!-- Service 1: GP Online Consultation -->
+            <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="50">
+                <div class="card h-100 border rounded-4 p-4 shadow-sm d-flex flex-column" style="transition: transform 0.25s ease;">
+                    <div class="d-flex justify-content-between align-items-center mb-3">
+                        <span class="badge bg-light text-brand-contrast border px-3 py-1 rounded-pill small">Service</span>
+                        <span class="badge bg-light text-muted border px-2 py-1 rounded-pill small"><i class="bi bi-clock me-1"></i> 15 min</span>
+                    </div>
+                    <div class="display-6 fw-bold text-brand-contrast mb-2" style="font-size: 1.75rem; color: #0f2d59;">AUD 65.00</div>
+                    <h4 class="fw-bold text-brand-contrast fs-5 mb-2">GP Online Consultation</h4>
+                    <p class="text-muted small mb-3">Speak with a doctor online for a 15-minute consultation.</p>
+                    <div class="d-flex align-items-center gap-2 mb-4 small text-muted">
+                        <span class="badge rounded-circle bg-light text-brand-contrast border fw-bold d-inline-flex align-items-center justify-content-center" style="width: 24px; height: 24px;">D</span>
+                        <span>1 doctor available</span>
+                    </div>
+                    <div class="d-flex gap-2 mt-auto">
+                        <a href="{{ route('booking.index') }}?service_id=1" class="btn btn-sm text-white px-3 py-2 rounded-pill fw-semibold flex-grow-1" style="background-color: #0f2d59;">Book Service</a>
+                        <a href="{{ route('services.gp') }}" class="btn btn-sm btn-outline-secondary px-3 py-2 rounded-pill fw-semibold">View Details</a>
+                    </div>
                 </div>
             </div>
 
-            <div class="col-lg-5" data-aos="fade-left" data-aos-delay="150">
-                <div class="inner-hero-img-wrap">
-                    <img src="{{ asset('images/cond-pain.jpg') }}" alt="Clinical Telehealth Services" class="inner-hero-img">
-                    <div class="inner-hero-floating-badge">
-                        <div class="bg-success text-white rounded-circle p-2 d-flex align-items-center justify-content-center" style="width: 38px; height: 38px;">
-                            <i class="bi bi-patch-check-fill fs-5"></i>
-                        </div>
-                        <div>
-                            <div class="fw-bold text-brand-contrast small">Initial Consult $79 &bull; Follow-Up $49</div>
-                            <div class="text-muted" style="font-size: 0.72rem;">Dedicated Australian Telehealth Doctor</div>
-                        </div>
+            <!-- Service 2: Cardiology Review -->
+            <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="100">
+                <div class="card h-100 border rounded-4 p-4 shadow-sm d-flex flex-column" style="transition: transform 0.25s ease;">
+                    <div class="d-flex justify-content-between align-items-center mb-3">
+                        <span class="badge bg-light text-brand-contrast border px-3 py-1 rounded-pill small">Service</span>
+                        <span class="badge bg-light text-muted border px-2 py-1 rounded-pill small"><i class="bi bi-clock me-1"></i> 20 min</span>
+                    </div>
+                    <div class="display-6 fw-bold text-brand-contrast mb-2" style="font-size: 1.75rem; color: #0f2d59;">AUD 120.00</div>
+                    <h4 class="fw-bold text-brand-contrast fs-5 mb-2">Cardiology Review</h4>
+                    <p class="text-muted small mb-3">Heart health consultation and follow-up review.</p>
+                    <div class="d-flex align-items-center gap-2 mb-4 small text-muted">
+                        <i class="bi bi-info-circle text-muted"></i>
+                        <span>0 doctors available • No assigned doctors yet</span>
+                    </div>
+                    <div class="d-flex gap-2 mt-auto">
+                        <a href="{{ route('booking.index') }}?service_id=2" class="btn btn-sm text-white px-3 py-2 rounded-pill fw-semibold w-100" style="background-color: #0f2d59;">Book Service</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Service 3: Skin Treatment -->
+            <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="150">
+                <div class="card h-100 border rounded-4 p-4 shadow-sm d-flex flex-column" style="transition: transform 0.25s ease;">
+                    <div class="d-flex justify-content-between align-items-center mb-3">
+                        <span class="badge bg-light text-brand-contrast border px-3 py-1 rounded-pill small">Service</span>
+                        <span class="badge bg-light text-muted border px-2 py-1 rounded-pill small"><i class="bi bi-clock me-1"></i> 15 min</span>
+                    </div>
+                    <div class="display-6 fw-bold text-brand-contrast mb-2" style="font-size: 1.75rem; color: #0f2d59;">AUD 80.00</div>
+                    <h4 class="fw-bold text-brand-contrast fs-5 mb-2">Skin Treatment</h4>
+                    <p class="text-muted small mb-3">Skin, acne, rash and allergy consultation.</p>
+                    <div class="d-flex align-items-center gap-2 mb-4 small text-muted">
+                        <i class="bi bi-info-circle text-muted"></i>
+                        <span>0 doctors available • No assigned doctors yet</span>
+                    </div>
+                    <div class="d-flex gap-2 mt-auto">
+                        <a href="{{ route('booking.index') }}?service_id=3" class="btn btn-sm text-white px-3 py-2 rounded-pill fw-semibold w-100" style="background-color: #0f2d59;">Book Service</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Service 4: Pediatric Consultation -->
+            <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="200">
+                <div class="card h-100 border rounded-4 p-4 shadow-sm d-flex flex-column" style="transition: transform 0.25s ease;">
+                    <div class="d-flex justify-content-between align-items-center mb-3">
+                        <span class="badge bg-light text-brand-contrast border px-3 py-1 rounded-pill small">Service</span>
+                        <span class="badge bg-light text-muted border px-2 py-1 rounded-pill small"><i class="bi bi-clock me-1"></i> 20 min</span>
+                    </div>
+                    <div class="display-6 fw-bold text-brand-contrast mb-2" style="font-size: 1.75rem; color: #0f2d59;">AUD 75.00</div>
+                    <h4 class="fw-bold text-brand-contrast fs-5 mb-2">Pediatric Consultation</h4>
+                    <p class="text-muted small mb-3">Child health appointment with pediatric-focused care.</p>
+                    <div class="d-flex align-items-center gap-2 mb-4 small text-muted">
+                        <span class="badge rounded-circle bg-light text-brand-contrast border fw-bold d-inline-flex align-items-center justify-content-center" style="width: 24px; height: 24px;">D</span>
+                        <span>1 doctor available</span>
+                    </div>
+                    <div class="d-flex gap-2 mt-auto">
+                        <a href="{{ route('booking.index') }}?service_id=4" class="btn btn-sm text-white px-3 py-2 rounded-pill fw-semibold w-100" style="background-color: #0f2d59;">Book Service</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Service 5: Dental Checkup -->
+            <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="250">
+                <div class="card h-100 border rounded-4 p-4 shadow-sm d-flex flex-column" style="transition: transform 0.25s ease;">
+                    <div class="d-flex justify-content-between align-items-center mb-3">
+                        <span class="badge bg-light text-brand-contrast border px-3 py-1 rounded-pill small">Service</span>
+                        <span class="badge bg-light text-muted border px-2 py-1 rounded-pill small"><i class="bi bi-clock me-1"></i> 30 min</span>
+                    </div>
+                    <div class="display-6 fw-bold text-brand-contrast mb-2" style="font-size: 1.75rem; color: #0f2d59;">AUD 95.00</div>
+                    <h4 class="fw-bold text-brand-contrast fs-5 mb-2">Dental Checkup</h4>
+                    <p class="text-muted small mb-3">Dental checkup and care planning appointment.</p>
+                    <div class="d-flex align-items-center gap-2 mb-4 small text-muted">
+                        <i class="bi bi-info-circle text-muted"></i>
+                        <span>0 doctors available • No assigned doctors yet</span>
+                    </div>
+                    <div class="d-flex gap-2 mt-auto">
+                        <a href="{{ route('booking.index') }}?service_id=5" class="btn btn-sm text-white px-3 py-2 rounded-pill fw-semibold w-100" style="background-color: #0f2d59;">Book Service</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Service 6: Repeat Prescription -->
+            <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="300">
+                <div class="card h-100 border rounded-4 p-4 shadow-sm d-flex flex-column" style="transition: transform 0.25s ease;">
+                    <div class="d-flex justify-content-between align-items-center mb-3">
+                        <span class="badge bg-light text-brand-contrast border px-3 py-1 rounded-pill small">Service</span>
+                        <span class="badge bg-light text-muted border px-2 py-1 rounded-pill small"><i class="bi bi-clock me-1"></i> 10 min</span>
+                    </div>
+                    <div class="display-6 fw-bold text-brand-contrast mb-2" style="font-size: 1.75rem; color: #0f2d59;">AUD 35.00</div>
+                    <h4 class="fw-bold text-brand-contrast fs-5 mb-2">Repeat Prescription</h4>
+                    <p class="text-muted small mb-3">Repeat script request and medication review.</p>
+                    <div class="d-flex align-items-center gap-2 mb-4 small text-muted">
+                        <span class="badge rounded-circle bg-light text-brand-contrast border fw-bold d-inline-flex align-items-center justify-content-center" style="width: 24px; height: 24px;">D</span>
+                        <span>1 doctor available</span>
+                    </div>
+                    <div class="d-flex gap-2 mt-auto">
+                        <a href="{{ route('booking.index') }}?service_id=6" class="btn btn-sm text-white px-3 py-2 rounded-pill fw-semibold flex-grow-1" style="background-color: #0f2d59;">Book Service</a>
+                        <a href="{{ route('services.prescriptions') }}" class="btn btn-sm btn-outline-secondary px-3 py-2 rounded-pill fw-semibold">View Details</a>
                     </div>
                 </div>
             </div>
@@ -60,218 +172,10 @@
     </div>
 </section>
 
-<div class="container py-5">
-    <div class="text-center max-w-700 mx-auto mb-5" data-aos="fade-up">
-        <span class="badge badge-tga mb-2">APPOINTMENT PACKAGES</span>
-        <h2 class="display-6 fw-bold text-brand-contrast">Clear, Transparent Consultation Fees</h2>
-        <p class="text-muted">Simple, upfront pricing for individualized plant medicine therapy and chronic condition telehealth.</p>
-    </div>
+<!-- FAQs Section -->
+@include('partials.faqs')
 
-    <!-- Luxury Pricing Services Cards matching Home Design -->
-    <div class="row g-4 mb-5 justify-content-center">
-        <!-- 1. Initial Telehealth Consultation (Featured) -->
-        <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="100">
-            <div class="pricing-card-vip pricing-card-featured">
-                <div class="pricing-badge-popular">
-                    <i class="bi bi-star-fill text-warning me-1"></i> Recommended for New Patients
-                </div>
-                
-                <h4 class="fw-bold text-brand-contrast mb-1">Initial Telehealth Consultation</h4>
-                <p class="small text-muted mb-0">Comprehensive health intake, medical history review &amp; initial care plan.</p>
-                
-                <div class="pricing-amount-box">
-                    <span class="pricing-currency">$</span>
-                    <span class="pricing-value">79</span>
-                    <span class="pricing-duration">/ 20 min session</span>
-                </div>
-                
-                <ul class="pricing-features-list flex-grow-1">
-                    <li class="pricing-feature-item">
-                        <span class="pricing-check-icon"><i class="bi bi-check2"></i></span>
-                        <span>Dedicated video consult with AHPRA registered doctor</span>
-                    </li>
-                    <li class="pricing-feature-item">
-                        <span class="pricing-check-icon"><i class="bi bi-check2"></i></span>
-                        <span>TGA SAS-B &amp; AP documentation included</span>
-                    </li>
-                    <li class="pricing-feature-item">
-                        <span class="pricing-check-icon"><i class="bi bi-check2"></i></span>
-                        <span>MediRecords real-time EHR record sync</span>
-                    </li>
-                    <li class="pricing-feature-item">
-                        <span class="pricing-check-icon"><i class="bi bi-check2"></i></span>
-                        <span>Digital e-script to patient portal</span>
-                    </li>
-                </ul>
+<!-- CTA Section -->
+@include('partials.cta-banner')
 
-                <a href="{{ route('booking.index', ['service_id' => 1]) }}" class="btn btn-brand-primary w-100 py-3 fw-bold shadow">
-                    Book Initial Consult ($79) <i class="bi bi-arrow-right ms-1"></i>
-                </a>
-            </div>
-        </div>
-
-        <!-- 2. Follow-Up & Dosage Review -->
-        <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="200">
-            <div class="pricing-card-vip">
-                <h4 class="fw-bold text-brand-contrast mb-1">Follow-Up &amp; Dosage Review</h4>
-                <p class="small text-muted mb-0">Clinical monitoring, dosage titration &amp; ongoing care plan optimization.</p>
-                
-                <div class="pricing-amount-box">
-                    <span class="pricing-currency">$</span>
-                    <span class="pricing-value">49</span>
-                    <span class="pricing-duration">/ 15 min session</span>
-                </div>
-                
-                <ul class="pricing-features-list flex-grow-1">
-                    <li class="pricing-feature-item">
-                        <span class="pricing-check-icon"><i class="bi bi-check2"></i></span>
-                        <span>Dedicated review with your treating doctor</span>
-                    </li>
-                    <li class="pricing-feature-item">
-                        <span class="pricing-check-icon"><i class="bi bi-check2"></i></span>
-                        <span>Dosage adjustments &amp; clinical efficacy assessment</span>
-                    </li>
-                    <li class="pricing-feature-item">
-                        <span class="pricing-check-icon"><i class="bi bi-check2"></i></span>
-                        <span>Updated digital e-scripts &amp; repeat management</span>
-                    </li>
-                    <li class="pricing-feature-item">
-                        <span class="pricing-check-icon"><i class="bi bi-check2"></i></span>
-                        <span>Direct MediRecords clinical notes update</span>
-                    </li>
-                </ul>
-
-                <a href="{{ route('booking.index', ['service_id' => 2]) }}" class="btn btn-brand-outline w-100 py-3 fw-bold">
-                    Book Follow-Up ($49) <i class="bi bi-arrow-right ms-1"></i>
-                </a>
-            </div>
-        </div>
-
-        <!-- 3. Express Repeat Prescription -->
-        <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="300">
-            <div class="pricing-card-vip">
-                <h4 class="fw-bold text-brand-contrast mb-1">Express Repeat Prescription</h4>
-                <p class="small text-muted mb-0">Fast script replenishment for stable, existing regular patients.</p>
-                
-                <div class="pricing-amount-box">
-                    <span class="pricing-currency">$</span>
-                    <span class="pricing-value">39</span>
-                    <span class="pricing-duration">/ 10 min session</span>
-                </div>
-                
-                <ul class="pricing-features-list flex-grow-1">
-                    <li class="pricing-feature-item">
-                        <span class="pricing-check-icon"><i class="bi bi-check2"></i></span>
-                        <span>Quick script verification for stable treatment plans</span>
-                    </li>
-                    <li class="pricing-feature-item">
-                        <span class="pricing-check-icon"><i class="bi bi-check2"></i></span>
-                        <span>Immediate e-script dispatch to patient wallet</span>
-                    </li>
-                    <li class="pricing-feature-item">
-                        <span class="pricing-check-icon"><i class="bi bi-check2"></i></span>
-                        <span>Direct pharmacy transmission for express delivery</span>
-                    </li>
-                    <li class="pricing-feature-item">
-                        <span class="pricing-check-icon"><i class="bi bi-check2"></i></span>
-                        <span>Full compliance with TGA repeat guidelines</span>
-                    </li>
-                </ul>
-
-                <a href="{{ route('booking.index', ['service_id' => 3]) }}" class="btn btn-brand-outline w-100 py-3 fw-bold">
-                    Book Express Repeat ($39) <i class="bi bi-arrow-right ms-1"></i>
-                </a>
-            </div>
-        </div>
-    </div>
-
-    <!-- Treatment Areas with Thumbnail Visuals -->
-    <div class="mt-5 pt-5 border-top" data-aos="fade-up">
-        <div class="text-center max-w-700 mx-auto mb-5">
-            <span class="badge badge-tga mb-2">CLINICAL FOCUS</span>
-            <h3 class="display-6 fw-bold text-brand-contrast">Primary Clinical Indications</h3>
-            <p class="text-muted">Evidence-based plant medicine treatments tailored for severe and chronic indications.</p>
-        </div>
-
-        <div class="row g-4">
-            <!-- Pain -->
-            <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="100">
-                <div class="p-4 bg-white border rounded-3 h-100 shadow-sm d-flex gap-3 align-items-start card-zymika">
-                    <div class="condition-thumb-wrap">
-                        <img src="{{ asset('images/cond-pain.jpg') }}" alt="Chronic Pain" class="condition-thumb-img">
-                    </div>
-                    <div>
-                        <h6 class="fw-bold text-brand-contrast mb-1">Chronic Pain Management</h6>
-                        <p class="small text-muted mb-0">Musculoskeletal, neuropathic, back &amp; joint pain reduction protocols.</p>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Sleep -->
-            <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="200">
-                <div class="p-4 bg-white border rounded-3 h-100 shadow-sm d-flex gap-3 align-items-start card-zymika">
-                    <div class="condition-thumb-wrap">
-                        <img src="{{ asset('images/cond-sleep.jpg') }}" alt="Sleep Disorders" class="condition-thumb-img">
-                    </div>
-                    <div>
-                        <h6 class="fw-bold text-brand-contrast mb-1">Sleep &amp; Insomnia Care</h6>
-                        <p class="small text-muted mb-0">Restorative cannabinoid titration to improve sleep latency and quality.</p>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Anxiety -->
-            <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="300">
-                <div class="p-4 bg-white border rounded-3 h-100 shadow-sm d-flex gap-3 align-items-start card-zymika">
-                    <div class="condition-thumb-wrap">
-                        <img src="{{ asset('images/cond-anxiety.jpg') }}" alt="Anxiety Disorders" class="condition-thumb-img">
-                    </div>
-                    <div>
-                        <h6 class="fw-bold text-brand-contrast mb-1">Anxiety &amp; Mood Support</h6>
-                        <p class="small text-muted mb-0">Gentle calming formulations for generalized anxiety and PTSD support.</p>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Women's Health -->
-            <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="400">
-                <div class="p-4 bg-white border rounded-3 h-100 shadow-sm d-flex gap-3 align-items-start card-zymika">
-                    <div class="condition-thumb-wrap">
-                        <img src="{{ asset('images/cond-women.jpg') }}" alt="Women's Health" class="condition-thumb-img">
-                    </div>
-                    <div>
-                        <h6 class="fw-bold text-brand-contrast mb-1">Women's Health &amp; Pelvic Pain</h6>
-                        <p class="small text-muted mb-0">Targeted support for endometriosis symptoms and pelvic cramping.</p>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Neurological -->
-            <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="500">
-                <div class="p-4 bg-white border rounded-3 h-100 shadow-sm d-flex gap-3 align-items-start card-zymika">
-                    <div class="condition-thumb-wrap">
-                        <img src="{{ asset('images/cond-neuro.jpg') }}" alt="Neurological Conditions" class="condition-thumb-img">
-                    </div>
-                    <div>
-                        <h6 class="fw-bold text-brand-contrast mb-1">Neurological &amp; Tremor Care</h6>
-                        <p class="small text-muted mb-0">Supportive symptom management for chronic migraines and neuropathies.</p>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Palliative -->
-            <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="600">
-                <div class="p-4 bg-white border rounded-3 h-100 shadow-sm d-flex gap-3 align-items-start card-zymika">
-                    <div class="condition-thumb-wrap">
-                        <img src="{{ asset('images/cond-palliative.jpg') }}" alt="Palliative Support" class="condition-thumb-img">
-                    </div>
-                    <div>
-                        <h6 class="fw-bold text-brand-contrast mb-1">Integrative Palliative Care</h6>
-                        <p class="small text-muted mb-0">Appetite stimulation, nausea mitigation and comfort-focused therapies.</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-</div>
 @endsection

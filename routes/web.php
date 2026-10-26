@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\AuthController;
 use App\Http\Controllers\HomeController;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Artisan;
@@ -7,27 +8,46 @@ use Illuminate\Support\Facades\Route;
 
 /*
 |--------------------------------------------------------------------------
-| Web Routes - Zymika Health
+| Web Routes - Zymika Health Live Website
 |--------------------------------------------------------------------------
-| Only Home Page is enabled. All other pages, portals, and admin routes
-| are locked and redirect back to the home page.
+| 100% matched routes and pages corresponding to zymikahealth.com.au
 */
 
 // Home Page
 Route::get('/', [HomeController::class, 'index'])->name('home');
 
-// Appointment Request Handler (Returns to home page with success notification)
-Route::post('/book-appointment', function (Request $request) {
-    return redirect('/#booking')->with('success', 'Thank you! Your telehealth appointment request has been received. Our team will contact you shortly.');
-})->name('home.appointment');
+// Main Pages
+Route::get('/about-us', [HomeController::class, 'about'])->name('about');
+Route::get('/how-it-works', [HomeController::class, 'howItWorks'])->name('how-it-works');
+Route::get('/clinic-doctors', [HomeController::class, 'doctors'])->name('doctors');
+Route::get('/clinic-services', [HomeController::class, 'services'])->name('services');
+Route::get('/contact-us', [HomeController::class, 'contact'])->name('contact');
+Route::post('/contact-us', [HomeController::class, 'submitContact'])->name('contact.submit');
 
-// Named route aliases redirecting to home to ensure no RouteNotFoundException
+// Service Subpages
+Route::get('/general-gp-consultations', [HomeController::class, 'generalGp'])->name('services.gp');
+Route::get('/prescriptions-medical', [HomeController::class, 'prescriptions'])->name('services.prescriptions');
+Route::get('/medicinal-cannabis-consultations', [HomeController::class, 'cannabis'])->name('services.cannabis');
+Route::get('/mental-health-wellbeing', [HomeController::class, 'mentalHealth'])->name('services.mental-health');
+Route::get('/urgent-after-hours-care', [HomeController::class, 'urgentCare'])->name('services.urgent-care');
+Route::get('/health-cannabis-compounding', [HomeController::class, 'compounding'])->name('services.compounding');
+
+// Booking Flow
+Route::get('/book-appointment', [HomeController::class, 'bookAppointment'])->name('booking.index');
+Route::post('/book-appointment', [HomeController::class, 'submitAppointment'])->name('home.appointment');
+
+// Authentication Routes
+Route::get('/login', [AuthController::class, 'showLoginForm'])->name('login');
+Route::post('/login', [AuthController::class, 'login'])->name('login.submit');
+Route::get('/register', [AuthController::class, 'showRegisterForm'])->name('register');
+Route::post('/register', [AuthController::class, 'register'])->name('register.submit');
+Route::post('/logout', [AuthController::class, 'logout'])->name('logout');
+
+// Named route aliases fallback
 $stubNamedRoutes = [
-    'about', 'how-it-works', 'services', 'faqs', 'contact', 'contact.submit',
-    'eligibility.show', 'eligibility.submit', 'booking.index', 'booking.slots',
+    'faqs', 'eligibility.show', 'eligibility.submit', 'booking.slots',
     'booking.store', 'booking.confirmation', 'telehealth.room', 'shop.index',
-    'shop.show', 'shop.cart', 'shop.checkout', 'login', 'login.submit', 'register',
-    'register.submit', 'logout', 'password.request', 'password.email',
+    'shop.show', 'shop.cart', 'shop.checkout', 'password.request', 'password.email',
     'admin.dashboard', 'admin.appointments', 'admin.orders', 'admin.products',
     'admin.medirecords', 'admin.sync-logs', 'doctor.dashboard', 'doctor.appointments',
     'doctor.patients', 'doctor.prescriptions', 'patient.dashboard', 'patient.appointments',
@@ -69,8 +89,3 @@ Route::match(['GET', 'POST'], '/deploy-webhook', function (Request $request) {
         'timestamp' => now()->toIso8601String(),
     ]);
 });
-
-// Redirect all other URLs and admin back to home page
-Route::any('{any}', function () {
-    return redirect()->route('home');
-})->where('any', '.*');

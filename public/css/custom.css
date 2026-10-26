@@ -3691,3 +3691,56 @@ img {
 .bg-brand-ice { background-color: #e7f9fb !important; }
 .bg-brand-navy { background-color: #0f2d59 !important; }
 .text-brand-navy { color: #0f2d59 !important; }
+
+/* Enhanced Modern Animations & Hovers for Zymika Health */
+.card-hover-lift {
+    transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.3s cubic-bezier(0.16, 1, 0.3, 1) !important;
+}
+
+.card-hover-lift:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 16px 36px rgba(15, 45, 89, 0.12) !important;
+}
+
+.hover-primary:hover {
+    color: #3aa3a2 !important;
+    transition: color 0.2s ease;
+}
+
+@media (min-width: 992px) {
+    .navbar .nav-item.dropdown:hover .dropdown-menu {
+        display: block;
+        animation: fadeInDropdown 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+}
+
+@keyframes fadeInDropdown {
+    from {
+        opacity: 0;
+        transform: translateY(8px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.custom-faq-accordion .accordion-button {
+    background-color: #ffffff;
+    transition: background-color 0.25s ease, color 0.25s ease;
+}
+
+.custom-faq-accordion .accordion-button:not(.collapsed) {
+    background-color: #f0fafb;
+    color: #0f2d59;
+}
+
+.custom-faq-accordion .accordion-button:focus {
+    box-shadow: none;
+    border-color: rgba(58, 163, 162, 0.3);
+}
+
+.btn:hover {
+    transform: translateY(-1px);
+}
+

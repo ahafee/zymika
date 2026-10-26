@@ -2,11 +2,11 @@
     Skip to content
 </a>
 
-<header class="sticky-top shadow-sm header-zymika-wrapper bg-white">
+<header class="sticky-top shadow-sm header-zymika-wrapper bg-white" style="z-index: 1040;">
     <nav class="navbar navbar-expand-lg navbar-zymika py-2 py-lg-3">
         <div class="container" style="max-width: 1320px;">
             <!-- Brand Logo -->
-            <a class="navbar-brand d-flex align-items-center py-1" href="#">
+            <a class="navbar-brand d-flex align-items-center py-1" href="{{ route('home') }}">
                 @include('partials.logo')
             </a>
 
@@ -19,30 +19,47 @@
             <div class="collapse navbar-collapse d-none d-lg-flex" id="navbarMain">
                 <ul class="navbar-nav mx-auto mb-2 mb-lg-0 gap-1 gap-xl-3 align-items-center">
                     <li class="nav-item">
-                        <a class="nav-link fw-semibold text-brand-contrast active" href="#">Home</a>
+                        <a class="nav-link fw-semibold {{ request()->routeIs('home') ? 'active text-brand-primary' : 'text-brand-contrast' }}" href="{{ route('home') }}">Home</a>
+                    </li>
+
+                    <!-- Services Dropdown -->
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle fw-semibold {{ request()->is('clinic-services*') || request()->is('*-consultations*') || request()->is('*prescriptions*') || request()->is('*mental-health*') || request()->is('*urgent*') || request()->is('*compounding*') ? 'active text-brand-primary' : 'text-brand-contrast' }}" href="#" id="servicesDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            Services
+                        </a>
+                        <ul class="dropdown-menu shadow-lg border-0 rounded-3 py-2 mt-2" aria-labelledby="servicesDropdown" style="min-width: 270px; border-top: 3px solid #3aa3a2 !important;">
+                            <li><a class="dropdown-item py-2 px-3 fw-medium text-brand-contrast {{ request()->routeIs('services.gp') ? 'active bg-light text-brand-primary' : '' }}" href="{{ route('services.gp') }}">General GP Consultations</a></li>
+                            <li><a class="dropdown-item py-2 px-3 fw-medium text-brand-contrast {{ request()->routeIs('services.prescriptions') ? 'active bg-light text-brand-primary' : '' }}" href="{{ route('services.prescriptions') }}">Prescriptions & Medical</a></li>
+                            <li><a class="dropdown-item py-2 px-3 fw-medium text-brand-contrast {{ request()->routeIs('services.cannabis') ? 'active bg-light text-brand-primary' : '' }}" href="{{ route('services.cannabis') }}">Medicinal Cannabis Consultations</a></li>
+                            <li><a class="dropdown-item py-2 px-3 fw-medium text-brand-contrast {{ request()->routeIs('services.mental-health') ? 'active bg-light text-brand-primary' : '' }}" href="{{ route('services.mental-health') }}">Mental Health & Wellbeing</a></li>
+                            <li><a class="dropdown-item py-2 px-3 fw-medium text-brand-contrast {{ request()->routeIs('services.urgent-care') ? 'active bg-light text-brand-primary' : '' }}" href="{{ route('services.urgent-care') }}">Urgent & After Hours Care</a></li>
+                            <li><a class="dropdown-item py-2 px-3 fw-medium text-brand-contrast {{ request()->routeIs('services.compounding') ? 'active bg-light text-brand-primary' : '' }}" href="{{ route('services.compounding') }}">Health Cannabis Compounding</a></li>
+                            <li><hr class="dropdown-divider my-1"></li>
+                            <li><a class="dropdown-item py-2 px-3 fw-semibold text-brand-primary d-flex align-items-center justify-content-between" href="{{ route('services') }}"><span>View All Services</span> <i class="bi bi-arrow-right"></i></a></li>
+                        </ul>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link fw-semibold {{ request()->routeIs('about') ? 'active text-brand-primary' : 'text-brand-contrast' }}" href="{{ route('about') }}">About Us</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link fw-semibold text-brand-contrast" href="#services">Services</a>
+                        <a class="nav-link fw-semibold {{ request()->routeIs('how-it-works') ? 'active text-brand-primary' : 'text-brand-contrast' }}" href="{{ route('how-it-works') }}">How It Works</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link fw-semibold text-brand-contrast" href="#about">About Us</a>
+                        <a class="nav-link fw-semibold {{ request()->routeIs('doctors') ? 'active text-brand-primary' : 'text-brand-contrast' }}" href="{{ route('doctors') }}">Doctors</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link fw-semibold text-brand-contrast" href="#how-it-works">How It Works</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link fw-semibold text-brand-contrast" href="#doctors">Doctors</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link fw-semibold text-brand-contrast" href="#contact">Contact Us</a>
+                        <a class="nav-link fw-semibold {{ request()->routeIs('contact') ? 'active text-brand-primary' : 'text-brand-contrast' }}" href="{{ route('contact') }}">Contact Us</a>
                     </li>
                 </ul>
 
-                <!-- Header CTA Button -->
+                <!-- Header CTA Buttons (Book Appointment & Login) -->
                 <div class="d-flex align-items-center gap-2 ms-2">
-                    <a href="#" class="btn btn-brand-primary px-4 py-2 rounded-pill fw-semibold shadow-sm d-inline-flex align-items-center gap-2">
-                        <i class="bi bi-telephone-fill"></i>
-                        <span>Call Us</span>
+                    <a href="{{ route('booking.index') }}" class="btn px-4 py-2 rounded-pill fw-semibold shadow-sm text-white" style="background-color: #0f2d59; font-size: 0.95rem; transition: all 0.3s ease;">
+                        Book Appointment
+                    </a>
+                    <a href="{{ route('login') }}" class="btn px-4 py-2 rounded-pill fw-semibold shadow-sm text-white" style="background-color: #3aa3a2; font-size: 0.95rem; transition: all 0.3s ease;">
+                        Login
                     </a>
                 </div>
             </div>
@@ -58,46 +75,65 @@
                 <div class="offcanvas-body d-flex flex-column justify-content-between p-4">
                     <ul class="nav flex-column gap-2 mb-4">
                         <li class="nav-item">
-                            <a class="nav-link fw-semibold fs-5 text-brand-contrast py-2" href="#" data-bs-dismiss="offcanvas">
+                            <a class="nav-link fw-semibold fs-5 text-brand-contrast py-2" href="{{ route('home') }}">
                                 <i class="bi bi-house-door me-2 text-brand-primary"></i> Home
                             </a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link fw-semibold fs-5 text-brand-contrast py-2" href="#services" data-bs-dismiss="offcanvas">
-                                <i class="bi bi-grid-fill me-2 text-brand-primary"></i> Services
+                            <a class="nav-link fw-semibold fs-5 text-brand-contrast py-2 d-flex justify-content-between align-items-center" data-bs-toggle="collapse" href="#mobileServicesCollapse" role="button" aria-expanded="false">
+                                <span><i class="bi bi-grid-fill me-2 text-brand-primary"></i> Services</span>
+                                <i class="bi bi-chevron-down fs-6"></i>
                             </a>
+                            <div class="collapse ps-3 pe-2 py-2 bg-light rounded-3 mt-1" id="mobileServicesCollapse">
+                                <ul class="list-unstyled mb-0 d-flex flex-column gap-2">
+                                    <li><a href="{{ route('services.gp') }}" class="text-decoration-none text-brand-contrast small py-1 d-block">General GP Consultations</a></li>
+                                    <li><a href="{{ route('services.prescriptions') }}" class="text-decoration-none text-brand-contrast small py-1 d-block">Prescriptions & Medical</a></li>
+                                    <li><a href="{{ route('services.cannabis') }}" class="text-decoration-none text-brand-contrast small py-1 d-block">Medicinal Cannabis Consultations</a></li>
+                                    <li><a href="{{ route('services.mental-health') }}" class="text-decoration-none text-brand-contrast small py-1 d-block">Mental Health & Wellbeing</a></li>
+                                    <li><a href="{{ route('services.urgent-care') }}" class="text-decoration-none text-brand-contrast small py-1 d-block">Urgent & After Hours Care</a></li>
+                                    <li><a href="{{ route('services.compounding') }}" class="text-decoration-none text-brand-contrast small py-1 d-block">Health Cannabis Compounding</a></li>
+                                    <li><a href="{{ route('services') }}" class="text-decoration-none text-brand-primary fw-semibold small py-1 d-block">All Services →</a></li>
+                                </ul>
+                            </div>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link fw-semibold fs-5 text-brand-contrast py-2" href="#about" data-bs-dismiss="offcanvas">
+                            <a class="nav-link fw-semibold fs-5 text-brand-contrast py-2" href="{{ route('about') }}">
                                 <i class="bi bi-info-circle-fill me-2 text-brand-primary"></i> About Us
                             </a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link fw-semibold fs-5 text-brand-contrast py-2" href="#how-it-works" data-bs-dismiss="offcanvas">
+                            <a class="nav-link fw-semibold fs-5 text-brand-contrast py-2" href="{{ route('how-it-works') }}">
                                 <i class="bi bi-arrow-repeat me-2 text-brand-primary"></i> How It Works
                             </a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link fw-semibold fs-5 text-brand-contrast py-2" href="#doctors" data-bs-dismiss="offcanvas">
+                            <a class="nav-link fw-semibold fs-5 text-brand-contrast py-2" href="{{ route('doctors') }}">
                                 <i class="bi bi-person-badge-fill me-2 text-brand-primary"></i> Doctors
                             </a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link fw-semibold fs-5 text-brand-contrast py-2" href="#contact" data-bs-dismiss="offcanvas">
+                            <a class="nav-link fw-semibold fs-5 text-brand-contrast py-2" href="{{ route('contact') }}">
                                 <i class="bi bi-envelope-fill me-2 text-brand-primary"></i> Contact Us
                             </a>
                         </li>
                     </ul>
 
-                    <div class="pt-3 border-top">
-                        <a href="#" class="btn btn-brand-primary w-100 py-3 rounded-pill fw-semibold shadow-sm d-flex align-items-center justify-content-center gap-2" data-bs-dismiss="offcanvas">
-                            <i class="bi bi-telephone-fill"></i>
-                            <span>Call Us</span>
+                    <div class="d-flex flex-column gap-2 pt-3 border-top">
+                        <a href="{{ route('booking.index') }}" class="btn text-white w-100 py-3 rounded-pill fw-semibold shadow-sm d-flex align-items-center justify-content-center gap-2" style="background-color: #0f2d59;">
+                            <i class="bi bi-calendar2-check"></i>
+                            <span>Book Appointment</span>
+                        </a>
+                        <a href="{{ route('login') }}" class="btn text-white w-100 py-3 rounded-pill fw-semibold shadow-sm d-flex align-items-center justify-content-center gap-2" style="background-color: #3aa3a2;">
+                            <i class="bi bi-box-arrow-in-right"></i>
+                            <span>Login to Portal</span>
+                        </a>
+                        <a href="tel:0411174173" class="btn btn-outline-secondary w-100 py-2 rounded-pill fw-semibold d-flex align-items-center justify-content-center gap-2 mt-1">
+                            <i class="bi bi-telephone"></i>
+                            <span>0411174173</span>
                         </a>
                     </div>
                 </div>
             </div>
-
         </div>
     </nav>
 </header>

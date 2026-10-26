@@ -1,56 +1,144 @@
 @extends('layouts.app')
 
-@section('title', 'Patient FAQs & Contact Us - ZYMIKA HEALTH Australia')
+@section('title', 'Contact Us - Zymika Health | Have a Question? Get in Touch')
 
 @section('content')
-<!-- Premium Inner Hero Banner with Image -->
-<section class="inner-hero-section">
-    <div class="container">
-        <div class="row align-items-center g-4 g-lg-5">
-            <div class="col-lg-7" data-aos="fade-right">
-                <div class="d-inline-flex align-items-center gap-2 mb-2">
-                    <span class="badge badge-tga"><i class="bi bi-headset me-1"></i> PATIENT CARE DESK</span>
-                    <span class="badge bg-white text-brand-contrast border"><i class="bi bi-clock-fill text-brand-primary me-1"></i> Mon - Sat Support</span>
-                </div>
-                <h1 class="display-5 fw-bold text-brand-contrast mb-3">Frequently Asked Questions &amp; Contact</h1>
-                <p class="lead text-muted mb-4">Lorem ipsum dolor sit amet, consectetur adipiscing elit sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-                
-                <div class="d-flex flex-wrap gap-3 mb-4">
-                    <div class="d-flex align-items-center gap-2 small fw-semibold text-brand-contrast">
-                        <i class="bi bi-telephone-fill text-brand-primary fs-5"></i>
-                        <span>02 5838 5365</span>
+<!-- Page Header -->
+<section class="py-5 text-white position-relative" style="background: linear-gradient(135deg, #0f2d59 0%, #163868 60%, #0a2142 100%);">
+    <div class="container py-3" style="max-width: 1200px;">
+        <nav aria-label="breadcrumb">
+            <ol class="breadcrumb mb-2 text-white-50 small">
+                <li class="breadcrumb-item"><a href="{{ route('home') }}" class="text-white text-decoration-none">Home</a></li>
+                <li class="breadcrumb-item active text-white" aria-current="page">Contact Us</li>
+            </ol>
+        </nav>
+        <h1 class="display-5 fw-bold text-white mb-2">Contact Zymika Health</h1>
+        <p class="lead text-white text-opacity-90 fs-6 mb-0" style="max-width: 680px;">
+            Have a Question? Get in Touch. Whether you have a general enquiry, need assistance with your appointment, or would like more information about our telehealth services, send us a message and our team will get back to you.
+        </p>
+    </div>
+</section>
+
+<!-- Contact Form & Info Cards Section -->
+<section class="py-5 bg-white">
+    <div class="container py-lg-4" style="max-width: 1200px;">
+        <div class="row g-4 g-lg-5">
+            <!-- Contact Info Cards -->
+            <div class="col-lg-5" data-aos="fade-right">
+                <div class="d-flex flex-column gap-3 mb-4">
+                    <div class="p-4 rounded-4 border bg-light">
+                        <div class="d-flex align-items-center gap-3">
+                            <div class="rounded-circle d-flex align-items-center justify-content-center text-white" style="width: 48px; height: 48px; background-color: #3aa3a2;">
+                                <i class="bi bi-envelope-fill fs-5"></i>
+                            </div>
+                            <div>
+                                <h6 class="fw-bold text-brand-contrast mb-1">Email</h6>
+                                <a href="mailto:info@zymikahealth.com.au" class="text-decoration-none fw-semibold" style="color: #3aa3a2;">info@zymikahealth.com.au</a>
+                            </div>
+                        </div>
                     </div>
-                    <div class="d-flex align-items-center gap-2 small fw-semibold text-brand-contrast">
-                        <i class="bi bi-envelope-fill text-brand-sage fs-5"></i>
-                        <span>care@zymikahealth.com.au</span>
+
+                    <div class="p-4 rounded-4 border bg-light">
+                        <div class="d-flex align-items-center gap-3">
+                            <div class="rounded-circle d-flex align-items-center justify-content-center text-white" style="width: 48px; height: 48px; background-color: #0f2d59;">
+                                <i class="bi bi-telephone-fill fs-5"></i>
+                            </div>
+                            <div>
+                                <h6 class="fw-bold text-brand-contrast mb-1">Phone Number</h6>
+                                <div class="d-flex flex-column">
+                                    <a href="tel:0395469477" class="text-decoration-none text-brand-contrast fw-semibold small">(03) 9546 9477</a>
+                                    <a href="tel:0411174173" class="text-decoration-none fw-semibold small" style="color: #3aa3a2;">0411174173</a>
+                                </div>
+                            </div>
+                        </div>
                     </div>
-                    <div class="d-flex align-items-center gap-2 small fw-semibold text-brand-contrast">
-                        <i class="bi bi-geo-alt-fill text-brand-primary fs-5"></i>
-                        <span>Surry Hills NSW 2010</span>
+
+                    <div class="p-4 rounded-4 border bg-light">
+                        <div class="d-flex align-items-center gap-3">
+                            <div class="rounded-circle d-flex align-items-center justify-content-center text-white" style="width: 48px; height: 48px; background-color: #163868;">
+                                <i class="bi bi-geo-alt-fill fs-5"></i>
+                            </div>
+                            <div>
+                                <h6 class="fw-bold text-brand-contrast mb-1">Location</h6>
+                                <p class="text-muted small mb-0">1098 Heatherton Rd, Noble Park VIC 3174</p>
+                                <p class="text-muted small mb-0">Berwick, VIC 3806</p>
+                            </div>
+                        </div>
                     </div>
                 </div>
 
-                <div class="d-flex flex-wrap gap-3">
-                    <a href="#contactFormSection" class="btn btn-brand-primary btn-lg shadow-sm">
-                        <i class="bi bi-envelope-paper me-2"></i> Send Us a Message
-                    </a>
-                    <a href="{{ route('booking.index') }}" class="btn btn-brand-outline btn-lg">
-                        <i class="bi bi-calendar2-check me-2"></i> Book Consult ($79)
-                    </a>
+                <!-- Quick Assistance Card -->
+                <div class="p-4 rounded-4 bg-white border shadow-sm">
+                    <span class="badge px-3 py-1 rounded-pill fw-semibold mb-2 text-uppercase" style="background-color: rgba(15, 45, 89, 0.08); color: #0f2d59; font-size: 0.75rem;">
+                        QUICK ASSISTANCE
+                    </span>
+                    <h5 class="fw-bold text-brand-contrast mb-3">How Can We Help?</h5>
+                    <ul class="list-unstyled d-flex flex-column gap-3 mb-0">
+                        <li>
+                            <a href="{{ route('booking.index') }}" class="fw-bold text-brand-contrast text-decoration-none d-block">Book an Appointment</a>
+                            <small class="text-muted">Ready to speak with an online doctor? Choose a convenient appointment time.</small>
+                        </li>
+                        <li>
+                            <a href="{{ route('how-it-works') }}" class="fw-bold text-brand-contrast text-decoration-none d-block">How It Works</a>
+                            <small class="text-muted">Learn how Zymika Health online consultations work from booking to consultation.</small>
+                        </li>
+                        <li>
+                            <a href="{{ route('services') }}" class="fw-bold text-brand-contrast text-decoration-none d-block">Explore Our Services</a>
+                            <small class="text-muted">Find the online healthcare service suitable for your needs.</small>
+                        </li>
+                    </ul>
                 </div>
             </div>
 
-            <div class="col-lg-5" data-aos="fade-left" data-aos-delay="150">
-                <div class="inner-hero-img-wrap">
-                    <img src="{{ asset('images/healing-journey-bg.jpg') }}" alt="ZYMIKA HEALTH Patient Support" class="inner-hero-img">
-                    <div class="inner-hero-floating-badge">
-                        <div class="bg-brand-primary text-white rounded-circle p-2 d-flex align-items-center justify-content-center" style="width: 38px; height: 38px;">
-                            <i class="bi bi-shield-check fs-5"></i>
-                        </div>
-                        <div>
-                            <div class="fw-bold text-brand-contrast small">Surry Hills Clinical HQ</div>
-                            <div class="text-muted" style="font-size: 0.72rem;">Level 1, 63-73 Ann St, Surry Hills NSW</div>
-                        </div>
+            <!-- Contact Form -->
+            <div class="col-lg-7" data-aos="fade-left">
+                <div class="card border-0 shadow-lg rounded-4 overflow-hidden">
+                    <div class="card-header border-0 py-3 px-4 text-white" style="background-color: #0f2d59;">
+                        <h5 class="mb-0 fw-semibold fs-5"><i class="bi bi-envelope-check me-2 text-brand-primary"></i> Send Us a Message</h5>
+                    </div>
+                    <div class="card-body p-4 p-md-5 bg-white">
+                        @if(session('success'))
+                            <div class="alert alert-success alert-dismissible fade show rounded-3 mb-4" role="alert">
+                                <i class="bi bi-check-circle-fill me-2"></i> {{ session('success') }}
+                                <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+                            </div>
+                        @endif
+
+                        <form action="{{ route('contact.submit') }}" method="POST">
+                            @csrf
+                            <div class="row g-3">
+                                <div class="col-md-6">
+                                    <label class="form-label fw-semibold text-brand-contrast small mb-1">Your Name *</label>
+                                    <input type="text" name="name" required class="form-control form-control-lg fs-6 rounded-3" placeholder="Enter your full name">
+                                </div>
+                                <div class="col-md-6">
+                                    <label class="form-label fw-semibold text-brand-contrast small mb-1">Your Email *</label>
+                                    <input type="email" name="email" required class="form-control form-control-lg fs-6 rounded-3" placeholder="name@example.com">
+                                </div>
+                                <div class="col-12">
+                                    <label class="form-label fw-semibold text-brand-contrast small mb-1">Subject *</label>
+                                    <input type="text" name="subject" required class="form-control form-control-lg fs-6 rounded-3" placeholder="How can we help you?">
+                                </div>
+                                <div class="col-12">
+                                    <label class="form-label fw-semibold text-brand-contrast small mb-1">Your Message</label>
+                                    <textarea name="message" rows="4" class="form-control fs-6 rounded-3" placeholder="Write your message here..."></textarea>
+                                </div>
+                                <div class="col-12">
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="checkbox" value="1" id="privacyConsent" required checked>
+                                        <label class="form-check-label small text-muted" for="privacyConsent">
+                                            I agree to the <a href="{{ route('home') }}#privacy" class="text-decoration-underline text-brand-primary">Privacy Policy</a> and consent to being contacted regarding my enquiry.
+                                        </label>
+                                    </div>
+                                </div>
+                                <div class="col-12 mt-4">
+                                    <button type="submit" class="btn btn-lg w-100 py-3 rounded-pill fw-semibold text-white shadow-sm d-flex align-items-center justify-content-center gap-2" style="background-color: #0f2d59;">
+                                        <span>Send Message</span>
+                                        <i class="bi bi-send-fill"></i>
+                                    </button>
+                                </div>
+                            </div>
+                        </form>
                     </div>
                 </div>
             </div>
@@ -58,199 +146,10 @@
     </div>
 </section>
 
-<div class="container py-5">
-    <!-- FAQs Section -->
-    <div class="mb-5 pb-4 border-bottom">
-        <div class="text-center max-w-700 mx-auto mb-4" data-aos="fade-up">
-            <span class="badge bg-brand-primary-light text-brand-primary mb-2">QUICK ANSWERS</span>
-            <h3 class="fw-bold text-brand-contrast">Common Patient Questions</h3>
-            <p class="text-muted small">Lorem ipsum dolor sit amet, consectetur adipiscing elit sed do eiusmod tempor.</p>
-        </div>
+<!-- FAQs Section -->
+@include('partials.faqs')
 
-        <div class="row justify-content-center" data-aos="fade-up" data-aos-delay="100">
-            <div class="col-lg-10">
-                <div class="accordion" id="faqAccordion">
-                    <!-- FAQ 1 -->
-                    <div class="accordion-item mb-3 border rounded-3 shadow-xs overflow-hidden">
-                        <h2 class="accordion-header">
-                            <button class="accordion-button fw-bold text-brand-contrast" type="button" data-bs-toggle="collapse" data-bs-target="#faq1">
-                                <i class="bi bi-shield-check text-brand-primary me-2 fs-5"></i> Is medicinal cannabis legal in Australia?
-                            </button>
-                        </h2>
-                        <div id="faq1" class="accordion-collapse collapse show" data-bs-parent="#faqAccordion">
-                            <div class="accordion-body text-muted small lh-lg">
-                                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
-                            </div>
-                        </div>
-                    </div>
+<!-- CTA Section -->
+@include('partials.cta-banner')
 
-                    <!-- FAQ 2 -->
-                    <div class="accordion-item mb-3 border rounded-3 shadow-xs overflow-hidden">
-                        <h2 class="accordion-header">
-                            <button class="accordion-button collapsed fw-bold text-brand-contrast" type="button" data-bs-toggle="collapse" data-bs-target="#faq2">
-                                <i class="bi bi-ui-checks text-brand-sage me-2 fs-5"></i> Who qualifies for a prescription under TGA guidelines?
-                            </button>
-                        </h2>
-                        <div id="faq2" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
-                            <div class="accordion-body text-muted small lh-lg">
-                                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- FAQ 3 -->
-                    <div class="accordion-item mb-3 border rounded-3 shadow-xs overflow-hidden">
-                        <h2 class="accordion-header">
-                            <button class="accordion-button collapsed fw-bold text-brand-contrast" type="button" data-bs-toggle="collapse" data-bs-target="#faq3">
-                                <i class="bi bi-car-front-fill text-brand-primary me-2 fs-5"></i> Can I drive while being prescribed medicinal cannabis?
-                            </button>
-                        </h2>
-                        <div id="faq3" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
-                            <div class="accordion-body text-muted small lh-lg">
-                                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- FAQ 4 -->
-                    <div class="accordion-item mb-3 border rounded-3 shadow-xs overflow-hidden">
-                        <h2 class="accordion-header">
-                            <button class="accordion-button collapsed fw-bold text-brand-contrast" type="button" data-bs-toggle="collapse" data-bs-target="#faq4">
-                                <i class="bi bi-repeat text-brand-sage me-2 fs-5"></i> How do repeats and repeat dispensing work?
-                            </button>
-                        </h2>
-                        <div id="faq4" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
-                            <div class="accordion-body text-muted small lh-lg">
-                                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- FAQ 5 -->
-                    <div class="accordion-item mb-3 border rounded-3 shadow-xs overflow-hidden">
-                        <h2 class="accordion-header">
-                            <button class="accordion-button collapsed fw-bold text-brand-contrast" type="button" data-bs-toggle="collapse" data-bs-target="#faq5">
-                                <i class="bi bi-truck text-brand-primary me-2 fs-5"></i> How are medications shipped and packaged?
-                            </button>
-                        </h2>
-                        <div id="faq5" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
-                            <div class="accordion-body text-muted small lh-lg">
-                                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <!-- Contact & Direct Assistance Section -->
-    <div class="row g-5 align-items-start">
-        <div class="col-lg-5" data-aos="fade-right">
-            <div class="card card-zymika p-4 border bg-white mb-4 shadow-sm">
-                <h4 class="fw-bold text-brand-contrast mb-3"><i class="bi bi-building text-brand-primary me-2"></i> Clinic Information</h4>
-                
-                <div class="d-flex gap-3 mb-3">
-                    <i class="bi bi-geo-alt-fill text-brand-primary fs-4 mt-1"></i>
-                    <div>
-                        <strong>Physical Clinic Address</strong>
-                        <p class="text-muted small mb-0">{{ $clinicInfo['address'] }}</p>
-                    </div>
-                </div>
-
-                <div class="d-flex gap-3 mb-3">
-                    <i class="bi bi-telephone-fill text-brand-primary fs-4 mt-1"></i>
-                    <div>
-                        <strong>Clinic Phone Hotline</strong>
-                        <p class="text-muted small mb-0"><a href="tel:0258385365" class="text-brand-contrast fw-semibold text-decoration-none">{{ $clinicInfo['phone'] }}</a></p>
-                    </div>
-                </div>
-
-                <div class="d-flex gap-3 mb-3">
-                    <i class="bi bi-envelope-fill text-brand-primary fs-4 mt-1"></i>
-                    <div>
-                        <strong>Patient Support Email</strong>
-                        <p class="text-muted small mb-0"><a href="mailto:{{ $clinicInfo['email'] }}" class="text-brand-contrast text-decoration-none">{{ $clinicInfo['email'] }}</a></p>
-                    </div>
-                </div>
-
-                <div class="d-flex gap-3 mb-3">
-                    <i class="bi bi-clock-fill text-brand-primary fs-4 mt-1"></i>
-                    <div>
-                        <strong>Telehealth Operating Hours</strong>
-                        <p class="text-muted small mb-0">{{ $clinicInfo['hours'] }}</p>
-                    </div>
-                </div>
-
-                <div class="d-flex gap-3">
-                    <i class="bi bi-person-fill-check text-brand-primary fs-4 mt-1"></i>
-                    <div>
-                        <strong>Clinical Lead</strong>
-                        <p class="text-muted small mb-0">{{ $clinicInfo['doctor'] }} (AHPRA Authorised Prescriber)</p>
-                    </div>
-                </div>
-            </div>
-
-            <div class="p-3 bg-brand-sage-light rounded-3 border">
-                <p class="small text-muted mb-0">
-                    <i class="bi bi-info-circle-fill text-brand-sage me-1"></i>
-                    <strong>Emergency Note:</strong> If you are experiencing an acute medical emergency, please call <strong>000</strong> or visit your nearest hospital emergency department immediately.
-                </p>
-            </div>
-        </div>
-
-        <div class="col-lg-7" data-aos="fade-left" id="contactFormSection">
-            <div class="card card-zymika p-4 p-md-5 border bg-white shadow-sm">
-                <h4 class="fw-bold text-brand-contrast mb-1">Send Us a Direct Message</h4>
-                <p class="small text-muted mb-4">Have specific clinical, prescription, or consultation questions? Leave a message below and our Surry Hills team will get back to you promptly.</p>
-
-                <form action="{{ route('contact.submit') }}" method="POST">
-                    @csrf
-                    <div class="row g-3">
-                        <div class="col-md-6">
-                            <label class="form-label fw-semibold small text-brand-contrast">Your Name *</label>
-                            <input type="text" name="name" class="form-control" placeholder="Jane Doe" required value="{{ old('name', Auth::user()?->name) }}">
-                        </div>
-
-                        <div class="col-md-6">
-                            <label class="form-label fw-semibold small text-brand-contrast">Email Address *</label>
-                            <input type="email" name="email" class="form-control" placeholder="jane@example.com" required value="{{ old('email', Auth::user()?->email) }}">
-                        </div>
-
-                        <div class="col-md-6">
-                            <label class="form-label fw-semibold small text-brand-contrast">Phone Number</label>
-                            <input type="text" name="phone" class="form-control" placeholder="0412 345 678" value="{{ old('phone', Auth::user()?->phone) }}">
-                        </div>
-
-                        <div class="col-md-6">
-                            <label class="form-label fw-semibold small text-brand-contrast">Subject *</label>
-                            <select name="subject" class="form-select" required>
-                                <option value="Eligibility Inquiry">Eligibility Inquiry</option>
-                                <option value="Booking Assistance">Booking Assistance</option>
-                                <option value="Prescriptions & Care Plan">Prescriptions &amp; Care Plan</option>
-                                <option value="MediRecords Integration">MediRecords Integration</option>
-                                <option value="General Question">General Question</option>
-                            </select>
-                        </div>
-
-                        <div class="col-12">
-                            <label class="form-label fw-semibold small text-brand-contrast">Message *</label>
-                            <textarea name="message" class="form-control" rows="5" placeholder="How can our clinical team assist you today?" required></textarea>
-                        </div>
-
-                        <div class="col-12">
-                            @include('partials.recaptcha')
-                        </div>
-
-                        <div class="col-12">
-                            <button type="submit" class="btn btn-brand-primary btn-lg w-100 fw-semibold">
-                                Send Message <i class="bi bi-send-fill ms-1"></i>
-                            </button>
-                        </div>
-                    </div>
-                </form>
-            </div>
-        </div>
-    </div>
-</div>
 @endsection

@@ -18,43 +18,57 @@ class HomeController extends Controller
 
     public function about()
     {
-        $doctor = Doctor::with('user')->where('is_active', true)->first();
-
-        return view('pages.about', compact('doctor'));
+        return view('pages.about');
     }
 
     public function howItWorks()
     {
-        $services = Service::where('is_active', true)->get();
+        return view('pages.how-it-works');
+    }
 
-        return view('pages.how-it-works', compact('services'));
+    public function doctors()
+    {
+        return view('pages.doctors');
     }
 
     public function services()
     {
-        $services = Service::where('is_active', true)->get();
-        $doctor = Doctor::with('user')->where('is_active', true)->first();
-
-        return view('pages.services', compact('services', 'doctor'));
+        return view('pages.services');
     }
 
-    public function faqs()
+    public function generalGp()
     {
-        return $this->contact();
+        return view('pages.services.general-gp');
+    }
+
+    public function prescriptions()
+    {
+        return view('pages.services.prescriptions-medical');
+    }
+
+    public function cannabis()
+    {
+        return view('pages.services.medicinal-cannabis');
+    }
+
+    public function mentalHealth()
+    {
+        return view('pages.services.mental-health');
+    }
+
+    public function urgentCare()
+    {
+        return view('pages.services.urgent-after-hours');
+    }
+
+    public function compounding()
+    {
+        return view('pages.services.cannabis-compounding');
     }
 
     public function contact()
     {
-        $clinicInfo = [
-            'name' => Setting::get('clinic_name', 'ZYMIKA HEALTH / Zymika Health Pty Ltd'),
-            'doctor' => Setting::get('clinic_doctor_lead', 'Dr. Suneetha Batthala'),
-            'phone' => Setting::get('clinic_phone', '02 58385365'),
-            'email' => Setting::get('clinic_email', 'hello@zymikahealth.com.au'),
-            'address' => Setting::get('clinic_address', 'Level 1, 63-73 Ann street Surry hills NSW 2010'),
-            'hours' => Setting::get('clinic_hours', 'Mon - Fri: 8:30am - 6:00pm, Sat: 9:00am - 2:00pm'),
-        ];
-
-        return view('pages.contact', compact('clinicInfo'));
+        return view('pages.contact');
     }
 
     public function submitContact(Request $request)
@@ -62,23 +76,38 @@ class HomeController extends Controller
         $request->validate([
             'name' => 'required|string|max:255',
             'email' => 'required|email|max:255',
-            'phone' => 'nullable|string|max:50',
             'subject' => 'required|string|max:255',
-            'message' => 'required|string|max:2000',
+            'message' => 'nullable|string|max:2000',
         ]);
 
-        return redirect()->back()->with('success', 'Thank you for reaching out to ZYMIKA HEALTH. Our Surry Hills clinical team will contact you within 1 business day.');
+        return redirect()->back()->with('success', 'Thank you for reaching out to Zymika Health. Our clinical care team will contact you shortly.');
     }
 
-    public function telehealthRoom($room_code)
+    public function submitAppointment(Request $request)
     {
-        $appointment = Appointment::with(['patient', 'doctor.user', 'service', 'preConsultForm'])
-            ->where('video_meeting_url', 'LIKE', '%'.$room_code.'%')
-            ->latest()
-            ->first();
+        $request->validate([
+            'name' => 'required|string|max:255',
+            'email' => 'required|email|max:255',
+            'phone' => 'required|string|max:50',
+            'reason' => 'required|string|max:255',
+            'message' => 'nullable|string|max:2000',
+        ]);
 
-        $doctor = $appointment?->doctor ?: Doctor::with('user')->first();
+        return redirect()->back()->with('success', 'Thank you! Your appointment request has been received. Our team will contact you shortly to confirm your consultation time.');
+    }
 
-        return view('pages.telehealth-room', compact('room_code', 'appointment', 'doctor'));
+    public function bookAppointment(Request $request)
+    {
+        try {
+            $services = Service::where('is_active', true)->get();
+            $doctors = Doctor::with('user')->where('is_active', true)->get();
+            $selectedServiceId = $request->get('service_id', $services->first()?->id);
+            $selectedDoctorId = $request->get('doctor_id', $doctors->first()?->id);
+            $assessment = null;
+
+            return view('pages.booking', compact('services', 'doctors', 'selectedServiceId', 'selectedDoctorId', 'assessment'));
+        } catch (\Throwable $e) {
+            return view('pages.services');
+        }
     }
 }
