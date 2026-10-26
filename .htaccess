@@ -1,9 +1,9 @@
 <IfModule mod_rewrite.c>
     RewriteEngine On
 
-    # Prevent direct access to sensitive files
-    RewriteRule ^\.env - [F,L,NC]
-    RewriteRule ^\.git - [F,L,NC]
+    # Prevent direct access to sensitive files and configs
+    RewriteRule ^\.(env|git|editorconfig) - [F,L,NC]
+    RewriteRule ^(composer\.(json|lock)|phpunit\.xml|deploy\.bat) - [F,L,NC]
 
     RewriteCond %{REQUEST_URI} !^/public/
     RewriteRule ^(.*)$ public/$1 [L]

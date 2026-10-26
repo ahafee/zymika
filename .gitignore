@@ -26,6 +26,15 @@ Homestead.json
 Homestead.yaml
 Thumbs.db
 
+# Sensitive and DB backups
+*.sqlite*
+*.sql
+*.tar.gz
+*.zip
+*.bak
+*.old
+*.swp
+
 # AI & Agent Context Files
 .claude/
 .cursor/
