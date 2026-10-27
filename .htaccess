@@ -5,8 +5,11 @@
 </IfModule>
 # php -- END cPanel-generated handler
 
+DirectoryIndex public/index.php index.php index.html
+
 <IfModule mod_rewrite.c>
     RewriteEngine On
+    RewriteBase /
 
     # Prevent direct access to sensitive files and configs
     RewriteRule ^\.(env|git|editorconfig) - [F,L,NC]
