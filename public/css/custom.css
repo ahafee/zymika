@@ -6393,4 +6393,474 @@ img {
     }
 }
 
+/* ==========================================================================
+   MOBILE OFFCANVAS NAVIGATION OVERHAUL (FIX TRANSPARENCY & LOOK)
+   ========================================================================== */
+.offcanvas-zymika-mobile {
+    background-color: #ffffff !important;
+    max-width: 330px !important;
+    width: 85% !important;
+    box-shadow: -10px 0 35px rgba(15, 45, 89, 0.18) !important;
+    z-index: 1070 !important;
+}
+
+.offcanvas-zymika-mobile .offcanvas-header {
+    background-color: #ffffff !important;
+    border-bottom: 1px solid #f1f5f9 !important;
+}
+
+.offcanvas-zymika-mobile .offcanvas-body {
+    background-color: #ffffff !important;
+}
+
+.mobile-nav-list {
+    margin: 0;
+    padding: 0;
+}
+
+.mobile-nav-link {
+    display: flex !important;
+    align-items: center !important;
+    gap: 12px !important;
+    padding: 0.75rem 1rem !important;
+    font-size: 0.98rem !important;
+    font-weight: 600 !important;
+    color: #0f2d59 !important;
+    border-radius: 12px !important;
+    transition: all 0.22s ease !important;
+    text-decoration: none !important;
+}
+
+.mobile-nav-icon {
+    width: 34px;
+    height: 34px;
+    border-radius: 9px;
+    background: #e7f9fb;
+    color: #176562;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.05rem;
+    flex-shrink: 0;
+}
+
+.mobile-nav-link:hover,
+.mobile-nav-link:focus,
+.mobile-nav-link.active {
+    background: #f0fdfa !important;
+    color: #176562 !important;
+}
+
+.mobile-nav-link.active .mobile-nav-icon,
+.mobile-nav-link:hover .mobile-nav-icon {
+    background: #176562;
+    color: #ffffff;
+}
+
+.mobile-sub-collapse {
+    background: #f8fafc !important;
+    border-left: 3px solid #3aa3a2 !important;
+    border-radius: 0 10px 10px 0 !important;
+    margin-left: 1rem;
+}
+
+.mobile-sub-link {
+    display: block;
+    padding: 0.4rem 0.5rem;
+    font-size: 0.86rem;
+    font-weight: 500;
+    color: #334155;
+    text-decoration: none !important;
+    transition: color 0.2s ease;
+}
+
+.mobile-sub-link:hover {
+    color: #176562 !important;
+}
+
+.mobile-cta-wrapper {
+    gap: 10px !important;
+}
+
+.btn-mobile-book {
+    background-color: #0f2d59 !important;
+    color: #ffffff !important;
+    font-size: 0.94rem !important;
+    font-weight: 600 !important;
+    padding: 0.75rem 1rem !important;
+    border-radius: 50rem !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    gap: 8px !important;
+    border: none !important;
+    box-shadow: 0 4px 14px rgba(15, 45, 89, 0.15) !important;
+}
+
+.btn-mobile-login {
+    background-color: #176562 !important;
+    color: #ffffff !important;
+    font-size: 0.94rem !important;
+    font-weight: 600 !important;
+    padding: 0.75rem 1rem !important;
+    border-radius: 50rem !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    gap: 8px !important;
+    border: none !important;
+    box-shadow: 0 4px 14px rgba(23, 101, 98, 0.2) !important;
+}
+
+.btn-mobile-call {
+    background-color: #ffffff !important;
+    color: #176562 !important;
+    border: 1.5px solid #176562 !important;
+    font-size: 0.92rem !important;
+    font-weight: 600 !important;
+    padding: 0.65rem 1rem !important;
+    border-radius: 50rem !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    gap: 8px !important;
+}
+
+/* ==========================================================================
+   100% COMPREHENSIVE MOBILE RESPONSIVE SYSTEM (ALL SCREENS UP TO 768px)
+   Balances typography, reduces bulky font sizes, line heights, paddings,
+   and ensures 100% fluid mobile alignment from 320px to 768px.
+   ========================================================================== */
+@media (max-width: 767.98px) {
+    /* Global Typography Reset */
+    html {
+        font-size: 15px;
+    }
+
+    body {
+        font-size: 0.92rem;
+        line-height: 1.55;
+    }
+
+    h1, .h1 {
+        font-size: 1.65rem !important;
+        line-height: 1.25 !important;
+        letter-spacing: -0.02em !important;
+    }
+
+    h2, .h2 {
+        font-size: 1.4rem !important;
+        line-height: 1.28 !important;
+        letter-spacing: -0.02em !important;
+    }
+
+    h3, .h3 {
+        font-size: 1.2rem !important;
+        line-height: 1.3 !important;
+    }
+
+    h4, .h4 {
+        font-size: 1.05rem !important;
+        line-height: 1.35 !important;
+    }
+
+    h5, .h5 {
+        font-size: 0.95rem !important;
+    }
+
+    .display-4, .display-5, .display-6 {
+        font-size: 1.5rem !important;
+        line-height: 1.25 !important;
+    }
+
+    /* Container Spacing */
+    .container {
+        padding-left: 1.15rem !important;
+        padding-right: 1.15rem !important;
+    }
+
+    /* Header & Logo */
+    .navbar-zymika {
+        padding: 0.5rem 0 !important;
+    }
+
+    .brand-logo-img {
+        max-height: 38px !important;
+    }
+
+    /* Hero Banner Mobile Optimization */
+    .newdoc-hero-section {
+        min-height: auto !important;
+        padding: 2.25rem 0 2rem !important;
+        text-align: left !important;
+    }
+
+    .newdoc-avatar-badge {
+        margin-bottom: 0.85rem !important;
+        padding: 4px 12px 4px 5px !important;
+    }
+
+    .newdoc-avatar-img {
+        width: 26px !important;
+        height: 26px !important;
+    }
+
+    .newdoc-avatar-text {
+        font-size: 0.78rem !important;
+    }
+
+    .newdoc-hero-title {
+        font-size: 1.7rem !important;
+        line-height: 1.25 !important;
+        margin-bottom: 0.85rem !important;
+        word-break: break-word !important;
+    }
+
+    .newdoc-lead-desc {
+        font-size: 0.9rem !important;
+        line-height: 1.6 !important;
+        margin-bottom: 1.25rem !important;
+    }
+
+    /* Hero Service Pills: 100% Fluid 1 Column on Mobile */
+    .hero-service-pills-grid {
+        grid-template-columns: 1fr !important;
+        gap: 0.55rem !important;
+        margin-bottom: 1.35rem !important;
+        max-width: 100% !important;
+    }
+
+    .hero-service-pill {
+        padding: 0.55rem 0.95rem !important;
+        font-size: 0.86rem !important;
+        border-radius: 10px !important;
+    }
+
+    .hero-service-pill .pill-arrow-wrap {
+        width: 22px !important;
+        height: 22px !important;
+        font-size: 0.75rem !important;
+    }
+
+    /* Hero CTAs: Full Width Friendly */
+    .newdoc-consult-btn,
+    .hero-call-btn {
+        width: 100% !important;
+        justify-content: center !important;
+        padding: 0.8rem 1.4rem !important;
+        font-size: 0.95rem !important;
+        border-radius: 10px !important;
+    }
+
+    .hero-dcapture-wrap {
+        margin-top: 1.75rem !important;
+        max-width: 100% !important;
+    }
+
+    .hero-dcapture-img {
+        max-height: 270px !important;
+    }
+
+    /* Trust Strip */
+    .newdoc-trust-strip {
+        padding: 0.85rem 0 !important;
+    }
+
+    .newdoc-trust-container {
+        flex-direction: column !important;
+        align-items: center !important;
+        gap: 0.5rem !important;
+        text-align: center !important;
+    }
+
+    .newdoc-trust-item {
+        font-size: 0.85rem !important;
+    }
+
+    .newdoc-trust-item .star-icon {
+        display: none !important;
+    }
+
+    /* About Accessible Section */
+    .about-accessible-section {
+        padding: 2.5rem 0 2rem !important;
+    }
+
+    .about-accessible-heading {
+        font-size: 1.55rem !important;
+        line-height: 1.28 !important;
+        margin-bottom: 0.85rem !important;
+    }
+
+    .about-accessible-lead {
+        font-size: 0.88rem !important;
+        line-height: 1.62 !important;
+        margin-bottom: 1.35rem !important;
+    }
+
+    .about-feature-card {
+        gap: 0.85rem !important;
+        margin-bottom: 1.15rem !important;
+    }
+
+    .about-feature-icon-wrap {
+        width: 38px !important;
+        height: 38px !important;
+        font-size: 1.1rem !important;
+        border-radius: 10px !important;
+    }
+
+    .about-feature-title {
+        font-size: 1rem !important;
+        margin-bottom: 0.2rem !important;
+    }
+
+    .about-feature-desc {
+        font-size: 0.84rem !important;
+        line-height: 1.55 !important;
+    }
+
+    .about-main-photo {
+        max-height: 300px !important;
+        border-radius: 18px !important;
+    }
+
+    .about-quote-box {
+        position: relative !important;
+        bottom: auto !important;
+        right: auto !important;
+        margin-top: -30px !important;
+        margin-left: auto !important;
+        margin-right: auto !important;
+        width: 90% !important;
+        max-width: 100% !important;
+        padding: 0.85rem 1rem !important;
+        border-radius: 14px !important;
+        box-shadow: 0 10px 25px rgba(15, 45, 89, 0.12) !important;
+    }
+
+    /* Services Grid Cards */
+    .card-hover-lift {
+        padding: 1.35rem 1.15rem !important;
+        border-radius: 16px !important;
+    }
+
+    /* Doctor Bazel Lodhi Section */
+    #doctors {
+        padding: 2.5rem 0 !important;
+    }
+
+    #doctors img {
+        max-height: 280px !important;
+    }
+
+    #doctors p.lead,
+    #doctors p {
+        font-size: 0.88rem !important;
+        line-height: 1.6 !important;
+        text-align: left !important;
+    }
+
+    /* Auto-Scrolling Reviews Marquee */
+    .review-carousel-item {
+        width: 275px !important;
+    }
+
+    .review-card {
+        padding: 1.25rem 1.15rem !important;
+        border-radius: 16px !important;
+    }
+
+    .review-card-text {
+        font-size: 0.82rem !important;
+        line-height: 1.55 !important;
+    }
+
+    /* CTA Banner */
+    section.py-5.position-relative.overflow-hidden.text-white {
+        padding: 2.5rem 0 !important;
+        text-align: center !important;
+    }
+
+    /* Footer Mobile Overhaul */
+    .footer-zymika-wrapper {
+        padding-top: 2.5rem !important;
+        padding-bottom: 1.75rem !important;
+    }
+
+    .footer-zymika-wrapper h6 {
+        font-size: 0.95rem !important;
+        margin-top: 0.5rem !important;
+        margin-bottom: 0.75rem !important;
+    }
+
+    .footer-zymika-wrapper p,
+    .footer-zymika-wrapper ul,
+    .footer-zymika-wrapper .small {
+        font-size: 0.84rem !important;
+        line-height: 1.6 !important;
+    }
+
+    .footer-zymika-wrapper .border-bottom {
+        padding-bottom: 1.5rem !important;
+        margin-bottom: 1.5rem !important;
+    }
+
+    .footer-highlight-link {
+        font-size: 0.8rem !important;
+        padding: 2px 7px !important;
+    }
+
+    /* Consultation Booking Modal Mobile */
+    .consult-modal .modal-dialog {
+        width: 95% !important;
+        margin: 0.75rem auto !important;
+    }
+
+    .consult-modal-content {
+        max-height: 94vh !important;
+        border-radius: 16px !important;
+    }
+
+    .consult-modal-header {
+        padding: 1rem 1.15rem 0.5rem !important;
+    }
+
+    .consult-modal-title {
+        font-size: 1.2rem !important;
+    }
+
+    .consult-modal-subtitle {
+        font-size: 0.76rem !important;
+    }
+
+    .consult-modal-body {
+        padding: 0.4rem 1.15rem 1rem !important;
+    }
+
+    .consult-time-grid {
+        grid-template-columns: repeat(2, 1fr) !important;
+    }
+}
+
+/* Extra Small Phones (iPhone SE, Galaxy A series, 320px - 380px) */
+@media (max-width: 380px) {
+    .newdoc-hero-title {
+        font-size: 1.5rem !important;
+    }
+
+    .hero-service-pill {
+        font-size: 0.8rem !important;
+        padding: 0.5rem 0.75rem !important;
+    }
+
+    .about-accessible-heading {
+        font-size: 1.35rem !important;
+    }
+
+    .consult-modal-title {
+        font-size: 1.1rem !important;
+    }
+}
+
 

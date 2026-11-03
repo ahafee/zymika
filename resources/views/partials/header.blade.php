@@ -100,70 +100,78 @@
             </div>
 
             <!-- Mobile Offcanvas Menu -->
-            <div class="offcanvas offcanvas-end d-lg-none" tabindex="-1" id="navbarOffcanvas" aria-labelledby="navbarOffcanvasLabel">
-                <div class="offcanvas-header border-bottom bg-light">
-                    <h5 class="offcanvas-title" id="navbarOffcanvasLabel">
+            <div class="offcanvas offcanvas-end offcanvas-zymika-mobile d-lg-none" tabindex="-1" id="navbarOffcanvas" aria-labelledby="navbarOffcanvasLabel">
+                <div class="offcanvas-header border-bottom py-3 px-4 bg-white">
+                    <h5 class="offcanvas-title m-0" id="navbarOffcanvasLabel">
                         @include('partials.logo')
                     </h5>
-                    <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+                    <button type="button" class="btn-close shadow-none" data-bs-dismiss="offcanvas" aria-label="Close"></button>
                 </div>
-                <div class="offcanvas-body d-flex flex-column justify-content-between p-4">
-                    <ul class="nav flex-column gap-2 mb-4">
+                <div class="offcanvas-body d-flex flex-column justify-content-between p-4 bg-white">
+                    <ul class="nav flex-column gap-1 mb-4 mobile-nav-list">
                         <li class="nav-item">
-                            <a class="nav-link fw-semibold fs-5 text-brand-contrast py-2" href="{{ route('home') }}">
-                                <i class="bi bi-house-door me-2 text-brand-primary"></i> Home
+                            <a class="nav-link mobile-nav-link {{ request()->routeIs('home') ? 'active' : '' }}" href="{{ route('home') }}">
+                                <span class="mobile-nav-icon"><i class="bi bi-house-door"></i></span>
+                                <span>Home</span>
                             </a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link fw-semibold fs-5 text-brand-contrast py-2 d-flex justify-content-between align-items-center" data-bs-toggle="collapse" href="#mobileServicesCollapse" role="button" aria-expanded="false">
-                                <span><i class="bi bi-grid-fill me-2 text-brand-primary"></i> Services</span>
-                                <i class="bi bi-chevron-down fs-6"></i>
+                            <a class="nav-link mobile-nav-link d-flex justify-content-between align-items-center" data-bs-toggle="collapse" href="#mobileServicesCollapse" role="button" aria-expanded="false">
+                                <span class="d-flex align-items-center gap-2">
+                                    <span class="mobile-nav-icon"><i class="bi bi-grid-fill"></i></span>
+                                    <span>Services</span>
+                                </span>
+                                <i class="bi bi-chevron-down fs-6 opacity-75"></i>
                             </a>
-                            <div class="collapse ps-3 pe-2 py-2 bg-light rounded-3 mt-1" id="mobileServicesCollapse">
-                                <ul class="list-unstyled mb-0 d-flex flex-column gap-2">
-                                    <li><a href="{{ route('services.gp') }}" class="text-decoration-none text-brand-contrast small py-1 d-block">General GP Consultations</a></li>
-                                    <li><a href="{{ route('services.prescriptions') }}" class="text-decoration-none text-brand-contrast small py-1 d-block">Prescriptions & Medical</a></li>
-                                    <li><a href="{{ route('services.cannabis') }}" class="text-decoration-none text-brand-contrast small py-1 d-block">Medicinal Cannabis Consultations</a></li>
-                                    <li><a href="{{ route('services.mental-health') }}" class="text-decoration-none text-brand-contrast small py-1 d-block">Mental Health & Wellbeing</a></li>
-                                    <li><a href="{{ route('services.urgent-care') }}" class="text-decoration-none text-brand-contrast small py-1 d-block">Urgent & After Hours Care</a></li>
-                                    <li><a href="{{ route('services.compounding') }}" class="text-decoration-none text-brand-contrast small py-1 d-block">Health Cannabis Compounding</a></li>
-                                    <li><a href="{{ route('services') }}" class="text-decoration-none text-brand-primary fw-semibold small py-1 d-block">All Services →</a></li>
+                            <div class="collapse mobile-sub-collapse ps-3 pe-2 py-2 mt-1 rounded-3" id="mobileServicesCollapse">
+                                <ul class="list-unstyled mb-0 d-flex flex-column gap-1">
+                                    <li><a href="{{ route('services.gp') }}" class="mobile-sub-link">General GP Consultations</a></li>
+                                    <li><a href="{{ route('services.prescriptions') }}" class="mobile-sub-link">Prescriptions & Medical</a></li>
+                                    <li><a href="{{ route('services.cannabis') }}" class="mobile-sub-link">Medicinal Cannabis Consultations</a></li>
+                                    <li><a href="{{ route('services.mental-health') }}" class="mobile-sub-link">Mental Health & Wellbeing</a></li>
+                                    <li><a href="{{ route('services.urgent-care') }}" class="mobile-sub-link">Urgent & After Hours Care</a></li>
+                                    <li><a href="{{ route('services.compounding') }}" class="mobile-sub-link">Health Cannabis Compounding</a></li>
+                                    <li><a href="{{ route('services') }}" class="mobile-sub-link fw-bold text-brand-primary pt-1">All Services →</a></li>
                                 </ul>
                             </div>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link fw-semibold fs-5 text-brand-contrast py-2" href="{{ route('about') }}">
-                                <i class="bi bi-info-circle-fill me-2 text-brand-primary"></i> About Us
+                            <a class="nav-link mobile-nav-link {{ request()->routeIs('about') ? 'active' : '' }}" href="{{ route('about') }}">
+                                <span class="mobile-nav-icon"><i class="bi bi-info-circle"></i></span>
+                                <span>About Us</span>
                             </a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link fw-semibold fs-5 text-brand-contrast py-2" href="{{ route('how-it-works') }}">
-                                <i class="bi bi-arrow-repeat me-2 text-brand-primary"></i> How It Works
+                            <a class="nav-link mobile-nav-link {{ request()->routeIs('how-it-works') ? 'active' : '' }}" href="{{ route('how-it-works') }}">
+                                <span class="mobile-nav-icon"><i class="bi bi-arrow-repeat"></i></span>
+                                <span>How It Works</span>
                             </a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link fw-semibold fs-5 text-brand-contrast py-2" href="{{ route('doctors') }}">
-                                <i class="bi bi-person-badge-fill me-2 text-brand-primary"></i> Doctors
+                            <a class="nav-link mobile-nav-link {{ request()->routeIs('doctors') ? 'active' : '' }}" href="{{ route('doctors') }}">
+                                <span class="mobile-nav-icon"><i class="bi bi-person-badge"></i></span>
+                                <span>Doctors</span>
                             </a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link fw-semibold fs-5 text-brand-contrast py-2" href="{{ route('contact') }}">
-                                <i class="bi bi-envelope-fill me-2 text-brand-primary"></i> Contact Us
+                            <a class="nav-link mobile-nav-link {{ request()->routeIs('contact') ? 'active' : '' }}" href="{{ route('contact') }}">
+                                <span class="mobile-nav-icon"><i class="bi bi-envelope"></i></span>
+                                <span>Contact Us</span>
                             </a>
                         </li>
                     </ul>
 
-                    <div class="d-flex flex-column gap-2 pt-3 border-top">
-                        <button type="button" class="btn btn-nav-book w-100 py-3 rounded-pill fw-semibold shadow-sm d-flex align-items-center justify-content-center gap-2" data-bs-dismiss="offcanvas" data-bs-toggle="modal" data-bs-target="#consultBookingModal">
+                    <div class="d-flex flex-column gap-2.5 pt-3 border-top mobile-cta-wrapper">
+                        <button type="button" class="btn btn-mobile-book" data-bs-dismiss="offcanvas" data-bs-toggle="modal" data-bs-target="#consultBookingModal">
                             <i class="bi bi-calendar2-check"></i>
                             <span>Book Appointment</span>
                         </button>
-                        <a href="{{ route('login') }}" class="btn btn-nav-login w-100 py-3 rounded-pill fw-semibold shadow-sm d-flex align-items-center justify-content-center gap-2">
+                        <a href="{{ route('login') }}" class="btn btn-mobile-login">
                             <i class="bi bi-box-arrow-in-right"></i>
                             <span>Login to Portal</span>
                         </a>
-                        <a href="tel:0411174173" class="btn btn-outline-secondary w-100 py-2 rounded-pill fw-semibold d-flex align-items-center justify-content-center gap-2 mt-1">
-                            <i class="bi bi-telephone"></i>
+                        <a href="tel:0411174173" class="btn btn-mobile-call">
+                            <i class="bi bi-telephone-fill"></i>
                             <span>0411174173</span>
                         </a>
                     </div>
