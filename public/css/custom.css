@@ -5359,7 +5359,7 @@ img {
     background: #ecfdf5;
     color: #059669;
     font-size: 0.76rem;
-    font-weight: 700;
+    font-weight: 500;
     padding: 3px 10px;
     border-radius: 50rem;
     border: 1px solid rgba(5, 150, 105, 0.2);
@@ -6964,6 +6964,17 @@ img {
     .consult-time-grid {
         grid-template-columns: repeat(2, 1fr) !important;
     }
+
+    /* Request Telehealth Consultation Card Header */
+    .booking-card-header-title {
+        font-size: 1.05rem !important;
+        font-weight: 600 !important;
+        letter-spacing: normal !important;
+    }
+
+    .booking-card-header-title i {
+        font-size: 1.05rem !important;
+    }
 }
 
 /* Extra Small Phones (iPhone SE, Galaxy A series, 320px - 380px) */
@@ -6983,6 +6994,10 @@ img {
 
     .consult-modal-title {
         font-size: 1.1rem !important;
+    }
+
+    .booking-card-header-title {
+        font-size: 0.95rem !important;
     }
 }
 
