@@ -6400,32 +6400,120 @@ img {
 .offcanvas-zymika-mobile {
     background: #ffffff !important;
     background-color: #ffffff !important;
-    max-width: 330px !important;
-    width: 85% !important;
     box-shadow: -10px 0 35px rgba(15, 45, 89, 0.22) !important;
-    z-index: 1070 !important;
     visibility: visible;
 }
 
 .offcanvas-backdrop {
-    z-index: 1065 !important;
+    z-index: 1050 !important;
     background-color: rgba(15, 45, 89, 0.65) !important;
     backdrop-filter: blur(4px) !important;
     -webkit-backdrop-filter: blur(4px) !important;
 }
 
-.offcanvas-zymika-mobile .offcanvas-header {
+/* Zymika Health - Mobile Header Fix */
+@media (max-width: 991.98px) {
+
+  .header-zymika-wrapper {
+    position: sticky !important;
+    top: 0 !important;
+    width: 100%;
+    z-index: 1030 !important;
+  }
+
+  .navbar-zymika .container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: nowrap;
+    min-width: 0;
+  }
+
+  .navbar-zymika .navbar-brand {
+    min-width: 0;
+    max-width: calc(100% - 65px);
+    margin-right: 0;
+  }
+
+  .navbar-zymika .brand-logo-img {
+    display: block;
+    width: auto;
+    max-width: 100%;
+    max-height: 48px;
+    object-fit: contain;
+  }
+
+  /* Offcanvas menu */
+  .offcanvas-zymika-mobile {
+    width: min(360px, 100vw) !important;
+    max-width: 100vw !important;
+    height: 100dvh;
+    z-index: 1055 !important;
+    overflow: hidden;
+    background: #ffffff !important;
+    background-color: #ffffff !important;
+  }
+
+  /* Logo and close button alignment */
+  .offcanvas-zymika-mobile .offcanvas-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: nowrap;
+    gap: 12px;
+    padding: 16px !important;
+    min-height: 75px;
     background: #ffffff !important;
     background-color: #ffffff !important;
     border-bottom: 1px solid #f1f5f9 !important;
-    padding: 1.15rem 1.25rem !important;
-}
+  }
 
-.offcanvas-zymika-mobile .offcanvas-body {
+  .offcanvas-zymika-mobile .offcanvas-title {
+    flex: 1 1 auto;
+    min-width: 0;
+    margin: 0;
+  }
+
+  .offcanvas-zymika-mobile .brand-logo-wrap {
+    max-width: 100%;
+    min-width: 0;
+  }
+
+  .offcanvas-zymika-mobile .brand-logo-img {
+    width: auto;
+    max-width: 190px;
+    max-height: 45px;
+    object-fit: contain;
+  }
+
+  .offcanvas-zymika-mobile .btn-close {
+    flex: 0 0 auto;
+    margin: 0 !important;
+    padding: 8px;
+  }
+
+  /* Scroll menu without cutting content */
+  .offcanvas-zymika-mobile .offcanvas-body {
+    min-height: 0;
+    overflow-x: hidden;
+    overflow-y: auto;
+    padding: 18px !important;
+    overscroll-behavior: contain;
     background: #ffffff !important;
     background-color: #ffffff !important;
-    padding: 1.25rem !important;
-    overflow-y: auto !important;
+  }
+
+  .offcanvas-zymika-mobile .mobile-nav-link {
+    width: 100%;
+    white-space: normal;
+    overflow-wrap: anywhere;
+  }
+}
+
+@media (max-width: 375px) {
+  .offcanvas-zymika-mobile .brand-logo-img {
+    max-width: 155px;
+  }
 }
 
 .mobile-nav-list {
