@@ -5,7 +5,7 @@
 </IfModule>
 # php -- END cPanel-generated handler
 
-DirectoryIndex public/index.php index.php index.html
+DirectoryIndex index.php public/index.php index.html
 
 <IfModule mod_rewrite.c>
     RewriteEngine On
@@ -15,6 +15,12 @@ DirectoryIndex public/index.php index.php index.html
     RewriteRule ^\.(env|git|editorconfig) - [F,L,NC]
     RewriteRule ^(composer\.(json|lock)|phpunit\.xml|deploy\.bat) - [F,L,NC]
 
-    RewriteCond %{REQUEST_URI} !^/public/
+    # Serve static assets directly from /public if requested without /public/
+    RewriteCond %{DOCUMENT_ROOT}/public/$1 -f [OR]
+    RewriteCond %{DOCUMENT_ROOT}/public/$1 -d
     RewriteRule ^(.*)$ public/$1 [L]
+
+    # Send all other requests to public/index.php
+    RewriteCond %{REQUEST_URI} !^/public/
+    RewriteRule ^(.*)$ public/index.php [L]
 </IfModule>
