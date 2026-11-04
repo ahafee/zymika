@@ -34,7 +34,7 @@
             </div>
             <div class="col-lg-9" data-aos="fade-left">
                 <h3 class="fw-bold text-brand-contrast mb-1">Dr Bazel Lodhi</h3>
-                <div class="text-brand-primary fw-semibold small mb-3">General Practitioner</div>
+                <div class="text-brand-primary fw-semibold small mb-3">Specialist Rural Generalist &amp; General Practitioner</div>
                 <blockquote class="fs-5 text-brand-contrast fst-italic lh-base mb-0 border-start border-4 ps-3" style="border-color: #3aa3a2 !important;">
                     “Committed to providing accessible, high-quality and patient-centred healthcare through convenient telehealth consultations.”
                 </blockquote>
@@ -149,7 +149,7 @@
                 OUR EXPERT DOCTOR
             </span>
             <h2 class="display-6 fw-bold text-brand-contrast mb-2">Dr Bazel Lodhi</h2>
-            <p class="text-muted fs-6">General Practitioner</p>
+            <p class="text-muted fs-6">Specialist Rural Generalist &amp; General Practitioner</p>
         </div>
 
         <div class="row align-items-center g-4 g-lg-5 justify-content-center">

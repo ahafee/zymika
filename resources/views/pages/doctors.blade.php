@@ -46,7 +46,7 @@
                         <div class="col-md-8">
                             <div class="d-flex align-items-center gap-2 mb-2">
                                 <span class="badge rounded-circle bg-light text-brand-contrast border fw-bold d-inline-flex align-items-center justify-content-center" style="width: 32px; height: 32px;">D</span>
-                                <span class="badge bg-light text-brand-primary border px-3 py-1 rounded-pill small fw-semibold">General Practitioner</span>
+                                <span class="badge bg-light text-brand-primary border px-3 py-1 rounded-pill small fw-semibold">Specialist Rural Generalist &amp; General Practitioner</span>
                             </div>
                             <h2 class="h3 fw-bold text-brand-contrast mb-1">Dr Bazel Lodhi</h2>
                             <p class="text-brand-primary fw-semibold small mb-3">

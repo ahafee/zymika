@@ -174,7 +174,7 @@
                             <img src="{{ asset('images/doctor-bazel.png') }}" alt="Dr Bazel Lodhi" class="about-quote-doc-img">
                             <div>
                                 <h4 class="about-quote-doc-name">Dr Bazel Lodhi</h4>
-                                <span class="about-quote-doc-title">General Practitioner</span>
+                                <span class="about-quote-doc-title">Specialist Rural Generalist &amp; General Practitioner</span>
                             </div>
                         </div>
                         <p class="about-quote-text">
@@ -337,16 +337,17 @@
                 OUR EXPERT DOCTOR
             </span>
             <h2 class="display-6 fw-bold text-brand-contrast mb-2">Dr Bazel Lodhi</h2>
-            <p class="text-muted fs-6">General Practitioner</p>
+            <p class="text-muted fs-6">Specialist Rural Generalist &amp; General Practitioner</p>
         </div>
 
         <div class="row align-items-center g-4 g-lg-5 justify-content-center">
             <div class="col-lg-5 text-center" data-aos="fade-right">
                 <div class="position-relative d-inline-block">
-                    <img src="{{ asset('images/doctor-bazel.png') }}" alt="Dr Bazel Lodhi General Practitioner" class="img-fluid rounded-5 shadow-lg" style="max-height: 420px; object-fit: cover;">
+                    <img src="{{ asset('images/doctor-bazel.png') }}" alt="Dr Bazel Lodhi Specialist Rural Generalist &amp; General Practitioner" class="img-fluid rounded-5 shadow-lg" style="max-height: 420px; object-fit: cover;">
                     <div class="position-absolute bottom-0 end-0 bg-white p-3 rounded-4 shadow-sm border m-3 text-start">
                         <div class="fw-bold text-brand-contrast small">Dr Bazel Lodhi</div>
                         <div class="text-brand-primary small fw-semibold">FACRRM, MPH, MBBS, EMC, RPSGT</div>
+                        <div class="text-muted small" style="font-size: 0.75rem;">Specialist Rural Generalist &amp; GP</div>
                     </div>
                 </div>
             </div>

@@ -116,7 +116,7 @@
                                     <label class="form-label small fw-semibold text-brand-contrast mb-1">Doctor *</label>
                                     <select name="doctor_id" id="doctor_select" class="form-select rounded-3 py-2.5 px-3 fs-6" required onchange="updateSlots()">
                                         <option value="" disabled>Select Doctor</option>
-                                        <option value="6" selected>Dr Bazel Lodhi (General Practitioner)</option>
+                                        <option value="6" selected>Dr Bazel Lodhi (Specialist Rural Generalist &amp; General Practitioner)</option>
                                     </select>
                                 </div>
 

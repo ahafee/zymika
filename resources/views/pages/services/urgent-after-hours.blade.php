@@ -35,7 +35,7 @@
                 </div>
             </div>
             <div class="col-lg-4 text-center" data-aos="fade-left">
-                <img src="{{ asset('images/step4-delivery.jpg') }}" alt="Get Urgent Medical Care When You Need It" class="img-fluid rounded-5 shadow-lg border" style="max-height: 320px; object-fit: cover;">
+                <img src="{{ asset('images/hero-telehealth.jpg') }}" alt="Get Urgent Medical Care When You Need It" class="img-fluid rounded-5 shadow-lg border" style="max-height: 320px; object-fit: cover;">
             </div>
         </div>
     </div>
