@@ -15,6 +15,10 @@ DirectoryIndex index.php public/index.php index.html
     RewriteEngine On
     RewriteBase /
 
+    # Allow cPanel AutoSSL and Let's Encrypt validation (prevents nightly SSL cron conflicts)
+    RewriteCond %{REQUEST_URI} ^/\.well-known/ [NC]
+    RewriteRule ^ - [L]
+
     # Prevent direct access to sensitive files and configs
     RewriteRule ^\.(env|git|editorconfig) - [F,L,NC]
     RewriteRule ^(composer\.(json|lock)|phpunit\.xml|deploy\.bat) - [F,L,NC]
